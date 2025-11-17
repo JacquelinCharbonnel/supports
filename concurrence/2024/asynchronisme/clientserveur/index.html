@@ -60,31 +60,13 @@
   <li class="nav-item is-current-page" data-depth="2">
     <a class="nav-link" href="index.html">Application #2</a>
   </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../bar/bar.html">Problème</a>
-  </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="1">
-    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../../multithreading/multithread.html">Multi-threading</a>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../../multithreading/application.html">Application</a>
-  </li>
-</ul>
   </li>
   <li class="nav-item" data-depth="1">
-    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../../multiprocessing/multiprocessing.html">Multi-processing</a>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../../multiprocessing/sequenceur/sequenceur.html">Problème 1</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../../multiprocessing/anagrammes/anagrammes.html">Problème 2</a>
-  </li>
-</ul>
   </li>
 </ul>
   </li>
@@ -339,89 +321,6 @@ mais cela lui permet de récupérer sans blocage plusieurs ressources en même t
 <td>sortie à l&#8217;écran de la string correspondante</td>
 </tr>
 </table>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_problème"><a class="anchor" href="#_problème"></a>Problème</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Il s&#8217;agit de développer une application client/serveur élémentaire.</p>
-</div>
-<div class="sect2">
-<h3 id="_question_1"><a class="anchor" href="#_question_1"></a>Question 1</h3>
-<div class="paragraph">
-<p>En assemblant les codes ci-dessus, concevoir
-un serveur à l&#8217;écoute sur 127.0.0.1 sur le port non privilégié 1234,
-qui attend l&#8217;arrivée d&#8217;un message 1, et renvoie au client un message 2, en loguant le tout à l&#8217;écran.</p>
-</div>
-<div class="paragraph">
-<p>Concevoir le client envoyant un message au serveur,  en loguant à l&#8217;écran la requête et la réponse.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_question_2"><a class="anchor" href="#_question_2"></a>Question 2</h3>
-<div class="paragraph">
-<p>Modifier le client de façon à ce que l&#8217;adresse IP du serveur sollcité soit variable (fournie en argument de ligne de commande).</p>
-</div>
-<div class="paragraph">
-<p>Le client peut-il se connecter à un serveur distant ?</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_question_3"><a class="anchor" href="#_question_3"></a>Question 3</h3>
-<div class="paragraph">
-<p>Modifier le serveur pour qu&#8217;il écoute sur toutes ses IP.
-Vérifier que cela permet à une autre machine de l&#8217;interroger.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_question_4"><a class="anchor" href="#_question_4"></a>Question 4</h3>
-<div class="paragraph">
-<p>On définit le protocole de communication suivant :</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>si le client envoie la chaine <code>"où?"</code>, le serveur renvoie son nom (indice : <code>socket.getfqdn</code>),</p>
-</li>
-<li>
-<p>sinon si le client envoie la chaine <code>"qui?"</code>, le serveur renvoie le nom de l&#8217;utilisateur qui a lancé le serveur (indice : <code>os.getlogin</code>),</p>
-</li>
-<li>
-<p>sinon, si le client envoie la chaine <code>"quand?"</code>, le serveur renvoie la date de dernière modification de son code source (indice : <code>sys.arg[0]</code>, <code>os.lstat</code>, <code>time.ctime</code>) ,</p>
-</li>
-<li>
-<p>sinon, si le client envoie la chaine <code>"comment?"</code>, le serveur renvoie son code source,</p>
-</li>
-<li>
-<p>sinon, le serveur renvoie <code>"pas compris!"</code>.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Le serveur ferme la session aussitôt après avoir répondu.</p>
-</div>
-<div class="paragraph">
-<p>Implémenter ce protocole dans le serveur, et adapter le client pour qu&#8217;il puisse dialoguer avec ce nouveau serveur.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_question_5"><a class="anchor" href="#_question_5"></a>Question 5</h3>
-<div class="paragraph">
-<p>On modifie le protocole, en ajoutant une requête <code>"quit!"</code>.</p>
-</div>
-<div class="paragraph">
-<p>Comme précédement, le client envoie une chaine de caractères au serveur, qui lui répond par une chaine de caractères.
-Mais maintenant, la connexion entre le serveur et ce client reste ouverte
-(tant que celui-ci ne lui a pas envoyé <code>"quit!"</code>)
-, ce qui permet au client d&#8217;envoyer d&#8217;autres requêtes dans la foulée (sans ré-établir une nouvelle connexion).
-A la réception de <code>"quit!"</code>, le serveur répond <code>"bye!"</code> et ferme la connexion.</p>
-</div>
-<div class="paragraph">
-<p>Modifier le client et le serveur en conséquence.
-Vérifier que plusieurs clients peuvent tenir une conversation avec le serveur en même temps.</p>
-</div>
 </div>
 </div>
 </div>
