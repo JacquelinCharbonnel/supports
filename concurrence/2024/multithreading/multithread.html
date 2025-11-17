@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Multi-threading en python :: Supports</title>
+    <link rel="canonical" href="https://jacquelincharbonnel.github.io/supports/concurrence/2024/multithreading/multithread.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<!-- reference des feuilles de styles supplémentaires -->
+<link rel="stylesheet" href="../../../_/css/layout.css">
+<link rel="stylesheet" href="../../../_/css/content.css">
+
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://jacquelincharbonnel.github.io/supports">Supports</a>
+  <!-- suppression du burger du bandeau
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+-->      
+    </div>
+<!-- suppression des boutons du bandeau
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+-->
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="concurrence" data-version="2024">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">Concurrence (preview)</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../introduction/intro.html">Aperçu</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../generateur/generateur.html">Générateur</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../asynchronisme/asyncio.html">Asynchronisme</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../aiohttp/collecte.html">Application #1</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asynchronisme/clientserveur/index.html">Application #2</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asynchronisme/bar/bar.html">Problème</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="multithread.html">Multi-threading</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="application.html">Application</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../multiprocessing/multiprocessing.html">Multi-processing</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../multiprocessing/sequenceur/sequenceur.html">Problème 1</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../multiprocessing/anagrammes/anagrammes.html">Problème 2</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Concurrence (preview)</span>
+    <span class="version">2024</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../../C/2023/index.html">C (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../C/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">Concurrence (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../linux_context/2025/index.html">Linux contexte (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../linux_context/2025/index.html">2025</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../python_objet/2024/index.html">Python objet</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../python_objet/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Concurrence (preview)</a></li>
+    <li><a href="multithread.html">Multi-threading</a></li>
+  </ul>
+</nav>
+<!-- supression de "edit this page"
+  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/concurrence/./modules/multithreading/pages/multithread.adoc">Edit this Page</a></div>
+-->
+</div>
+  <!-- ajout de la date de modification -->
+  <div class="lastmodify"> modifié le <span id="lastmodify"/> </div>
+  <!-- fin ajout -->
+  <div class="content">
+<aside class="toc sidebar" data-title="Plan" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Multi-threading en python</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Le multi-threading consiste à écrire un programme composé de plusieurs fils d&#8217;exécution (<em>thread</em>).
+Chaque thread et matérialisé par une suite d&#8217;instructions qui lui est propre.
+L&#8217;exécution d&#8217;un tel programme donne lieu à plusieurs tâches qui progressent en même temps.</p>
+</div>
+<div class="paragraph">
+<p>Un thread est léger,
+car son contexte se réduit à ses instructions,
+à un compteur ordinal qui pointe sur la prochaine instruction à exécuter
+et à la pile des appels de fonctions.
+Il est donc rapide à créer et à détruire,
+Sa gestion consomme peu de ressources (pas d’overhead).
+Il partage la mémoire avec les autres threads,
+donc son contexte ne contient pas les variables (d&#8217;où sa légèreté).
+La commutation de threads est donc rapide, mais en contre partie leur isolation est faible :
+ils  partagent beaucoup (leurs variables en particulier).</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Le cas de Python</dt>
+<dd>
+<p>Le module <code>threading</code>
+est l&#8217;un des moyens de faire du multi-threading,
+dans lequel le programmeur crée explicitement les threads sous forme de classe.
+Pour le programmeur, le thread est un concept abstrait :
+il peut en créer autant qu’il le souhaite dans son programme.
+Ensuite, au moment de l&#8217;exécuter, le programme est confronté au matériel :
+suivant l&#8217;ordinateur cible, un certain nombre de threads seront ou non distribués
+sur un certain nombre de coeurs
+(et à partir de 2 cœurs, il y aura parallélisme).</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tâche"><a class="anchor" href="#_tâche"></a>1. Tâche</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Créer une tâche consiste à créer une sous-classe de <code>threading.Thread</code>.
+Cette sous-classe doit être dotée d&#8217;une méthode <code>run</code>
+implémentant le traitement à réaliser.
+Elle hérite d&#8217;une méthode <code>start</code> destinée à lancer l&#8217;exécution de la tâche.
+Exemple :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">import threading
+...
+
+class MyThread(threading.Thread):
+    def __init__(self, ...):
+        threading.Thread.__init__(self)
+        ...
+
+    def run(self):
+        ...
+
+if __name__ == '__main__':
+  mytask = MyThread(...)
+  mytask.start()
+...</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_synchronisation"><a class="anchor" href="#_synchronisation"></a>2. Synchronisation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Synchroniser 2 tâches à un instant t, c&#8217;est définir un point de rendez-vous.
+La méthode <code>join</code> de la classe <code>threading.Thread</code> attend que la tâche courante se termine pour poursuivre le fil d&#8217;exécution.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_atomicité"><a class="anchor" href="#_atomicité"></a>3. Atomicité</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Dans la vraie vie, l&#8217;incrémentation d&#8217;une variable mémoire n&#8217;est pas atomique.
+Elle se décompose en plusieurs opérations élémentaires :</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>transfert de la valeur de la variable de la mémoire vers l&#8217;unité de calcul,</p>
+</li>
+<li>
+<p>incrémentation de la valeur dans l&#8217;unité de calcul,</p>
+</li>
+<li>
+<p>transfert de la nouvelle valeur de l&#8217;unité de calcul vers la mémoire.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_verrou"><a class="anchor" href="#_verrou"></a>4. Verrou</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Les tâches se partageant les variables globales du programme, des interférences peuvent avoir lieu :
+par exemple, 2 tâches peuvent vouloir modifier en même temps la même variable.
+Pour éviter les effets indésirables dans ce genre de situation, il est nécessaire qu&#8217;une tâche puisse définir
+des portions de code in-interruptibles (sections critiques).</p>
+</div>
+<div class="paragraph">
+<p>On crée une section critique en posant un verrou,
+et on en sort en le supprimant.
+Le verrou est une instance de la classe <code>Lock</code>.
+Pour créer une section critique, il faut donc :</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>créer un verrou</p>
+</li>
+<li>
+<p>appeller la méthode <code>acquire</code> en début de section critique (poser le verrou)</p>
+</li>
+<li>
+<p>appeller la méthode <code>release</code> en fin de section critique (enlever le verrou)</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="title">Exemple</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">mon_verrou = threading.Lock() <i class="conum" data-value="1"></i><b>(1)</b>
+... <i class="conum" data-value="2"></i><b>(2)</b>
+mon_verrou.acquire() <i class="conum" data-value="3"></i><b>(3)</b>
+... <i class="conum" data-value="4"></i><b>(4)</b>
+mon_verrou.release() <i class="conum" data-value="5"></i><b>(5)</b>
+... <i class="conum" data-value="6"></i><b>(6)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>création d&#8217;un verrou</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>section "normale" interruptible</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>début de section critique</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>la section critique</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>fin de la section critique</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td>section "normale" interruptible</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_particularité_de_linterpréteur_python"><a class="anchor" href="#_particularité_de_linterpréteur_python"></a>5. Particularité de l&#8217;interpréteur Python</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Le <em>global interpreter lock</em> (GIL) est un verrou que l&#8217;interpréteur Python utilise en permanence
+pour se prémunir des accès concurrents à certaines de ses variables.
+Conséquence :
+à un instant t, un seul thread peut accèder à l&#8217;interpréteur.
+Ce qui pénalise le parallélisme.</p>
+</div>
+<div class="paragraph">
+<p>Par conséquent, étant donnée l&#8217;implementation actuelle de l&#8217;interpréteur Python,
+le multi-threading est inefficace pour les programmes CPU bounds.
+Son intérêt se révèle pour des applications I/O bounds, comme dans le contexte des applications réseaux ou graphiques (programmation évènementielle d&#8217;une application en environnement graphique).</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+La suppression du GIL  pour les futures versions de Python fait actuellement (2023) débat
+dans la communauté des développeurs Python.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p class="center">
+  <span style="font-size: 0.9em;">
+    <a href="https://jacquelincharbonnel.github.io/">Jacquelin Charbonnel</a>
+    <!-- &nbsp; &mdash; &nbsp; -->
+    &nbsp; &nbsp;
+    &copy;Creative Commons BY-NC-SA 4.0
+  </span>
+  </p>
+</footer>
+
+<script>
+var myDate = new Date(document.lastModified);
+myNewDate = new Intl.DateTimeFormat(
+            undefined,
+            {year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit"}
+        )
+        .format(myDate).replace(/\./g, '-');
+document.getElementById("lastmodify").innerHTML = myNewDate ;
+</script>
+
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

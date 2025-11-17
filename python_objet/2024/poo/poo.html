@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Concepts de la Programmation Orientée Objet :: Supports</title>
+    <link rel="canonical" href="https://jacquelincharbonnel.github.io/supports/python_objet/2024/poo/poo.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<!-- reference des feuilles de styles supplémentaires -->
+<link rel="stylesheet" href="../../../_/css/layout.css">
+<link rel="stylesheet" href="../../../_/css/content.css">
+
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://jacquelincharbonnel.github.io/supports">Supports</a>
+  <!-- suppression du burger du bandeau
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+-->      
+    </div>
+<!-- suppression des boutons du bandeau
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+-->
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="python_objet" data-version="2024">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">Python objet</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="poo.html">Concepts de la POO</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../objet/objet.html">Objet</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../objet/Tortue/Tortue.html">Exercice 1</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../objet/Frigo/Frigo.html">Exercice 2</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../objet/IPaddr/IPaddr.html">Exercice 3</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../objet/TicTacToe/tictactoe.html">Problème 1</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../objet/Torche/torche.html">Problème 2</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../operateurs/operateurs.html">Opérateurs</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../operateurs/domino/domino.html">Problème</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../classe/classe.html">Membres de classe</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../classe/capteurs/capteurs.html">Problème</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../heritage/heritage.html">Héritage</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../heritage/Biodiversite/biodiversite.html">Problème 1</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../heritage/Formes/formes.html">Problème 2</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../heritage/debrief.html">Debriefing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../heritage/flotte/flotte.html">Problème 3</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../heritage/Biblio/biblio.html">Problème 4</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../exception/exception.html">Exceptions</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../exception/Poker/poker.html">Problème</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../internals/internals.html">Debriefing</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../internals/muabilite.html">Muabilité</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../internals/hashable.html">Hashable</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Applications</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../app_iter/iter.html">Itérable</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../app_files/files.html">Lecture/écriture de données</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../app_contextman/context.html">Context manager</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../app_serialisation/serialisation.html">Sérialisation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../app_callable/callable.html">Callables</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../packaging/packaging.html">Packaging</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../eval/biblio.html">Projet</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../heritage/BiblioScrap/BiblioScrap.html">Projet</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Python objet</span>
+    <span class="version">2024</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../../C/2023/index.html">C (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../C/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../concurrence/2024/index.html">Concurrence (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../concurrence/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../linux_context/2025/index.html">Linux contexte (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../linux_context/2025/index.html">2025</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">Python objet</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Python objet</a></li>
+    <li><a href="poo.html">Concepts de la POO</a></li>
+  </ul>
+</nav>
+<!-- supression de "edit this page"
+  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/python_objet/./modules/poo/pages/poo.adoc">Edit this Page</a></div>
+-->
+</div>
+  <!-- ajout de la date de modification -->
+  <div class="lastmodify"> modifié le <span id="lastmodify"/> </div>
+  <!-- fin ajout -->
+  <div class="content">
+<aside class="toc sidebar" data-title="Plan" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Concepts de la Programmation Orientée Objet</h1>
+<div class="sect1">
+<h2 id="historique"><a class="anchor" href="#historique"></a>1. Introduction</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Au début de l&#8217;informatique
+(avec les langages de programmation historiques comme Fortran ou C),
+un programme est une juxtaposition de données et de fonctions agissant sur ces données,
+les données constituant la partie passive du programme,
+et les fonctions la partie active.</p>
+</div>
+<div class="paragraph">
+<p>Dans cette approche traditionnelle, largement encore utilisée de nos jours,
+programmer consiste alors grosso modo à :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>initialiser un certain nombre de variables,</p>
+</li>
+<li>
+<p>écrire des fonctions pour les manipuler,</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>sans particulièrement associer explicitement les unes aux autres.</p>
+</div>
+<div class="paragraph">
+<p>Soit par exemple à modéliser le comportement d&#8217;une tortue sur un plan
+(ou un pointeur de souris dans une fenêtre, c&#8217;est la même chose).
+L&#8217;état d&#8217;une tortue se résume à sa position, soit un couple (x,y).
+Pour le représenter, on peut utiliser un dictionnaire <code>{"x":x,"y":y}</code>.
+C&#8217;est la partie passive de la tortue.</p>
+</div>
+<div class="paragraph">
+<p>Une tortue peut se déplacer et donner sa position.
+C&#8217;est la partie active de la tortue.
+Elle va être implantée sous forme de 2 fonctions :
+<code>avance())</code> et <code>localise()</code> :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">def avance(une_tortue,dx,dy):
+  """ Avance une tortue de (dx,dy) """
+  une_tortue["x"] += dx
+  une_tortue["y"] += dy
+
+def localise(une_tortue):
+  """ Donne la position d'une tortue """
+  print(une_tortue["x"],une_tortue["y"])</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Dans cette approche, exécuter un programme consiste à créer des variables et à appeler quelques fonctions,
+qui en appelleront de proche en proche d&#8217;autres, en leur fournissant les données nécessaires à l’accomplissement de leurs tâches.</p>
+</div>
+<div class="paragraph">
+<p>Exemple, pour créer une tortue, écrire sa position initiale, la déplacer, et écrire sa nouvelle position :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">ma_tortue = { "x": 1, "y": -1 }
+
+localise(ma_tortue)         # (1,-1)
+avance(ma_tortue,10,10)
+localise(ma_tortue)         # (11,9)</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_modulariser"><a class="anchor" href="#_modulariser"></a>2. Modulariser</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>On peut modulariser ce code afin d&#8217;en accroitre la réutilisabilité.
+En Python, on va créer un module pour y mettre les fonctions relatives à la tortue :</p>
+</div>
+<div class="listingblock">
+<div class="title">module tortue</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python"># fichier tortue.py
+
+def avance(une_tortue,dx,dy):
+  une_tortue["x"] += dx
+  une_tortue["y"] += dy
+
+def localise(une_tortue):
+  print(une_tortue["x"],une_tortue["y"])</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>On utilise alors le module comme une bibliothèque de fonctions :</p>
+</div>
+<div class="listingblock">
+<div class="title">programme principal</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python"># fichier main.py
+
+import tortue
+
+ma_tortue = { "x": 0, "y": 0 }
+
+tortue.localise(ma_tortue)
+tortue.avance(ma_tortue,10,10)
+tortue.localise(ma_tortue)
+
+print(type(ma_tortue))               # &lt;class 'dict'&gt;, le type de ma_tortue
+print(type(ma_tortue).__name__)      # 'dict', le nom du type de ma_tortue</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Le module peut être vu comme un entrepôt de fonctions,
+les données restant en dehors de cet entrepôt :
+il n&#8217;y a pas de couplage fort entre les données et les fonctions qui les manipulent.</p>
+</div>
+<div class="paragraph">
+<p>On remarque que l&#8217;on peut se servir de ces fonctions avec des tortues de structure un peu différente :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">import tortue
+
+ma_tortue2 = { "x": 0, "y": 0, "couleur": "rouge" }
+
+tortue.localise(ma_tortue2)
+tortue.avance(ma_tortue2,10,10)
+tortue.localise(ma_tortue2)
+
+print(type(ma_tortue2).__name__)      # 'dict'</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>On remarque que les fonctions du module traitent correctement <code>ma_tortue2</code> qui n&#8217;a pourtant pas la même structure que <code>ma_tortue</code>.
+Coup de chance, car si la modification est trop importante, cela ne marche plus.
+Exemple avec une tortue définie par :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">ma_tortue3 = { ('x','y'): (0,0), "couleur": "bleu"}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Et pourtant, ces 3 variables sont de même type :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">print(type(ma_tortue3.__name__)) # 'dict'</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>On dit que <code>ma_tortue1</code>, <code>ma_tortue2</code> et <code>ma_tortue3</code> sont des <em>instances</em> du type <code>dict</code>.</p>
+</div>
+<div class="paragraph">
+<p>L&#8217;approche objet va consister à <em>assembler</em> les données et les fonctions qui les manipulent, en les encapsulant dans une même entité : l&#8217;objet.
+Elle va également typer plus finement les données.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="objet"><a class="anchor" href="#objet"></a>3. Approche objet</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Dans l&#8217;approche objet, un programme est constitué d’objets,
+chacun disposant de ses propres données et des
+fonctions les manipulant.
+Les données sont mémorisées dans des variables internes à l&#8217;objet, appelées <em>attributs</em> :
+l&#8217;état d&#8217;un objet est caractérisé par les valeurs de ses
+attributs.
+Le comportement de l&#8217;objet est exprimé au travers de ses fonctions, appelées <em>méthodes</em>.
+Attributs et méthodes sont appelés <em>membres</em> de l&#8217;objet.</p>
+</div>
+<div class="paragraph">
+<p>Un objet se caractérise par son type (une <em>classe</em>), dont il est une <em>instance</em>.
+Une classe représente donc un ensemble d&#8217;objets <em>de même nature</em>,
+ayant les mêmes membres :
+les mêmes attributs (mais pas les mêmes valeurs de ces attributs)
+et les mêmes méthodes.
+Une classe sert de modèle pour créer des instances.</p>
+</div>
+<div class="paragraph">
+<p>Tout au long de l&#8217;exécution du programme, les objets naissent, interagissent entre eux, et meurent.
+Programmer consiste à concevoir des classes, puis à créer des instances,
+qui créent de proche en proche d&#8217;autres instances,
+qui interagissent entre elles.</p>
+</div>
+<div class="paragraph">
+<p>Par exemple, étant donnée une classe <code>Tortue</code> modélisant une tortue sachant se localiser et se déplacer,
+le code suivant crée une instance <code>ma_tortue</code>, lui demande de se
+localiser, puis de se déplacer, puis à nouveau de se localiser :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">ma_tortue = Tortue(0,0)
+ma_tortue.localise()
+ma_tortue.avance(10,10)
+ma_tortue.localise()</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>On a toujours une variable globale <code>ma_tortue</code>,
+qui est ici un objet possédant un état (sa position)
+et un comportement (ses méthodes <code>avance()</code> et <code>localise()</code>).
+La tortue sait où elle se trouve, et est capable de se déplacer et de donner sa position.</p>
+</div>
+<div class="paragraph">
+<p><code>ma_tortue</code> est ici de type <code>class 'Tortue'</code>, et non plus de type <code>dict</code>.</p>
+</div>
+<div class="paragraph">
+<p>Pour manipuler des tortues colorées dont la position est exprimée par un tuple, il suffit de créer une nouvelle classe, et de créer des instances de cette classe :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">ma_tortue3 = TortueColoree((2,2),"rouge")</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Et rien n&#8217;empêche cette nouvelle classe d&#8217;avoir les mêmes méthodes que la classe <code>Tortue</code> :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">ma_tortue3.localise()
+ma_tortue3.avance(10,10)
+ma_tortue3.localise()</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Mais <code>ma_tortue</code> et <code>ma_tortue3</code> sont cette fois de type différent.
+Les méthodes <code>localise</code> et <code>avance</code> sont spécifiques à chacun de ces 2 types.
+Elles portent le même nom, visent à la même finalité, mais l&#8217;atteignent de façon différente, puisqu&#8217;elles agissent sur des objets de structure différente :
+c&#8217;est le <em>polymorphisme</em>.
+Il permet d&#8217;écrire :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">for t in (ma_tortue,ma_tortue3):
+  t.avance(2,3)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Ici, <code>ma_tortue</code> et <code>ma_tortue3</code> sont des objets de type différent,
+Pourtant, on les fait avancer avec la même expression <code>t.avance(2,3)</code>.
+Mais quand on regarde dans le détail,
+la méthode appelée n&#8217;est pas la même dans les 2 tours de boucle :
+c&#8217;est la méthode <code>avance()</code> de <code>Tortue</code> au premier tour, puisque <code>ma_tortue</code> est de type <code>Tortue</code>,
+et c&#8217;est la méthode <code>avance()</code> de <code>TortueColoree</code> au second tour, puisque <code>ma_tortue3</code> est de type <code>TortueColoree</code>,</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="encapsulation"><a class="anchor" href="#encapsulation"></a>4. Encapsulation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Code et données sont donc encapsulés dans une même entité appelée objet.
+Cette encapsulation favorise la réutilisation,
+puisqu&#8217;en récupèrant un objet,
+on récupère d&#8217;un seul coup les structures de données et les traitements
+qui les manipulent.</p>
+</div>
+<div class="paragraph">
+<p>Il est nécessaire ici de distinguer 2 types de développeurs :
+le concepteur de la classe d&#8217;une part, et l&#8217;utilisateur de la classe d&#8217;autre part (qui est lui aussi un développeur, mais un développeur d&#8217;autre chose).
+Le concepteur fixe les attributs de la classe, et implémente les méthodes. Il a bien entendu accès à tous les membres de l&#8217;objet, puisque c&#8217;est lui qui les conçoit.
+L&#8217;utilisateur de la classe, quant à lui, crée des instances de cette classe.
+Ce qui l&#8217;intéresse, ce sont les fonctionnalités de l&#8217;objet : ce qu&#8217;il est capable de faire.
+Comment ses fonctionnalités sont réalisées, ce n&#8217;est pas son problème : il fait confiance.
+Il n&#8217;a donc pas besoin de voir tous les membres de l&#8217;objet, car il n&#8217;a pas à  comprendre le détail de son fonctionnement.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="abstraction"><a class="anchor" href="#abstraction"></a>5. Abstraction des données</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>C&#8217;est un principe de conception consistant à protéger le coeur d&#8217;un système des accès délibérés venant de l&#8217;extérieur
+(à l&#8217;image de la capsule spaciale qui fonctionne en autonomie
+en limitant au minimum les échanges avec le monde extérieur).</p>
+</div>
+<div class="exampleblock">
+<div class="title">La métaphore de la capsule spaciale</div>
+<div class="content">
+<div class="paragraph">
+<p>Elle fonctionne le plus possible en autonomie,
+mais doit néanmoins échanger (le moins possible) avec le monde extérieur : capter l&#8217;énergie du soleil et recevoir/émettre les ondes radio.
+Il n&#8217;est pas possible depuis la Terre, d&#8217;agir sur le comportement intérieur de la capsule : il faut demander aux occupants de le faire eux-mêmes : définir le cap, la vitesse, régler la température, ouvrir la porte, etc.</p>
+</div>
+<div class="paragraph">
+<p>+
+Traduction : un objet est une capsule spaciale.
+Son interface est composée de ses panneaux solaires et de son antenne de communication.
+Son impémentation se compose de ses attributs
+(son cap, sa vitesse, la température intérieure et la porte)
+et de méthodes privées (modifier le cap, ajuster le vitesse, fixer la température, ouvrir la porte, fermer la porte).</p>
+</div>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+L&#8217;idéal serait que l’état d’un objet ne soit  modifiable que par lui-même.
+</td>
+</tr>
+</table>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Interface &amp; implémentation</dt>
+<dd>
+<p>Un objet possède une <em>interface</em> et une <em>implémentation</em>.
+L&#8217;interface est la partie publique de l&#8217;objet.
+C&#8217;est ce qui est visible de l&#8217;extérieur de l&#8217;objet.
+Cela correspond aux services offerts par l&#8217;objet au monde extérieur,
+généralement un ensemble de méthodes.
+L&#8217;implémentation est la partie privée,
+elle n&#8217;est pas visible de l&#8217;extérieur de l&#8217;objet.
+Elle contient généralement les attributs de l&#8217;objet, ainsi que des méthodes à usage interne.
+Les utilisateurs de l&#8217;objet ne peuvent (ne doivent) accéder qu&#8217;à son interface.
+Donc chaque membre de l&#8217;objet se situe soit dans l&#8217;interface, soit dans l&#8217;implémentation.</p>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Respecter ces règles permet à l&#8217;auteur de l&#8217;objet de garder toute liberté pour modifier l&#8217;implémentation de son objet
+sans impacter ses utilisateurs.
+</td>
+</tr>
+</table>
+</div>
+</dd>
+<dt class="hdlist1">Boîte noire</dt>
+<dd>
+<p>L&#8217;objet devient une boîte noire pour ses utilisateurs, qui de fait,
+s&#8217;abstraient de sa représentation interne.
+Ainsi, toute modification de cette représentation
+n&#8217;a aucun impact sur les utilisateurs.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>En regroupant code et données,
+et en donnant la possibilité d&#8217;interdir un accès direct aux structures de données,
+la POO favorise la conception de composants logiciels réutilisables et évolutifs.</p>
+</div>
+<div class="exampleblock">
+<div class="title">La métaphore de la capsule spaciale</div>
+<div class="content">
+<div class="paragraph">
+<p>Elle fonctionne le plus possible en autonomie,
+mais doit néanmoins échanger (le moins possible) avec le monde extérieur : capter l&#8217;énergie du soleil et recevoir/émettre les ondes radio pour communiquer.
+Il n&#8217;est pas possible depuis la Terre, d&#8217;agir sur le comportement intérieur de la capsule : il faut demander aux occupants de le faire eux-mêmes : définir le cap, la vitesse, régler la température, ouvrir la porte, etc.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Traduction</dt>
+<dd>
+<p>Un objet est une capsule spaciale.
+Son interface est composé de ses panneaux solaires et de son antenne de communication.
+Son impémentation se compose de ses attributs
+(son cap, sa vitesse, la température intérieure et la porte)
+et de méthodes privées (modifier le cap, ajuster le vitesse, fixer la température, ouvrir la porte, fermer la porte).</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Cas de C++, Java, C#</dt>
+<dd>
+<p>Les membres sont par défaut privés.
+Pour les rendre publics, une interface doit être définie explicitement.</p>
+</dd>
+<dt class="hdlist1">Cas de PHP</dt>
+<dd>
+<p>Les membres sont publics par défaut, mais peuvent être explicitement déclarés privés si besoin.</p>
+</dd>
+<dt class="hdlist1">Cas de Python</dt>
+<dd>
+<p>Tout est public, il n&#8217;y a pas de notion d&#8217;implémentation.
+Une convention stipule que si le nom d&#8217;un membre commence par <code>_</code>, c&#8217;est qu&#8217;il ne faut pas y accéder de l&#8217;extérieur.
+Donc un attribut nommé <code>_x</code> est supposé privé (mais aucun contrôle n&#8217;est réalisé par l&#8217;interpréteur).</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_relation_de_composition_ou_daggrégation"><a class="anchor" href="#_relation_de_composition_ou_daggrégation"></a>6. Relation de composition (ou d&#8217;aggrégation)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Un objet peut avoir des composantes qui sont elles-mêmes des objets.
+C&#8217;est le cas, par exemple, d&#8217;un objet <em>segment de droite</em> représenté par 2 points, qui sont eux-mêmes 2 objets.
+On a affaire ici à une relation de composition :
+un segment se compose de 2 points.
+Au niveau de la classe <code>Segment</code>, cela se traduit par le fait qu&#8217;elle dispose de 2 attributs de type <code>Point</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_relation_dhéritage"><a class="anchor" href="#_relation_dhéritage"></a>7. Relation d&#8217;héritage</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Une classe B peut-être un cas particulier d&#8217;une classe A.
+L&#8217;héritage permet alors de définir <code>B</code> en spécifiant uniquement ses différences par rapport à <code>A</code>.
+Cela permet de factoriser le code commun à <code>A</code> et <code>B</code> dans <code>A</code>.</p>
+</div>
+<div class="sect2">
+<h3 id="_exemple"><a class="anchor" href="#_exemple"></a>Exemple</h3>
+<div class="paragraph">
+<p>Soit la classe <code>Container</code> modélisant une structure de données pouvant contenir des objets.
+Les containers de ce type disposent d&#8217;une méthode <code>size()</code> renvoyant le nombre d&#8217;objets qu&#8217;ils contiennent,
+et <code>insert(objet)</code> insérant un nouvel objet.</p>
+</div>
+<div class="paragraph">
+<p>Une liste est un container particulier.
+Par conséquent <code>Liste</code> hérite de <code>Container</code>.
+Un objet liste dispose donc (en plus des siennes propres) des 2 méthodes <code>size()</code> et <code>insert()</code>.</p>
+</div>
+<div class="paragraph">
+<p>De même, un dictionnaire est un container particulier.
+Par conséquent <code>Dictionnaire</code> hérite de <code>Container</code>.
+Un objet dictionnaire dispose donc lui aussi (en plus des siennes propres) des 2 méthodes <code>size()</code> et <code>insert()</code>.</p>
+</div>
+<div class="paragraph">
+<p>Donc les méthodes <code>size()</code> et <code>insert()</code>, dont bénéficient les classes <code>Liste</code> et <code>Container</code>,
+sont factorisées dans la classe <code>Container</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_lhéritage"><a class="anchor" href="#_lhéritage"></a>L&#8217;héritage</h3>
+<div class="paragraph">
+<p>L’<em>héritage</em> est un mécanisme de transmission des caractéristiques d’une classe (attributs et méthodes) vers une <em>sous-classe</em>.
+C&#8217;est une relation inter-classes qui exprime la relation "<em>est une sorte de</em>" (<em>a kind of</em>).</p>
+</div>
+<div class="paragraph">
+<p>Dans l&#8217;exemple ci-dessous, <code>Inscrit_en_master</code> est une sorte d' <code>Etudiant</code>,
+<code>Etudiant</code> une sorte de <code>Bachelier</code>, etc.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/poo_heritage.svg" alt="poo heritage" width="600">
+</div>
+</div>
+<div class="paragraph">
+<p>L&#8217;héritage permet de concevoir des classes générales, puis progressivement de créer de
+nouvelles classes plus spécialisées, en procédant par ajouts ou différences.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Vocabulaire</dt>
+<dd>
+<p>Si A, B et C sont 3 classes, si C hérite de B et B hérite de A, alors :</p>
+<div class="ulist">
+<ul>
+<li>
+<p>A et B sont des <em>super-classes</em> de C,</p>
+</li>
+<li>
+<p>B est une super-classe directe_ de C,</p>
+</li>
+<li>
+<p>B et C sont des sous-classes de A.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Héritage simple</dt>
+<dd>
+<p>L&#8217;héritage est simple lorsqu&#8217;une classe a au plus une classe de base directe.
+On obtient alors un arbre d&#8217;héritage :</p>
+</dd>
+</dl>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/poo_hsimple.svg" alt="poo hsimple" width="400">
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Héritage multiple</dt>
+<dd>
+<p>L&#8217;héritage est multiple lorsqu&#8217;une classe peut avoir plusieurs classes de base directes.
+On obtient alors un graphe d&#8217;héritage :</p>
+</dd>
+</dl>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/poo_hmultiple.svg" alt="poo hmultiple" width="500">
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Classe abstraite</dt>
+<dd>
+<p>Une classe destinée uniquement à servir de classe de base pour concevoir de nouvelles classes est appelée une <em>classe abstraite</em>.
+C’est en général une classe dont l’implémentation est insuffisante pour représenter complètement un objet réel.
+Une classe abstraite ne peut pas être instanciée.
+Dans l&#8217;exemple ci-dessus, <code>Forme</code> est une classe abstraite, car elle ne contient pas assez d&#8217;information pour y implémenter une méthode <code>tracer()</code>.</p>
+</dd>
+<dt class="hdlist1">Polymorphisme</dt>
+<dd>
+<p>Le polymorphisme permet d&#8217;utiliser de façon homogène des objets de différents types, malgré leurs comportements
+spécifiques.
+Par exemple, si toutes les classes ci-dessus disposent d&#8217;une méthode <code>tracer()</code>,
+alors le polymorphisme permet d&#8217;écrire :</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">for f in [cercle1, carre1, losange1, carre2, trapeze1, cercle2]:
+  f.tracer()</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>bien que <code>tracer()</code> ait une implémentation propre pour chaque type de formes.</p>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p class="center">
+  <span style="font-size: 0.9em;">
+    <a href="https://jacquelincharbonnel.github.io/">Jacquelin Charbonnel</a>
+    <!-- &nbsp; &mdash; &nbsp; -->
+    &nbsp; &nbsp;
+    &copy;Creative Commons BY-NC-SA 4.0
+  </span>
+  </p>
+</footer>
+
+<script>
+var myDate = new Date(document.lastModified);
+myNewDate = new Intl.DateTimeFormat(
+            undefined,
+            {year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit"}
+        )
+        .format(myDate).replace(/\./g, '-');
+document.getElementById("lastmodify").innerHTML = myNewDate ;
+</script>
+
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

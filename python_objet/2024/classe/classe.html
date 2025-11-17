@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Membres de classe :: Supports</title>
+    <link rel="canonical" href="https://jacquelincharbonnel.github.io/supports/python_objet/2024/classe/classe.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<!-- reference des feuilles de styles supplémentaires -->
+<link rel="stylesheet" href="../../../_/css/layout.css">
+<link rel="stylesheet" href="../../../_/css/content.css">
+
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://jacquelincharbonnel.github.io/supports">Supports</a>
+  <!-- suppression du burger du bandeau
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+-->      
+    </div>
+<!-- suppression des boutons du bandeau
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+-->
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="python_objet" data-version="2024">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">Python objet</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../poo/poo.html">Concepts de la POO</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../objet/objet.html">Objet</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../objet/Tortue/Tortue.html">Exercice 1</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../objet/Frigo/Frigo.html">Exercice 2</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../objet/IPaddr/IPaddr.html">Exercice 3</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../objet/TicTacToe/tictactoe.html">Problème 1</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../objet/Torche/torche.html">Problème 2</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../operateurs/operateurs.html">Opérateurs</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../operateurs/domino/domino.html">Problème</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="classe.html">Membres de classe</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="capteurs/capteurs.html">Problème</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../heritage/heritage.html">Héritage</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../heritage/Biodiversite/biodiversite.html">Problème 1</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../heritage/Formes/formes.html">Problème 2</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../heritage/debrief.html">Debriefing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../heritage/flotte/flotte.html">Problème 3</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../heritage/Biblio/biblio.html">Problème 4</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../exception/exception.html">Exceptions</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../exception/Poker/poker.html">Problème</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../internals/internals.html">Debriefing</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../internals/muabilite.html">Muabilité</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../internals/hashable.html">Hashable</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Applications</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../app_iter/iter.html">Itérable</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../app_files/files.html">Lecture/écriture de données</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../app_contextman/context.html">Context manager</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../app_serialisation/serialisation.html">Sérialisation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../app_callable/callable.html">Callables</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../packaging/packaging.html">Packaging</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../eval/biblio.html">Projet</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../heritage/BiblioScrap/BiblioScrap.html">Projet</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Python objet</span>
+    <span class="version">2024</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../../C/2023/index.html">C (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../C/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../concurrence/2024/index.html">Concurrence (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../concurrence/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../linux_context/2025/index.html">Linux contexte (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../linux_context/2025/index.html">2025</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">Python objet</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Python objet</a></li>
+    <li><a href="classe.html">Membres de classe</a></li>
+  </ul>
+</nav>
+<!-- supression de "edit this page"
+  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/python_objet/./modules/classe/pages/classe.adoc">Edit this Page</a></div>
+-->
+</div>
+  <!-- ajout de la date de modification -->
+  <div class="lastmodify"> modifié le <span id="lastmodify"/> </div>
+  <!-- fin ajout -->
+  <div class="content">
+<aside class="toc sidebar" data-title="Plan" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Membres de classe</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="imageblock right">
+<div class="content">
+<img src="_images/classe.png" alt="classe" width="150">
+</div>
+</div>
+<div class="paragraph">
+<p>Les membres (c&#8217;est-à-dire les attributs et les méthodes) ont été définis jusqu&#8217;ici au niveau des instances.
+Mais on peut en définir aussi au niveau d&#8217;une classe.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="attribut"><a class="anchor" href="#attribut"></a>1. Attribut de classe</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Contrairement à un attribut d&#8217;instance, propre à chaque instance,
+un attribut de classe est partagé par toutes les instances de la classe.</p>
+</div>
+<div class="paragraph">
+<p>Exemple : on voudrait que le classe <code>Fraction</code> ait 2 comportements distincts au choix :
+soit les instances se simplifient automatiquement, soit elles restent inchangés.
+On veut décider en début de programme si l&#8217;on veut que les fractions se simplifient ou pas.
+Cette propriété s&#8217;applique alors à l&#8217;ensemble de l&#8217;application, pour chaque instance.
+Ce qui veut dire que si la classe est en mode simplification, alors toutes instances du programme vont se simplifier.</p>
+</div>
+<div class="paragraph">
+<p>Pour cela, on va utiliser un attribut de classe (en l&#8217;occurence ici <code>reduction</code>) pour mémoriser le mode de fonctionnement courant :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">from math import gcd
+
+class Fraction:
+  reduction = True <i class="conum" data-value="1"></i><b>(1)</b>
+
+  def __init__(self,n,d):
+    self._num = n
+    self._den = d
+    if Fraction.reduction: <i class="conum" data-value="2"></i><b>(2)</b>
+      self.reduire()
+
+  def switch_reduction(self):
+    Fraction.reduction = not Fraction.reduction <i class="conum" data-value="2"></i><b>(2)</b>
+
+  def reduire(self):
+    if self._den==0:
+      raise Exception("le dénominateur est nul")
+    pgcd = gcd(self._num,self._den)
+    self._num //= pgcd
+    self._den //= pgcd
+
+  def __str__(self):
+    return f"{self._num}/{self._den}"</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td><code>reduction</code> est un attribut de classe</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>chaque instance accède à cet attribut de classe</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>ce qui s&#8217;utilise par exemple comme :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">if __name__=="__main__":
+  q1 = Fraction(21,35)
+  q2 = Fraction(9,45)
+  print(q1,q2)                   # 3/5 1/5
+
+  q1.switch_reduction()
+
+  q3 = Fraction(21,35)
+  q4 = Fraction(9,45)
+  print(q3,q4)                   # 21/35 9/45</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Cet attribut a une existence indépendante de toute instance.
+On peut donc le référencer même si aucune instance n&#8217;existe :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">if __name__=="__main__":
+  print(Fraction.reduction)            # True</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Cet attribut est atteignable aussi via n&#8217;importe quelle instance :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">if __name__=="__main__":
+  q1 = Fraction(1,2)
+  q2 = Fraction(2,3)
+  print(Fraction.reduction)      # True
+  print(q1.reduction)            # True
+  print(q2.reduction)            # True
+
+  q1.switch_reduction()
+
+  print(Fraction.reduction)      # False
+  print(q1.reduction)            # False
+  print(q2.reduction)            # False</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>C&#8217;est embêtant de référencer la classe <code>Fraction</code> dans une méthode de la classe Fraction :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">def switch_reduction(self):
+  Fraction.reduction = not Fraction.reduction</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>car renommer la classe Fraction nécessiterait de modifier le code de cette méthode.
+L&#8217;attribut <code>__class__</code> ayant pour valeur la classe courante, on peut écrire avantageusement :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">def switch_reduction(self):
+  self.__class__.reduction = not self.__class__.reduction</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_méthode_de_classe"><a class="anchor" href="#_méthode_de_classe"></a>2. Méthode de classe</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>C&#8217;est une méthode définie au niveau de la classe.
+Elle a donc accès aux attributs de la classe,
+mais pas à ceux des instances (elle ne possède pas le paramètre <code>self</code>).
+Son périmètre d&#8217;action est donc restreint à la classe : elle ne peut appeler que des méthodes de classe.</p>
+</div>
+<div class="paragraph">
+<p>Dans l&#8217;exemple précédent, la méthode <code>switch_reduction()</code> n&#8217;a pas pour objectif d&#8217;interagir avec les instances de <code>Fraction</code>, c&#8217;est donc typiquement une méthode de classe :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">class Fraction:
+  reduction = True <i class="conum" data-value="1"></i><b>(1)</b>
+
+  def __init__(self,n,d):
+    self._num = n
+    self._den = d
+    if Fraction.reduction: <i class="conum" data-value="2"></i><b>(2)</b>
+      Fraction.reduire()
+
+  @classmethod <i class="conum" data-value="1"></i><b>(1)</b>
+  def switch_reduction(cls):
+    cls.reduction = not cls.reduction <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>ceci indique que la méthode qui suit est une méthode de classe</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Conséquence :
+le premier paramètre d&#8217;une méthode de classe ne reçoit pas une instance,
+mais la classe de l’instance pour laquelle elle est appelée
+(c&#8217;est pourquoi il est nommé par convention <code>cls</code>) :</p>
+</div>
+<div class="paragraph">
+<p>Une méthode de classe a une existence indépendante de toute instance.
+Elle peut donc être appelée sans qu&#8217;aucune instance existe :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">if __name__=="__main__":
+  print(Fraction.reduction)            # True
+  Fraction.switch_reduction()
+  print(Fraction.reduction)            # False</code></pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p class="center">
+  <span style="font-size: 0.9em;">
+    <a href="https://jacquelincharbonnel.github.io/">Jacquelin Charbonnel</a>
+    <!-- &nbsp; &mdash; &nbsp; -->
+    &nbsp; &nbsp;
+    &copy;Creative Commons BY-NC-SA 4.0
+  </span>
+  </p>
+</footer>
+
+<script>
+var myDate = new Date(document.lastModified);
+myNewDate = new Intl.DateTimeFormat(
+            undefined,
+            {year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit"}
+        )
+        .format(myDate).replace(/\./g, '-');
+document.getElementById("lastmodify").innerHTML = myNewDate ;
+</script>
+
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Application serveur :: Supports</title>
+    <link rel="canonical" href="https://jacquelincharbonnel.github.io/supports/concurrence/2024/asynchronisme/clientserveur/index.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+<!-- reference des feuilles de styles supplémentaires -->
+<link rel="stylesheet" href="../../../../_/css/layout.css">
+<link rel="stylesheet" href="../../../../_/css/content.css">
+
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://jacquelincharbonnel.github.io/supports">Supports</a>
+  <!-- suppression du burger du bandeau
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+-->      
+    </div>
+<!-- suppression des boutons du bandeau
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+-->
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="concurrence" data-version="2024">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../../index.html">Concurrence (preview)</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../introduction/intro.html">Aperçu</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../generateur/generateur.html">Générateur</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../asyncio.html">Asynchronisme</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../aiohttp/collecte.html">Application #1</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="index.html">Application #2</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../bar/bar.html">Problème</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../multithreading/multithread.html">Multi-threading</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../multithreading/application.html">Application</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../multiprocessing/multiprocessing.html">Multi-processing</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../multiprocessing/sequenceur/sequenceur.html">Problème 1</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../multiprocessing/anagrammes/anagrammes.html">Problème 2</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Concurrence (preview)</span>
+    <span class="version">2024</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../../../C/2023/index.html">C (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../C/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../../index.html">Concurrence (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../../linux_context/2025/index.html">Linux contexte (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../linux_context/2025/index.html">2025</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../../python_objet/2024/index.html">Python objet</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../python_objet/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Concurrence (preview)</a></li>
+    <li><a href="../asyncio.html">Asynchronisme</a></li>
+    <li><a href="index.html">Application #2</a></li>
+  </ul>
+</nav>
+<!-- supression de "edit this page"
+  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/concurrence/./modules/asynchronisme/pages/clientserveur/index.adoc">Edit this Page</a></div>
+-->
+</div>
+  <!-- ajout de la date de modification -->
+  <div class="lastmodify"> modifié le <span id="lastmodify"/> </div>
+  <!-- fin ajout -->
+  <div class="content">
+<aside class="toc sidebar" data-title="Plan" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Application serveur</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Une application serveur est une application offrant un service à d&#8217;autres applications
+(locales ou distantes) appelées <em>applications clientes</em>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_aperçu"><a class="anchor" href="#_aperçu"></a>Aperçu</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>L&#8217;application serveur est un programme à l&#8217;écoute de demandes de connexion provenant souvent de clients connectés au réseau.
+Cette application écoute sur une ou plusieurs adresses IP et un numéro de port.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Adresses IP d&#8217;écoute</dt>
+<dd>
+<p>L&#8217;adresse IP identifie un point de connexion sur le réseau.
+Un serveur peut écouter n&#8217;importe lesquelles de ses adresses.
+Il existe des IP particulières :</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>127.x.y.z</code> qui sont des adresses accessibles uniquement en local :
+une application écoutant seulement sur <code>127.0.0.1</code> ne peut être sollicitée que par des clients résidant sur la même machine</p>
+</li>
+<li>
+<p><code>0.0.0.0</code> qui représente toutes les adresses du serveur.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Port d&#8217;écoute</dt>
+<dd>
+<p>Le port est un entier identifiant le service.
+Les ports &lt;1024 sont réservés à des services internet bien connus (<em>well-known ports</em>).
+Ils sont définis dans le fichier <code>/etc/services</code>.
+Une application sans droit particulier ne peut pas écouter un port &lt;1024.
+Pour le faire, elle doit disposer des droits particuliers.
+C&#8217;est pourquoi ces ports sont appelés <em>ports privilégiés</em>.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>Le couple <code>(IP,port)</code> s&#8217;appelle un <em>network socket</em>.
+C&#8217;est un point d&#8217;entrée de service unique sur le réseau.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_implémentation"><a class="anchor" href="#_implémentation"></a>Implémentation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Lorsqu&#8217;une demande de connexion arrive au serveur, celui choisit ou non de l&#8217;accepter.
+S&#8217;il l&#8217;accepte, alors s&#8217;établit une session au cours de laquelle se déroule un dialogue entre le serveur et le client.</p>
+</div>
+<div class="paragraph">
+<p>Un serveur digne de ce nom ne doit pas faire attendre ses clients.
+Il doit donc être capable de gérer le dialogue avec plusieurs clients simultanément.
+De plus, il doit faire attention à ne pas être monopolisé par un client.
+Or la cadence de chaque dialogue dépend de la réactivité du client,
+ainsi que  de la qualité, des capacités et de l&#8217;encombrement du réseau.
+Donc pour avoir un service fluide, chaque session doit être traitée en asynchrone vis à vis des autres, afin de ne pas introduire de temps d&#8217;attente superflus :
+chaque session doit être gérée à son rythme, indépendamment des autres.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_squelette_dune_application_serveur"><a class="anchor" href="#_squelette_dune_application_serveur"></a>Squelette d&#8217;une application serveur</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Le serveur se compose d&#8217;une première coroutine qui lance l&#8217;écoute sur le réseau et l&#8217;attente des requêtes :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">async def main(addr,port):
+  server = await asyncio.start_server(handle,addr,port) <i class="conum" data-value="1"></i><b>(1)</b>
+
+  async with server:
+    await server.serve_forever() <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>lancement de l&#8217;écoute sur le socket <code>(addr,port)</code> et mémorisation de la fonction à exécuter à chaque connexion</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>boucle d&#8217;attente perpétuelle</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>A chaque connexion, une coroutine (nommée dans l&#8217;exemple ci-dessus <code>handle</code>) sera lancée.
+Ci-dessous un exemple simpliste d&#8217;une telle coroutine qui simplement sort à l&#8217;écran la requête reçue et la réponse qui lui est faite :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">async def handle(reader, writer):
+  data = await reader.read(100) <i class="conum" data-value="1"></i><b>(1)</b>
+  print(f"réception de : {data.decode()}") <i class="conum" data-value="2"></i><b>(2)</b>
+
+  response = "je suis le serveur et voici ma reponse"
+  writer.write(response.encode()) <i class="conum" data-value="3"></i><b>(3)</b>
+  await writer.drain() <i class="conum" data-value="3"></i><b>(3)</b>
+  print(f"envoi de : {response}")
+
+  writer.close()</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>récupération de la requête (sous forme de bytes)</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>conversion en string et affichage</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>envoi de la réponse (sous forme de bytes)</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_squelette_dun_client"><a class="anchor" href="#_squelette_dun_client"></a>Squelette d&#8217;un client</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Le client dispose d&#8217;une coroutine réalisant la demande de connexion vers le serveur, l&#8217;envoi de la requête, l&#8217;attente et la récupération de la réponse.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>L&#8217;usage de coroutines par le client n&#8217;est pas indispensable,
+mais cela lui permet de récupérer sans blocage plusieurs ressources en même temps (par exemple les CSS, images, etc. contenus dans une page web) ou bien de faire du scraping.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">async def send(message,addr,port):
+    reader, writer = await asyncio.open_connection(addr,port)
+
+    print(f'envoi de : {message}')
+    writer.write(message.encode()) <i class="conum" data-value="1"></i><b>(1)</b>
+
+    data = await reader.read(100) <i class="conum" data-value="2"></i><b>(2)</b>
+    print(f'réception de : {data.decode()}') <i class="conum" data-value="3"></i><b>(3)</b>
+
+    writer.close()</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>envoi d&#8217;une requete (sous forme de bytes)</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>attente et lecture de la réponse (sous forme de bytes)</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>sortie à l&#8217;écran de la string correspondante</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_problème"><a class="anchor" href="#_problème"></a>Problème</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Il s&#8217;agit de développer une application client/serveur élémentaire.</p>
+</div>
+<div class="sect2">
+<h3 id="_question_1"><a class="anchor" href="#_question_1"></a>Question 1</h3>
+<div class="paragraph">
+<p>En assemblant les codes ci-dessus, concevoir
+un serveur à l&#8217;écoute sur 127.0.0.1 sur le port non privilégié 1234,
+qui attend l&#8217;arrivée d&#8217;un message 1, et renvoie au client un message 2, en loguant le tout à l&#8217;écran.</p>
+</div>
+<div class="paragraph">
+<p>Concevoir le client envoyant un message au serveur,  en loguant à l&#8217;écran la requête et la réponse.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_question_2"><a class="anchor" href="#_question_2"></a>Question 2</h3>
+<div class="paragraph">
+<p>Modifier le client de façon à ce que l&#8217;adresse IP du serveur sollcité soit variable (fournie en argument de ligne de commande).</p>
+</div>
+<div class="paragraph">
+<p>Le client peut-il se connecter à un serveur distant ?</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_question_3"><a class="anchor" href="#_question_3"></a>Question 3</h3>
+<div class="paragraph">
+<p>Modifier le serveur pour qu&#8217;il écoute sur toutes ses IP.
+Vérifier que cela permet à une autre machine de l&#8217;interroger.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_question_4"><a class="anchor" href="#_question_4"></a>Question 4</h3>
+<div class="paragraph">
+<p>On définit le protocole de communication suivant :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>si le client envoie la chaine <code>"où?"</code>, le serveur renvoie son nom (indice : <code>socket.getfqdn</code>),</p>
+</li>
+<li>
+<p>sinon si le client envoie la chaine <code>"qui?"</code>, le serveur renvoie le nom de l&#8217;utilisateur qui a lancé le serveur (indice : <code>os.getlogin</code>),</p>
+</li>
+<li>
+<p>sinon, si le client envoie la chaine <code>"quand?"</code>, le serveur renvoie la date de dernière modification de son code source (indice : <code>sys.arg[0]</code>, <code>os.lstat</code>, <code>time.ctime</code>) ,</p>
+</li>
+<li>
+<p>sinon, si le client envoie la chaine <code>"comment?"</code>, le serveur renvoie son code source,</p>
+</li>
+<li>
+<p>sinon, le serveur renvoie <code>"pas compris!"</code>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Le serveur ferme la session aussitôt après avoir répondu.</p>
+</div>
+<div class="paragraph">
+<p>Implémenter ce protocole dans le serveur, et adapter le client pour qu&#8217;il puisse dialoguer avec ce nouveau serveur.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_question_5"><a class="anchor" href="#_question_5"></a>Question 5</h3>
+<div class="paragraph">
+<p>On modifie le protocole, en ajoutant une requête <code>"quit!"</code>.</p>
+</div>
+<div class="paragraph">
+<p>Comme précédement, le client envoie une chaine de caractères au serveur, qui lui répond par une chaine de caractères.
+Mais maintenant, la connexion entre le serveur et ce client reste ouverte
+(tant que celui-ci ne lui a pas envoyé <code>"quit!"</code>)
+, ce qui permet au client d&#8217;envoyer d&#8217;autres requêtes dans la foulée (sans ré-établir une nouvelle connexion).
+A la réception de <code>"quit!"</code>, le serveur répond <code>"bye!"</code> et ferme la connexion.</p>
+</div>
+<div class="paragraph">
+<p>Modifier le client et le serveur en conséquence.
+Vérifier que plusieurs clients peuvent tenir une conversation avec le serveur en même temps.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p class="center">
+  <span style="font-size: 0.9em;">
+    <a href="https://jacquelincharbonnel.github.io/">Jacquelin Charbonnel</a>
+    <!-- &nbsp; &mdash; &nbsp; -->
+    &nbsp; &nbsp;
+    &copy;Creative Commons BY-NC-SA 4.0
+  </span>
+  </p>
+</footer>
+
+<script>
+var myDate = new Date(document.lastModified);
+myNewDate = new Intl.DateTimeFormat(
+            undefined,
+            {year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit"}
+        )
+        .format(myDate).replace(/\./g, '-');
+document.getElementById("lastmodify").innerHTML = myNewDate ;
+</script>
+
+<script id="site-script" src="../../../../_/js/site.js" data-ui-root-path="../../../../_"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

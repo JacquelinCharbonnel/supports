@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Opérateurs :: Supports</title>
+    <link rel="canonical" href="https://jacquelincharbonnel.github.io/supports/python_objet/2024/operateurs/operateurs.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<!-- reference des feuilles de styles supplémentaires -->
+<link rel="stylesheet" href="../../../_/css/layout.css">
+<link rel="stylesheet" href="../../../_/css/content.css">
+
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://jacquelincharbonnel.github.io/supports">Supports</a>
+  <!-- suppression du burger du bandeau
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+-->      
+    </div>
+<!-- suppression des boutons du bandeau
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+-->
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="python_objet" data-version="2024">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">Python objet</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../poo/poo.html">Concepts de la POO</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../objet/objet.html">Objet</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../objet/Tortue/Tortue.html">Exercice 1</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../objet/Frigo/Frigo.html">Exercice 2</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../objet/IPaddr/IPaddr.html">Exercice 3</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../objet/TicTacToe/tictactoe.html">Problème 1</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../objet/Torche/torche.html">Problème 2</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="operateurs.html">Opérateurs</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="domino/domino.html">Problème</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../classe/classe.html">Membres de classe</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../classe/capteurs/capteurs.html">Problème</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../heritage/heritage.html">Héritage</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../heritage/Biodiversite/biodiversite.html">Problème 1</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../heritage/Formes/formes.html">Problème 2</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../heritage/debrief.html">Debriefing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../heritage/flotte/flotte.html">Problème 3</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../heritage/Biblio/biblio.html">Problème 4</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../exception/exception.html">Exceptions</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../exception/Poker/poker.html">Problème</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../internals/internals.html">Debriefing</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../internals/muabilite.html">Muabilité</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../internals/hashable.html">Hashable</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Applications</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../app_iter/iter.html">Itérable</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../app_files/files.html">Lecture/écriture de données</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../app_contextman/context.html">Context manager</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../app_serialisation/serialisation.html">Sérialisation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../app_callable/callable.html">Callables</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../packaging/packaging.html">Packaging</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../eval/biblio.html">Projet</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../heritage/BiblioScrap/BiblioScrap.html">Projet</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Python objet</span>
+    <span class="version">2024</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../../C/2023/index.html">C (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../C/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../concurrence/2024/index.html">Concurrence (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../concurrence/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../linux_context/2025/index.html">Linux contexte (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../linux_context/2025/index.html">2025</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">Python objet</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Python objet</a></li>
+    <li><a href="operateurs.html">Opérateurs</a></li>
+  </ul>
+</nav>
+<!-- supression de "edit this page"
+  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/python_objet/./modules/operateurs/pages/operateurs.adoc">Edit this Page</a></div>
+-->
+</div>
+  <!-- ajout de la date de modification -->
+  <div class="lastmodify"> modifié le <span id="lastmodify"/> </div>
+  <!-- fin ajout -->
+  <div class="content">
+<aside class="toc sidebar" data-title="Plan" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Opérateurs</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="imageblock right">
+<div class="content">
+<img src="_images/operateurs.png" alt="operateurs" width="150">
+</div>
+</div>
+<div class="paragraph">
+<p>L&#8217;objectif ici est de voir comment on peut appliquer les opérateurs,
+ habituels agissant sur les types prédéfinis,
+pour réaliser des opérations avec de nouveaux types d&#8217;objets.</p>
+</div>
+<div class="paragraph">
+<p>Par exemple, comment donner un sens à l&#8217;expression <code>z1+z2</code>
+où <code>z1</code> et <code>z2</code> sont des instances du type <code>Complex</code> défini précédemment.</p>
+</div>
+<div class="paragraph">
+<p>Le principe pour étendre la sémantique des opérateurs à de nouveaux types
+passe par la définition de méthodes particulières.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="principe"><a class="anchor" href="#principe"></a>1. Le principe général</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_opérateur_binaire"><a class="anchor" href="#_opérateur_binaire"></a>1.1. Opérateur binaire</h3>
+<div class="paragraph">
+<p>Une opération binaire &nbsp; <code>x&#945;y</code> &nbsp;
+est interprétée comme &nbsp; <code>x.m<sub>&#945;</sub>(y)</code>,
+où <code>m<sub>&#945;</sub></code> est la méthode implémentant l&#8217;opérateur <code>&#945;</code>.
+Par exemple, la méthode implémentant l&#8217;opérateur <code>+</code> étant <code>__add__()</code>,
+alors <code>z1+z2</code> est interprété comme <code>z1.__add__(z2)</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_opérateur_unaire"><a class="anchor" href="#_opérateur_unaire"></a>1.2. Opérateur unaire</h3>
+<div class="paragraph">
+<p>Une opération unaire  &nbsp; <code>&#945;x</code> &nbsp;
+est interprétée comme &nbsp; <code>x.m<sub>&#945;</sub>()</code> ,
+où <code>m<sub>&#945;</sub></code> est la méthode implémentant l&#8217;opérateur <code>&#945;</code>.
+Par exemple, la méthode implémentant l&#8217;opérateur unaire <code>-</code> étant <code>__neg__()</code>,
+<code>-z</code> est interprété comme <code>z.__neg__()</code>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="meme_type"><a class="anchor" href="#meme_type"></a>2. Opérandes de même type</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>On s&#8217;intéresse ici aux opérateurs binaires s&#8217;appliquant à 2 objets de même type, par exemple l&#8217;addition de 2 complexes.
+Dans ce cas, il suffit de créer les méthodes adéquates dans la classe concernée.</p>
+</div>
+<div class="sect2">
+<h3 id="_opérateurs_arithmétiques_binaires"><a class="anchor" href="#_opérateurs_arithmétiques_binaires"></a>2.1. Opérateurs arithmétiques binaires</h3>
+<div class="paragraph">
+<p>Les méthodes implémentant ces opérateurs sont :</p>
+</div>
+<div class="paragraph">
+<p><code>__add__</code>, <code>__sub__</code>, <code>__mul__</code>, etc.</p>
+</div>
+<div class="paragraph">
+<p>Elles prennent en argument un complexe.
+L&#8217;opération est réalisée entre le complexe courant et le complexe passé en argument.
+La méthode retourne un nouveau complexe, résultat de l&#8217;opération.
+L&#8217;objet courant est inchangé.</p>
+</div>
+<div class="paragraph">
+<p>Exemple, définir les 2 méthodes ci-dessous :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">def __add__(self,z):
+  return Complex(self.x+z.x, self.y+z.y)
+
+def __mul__(self,z):
+  return Complex(self.x*z.x-self.y*z.y, self.x*z.y+self.y*z.x)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>va permettre d&#8217;écrire :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">z1= Complex(3,4)
+z2= Complex(3,5)
+
+print(z1+z2)   # print(z1.__add__(z2))
+print(z1*z2)   # print(z1.__mul__(z2))</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_opérateurs_arithmétiques_unaires"><a class="anchor" href="#_opérateurs_arithmétiques_unaires"></a>2.2. Opérateurs arithmétiques unaires</h3>
+<div class="paragraph">
+<p>L&#8217;opposé est un exemple d&#8217;opérateur arithmétique unaire.
+Il est implémenté par la méthode <code>__neg__</code>.</p>
+</div>
+<div class="paragraph">
+<p>Elle ne prend pas d&#8217;argument.
+L&#8217;opération est réalisée à partir du complexe courant.
+La méthode renvoie un nouveau complexe, résultat de l&#8217;opération.
+L&#8217;objet courant est inchangé.</p>
+</div>
+<div class="paragraph">
+<p>Donc définir la méthode :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">def __neg__(self):
+  return Complex(-self.x,-self.y)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>va permettre d&#8217;écrire :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">z= Complex(1,2)
+
+print(-z)     # print(z.__neg__())</code></pre>
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Les équivalences habituelles n&#8217;existent pas.
+Par exemple, ce n&#8217;est pas parce qu&#8217;on sait faire une addition et calculer l&#8217;opposé
+que l&#8217;on peut soustraire de 2 complexes.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_opérateurs_relationnels"><a class="anchor" href="#_opérateurs_relationnels"></a>2.3. Opérateurs relationnels</h3>
+<div class="paragraph">
+<p>Ce sont des opérateurs binaires.</p>
+</div>
+<div class="paragraph">
+<p>Les méthodes implémentant ces opérateurs sont :
+<code>__lt__</code>, <code>__le__</code>, <code>__eq__</code>, <code>__ne__</code>, <code>__gt__</code> et <code>__ge__</code>.</p>
+</div>
+<div class="paragraph">
+<p>Elles prennent en argument un complexe.
+L&#8217;opération est réalisée entre le complexe courant et le complexe passé en argument.
+La méthode retourne un booléen, résultat de l&#8217;opération.</p>
+</div>
+<div class="paragraph">
+<p>Donc définir la méthode :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">def __eq__(self,z):
+  return self.x==z.x and self.y==z.y</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>permet d&#8217;écrire :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">z1= Complex(3,4)
+z2= Complex(3,5)
+
+if z1==z2:  # if z1.__eq__(z2):
+  ..</code></pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Par défaut, <code>__ne__</code> renvoie la négation de <code>__eq__</code>,
+et n’a donc pas a être personnalisé dans la plupart des cas.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>L&#8217;exemple complet donne :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">class Complex:
+  ...
+  def __add__(self,z):
+      return Complex(self.x+z.x, self.y+z.y)
+
+  def __mul__(self,z):
+      return Complex(self.x*z.x-self.y*z.y, self.x*z.y+self.y*z.x)
+
+  def __neg__(self):
+      return Complex(-self.x,-self.y)
+
+  def __eq__(self,z):
+      return self.x==z.x and self.y==z.y
+
+if __name__=="__main__":
+  z1= Complex(3,4)
+  z2= Complex(3,5)
+  z3= Complex(3,4)
+
+  print(z1+z2)
+  print(z1*z2)
+  print(-z1)
+
+  print(z1==z2)          # False
+  print(z1!=z2)          # True
+  print(z1&lt;z2)           # TypeError: '&lt;' not supported between instances of 'Complex' and 'Complex'
+  print(z1==z3,z1 is z3) # True False</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_opérateurs_de_modification_sur_place"><a class="anchor" href="#_opérateurs_de_modification_sur_place"></a>2.4. Opérateurs de modification <em>sur place</em></h3>
+<div class="paragraph">
+<p>Ce sont les opérateurs <code> +=</code>, <code>*=</code>, etc.
+Sur les types prédéfinis, <code>x&#945;=y</code>
+signifie <code>x=x&#945;y</code> .
+Par exemple, <code>x+=y</code> signifie <code>x=x+y</code>,
+ <code>x/=y</code> signifie <code>x=x/y</code>, etc.</p>
+</div>
+<div class="paragraph">
+<p>Cette relation implicite n&#8217;existe pas pour les types créés par le programmeur.
+Même si l&#8217;on a défini <code>z1+z2</code> entre 2 complexes, cela n&#8217;autorise pas l&#8217;écriture de <code>z1+=z2</code>.
+Il faut donc définir ces opérateurs explicitement si l&#8217;on veut en disposer.</p>
+</div>
+<div class="paragraph">
+<p>Les méthodes à utiliser sont :</p>
+</div>
+<div class="paragraph">
+<p><code>__iadd__</code>, <code>__isub__</code>, <code>__imul__</code>, etc.</p>
+</div>
+<div class="paragraph">
+<p>Exemple :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">class Complex:
+  ...
+  def __iadd__(self,z):
+      self.x += z.x
+      self.y += z.y
+      return self
+
+  def __imul__(self,z):
+      self.x = self.x*z.x-self.y*z.y
+      self.y = self.x*z.y+self.y*z.x
+      return self
+
+if __name__=="__main__":
+  z1 = Complex(3,4)
+  z2 = Complex(1,5)
+  z1 += z2
+  z1 *= z2</code></pre>
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Ces méthodes doivent retourner <code>self</code>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="types_differents"><a class="anchor" href="#types_differents"></a>3. Opérandes de types différents</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Il s’agit par exemple de définir des opérations entre 1 complexe et 1 réel (dans cet ordre).
+Pour cela, on teste le type du paramètre (par exemple, avec <code>isinstance</code>),
+et on fait le calcul approprié.
+Exemple :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">class Complex:
+  # ...
+  def __add__(self,z):
+    if isinstance(z,Complex):
+      return Complex(self.x+z.x, self.y+z.y)
+    elif isinstance(z,int) or isinstance(z,float):
+      return Complex(self.x+z, self.y)
+    else:
+      raise RuntimeError("opération non implémentée")
+
+if __name__=="__main__":
+  z= Complex(1,1)
+
+  print(z+z)      # 2+2i
+  print(z+1)      # 2+i <i class="conum" data-value="1"></i><b>(1)</b>
+  print(1+z)      # TypeError: unsupported operand type(s) for +: 'int' and 'Complex' <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>pas de surprise, <code>z+1</code> est interprêté comme <code>z.__add__(1)</code>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>par contre, erreur pour <code>1+z</code>, qui est interprêté comme <code>1.__add__(z)</code>, ce qui n’a pas de sens.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_premier_opérande_non_personnalisable"><a class="anchor" href="#_premier_opérande_non_personnalisable"></a>4. Premier opérande non personnalisable</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Parfois il n&#8217;est pas possible de modifier la classe du premier opérande.
+Par exemple, pour implémenter l&#8217;addition entre un <code>numpy.float16</code> et un complexe,
+il faut pourvoir le faire sans nécessité d&#8217;étendre la classe <code>numpy.float16</code>.
+Parfois ce premier opérande n&#8217;est même pas une instance de classe
+(s&#8217;il est de type <code>int</code>, <code>float</code>, etc.).</p>
+</div>
+<div class="paragraph">
+<p>Si aucune méthode n&#8217;est trouvée dans le premier opérande pour réaliser l&#8217;opération souhaitée,
+alors une méthode alternative est recherchée dans le second.</p>
+</div>
+<div class="paragraph">
+<p>Ces méthodes alternatives sont
+<code>__radd__</code>, <code>__rsub__</code>, <code>__rmul__</code>, etc.</p>
+</div>
+<div class="paragraph">
+<p>Exemple, voici comment on peut définir l&#8217;addition et la multiplication entre un scalaire et un complexe (dans cet ordre) :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">class Complex:
+  ...
+  def __radd__(self,x):
+    return Complex(self.x+x, self.y)
+
+  def __rmul__(self,x):
+    return Complex(self.x*x, self.y*x)
+
+if __name__=="__main__":
+  z = Complex(3,4)
+  print(1+z)
+  print(2+z)</code></pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p class="center">
+  <span style="font-size: 0.9em;">
+    <a href="https://jacquelincharbonnel.github.io/">Jacquelin Charbonnel</a>
+    <!-- &nbsp; &mdash; &nbsp; -->
+    &nbsp; &nbsp;
+    &copy;Creative Commons BY-NC-SA 4.0
+  </span>
+  </p>
+</footer>
+
+<script>
+var myDate = new Date(document.lastModified);
+myNewDate = new Intl.DateTimeFormat(
+            undefined,
+            {year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit"}
+        )
+        .format(myDate).replace(/\./g, '-');
+document.getElementById("lastmodify").innerHTML = myNewDate ;
+</script>
+
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

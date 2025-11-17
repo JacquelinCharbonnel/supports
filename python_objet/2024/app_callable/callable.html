@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Callables :: Supports</title>
+    <link rel="canonical" href="https://jacquelincharbonnel.github.io/supports/python_objet/2024/app_callable/callable.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<!-- reference des feuilles de styles supplémentaires -->
+<link rel="stylesheet" href="../../../_/css/layout.css">
+<link rel="stylesheet" href="../../../_/css/content.css">
+
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://jacquelincharbonnel.github.io/supports">Supports</a>
+  <!-- suppression du burger du bandeau
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+-->      
+    </div>
+<!-- suppression des boutons du bandeau
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+-->
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="python_objet" data-version="2024">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">Python objet</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../poo/poo.html">Concepts de la POO</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../objet/objet.html">Objet</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../objet/Tortue/Tortue.html">Exercice 1</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../objet/Frigo/Frigo.html">Exercice 2</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../objet/IPaddr/IPaddr.html">Exercice 3</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../objet/TicTacToe/tictactoe.html">Problème 1</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../objet/Torche/torche.html">Problème 2</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../operateurs/operateurs.html">Opérateurs</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../operateurs/domino/domino.html">Problème</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../classe/classe.html">Membres de classe</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../classe/capteurs/capteurs.html">Problème</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../heritage/heritage.html">Héritage</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../heritage/Biodiversite/biodiversite.html">Problème 1</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../heritage/Formes/formes.html">Problème 2</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../heritage/debrief.html">Debriefing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../heritage/flotte/flotte.html">Problème 3</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../heritage/Biblio/biblio.html">Problème 4</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../exception/exception.html">Exceptions</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../exception/Poker/poker.html">Problème</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../internals/internals.html">Debriefing</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../internals/muabilite.html">Muabilité</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../internals/hashable.html">Hashable</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Applications</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../app_iter/iter.html">Itérable</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../app_files/files.html">Lecture/écriture de données</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../app_contextman/context.html">Context manager</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../app_serialisation/serialisation.html">Sérialisation</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="callable.html">Callables</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../packaging/packaging.html">Packaging</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../eval/biblio.html">Projet</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../heritage/BiblioScrap/BiblioScrap.html">Projet</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Python objet</span>
+    <span class="version">2024</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../../C/2023/index.html">C (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../C/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../concurrence/2024/index.html">Concurrence (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../concurrence/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../linux_context/2025/index.html">Linux contexte (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../linux_context/2025/index.html">2025</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">Python objet</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Python objet</a></li>
+    <li>Applications</li>
+    <li><a href="callable.html">Callables</a></li>
+  </ul>
+</nav>
+<!-- supression de "edit this page"
+  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/python_objet/./modules/app_callable/pages/callable.adoc">Edit this Page</a></div>
+-->
+</div>
+  <!-- ajout de la date de modification -->
+  <div class="lastmodify"> modifié le <span id="lastmodify"/> </div>
+  <!-- fin ajout -->
+  <div class="content">
+<aside class="toc sidebar" data-title="Plan" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Callables</h1>
+<div class="sect1">
+<h2 id="_callable"><a class="anchor" href="#_callable"></a>1. Callable</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Un callable est un objet que l&#8217;on appelle avec une syntaxe identique à l&#8217;appel de fonction, c&#8217;est-à-dire avec des <code>()</code> entourant d&#8217;éventuels arguments.
+Les fonctions sont des callables,
+les méthodes et les classes aussi.
+On peut vérifier qu’un objet est un callable à l’aide de la fonction booléenne <code>callable()</code> :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">def f(): pass
+
+class C:
+  def m(self): pass
+
+if __name__=="__main__":
+  c = C()
+
+  print(callable(f))        # True
+  print(callable(f()))      # False
+  print(callable(c))        # False
+  print(callable(C))        # True
+  print(callable(c.m))      # True</code></pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_créer_un_callable"><a class="anchor" href="#_créer_un_callable"></a>1.1. Créer un callable</h3>
+<div class="paragraph">
+<p>Pour créer un callable, il suffit de créer une classe sachant interpréter <code>()</code>.
+C&#8217;est le but de la méthode <code>o.__call__()</code>.</p>
+</div>
+<div class="paragraph">
+<p>En effet, si <code>o</code> est une instance de classe, alors
+<code>o()</code> est interprété comme <code>o.__call__()</code>,
+<code>o(1)</code> est interprété comme <code>o.__call__(1)</code>,
+<code>o(1,2)</code> est interprété comme <code>o.__call__(1,2)</code>,
+etc.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Syntaxiquement, <code>o.__call__()</code> accepte donc un nombre quelconque d&#8217;arguments.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Exemple :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">class Multiplicateur:
+  def __init__(self,n):
+    self.n = n
+  def __call__(self,i):
+    return i*self.n
+
+if __name__=="__main__":
+  tripleur = Multiplicateur(3)
+  quadrupleur = Multiplicateur(4)
+
+  for k in range(5):
+    print(tripleur(k), quadrupleur(k)) <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>ici, les objets <code>tripleur</code> et <code>quadrupleur</code> sont utilisés comme des fonctions</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>ce qui donne :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>0  0
+3  4
+6  8
+9 12
+12 16</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_arguments_et_paramètres"><a class="anchor" href="#_arguments_et_paramètres"></a>1.2. Arguments et paramètres</h3>
+<div class="paragraph">
+<p>Les paramètres d&#8217;un callable sont spécifiés à sa définition,
+ce qui impose que des arguments soient fournis à l&#8217;appel pour les initialiser :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">def f(a, b, c, d=1, e=2):   <i class="conum" data-value="1"></i><b>(1)</b>
+  print(f"{a=} {b=} {c=} {d=} {e=}")
+
+f(3, 4, 5)            # a=3 b=4 c=5 d=1 e=2
+f(3, 4, 5, 6)         # a=3 b=4 c=5 d=6 e=2
+f(3, 4, 5, e=7, d=6)  # a=3 b=4 c=5 d=6 e=7
+f(3, 4, d=6, c=5)     # a=3 b=4 c=5 d=6 e=2 <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>les paramètres <code>d</code> et <code>e</code> possèdent une valeur par défaut :
+ils se placent obligatoirement après les autres.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>3 et 4 sont des arguments positionnels, car ils sont repérés par leur position (et sont alors associés aux paramètres de même rang) ; 5 et 6 sont des arguments nommés, car leur valeur est précédée d&#8217;un nom de paramètre : ils peuvent ainsi être placés dans n’importe quel ordre (pour peu qu’ils soient placés après les arguments positionnels).</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_paramètre_de_type_callable"><a class="anchor" href="#_paramètre_de_type_callable"></a>1.3. Paramètre de type callable</h3>
+<div class="paragraph">
+<p>Certaines fonctions <em>builtin</em> de Python acceptent des callables en paramètre,
+comme par exemple <code>les fonctions min</code>, <code>max</code> et <code>sorted</code> :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">def f(a):
+  return abs(a)
+
+print(max(-1,-4,5,0,-6,4, key=f))        # -6
+print(min(-1,-4,5,0,-6,4, key=f))        # 0
+print(sorted([-1,-4,5,0,-6,4], key=f))   # [0, -1, -4, 4, 5, -6]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Pour réaliser leur tâche, ces fonctions comparent non pas les valeurs de la séquence,mais  les valeurs renvoyées par la fonction <code>key</code>.
+Par exemple :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">max(-1,-4,5,0,-6,4, key=f)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>compare <code>abs(-1)</code>, <code>abs(-4)</code>, <code>abs(5)</code>, <code>abs(0)</code>, <code>abs(-6)</code>, <code>abs(4)</code>
+donc 1, 4, 5, 0, 6, 4.
+Le max est 6, donc <code>max</code> renvoie -6, la valeur originale.</p>
+</div>
+<div class="paragraph">
+<p>De même,</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">sorted([-1,-4,5,0,-6,4], key=f)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>renvoie les valeurs des éléments de
+<code>{ 1: -1, 4: -4, 5: 5, 0: 0, 6: -6, 4: 4 }</code>
+triés dans l&#8217;ordre des clés.</p>
+</div>
+<h3 id="_lambda" class="discrete">Lambda</h3>
+<div class="paragraph">
+<p>Une lambda est une fonction anonyme définie <em>à la volée</em>.
+Par exemple <code>lambda x: x**2</code> définie la fonction  x &#8594; x².
+Exemple :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">f = lambda x,y : x**2+y**2     # f(x,y)=x²+y²
+
+print(f(1,-1))   # 2
+
+print(f)         # &lt;function &lt;lambda&gt; at 0x7f0483cf9f30&gt;
+print(type(f))   # &lt;class 'function'&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>f</code> est donc une fonction définie de façon particulière, mais globalement équivalente à :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">def f(x,y):
+  return x**2+y**2</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>L&#8217;intérêt d&#8217;une lambda, c&#8217;est donc justement de pouvoir créer une fonction <em>à la volée</em>,
+sans avoir à la définir avec un traditionnel &#8220; def ... : &#8221;.
+L&#8217;écriture s&#8217;en trouve allégée.
+Par exemple, lorsqu&#8217;une fonction attend un callable,
+on peut lui fournir directement le code :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">print(max(-1,-4,5,0,-6,4, key=lambda x: abs(x)))
+print(sorted([-1,-4,5,0,-6,4], key=lambda x: abs(1-x)))           # éloignement de 1
+print(sorted([-1,-4,5,0,-6,4], key=lambda x: -1 if x&lt;0 else 1 ))  # sépare les positifs des négatifs</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_lopérateur_splat"><a class="anchor" href="#_lopérateur_splat"></a>1.4. L&#8217;opérateur splat</h3>
+<div class="paragraph">
+<p>L&#8217;opérateur <code>*</code> permet de récupérer le tuple des arguments positionnels en surplus :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">def f(a,b,*args):
+  print(a,b,args)
+
+f(1, 2, 3, 'a', 'b', None)   # (3, 'a', 'b', None) <i class="conum" data-value="1"></i><b>(1)</b>
+f(b=1, a=2)                  # 2 1 () <i class="conum" data-value="2"></i><b>(2)</b>
+f(b=1, a=2, c=3)             # TypeError: f() got an unexpected keyword argument 'c' <i class="conum" data-value="3"></i><b>(3)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>1 et 2 passés dans <code>a</code> et <code>b</code>, <code>args</code> reçoit le reste, soit <code>(3,'a','b',None)</code></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>2 et 1 passés dans <code>a</code> et <code>b</code>, pas d&#8217;autres arguments, donc <code>*args</code> est vide</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>2 et 1 passés dans <code>a</code> et <code>b</code>, reste 3 qui n&#8217;est pas positionnel</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Le nom <code>args</code> n&#8217;est qu&#8217;une convention communément adoptée
+(au même titre que <code>self</code> pour le paramètre des méthodes).
+Dans l&#8217;absolu, son nom est quelconque.
+</td>
+</tr>
+</table>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Autre utilisation de splat</dt>
+<dd>
+<p>Utilisé seul, l&#8217;opérateur splat force les paramètres qui le suivent à ne recevoir que des arguments nommés :</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">def f(a, *, b):          <i class="conum" data-value="1"></i><b>(1)</b>
+    print(f"{a=} {b=}")
+
+f(1, b=2)     # a=1 b=2
+f(a=1, b=2)   # a=1 b=2
+f(b=2, a=1)   # a=1 b=2
+f(1,2)        # TypeError: f() takes 1 positional argument but 2 were given <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td><code>b</code> ne pourra recevoir que des arguments nommés</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>le second argument n&#8217;est pas nommé &#8594; erreur</td>
+</tr>
+</table>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_lopérateur_double_splat"><a class="anchor" href="#_lopérateur_double_splat"></a>1.5. L&#8217;opérateur double-splat</h3>
+<div class="paragraph">
+<p>L&#8217;opérateur double-splat récupère le dictionnaire des arguments en surplus
+(qui sont forcément des arguments nommés).
+Il doit se placer après tous les autres paramètres :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">def f(a, b=10, **kwargs):
+  print(f"{a=} {b=} {kwargs=}")
+
+f(1)                  # a=1 b=10 kwargs={}
+f(1, b=2)             # a=1 b=2 kwargs={}
+f(a=1,b=2,c=3,d=4)    # a=1 b=2 kwargs={'c': 3, 'd': 4}
+f(1,c=3,d=4)          # a=1 b=10 kwargs={'c': 3, 'd': 4}
+f(1,c=3,d=4,b=2)      # a=1 b=2 kwargs={'c': 3, 'd': 4}
+f(1,c=3,2,d=4)        # SyntaxError: positional argument follows keyword argument</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Là aussi, le nom du paramètre n&#8217;a pas d&#8217;importance,
+<code>kwargs</code> n&#8217;est qu&#8217;une convention communément adoptée.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_décorateur"><a class="anchor" href="#_décorateur"></a>2. Décorateur</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Un décorateur permet d&#8217;intercaler un traitement entre l&#8217;appel d&#8217;une fonction et son exécution.
+Il crée une fonction à partir d&#8217;une fonction quelconque <code>f</code>, en l&#8217;enrichissant par ajout de code avant et après (d&#8217;où le terme de <em>décorateur</em>).
+Par rapport à la fonction initiale <code>f</code>, la fonction décorée ajoute un pré-traitement et un post-traitement,
+ce qui permet par exemple :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>de vérifier des conditions particulières avant d&#8217;exécuter une fonction, ou après en être sorti,</p>
+</li>
+<li>
+<p>d&#8217;acquérir des ressources pour exécuter une fonction, et les libérer en fin d&#8217;exécution,</p>
+</li>
+<li>
+<p>de tracer les appels de fonctions, la valeur des paramètres, etc.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Lorsqu&#8217;un programme agit dynamiquement sur son propre code, on parle de <em>metaprogrammation</em>.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Formellement, un décorateur est un callable recevant en paramètre un callable et renvoyant un nouveau callable.
+L&#8217;exemple suivant définit le plus simple des décorateurs :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">def addition(a, b):
+    return a + b
+
+def multiplication(a, b):
+    return a * b
+
+def un_decorateur(fct): <i class="conum" data-value="1"></i><b>(1)</b>
+    return fct
+
+f = un_decorateur(addition) <i class="conum" data-value="2"></i><b>(2)</b>
+print(f(1,2))  # 3
+
+g = un_decorateur(multiplication) <i class="conum" data-value="3"></i><b>(3)</b>
+print(f(1,2))  # 2</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Ce décorateur renvoie simplement la fonction qu&#8217;il a reçu.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>equivalent à <code>f=addition</code>, puisque <code>un_decorateur</code> renvoie son argument tel quel</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>equivalent à <code>g=multiplication</code>, puisque <code>un_decorateur</code> renvoie son argument tel quel</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Ce décorateur n&#8217;a pas d&#8217;intérêt, puisqu&#8217;il ne fait rien,
+il permet juste de comprendre le principe : s&#8217;intercaler entre l&#8217;appel d&#8217;une fonction et son exécution.</p>
+</div>
+<div class="paragraph">
+<p>Plus intéressant serait un décorateur affichant le nom de la fonction à chaque appel à cette fonction.
+Si, pour cela, on ajoute un <code>print()</code> au décortateur précédent :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">def nomme(fct):                          # le décorateur
+  """ définition du décorateur """
+  print(f"fonction {fct.__name__}:")
+  return fct</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>alors le résultat n&#8217;est pas à la hauteur :
+le message sort lorsque la fonction est décorée,
+et non, comme espéré, lorsque la fonction décorée est appelée.</p>
+</div>
+<div class="paragraph">
+<p>Pour obtenir le résultat attendu, le décorateur
+ne doit pas exécuter le <code>print</code> lui-même,
+mais le faire exécuter par la fonction qu&#8217;il décore :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">def nomme(f_origin):
+  def f_decoree(a,b):
+    print(f"fonction {f_origin.__name__}")
+    return f_origin(a,b)
+  return f_decoree
+
+def add(a, b):
+    return a + b
+
+def mult(a, b):
+    return a * b
+
+print("&gt;&gt; création des fonctions décorées")
+add_d = nomme(add)
+mult_d = nomme(mult)
+
+print("&gt;&gt; appel aux fonctions décorées")
+print(add_d(1,2))
+print(mult_d(3,4))
+print(mult_d(add_d(5,6),add_d(7,8)))</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>ce qui donne cette fois :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&gt;&gt; création des fonctions décorées
+&gt;&gt; appel aux fonctions décorées
+fonction add
+3
+fonction mult
+12
+fonction add
+fonction add
+fonction mult
+165</pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_lopérateur_pie"><a class="anchor" href="#_lopérateur_pie"></a>2.1. L&#8217;opérateur pie <code>@</code></h3>
+<div class="paragraph">
+<p>L&#8217;opérateur <code>@</code> écrase la fonction initiale par sa décoration.
+Etant donné un décorateur :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">def un_decorateur(...)
+  ...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>alors écrire :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">@un_decorateur
+def f_origin(..):
+  ...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>est équivalent à :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">def f_origin(...)
+  ...
+
+f_origin = un_decorateur(f_origin)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Donc <code>@un_decorateur</code></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>exécute le décorateur avec pour argument la fonction originale
+(celle qui est définie juste après)</p>
+</li>
+<li>
+<p>remplace la fonction originale par la fonction décorée</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Exemple:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">def nomme(f_origin):
+  def f_decoree(a,b):
+    print(f"fonction {f_origin.__name__}:")
+    return f_origin(a,b)
+  return f_decoree
+
+@nomme
+def add(a, b):
+    return a + b
+
+@nomme
+def mul(a, b):
+    return a * b
+
+print(add(1,2))
+print(mul(3,4))
+print(mul(add(5,6),add(7,8)))</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_paramétrer_un_décorateur"><a class="anchor" href="#_paramétrer_un_décorateur"></a>2.2. Paramétrer un décorateur</h3>
+<div class="paragraph">
+<p>Pour paramétrer le décorateur lui-même,
+il suffit de créer une fonction qui retourne un décorateur,
+ce dernier renvoyant à son tour la fonction décorée.
+Exemple :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">from time import sleep, gmtime, strftime
+
+def log(fmt):
+  def decorateur(f):
+    def wrapper(*args,**kwargs):
+      current_time = strftime(fmt, gmtime()) <i class="conum" data-value="1"></i><b>(1)</b>
+      print(f"[{current_time}] {f.__name__}{args}")
+      return f(*args,**kwargs)
+    return wrapper
+  return decorateur</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td><code>gmtime()</code> renvoie l&#8217;instant actuel.
+<code>strftime()</code> transforme un instant en chaine de caractère suivant un certain format (<code>fmt</code>)</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Ce décorateur <code>log</code> trace les appels de fonction avec un horodatage dont le format est un argument du décorateur :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">@log("%T") <i class="conum" data-value="1"></i><b>(1)</b>
+def add(a,b):
+  return a+b
+
+@log("%D") <i class="conum" data-value="2"></i><b>(2)</b>
+def mul(a,b):
+  return a*b</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td><code>strftime("%T",instant)</code> affiche le temps de l&#8217;instant</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td><code>strftime("%D",instant)</code> affiche la date de l&#8217;instant</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Les fonctions décorées n&#8217;ont pas de particularités par rapport à précédemment :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">print(add(1,2))
+print(mul(3,4))
+print(addl(mul(5,6),mul(7,8)))</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>donne :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>[08:27:12] add(1, 2) <i class="conum" data-value="1"></i><b>(1)</b>
+3
+[11/21/22] mul(3, 4) <i class="conum" data-value="2"></i><b>(2)</b>
+12
+[11/21/22] mul(5, 6)
+[11/21/22] mul(7, 8)
+[08:27:13] add(30, 56)
+86</pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>l&#8217;horodatage de <code>add</code> est bien au format &#8220;%T&#8221;</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>l&#8217;horodatage de <code>mul</code> est bien au format &#8220;%D&#8221;</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Les fonctions décorées par <code>log</code> affichent, à l&#8217;entrée,
+ leur nom et la valeur de leurs paramètres,
+ précédés d&#8217;un timestamp au format spécifié en argument au décorateur.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p class="center">
+  <span style="font-size: 0.9em;">
+    <a href="https://jacquelincharbonnel.github.io/">Jacquelin Charbonnel</a>
+    <!-- &nbsp; &mdash; &nbsp; -->
+    &nbsp; &nbsp;
+    &copy;Creative Commons BY-NC-SA 4.0
+  </span>
+  </p>
+</footer>
+
+<script>
+var myDate = new Date(document.lastModified);
+myNewDate = new Intl.DateTimeFormat(
+            undefined,
+            {year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit"}
+        )
+        .format(myDate).replace(/\./g, '-');
+document.getElementById("lastmodify").innerHTML = myNewDate ;
+</script>
+
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

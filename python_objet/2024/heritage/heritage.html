@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Héritage :: Supports</title>
+    <link rel="canonical" href="https://jacquelincharbonnel.github.io/supports/python_objet/2024/heritage/heritage.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<!-- reference des feuilles de styles supplémentaires -->
+<link rel="stylesheet" href="../../../_/css/layout.css">
+<link rel="stylesheet" href="../../../_/css/content.css">
+
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://jacquelincharbonnel.github.io/supports">Supports</a>
+  <!-- suppression du burger du bandeau
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+-->      
+    </div>
+<!-- suppression des boutons du bandeau
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+-->
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="python_objet" data-version="2024">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">Python objet</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../poo/poo.html">Concepts de la POO</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../objet/objet.html">Objet</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../objet/Tortue/Tortue.html">Exercice 1</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../objet/Frigo/Frigo.html">Exercice 2</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../objet/IPaddr/IPaddr.html">Exercice 3</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../objet/TicTacToe/tictactoe.html">Problème 1</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../objet/Torche/torche.html">Problème 2</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../operateurs/operateurs.html">Opérateurs</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../operateurs/domino/domino.html">Problème</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../classe/classe.html">Membres de classe</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../classe/capteurs/capteurs.html">Problème</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="heritage.html">Héritage</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Biodiversite/biodiversite.html">Problème 1</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Formes/formes.html">Problème 2</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="debrief.html">Debriefing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="flotte/flotte.html">Problème 3</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Biblio/biblio.html">Problème 4</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../exception/exception.html">Exceptions</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../exception/Poker/poker.html">Problème</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../internals/internals.html">Debriefing</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../internals/muabilite.html">Muabilité</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../internals/hashable.html">Hashable</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Applications</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../app_iter/iter.html">Itérable</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../app_files/files.html">Lecture/écriture de données</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../app_contextman/context.html">Context manager</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../app_serialisation/serialisation.html">Sérialisation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../app_callable/callable.html">Callables</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../packaging/packaging.html">Packaging</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../eval/biblio.html">Projet</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="BiblioScrap/BiblioScrap.html">Projet</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Python objet</span>
+    <span class="version">2024</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../../C/2023/index.html">C (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../C/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../concurrence/2024/index.html">Concurrence (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../concurrence/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../linux_context/2025/index.html">Linux contexte (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../linux_context/2025/index.html">2025</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">Python objet</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Python objet</a></li>
+    <li><a href="heritage.html">Héritage</a></li>
+  </ul>
+</nav>
+<!-- supression de "edit this page"
+  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/python_objet/./modules/heritage/pages/heritage.adoc">Edit this Page</a></div>
+-->
+</div>
+  <!-- ajout de la date de modification -->
+  <div class="lastmodify"> modifié le <span id="lastmodify"/> </div>
+  <!-- fin ajout -->
+  <div class="content">
+<aside class="toc sidebar" data-title="Plan" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Héritage</h1>
+<div class="sect1">
+<h2 id="_introduction"><a class="anchor" href="#_introduction"></a>1. Introduction</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>L’héritage permet de construire une classe
+(appelée classe <em>héritée</em>, <em>classe dérivée</em> ou <em>sous-classe</em>)
+à partir d’une autre
+(appelée <em>classe de base</em> ou <em>super-classe</em>),
+par différence.
+La sous-classe dispose de tous les attributs
+et de toutes les méthodes de
+sa super-classe.</p>
+</div>
+<div class="paragraph">
+<p>L&#8217;héritage exprime la relation "est une sorte de" (a kind of),
+qu&#8217;il faut bien distinguer de la relation de <em>composition</em> (ou <em>d&#8217;aggrégation</em>).</p>
+</div>
+<div class="dlist discrete">
+<dl>
+<dt>Exemple d&#8217;héritage</dt>
+<dd>
+<p>Soit la classe abstraite <code>Container</code> modélisant quelque chose  pouvant contenir des objets.
+Un objet container dispose d&#8217;une méthode <code>size()</code> renvoyant le nombre d&#8217;objets qu&#8217;il contient,
+et <code>insert(objet)</code> insérant un nouvel objet dans le container.</p>
+<div class="paragraph">
+<p>Soit la classe abstraite <code>Iterable</code> modélisant un ensemble d&#8217;objets que l&#8217;on peut parcourir.
+Un itérable dispose d&#8217;une méthode <code>current()</code> renvoyant l&#8217;objet courant,
+et <code>next()</code> déplaçant l&#8217;objet courant sur le prochain.</p>
+</div>
+<div class="paragraph">
+<p>Une liste est à la fois un container et un itérable.
+Par conséquent <code>Liste</code> peut hériter de <code>Container</code> et de <code>Iterable</code>.
+<code>Liste</code> hérite donc de 2 classes (c&#8217;est de l&#8217;héritage multiple).
+Une liste dispose donc (en plus des siennes propres) des 4 méthodes <code>size()</code>, <code>insert()</code>, <code>current()</code> et <code>next()</code>.</p>
+</div>
+</dd>
+</dl>
+</div>
+<div class="dlist discrete">
+<dl>
+<dt>Exemple de composition</dt>
+<dd>
+<p>Soit la classe Point modélisant un point dans le plan.
+Et soit la classe Segment modélisant un segment de droite.
+Un segment peut être modélisé par 2 points.
+La relation entre Segment et Point n&#8217;est une relation d&#8217;héritage (un segment n&#8217;est pas une sorte de point),
+mais une relation d&#8217;aggrégation :</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">class Point:
+  def __init__(self,x,y):
+    self.x = x
+    self.y = y
+
+class Segment:
+  def __init__(self,a,b):
+    self.a = a
+    self.b = b
+
+s = Segment(Point(1,1),Point(0,2)</code></pre>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_sous_classe"><a class="anchor" href="#_sous_classe"></a>2. Sous-classe</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Soit <code>A</code> une classe, et <code>B</code> une sous-classe de <code>A</code> :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">class A:
+    att = 1
+
+class B(A):                 # B hérite de A
+    pass
+
+if __name__=="__main__":
+  print(B.att)         # -&gt; 1</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>B</code> dispose de l&#8217;attribut de classe <code>att</code> hérité de sa super-classe <code>A</code>.
+De même, la classe <code>B</code> ci-dessous dispose d&#8217;une méthode <code>f()</code> héritée de sa super-classe <code>A</code> :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">class A:
+    def f(self):
+        return 2
+
+class B(A):
+    pass
+
+if __name__=="__main__":
+  b = B()
+  print(b.f())   # -&gt; 2</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Dans l&#8217;exemple c-dessous, <code>B</code> complète <code>A</code> en ajoutant une méthode <code>get()</code> :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">class A:
+    def set_x(self,x):
+        self.x = x
+
+class B(A):
+    def get_x(self):
+        return self.x <i class="conum" data-value="1"></i><b>(1)</b>
+
+if __name__=="__main__":
+  b = B()
+  b.set_x(3)
+  print(b.get_x())    # -&gt; 3</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>cette méthode définie dans <code>B</code> accède à un attribut
+créé par une méthode issue de <code>A</code></td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>La sous-classe peut aussi modifier le comportement issu de sa super-classe,
+en redéfinissant (<em>surchargeant</em>) certaines méthodes.
+Ci-dessous, <code>B</code> surcharge la méthode <code>mod_x()</code> issue de <code>A</code> :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">class A:
+    def set_x(self,x):
+        self.x = x
+
+    def get_x(self):
+        return self.x
+
+    def mod_x(self,k):
+        self.x += k
+
+class B(A):
+    def mod_x(self,k):
+        self.x *= k
+
+if __name__=="__main__":
+  a = A()
+  a.set_x(3)
+  a.mod_x(2)
+  print(a.get_x())    # -&gt; 5
+
+  b = B()
+  b.set_x(3)
+  b.mod_x(2)
+  print(b.get_x())    # -&gt; 6</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_construction_des_objets"><a class="anchor" href="#_construction_des_objets"></a>3. Construction des objets</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_appel_des_constructeurs"><a class="anchor" href="#_appel_des_constructeurs"></a>3.1. Appel des constructeurs</h3>
+<div class="paragraph">
+<p>Soit une classe <code>A</code> doté d&#8217;un constructeur,
+et une sous-classe <code>B</code> de <code>A</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">class A:
+  def __init__(self):
+    self.A_is_built = True
+
+class B(A):
+  pass
+
+if __name__=="__main__":
+  b = B()
+  print(f"{b.A_is_built=}") # -&gt; b.A_is_built=True</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>B</code> hérite de la méthode <code>__init__()</code> de A,
+donc la partie de <code>B</code> héritée de <code>A</code> est correctement initialisé.
+Mais si <code>B</code> possède lui-même un constructeur :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">class A:
+  def __init__(self):
+    self.A_is_built = True
+
+class B(A):
+  def __init__(self):
+    self.B_is_built = True
+
+if __name__=="__main__":
+  a = A()
+  print(f"{a.A_is_built=}") # -&gt; a.A_is_built=True
+
+  b = B()
+  print(f"{b.B_is_built=}") # -&gt; b.B_is_built=True
+  print(f"{b.A_is_built=}") # -&gt; AttributeError: 'B' object has no attribute 'A_is_built'. Did you mean: 'B_is_built'?</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>alors, on constate que le constructeur de <code>A</code> n&#8217;est plus exécuté.
+La partie de <code>B</code> héritée de <code>A</code> n&#8217;est donc pas initialisée,
+et c&#8217;est un problème.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Le constructeur de la super-classe n&#8217;est pas appelé automatiquement dans une sous-classe.
+C&#8217;est un choix de Python, qui n&#8217;est pas universel.
+Par exemple, en C++, le constructeur de la super-classe est automatiquement appelé par le constructeur de la sous-classe.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Pour intialiser la partie de <code>B</code> héritée de <code>A</code>,
+il faut faire un appel explicite au constructeur de <code>A</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">class A:
+  def __init__(self):
+    self.A_is_built = True
+
+class B(A):
+  def __init__(self):
+    A.__init__(self) <i class="conum" data-value="1"></i><b>(1)</b>
+    self.B_is_built = True
+
+if __name__=="__main__":
+  b = B()
+  print(f"{b.B_is_built=}") # -&gt; b.B_is_built=True
+  print(f"{b.A_is_built=}") # -&gt; b.A_is_built=True</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>appel explicite au constructeur de la super-classe</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_super"><a class="anchor" href="#_super"></a>3.2. <code>super()</code></h3>
+<div class="paragraph">
+<p>Mentionner le nom de sa super-classe A dans une classe B n&#8217;est pas judicieux.
+En effet, si, au grè des évolutions, une classe <code>C</code> vient à s&#8217;intercaler,
+dans l&#8217;arbre d&#8217;héritage, entre <code>A</code> et <code>B</code>, alors il faudra reprendre le code de <code>B</code>.</p>
+</div>
+<div class="paragraph">
+<p>Pour éviter d&#8217;utiliser le nom de la super-classe en dur,
+mieux vaut utiliser la fonction <code>super()</code> qui la renvoie (dynamiquement) :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">class A:
+  def __init__(self):
+    self.A_is_built = True
+
+class B(A):
+  def __init__(self):
+    super().__init__() <i class="conum" data-value="1"></i><b>(1)</b>
+    self.B_is_built = True
+
+if __name__=="__main__":
+  b = B()
+  print(f"{b.B_is_built=}") # -&gt; b.B_is_built=True
+  print(f"{b.A_is_built=}") # -&gt; b.A_is_built=True</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>appel explicite au constructeur de la super-classe</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Ce qui permet d&#8217;intercaler une classe <code>C</code> sans douleur :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">class A:
+  def __init__(self):
+    self.A_is_built = True
+
+class C(A):
+  def __init__(self):
+    super().__init__()
+    self.C_is_built = True
+
+class B(C):
+  def __init__(self):
+    super().__init__()
+    self.B_is_built = True
+
+if __name__=="__main__":
+  b = B()
+  print(f"{b.B_is_built=}") # -&gt; b.B_is_built=True
+  print(f"{b.C_is_built=}") # -&gt; b.C_is_built=True
+  print(f"{b.A_is_built=}") # -&gt; b.A_is_built=True</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_exemple"><a class="anchor" href="#_exemple"></a>3.3. Exemple</h3>
+<div class="paragraph">
+<p>Soit la classe <code>Personne</code>, et <code>Etudiant</code> une sous-classe :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">class Personne:
+  def __init__(self,nom):
+    self.nom = nom
+
+  def __str__(self):
+    return f"{self.nom=}"
+
+class Etudiant(Personne):
+  def __init__(self,nom,master):
+    super().__init__(nom)  <i class="conum" data-value="1"></i><b>(1)</b>
+    self.master = master
+
+  def __str__(self):
+    return f"{self.nom=}, {self.master=}"
+
+if __name__=="__main__":
+  jean = Etudiant("Neymar",2022)
+  print(jean) # -&gt; self.nom='Neymar', self.master=2022</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>initialisation explicite de la partie héritée</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Similairement à ce qui a été fait pour <code>__init__()</code>,
+on pourrait réutiliser la méthode <code>__str()__</code> de <code>Personne</code>
+dans la méthode <code>__str()__</code> de <code>Etudiant</code>, pour afficher la partie héritée :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">class Personne:
+  def __init__(self,nom):
+    self.nom = nom
+
+  def __str__(self):
+    return f"{self.nom=}"
+
+class Etudiant(Personne):
+  def __init__(self,nom,master):
+    super().__init__(nom)
+    self.master = master
+
+  def __str__(self):
+    return f"{super().__str__()}, {self.master=}" <i class="conum" data-value="1"></i><b>(1)</b>
+
+if __name__=="__main__":
+  jean = Etudiant("Neymar",2022)
+  print(jean) # -&gt; self.nom='Neymar', self.master=2022</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>appel explicite à la méthode <code>__str()__</code> de la super-classe</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>En évitant d&#8217;avoir à spécifier le nom de la super-classe en dur, l&#8217;usage de  <code>super()</code> facilite d&#8217;insertion d&#8217;une nouvelle classe dans l&#8217;arbre d&#8217;héritage :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">class Personne:
+  def __init__(self,nom):
+    self.nom = nom
+
+  def __str__(self):
+    return f"{self.nom=}"
+
+class Bachelier(Personne):   <i class="conum" data-value="1"></i><b>(1)</b>
+  def __init__(self,nom,bac):
+    super().__init__(nom)
+    self.bac = bac
+
+  def __str__(self):
+    return f"{super().__str__()}, {self.bac=}"
+
+class Etudiant(Bachelier):
+  def __init__(self,nom,bac,master):
+    super().__init__(nom,bac)
+    self.master = master
+
+  def __str__(self):
+    return f"{super().__str__()}, {self.master=}"
+
+if __name__=="__main__":
+  print(jean) # -&gt; self.nom='Neymar', self.bac=2018, self.master=2022</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td><code>Bachelier</code> intercalée entre <code>Personne</code> et <code>Etudiant</code></td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><code>Bachelier</code> a été intercalée, et (presque) aucune modification n&#8217;a été nécessaire dans <code>Etudiant</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_récapitulatif"><a class="anchor" href="#_récapitulatif"></a>3.4. Récapitulatif</h3>
+<div class="paragraph">
+<p>Soit <code>B</code> une classe qui hérite de <code>A</code>.
+Créer une instance de <code>B</code>, c&#8217;est donc créer d&#8217;abord une instance de <code>A</code>,
+puis y ajouter ce qu&#8217;il manque pour parvenir à un objet de type <code>B</code>.
+Si la construction de l&#8217;instance de <code>A</code> nécessite des arguments,
+cela doit être pris en charge par l&#8217;instance de <code>B</code>, lors de sa création :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">class A:
+  def __init__(self,x):
+    self.x = x
+
+  def get_x(self):
+    return self.x
+
+class B(A):
+  def __init__(self,x,y):  <i class="conum" data-value="1"></i><b>(1)</b>
+    A.__init__(self,x)     <i class="conum" data-value="2"></i><b>(2)</b>
+    self.y = y             <i class="conum" data-value="3"></i><b>(3)</b>
+
+  def get_y(self):
+      return self.y
+
+if __name__=="__main__":
+  b = B(1,2)
+  print(b.get_x(),b.get_y())</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Pour initialiser l&#8217;instance de <code>B</code>&#8230;&#8203;</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>&#8230;&#8203; on initialise ce qui vient de <code>A</code>&#8230;&#8203;</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>&#8230;&#8203; puis on ajoute le complément.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>La fonction <code>super()</code> renvoie la super-classe, ce qui permet d&#8217;écrire de façon  équivalente :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">class B(A):
+  def __init__(self,x,y):
+    super().__init__(x)  # équivalent à A.__init__(self,x)
+    self.y = y</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>L&#8217;héritage permet de factoriser du code entre différentes classes issues d&#8217;une même super-classe.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="methode"><a class="anchor" href="#methode"></a>4. L&#8217;appel de méthodes en détail</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>La sous-classe peut donc compléter sa super-classe, et aussi modifier son comportement
+en redéfinissant (surchargeant) certaines méthodes.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">class A:
+  def f(self):
+    print("  inside A.f")
+  def g(self):
+    print("  inside A.g")
+  def i(self):
+    print("  inside A.i")
+  def j(self):
+    print("  inside A.j")
+
+class B(A):
+  def f(self):
+    print("  inside B.f")
+  def h(self):
+    print("  inside B.h")
+    self.f()
+  def i(self):
+    print("  inside B.i")
+    super().i()
+  def j(self):
+    print("  inside B.j")
+    self.g()
+
+if __name__=="__main__":
+  b = B()
+  b.f()       # "inside B.f" <i class="conum" data-value="1"></i><b>(1)</b>
+  b.g()       # "inside A.g" <i class="conum" data-value="2"></i><b>(2)</b>
+  b.h()       # "inside B.h" "inside B.f" <i class="conum" data-value="3"></i><b>(3)</b>
+  b.i()       # "inside B.i" "inside A.i" <i class="conum" data-value="4"></i><b>(4)</b>
+  b.j()       # "inside B.j" "inside A.g" <i class="conum" data-value="5"></i><b>(5)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>appelle <code>B.f</code> puisque <code>f</code> est surchargée dans <code>B</code></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>appelle <code>A.f</code> puisque <code>f</code> n&#8217;existe pas dans <code>B</code></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>appelle <code>B.h</code>, qui appelle <code>B.f</code> puisque <code>self</code> est de type <code>B</code></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>appelle <code>B.i</code> qui appelle <code>A.i</code> puisque <code>super()</code> renvoie <code>A</code></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>appelle <code>B.j</code> qui appelle <code>B.g</code>, qui n&#8217;existe pas, donc qui est remplacée par <code>A.g</code> héritée</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="abstraite"><a class="anchor" href="#abstraite"></a>5. Classe abstraite</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Par définition, une classe abstraite est une classe qui n’a pas vocation à être instanciée, mais seulement à servir de classe de base pour dériver d’autres classes.
+C’est en général une classe dont le contenu est insuffisant pour représenter complètement un objet réel.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_héritage_multiple"><a class="anchor" href="#_héritage_multiple"></a>6. Héritage multiple</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>L&#8217;héritage est dit multiple lorsqu&#8217;une classe possède plusieurs classes de base directes.</p>
+</div>
+<div class="listingblock">
+<div class="title">Exemple</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">class A:
+  pass
+
+class B:
+  pass
+
+class C(A,B): <i class="conum" data-value="1"></i><b>(1)</b>
+  pass</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>héritage multiple</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_isinstance_et_class"><a class="anchor" href="#_isinstance_et_class"></a>6.1. isinstance() et __class__</h3>
+<div class="paragraph">
+<p><code>isinstance(objet,classe)</code> et une fonction booléenne
+indiquant si <code>objet</code> est une instance (directe ou indirecte) de <code>classe</code>.</p>
+</div>
+<div class="paragraph">
+<p><code>__class__</code> est un attribut de chaque classe contenant ses caractéristiques, par exemple :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>un attribut <code>__name__</code> ayant pour valeur le nom de la classe,</p>
+</li>
+<li>
+<p>un attribut <code>__bases__</code> ayant pour valeur la liste des classes de base directes.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Exemple</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">class A:
+  pass
+
+class B(A):
+  pass
+
+class C:
+  pass
+
+class D(B,C):
+  pass
+
+if __name__=="__main__":
+  a = A()
+  b = B()
+  d = D()
+
+  print(a.__class__.__name__) # A
+  print(b.__class__.__name__) # B
+  print(d.__class__.__name__) # D
+
+  print(isinstance(a,A),   # True
+        isinstance(b,B),   # True
+        isinstance(b,A),   # True
+        isinstance(b,C),   # False
+        isinstance(d,D),   # True
+        isinstance(d,B),   # True
+        isinstance(d,C),   # True
+        isinstance(d,A))   # True</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="polymorphisme"><a class="anchor" href="#polymorphisme"></a>7. Polymorphisme</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Formellement, le polymorphisme est la propriété d&#8217;un élément à pouvoir se présenter sous plusieurs formes.
+Il se matérialise ici par la capacité à réaliser des opérations s&#8217;effectuant différemment suivant le contexte :
+une opération plus ou moins abstraite définie dans une super-classe, qui se réalise concrètement et spécifiquement dans une sous-classe.</p>
+</div>
+<div class="sect2">
+<h3 id="_le_principe"><a class="anchor" href="#_le_principe"></a>7.1. Le principe</h3>
+<div class="paragraph">
+<p>Une classe peut utiliser les méthodes de ses sous-classes
+à la place des siennes, de façon transparente et automatique :</p>
+</div>
+<div class="listingblock">
+<div class="title">Exemple :</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">class A:
+    def f(self):
+      print("  inside A.f")
+
+    def k(self):
+      print("  inside A.k")
+      self.f() <i class="conum" data-value="1"></i><b>(1)</b>
+
+class B(A):
+    def f(self):
+      print("  inside B.f")</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>une simple lecture statique des classes <code>A</code> et <code>B</code>
+ne permet pas de déterminer quelle méthode est appelée ici</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Et en effet, cela varie :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">a = A()
+a.k()         # inside A.k
+              # inside A.f
+
+b = B()
+b.k()         # inside A.k
+              # inside B.f</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_limplémentation"><a class="anchor" href="#_limplémentation"></a>7.2. L&#8217;implémentation</h3>
+<div class="paragraph">
+<p>Voici un exemple de ce qu&#8217;il ne faut pas faire :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">import math
+
+class Shape:
+  def area(self):
+    if isinstance(self,Circle):
+      return self.surface()
+    if isinstance(self,Square):
+      return self.space()
+
+class Circle(Shape):
+  def __init__(self,radius):
+    self.radius = radius
+
+  def surface(self):
+    return math.pi * self.radius**2
+
+class Square(Shape):
+  def __init__(self,side):
+    self.side = side
+
+  def space(self):
+    return self.side**2
+
+if __name__=="__main__":
+  shape1 = Circle(10)
+  shape2 = Square(14)
+  print(shape1.area())  # 314.1592653589793
+  print(shape2.area())  # 196</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Dans ce programme, qui calcule correctement les surfaces des cercles et carrés, il y a un problème :
+la classe <code>Shape</code> référence explicitement ses sous-classes <code>Circle</code> et <code>Square</code>.
+Or le concepteur de <code>Shape</code> n&#8217;est pas censé connaitre toutes les classes qui seront dérivées de sa classe.
+D&#8217;ailleurs, elles n&#8217;existent probablement pas au moment où il conçoit <code>Shape</code>.
+Pour chaque nouvelle forme à venir, il faudra modifier le constructeur de <code>Shape</code>.
+Par exemple, le concepteur d&#8217;une classe <code>Triangle</code>, qui n&#8217;est qu&#8217;un utilisateur de la classe <code>Shape</code>, va devoir la modifier : ça ne va pas.</p>
+</div>
+<div class="paragraph">
+<p>La POO permet de faire beaucoup mieux :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">class Shape:
+  pass
+
+class Circle(Shape):
+  def __init__(self,radius):
+    self.radius = radius
+
+  def area(self):
+    return math.pi * self.radius**2
+
+class Square(Shape):
+  def __init__(self,side):
+    self.side = side
+
+  def area(self):
+    return self.side**2</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Ici, plus de dépendance <em>super classe</em> &#8594; <em>sous classe</em>, c&#8217;est nettement mieux.
+Mais le programmeur qui va utiliser <code>Shape</code> pour dériver ses propres  classes doit comprendre que celles-ci doivent implémenter une méthode <code>area(self)</code>, sinon :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">import math
+
+class Shape:
+  pass
+...
+class Triangle(Shape):
+  def __init__(self,side1,side2,side3):
+    self.side1 = side1
+    self.side2 = side2
+    self.side3 = side3
+
+  def surface(self):
+    ...
+
+if __name__=="__main__":
+  shape1 = Triangle(3,3,4)
+  print(shape1.area())  # AttributeError: 'Triangle' object has no attribute 'area'</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Il y a moyen de rendre les choses plus explicites pour le développeur.
+Par exemple :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">class Shape:
+    def area(self):
+        raise NotImplementedError("method area() must be redefined in subclasses")
+
+class Circle(Shape):
+  def __init__(self,radius):
+    self.radius = radius
+
+  def area(self):
+    return math.pi * self.radius**2
+
+class Triangle(Shape):
+  def __init__(self,side1,side2,side3):
+    self.side1 = side1
+    self.side2 = side2
+    self.side3 = side3
+
+  def surface(self):
+    ...
+
+if __name__=="__main__":
+  shape1 = Circle(10)
+  shape2 = Triangle(3,3,4)
+  print(shape1.area())
+  print(shape2.area())  # NotImplementedError: method area() must be redefined in Shape's subclasses</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Une autre façon de faire consiste à utiliser la classe <code>ABC</code> (pour <em>Abstract Base Classes</em>) du module <code>abc</code>,
+qui est justement faite pour ça.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_la_magie_du_polymorphisme"><a class="anchor" href="#_la_magie_du_polymorphisme"></a>7.3. La magie du polymorphisme</h3>
+<div class="paragraph">
+<p>Le polymorphisme contribue fortement à la réutilisabilité des composants logiciels.
+L&#8217;exemple ci-dessous le met en évidence.</p>
+</div>
+<div class="paragraph">
+<p>Soit la situation suivante :</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Une super-classe A est réalisée à un instant t par un développeur d1.</p>
+</li>
+<li>
+<p>Elle est réutilisée bien après t par un développeur d2 sans concertation avec d1, pour créer une sous-classe B (sans modifier A bien-entendu).</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Malgré ce décalage temporelle, une méthode de la classe A peut appeler, sans aucune modification,
+une méthode de B qui n&#8217;existait pas au moment où A a été créée.
+C&#8217;est l&#8217;aspect magique du polymorphisme.</p>
+</div>
+<div class="paragraph">
+<p>Pour exploiter ce concept, le développeur d1 doit imaginer tout le potentiel de sa classe A,
+comment elle pourrait être utilisée dans le futur.
+Il doit faire en sorte de permettre au développeur qui réutilisera sa classe A pour créer une classe dérivée B,
+de pouvoir insérer son propre code là où c&#8217;est judicieux.
+Concrètement, cela veut dire
+créer dans A des méthodes destinées à être redéfinies dans les futures sous-classes.
+Et même parfois à créer des méthodes qui ne font rien dans A (des <em>hooks</em>),
+et dont le seul but est d&#8217;être redéfinies dans B.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>En Python, ces méthodes particulières ne se distinguent pas des autres méthodes.</p>
+</div>
+<div class="paragraph">
+<p>En C++, les méthodes destinées à être redéfinies dans les sous-classes sont appelées <em>méthodes virtuelles</em>,
+et parmi elles, celles qui ne font rien sont des <em>méthodes virtuelles pures</em>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Avec un langage compilé, le polymorphisme est encore plus étonnant.
+En effet, une méthode d&#8217;une classe A compilée dans le passé peut appeler une méthode d&#8217;une sous-classe créée bien après A, sans nécessité d&#8217;être recompilée.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p class="center">
+  <span style="font-size: 0.9em;">
+    <a href="https://jacquelincharbonnel.github.io/">Jacquelin Charbonnel</a>
+    <!-- &nbsp; &mdash; &nbsp; -->
+    &nbsp; &nbsp;
+    &copy;Creative Commons BY-NC-SA 4.0
+  </span>
+  </p>
+</footer>
+
+<script>
+var myDate = new Date(document.lastModified);
+myNewDate = new Intl.DateTimeFormat(
+            undefined,
+            {year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit"}
+        )
+        .format(myDate).replace(/\./g, '-');
+document.getElementById("lastmodify").innerHTML = myNewDate ;
+</script>
+
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

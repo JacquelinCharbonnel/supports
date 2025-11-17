@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Création de processus :: Supports</title>
+    <link rel="canonical" href="https://jacquelincharbonnel.github.io/supports/C/2023/sys/proc.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<!-- reference des feuilles de styles supplémentaires -->
+<link rel="stylesheet" href="../../../_/css/layout.css">
+<link rel="stylesheet" href="../../../_/css/content.css">
+
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://jacquelincharbonnel.github.io/supports">Supports</a>
+  <!-- suppression du burger du bandeau
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+-->      
+    </div>
+<!-- suppression des boutons du bandeau
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+-->
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="C" data-version="2023">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">C (preview)</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Le langage C</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../C/base.html">Les bases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../C/fonctions.html">Fonctions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../C/tableaux.html">Tableaux</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../C/pointeurs.html">Pointeurs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../C/strings.html">Chaînes de caractères</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../C/mainfunc.html">Fonction main</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../C/bibliotheque.html">Organisation du code</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../C/fichiers.html">Fichiers de données</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../C/alloc.html">Allocation de mémoire</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../C/types.html">Complément sur les types</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../C/preproc.html">Le préprocesseur</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../C/typeinterpret.html">Interprétation des types</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../C/ptrfunc.html">Pointeurs de fonctions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Programmation système</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="sig.html">Signaux Unix</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="proc.html">Processus</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="thread.html">Multi-threading</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">C (preview)</span>
+    <span class="version">2023</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">C (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../concurrence/2024/index.html">Concurrence (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../concurrence/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../linux_context/2025/index.html">Linux contexte (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../linux_context/2025/index.html">2025</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../python_objet/2024/index.html">Python objet</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../python_objet/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">C (preview)</a></li>
+    <li>Programmation système</li>
+    <li><a href="proc.html">Processus</a></li>
+  </ul>
+</nav>
+<!-- supression de "edit this page"
+  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/C/./modules/sys/pages/proc.adoc">Edit this Page</a></div>
+-->
+</div>
+  <!-- ajout de la date de modification -->
+  <div class="lastmodify"> modifié le <span id="lastmodify"/> </div>
+  <!-- fin ajout -->
+  <div class="content">
+<aside class="toc sidebar" data-title="Plan" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Création de processus</h1>
+<div class="imageblock right">
+<div class="content">
+<img src="_images/fork.jpg" alt="fork" width="100">
+</div>
+</div>
+<div class="paragraph">
+<p>La fonction <code>fork()</code> crée un nouveau processus dans le système.
+Le processus obtenu est la copie conforme du processus qui l&#8217;a créé.
+Donc <code>fork()</code> duplique le processus courant.</p>
+</div>
+<div class="paragraph">
+<p>Au retour du <code>fork()</code>, le processus intial et son clone sont dans le même état.
+En particulier, le point d&#8217;exécution est le même dans les 2 processus :
+c&#8217;est la même instruction dans chaque processus qui s&#8217;exécute après le retour de <code>fork()</code>.</p>
+</div>
+<div class="paragraph">
+<p>Une différence notable entre les 2 processus est la valeur renvoyée par <code>fork()</code>.
+Dans le nouveau processus, <code>fork()</code> renvoie 0,
+alors que
+dans le processus initial, <code>fork()</code> renvoie le PID du processus créé :
+le processus père récupère donc le PID de son fils.
+Exemple :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">int main()
+{
+  pid_t pid ;
+  int ret ;
+
+  // ici, il y a 1 processus unique
+
+  pid = fork() ; /* dédoublement : pid reçoit le PID du fils dans le père
+                                   pid reçoit 0 dans le fils */
+  // ici, il y en a 2
+
+  switch(pid)
+  {
+    case -1 :
+      perror("erreur de fork !\n") ;
+      return 1 ;
+
+   case 0 :
+      puts("[fils] coucou c'est moi !") ;
+      return 0  ;
+
+   default :
+      printf("[père] le PID de fiston est %d\n",pid) ;
+      puts("[père] j'attends que fiston ait fini\n") ;
+      wait(&amp;ret) ;
+      printf("[père] fiston a renvoyé %d\n",WEXITSTATUS(ret)) ;
+      return 0 ;
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Normalement, le processus père doit attendre la fin d&#8217;exécution de tous ces fils
+ (fonction <code>wait</code>) avant de se terminer.
+De cette façon, l&#8217;environnement du fils est libéré proprement,
+et les ressources sont restituées au système.
+Un processus terminé, dont le code de retour n&#8217;a pas été lu par son père,
+reste dans la liste des processus
+en tant que processus <em>zombie</em>.
+Un processus actif qui n&#8217;a plus de père est un processus orphelin.</p>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p class="center">
+  <span style="font-size: 0.9em;">
+    <a href="https://jacquelincharbonnel.github.io/">Jacquelin Charbonnel</a>
+    <!-- &nbsp; &mdash; &nbsp; -->
+    &nbsp; &nbsp;
+    &copy;Creative Commons BY-NC-SA 4.0
+  </span>
+  </p>
+</footer>
+
+<script>
+var myDate = new Date(document.lastModified);
+myNewDate = new Intl.DateTimeFormat(
+            undefined,
+            {year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit"}
+        )
+        .format(myDate).replace(/\./g, '-');
+document.getElementById("lastmodify").innerHTML = myNewDate ;
+</script>
+
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

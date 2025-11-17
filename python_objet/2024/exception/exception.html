@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Exceptions :: Supports</title>
+    <link rel="canonical" href="https://jacquelincharbonnel.github.io/supports/python_objet/2024/exception/exception.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<!-- reference des feuilles de styles supplémentaires -->
+<link rel="stylesheet" href="../../../_/css/layout.css">
+<link rel="stylesheet" href="../../../_/css/content.css">
+
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://jacquelincharbonnel.github.io/supports">Supports</a>
+  <!-- suppression du burger du bandeau
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+-->      
+    </div>
+<!-- suppression des boutons du bandeau
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+-->
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="python_objet" data-version="2024">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">Python objet</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../poo/poo.html">Concepts de la POO</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../objet/objet.html">Objet</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../objet/Tortue/Tortue.html">Exercice 1</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../objet/Frigo/Frigo.html">Exercice 2</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../objet/IPaddr/IPaddr.html">Exercice 3</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../objet/TicTacToe/tictactoe.html">Problème 1</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../objet/Torche/torche.html">Problème 2</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../operateurs/operateurs.html">Opérateurs</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../operateurs/domino/domino.html">Problème</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../classe/classe.html">Membres de classe</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../classe/capteurs/capteurs.html">Problème</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../heritage/heritage.html">Héritage</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../heritage/Biodiversite/biodiversite.html">Problème 1</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../heritage/Formes/formes.html">Problème 2</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../heritage/debrief.html">Debriefing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../heritage/flotte/flotte.html">Problème 3</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../heritage/Biblio/biblio.html">Problème 4</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="exception.html">Exceptions</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Poker/poker.html">Problème</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../internals/internals.html">Debriefing</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../internals/muabilite.html">Muabilité</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../internals/hashable.html">Hashable</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Applications</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../app_iter/iter.html">Itérable</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../app_files/files.html">Lecture/écriture de données</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../app_contextman/context.html">Context manager</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../app_serialisation/serialisation.html">Sérialisation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../app_callable/callable.html">Callables</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../packaging/packaging.html">Packaging</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../eval/biblio.html">Projet</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../heritage/BiblioScrap/BiblioScrap.html">Projet</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Python objet</span>
+    <span class="version">2024</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../../C/2023/index.html">C (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../C/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../concurrence/2024/index.html">Concurrence (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../concurrence/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../linux_context/2025/index.html">Linux contexte (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../linux_context/2025/index.html">2025</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">Python objet</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Python objet</a></li>
+    <li><a href="exception.html">Exceptions</a></li>
+  </ul>
+</nav>
+<!-- supression de "edit this page"
+  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/python_objet/./modules/exception/pages/exception.adoc">Edit this Page</a></div>
+-->
+</div>
+  <!-- ajout de la date de modification -->
+  <div class="lastmodify"> modifié le <span id="lastmodify"/> </div>
+  <!-- fin ajout -->
+  <div class="content">
+<aside class="toc sidebar" data-title="Plan" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Exceptions</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="imageblock right">
+<div class="content">
+<img src="_images/pommes.jpg" alt="pommes" width="150">
+</div>
+</div>
+<div class="paragraph">
+<p>Une exception est un mécanisme destiné à signaler que quelque chose d’anormal se produit.
+Le court normal d&#8217;exécution du programme est alors chamboulé.</p>
+</div>
+<div class="paragraph">
+<p>Le concept d&#8217;exception n&#8217;est pas lié à la programmation orientée objet :
+les langages oriéntés objet ne sont pas les seuls à pouvoir
+disposer de mécanisme de gestion d&#8217;exception.
+Mais les exceptions facilitent la conception de briques logicielles réutilisables.
+C&#8217;est pourquoi on les voit apparaître dans ce contexte.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_introduction"><a class="anchor" href="#_introduction"></a>1. Introduction</h2>
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Les exemples et exercices de ce chapitre sont à exécuter dans un terminal,
+car les environnement de développement (comme <em>spyder</em> &amp; co)
+attrapent une partie des exceptions pour leur propre compte.
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="title">exemple</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">#!/bin/env python3
+# fichier exceptions1.py
+
+def myfunction():
+    x = 1/0             # 4
+
+def mafonction():
+    myfunction()        # 7
+
+def main():
+    mafonction()        # 10
+
+if __name__ == "__main__":
+    main()              # 13</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">Traceback (most recent call last): <i class="conum" data-value="1"></i><b>(1)</b>
+  File "exceptions1.py", line 13, in &lt;module&gt;
+    main()
+  File "exceptions1.py", line 10, in main
+    mafonction()
+  File "exceptions1.py", line 7, in mafonction
+    myfunction()
+  File "exceptions1.py", line 4, in myfunction
+    x = 1/0
+ZeroDivisionError: division by zero <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>pile des appels de fonction en cours</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>cette ligne indique le type de l&#8217;exception et un message explicatif</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>A chaque type d&#8217;exception (dans l&#8217;exemple <code>ZeroDivisionError</code>) correspond une classe.
+Python propose une hiéarchie de classes d' <a href="https://docs.python.org/fr/3/library/exceptions.html#exception-hierarchy">exceptions prédéfinies</a>.
+Le développeur peut piocher dans ces classes pour identifier et gérer ses propres exceptions.
+Il peut aussi vouloir les gérer plus finement,
+et pour cela,
+il peut créer de nouvelles classes plus adaptées à ses besoins,
+par héritage de classes prises dans cette hiérarchie.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gestion_des_exceptions"><a class="anchor" href="#_gestion_des_exceptions"></a>2. Gestion des exceptions</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Pourquoi a-t-on besoin d&#8217;un mécanisme spécial
+(une structure de contrôle particulière, comparable à <code>if</code>&#8230;&#8203;<code>else</code> ou <code>for</code>&#8230;&#8203;<code>in</code>&#8230;&#8203;)
+pour gérer les exceptions ?
+Pour le comprendre, il faut voir qu&#8217;un logiciel est un empilement de couches,
+réalisées indépendamment les unes des autres.</p>
+</div>
+<div class="paragraph">
+<p>En POO, on définit des classes de bas niveau (c&#8217;est-a-dire qui collent aux structures de données) :
+par exemple des listes, des files, des chaines de caractères particulières, etc.
+Puis, avec ces classes, on construit des classes de plus haut niveau (c&#8217;est-à-dire qui collent au <em>métier</em> : math, physique, gestion, biologie etc.).
+Et, au final, on élabore un programme construit à partir de ces classes de haut niveau.</p>
+</div>
+<div class="paragraph">
+<p>En programmation <em>classique</em>, c&#8217;est la même chose : les fonctions de haut niveau d&#8217;abstraction s&#8217;appuient sur des fonctions de plus bas niveau, qii elles-mêmes font la même chose.</p>
+</div>
+<div class="paragraph">
+<p>Lorsqu&#8217;une erreur survient au plus profond du code, dans les couches basses,
+comment la traiter ?
+L’utilisateur d’un composant logiciel de haut niveau,
+qui ne peut pas intervenir lors de l’apparition d’une erreur à l’intérieur du composant qu’il utilise,
+peut vouloir la traiter à sa façon.
+Et symétriquement, le concepteur du composant de bas niveau,
+qui lui peut détecter l’erreur dès qu’elle apparait,
+n’a probablement pas les éléments pour la gérer judicieusement.</p>
+</div>
+<h3 id="_exemple_bob_alice_yann" class="discrete">Exemple Bob-Alice-Yann</h3>
+<div class="paragraph">
+<p>Par exemple, soit une application <code>appli.py</code> utilisant un module <code>moduleAlice</code>,
+utilisant à son tour un module <code>moduleYann</code> :</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="title">fichier appli.py écrit en 2024 par Bob</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">from moduleAlice import acquerirDonnees
+
+def traiterDonnees(jeuDonnees):
+  ...
+  acquerirDonnees(jeuDonnees)
+  ...
+
+if __name__=="__main__":
+  for data in [data1, data2, data3, data4, data5]:
+    traiterDonnees(data)</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">fichier moduleAlice.py écrit en 2022 par Alice</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">from moduleYann import lire
+
+def acquerirDonnees(filename):
+  ...
+  lire(filename)
+  ...</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">fichier moduleYann.py écrit en 2021 par Yann</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">def lire(file):
+  ...
+  f = open(file, "r")
+  ...</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Si Bob, en 2024, fournit un jeu de données inexistant à la fonction <code>acquerirDonnées</code>,
+c&#8217;est la fonction <code>lire</code> de Yann qui va s&#8217;en rendre compte.
+Bob aimerait pourtant bien pouvoir intervenir quand le jeu de données qu&#8217;il fournit
+pose problème, mais comment faire sans modifier le module de Yann ?</p>
+</div>
+<div class="paragraph">
+<p>La solution consistant à stopper net l&#8217;exécution du programme est trop radicale,
+car elle ne permet pas de remédier au problème,
+ni même d&#8217;en comprendre la cause (à ce niveau de profondeur, on n&#8217;a pas le recul suffisant pour comprendre comment et pourquoi on en est arrivé là).
+En caricaturant, on peut dire que :</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>ce sont les couches basses qui détectent les problèmes, mais elles ne comprennent pas le processus qui les provoque,</p>
+</li>
+<li>
+<p>les couches hautes possèdent la vue d&#8217;ensemble permettant de comprendre comment et pourquoi les problèmes apparaissent, mais ne les détectent pas.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Le mécanisme d&#8217;exceptions est fait pour gérer cela.
+Il permet :</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>aux couches basses d&#8217;envoyer un signal vers les couches hautes pour  signaler une anomalie (<em>lancer</em> une exception),</p>
+</li>
+<li>
+<p>quelque part dans les couches hautes, à l&#8217;endroit où l&#8217;anomalie peut être traitée judicieusement, de prendre la main pour y remédier (<em>attraper</em> l&#8217;exception et la traiter).</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Il offre un moyen de dérouter le flux d’exécution
+du point de détection de l’erreur au point adéquat pour la traiter
+(saut dans le déroulement du programme accompagné d’un transfert d’information).</p>
+</div>
+<div class="paragraph">
+<p>Le champ d’action du mécanisme d&#8217;exceptions est plus large que la gestion des erreurs,
+et s’applique à toute situation exceptionnelle
+(comme la fin d’une itération, la fin de lecture d’un fichier, etc.).</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Comportement par défaut de Python</dt>
+<dd>
+<p>Par défaut, lorsqu&#8217;une erreur (arithmétique, périphérique, mathématique, etc.) est détectée, une exception est automatiquement lancée.
+Rien n&#8217;attrape cette exception, et le programme s&#8217;arrête brutalement,
+en sortant un message (indiquant le type de l&#8217;exception et le contenu de la pile des appels de fonctions).
+C&#8217;est le comportement standard auquel conduit toute exception non attrapée.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_lancer_une_exception"><a class="anchor" href="#_lancer_une_exception"></a>3. Lancer une exception</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>On lance une exception avec l&#8217;instruction <code>raise</code>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+On peut lancer une exception pour signaler autre chose qu&#8217;une erreur.
+Par exemple, Python lance des <code>StopIteration</code> lorsqu&#8217;une itération arrive normalement à son terme.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Exemple, soit la classe <code>Fraction</code> :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">class Fraction:
+  def __init__(self,n,d):
+    self.num = n
+    self.den = d
+
+  def reduire(self):
+    pgcd = gcd(self.num,self.den)
+    self.num //= pgcd
+    self.den //= pgcd
+    return self
+
+  def __float__(self,r):
+    return self.num / self.den
+  ...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Bien que créer une fraction avec un dénominateur nul ne pose pas de problème immédiat,
+tôt ou tard une erreur arithmétique fatale va apparaître
+(lors du calcul du PGCD, du quotient, etc.).
+On peut donc anticiper en lançant une exception dès la création d&#8217;une fraction avec un dénominateur nul :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">class Fraction:
+  def __init__(self,n,d):
+    if d==0:
+        raise ValueError(f"problème pour créer Fraction({n},{d}) !") <i class="conum" data-value="1"></i><b>(1)</b>
+    self.num = n
+    self.den = d
+  ...</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>ici, un objet de type <code>ValueError</code> est créé, puis il est lancé vers les couches hautes</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Autre stratégie possible :
+autoriser la création d&#8217;une fraction à dénominateur nul,
+et lancer une exception au dernier moment, juste avant une division par 0 :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">class Fraction:
+  def __init__(self,n,d):
+    self.num = n
+    self.den = d
+
+  def reduire(self):
+    if self.den==0:
+      raise ArithmeticError(f"problème pour réduire la Fraction({self.num},{self.den}) !")
+    pgcd = gcd(self.num,self.den)
+    self.num //= pgcd
+    self.den //= pgcd
+    return self
+
+  def __float__(self,r):
+    if self.den==0:
+      raise ZeroDivisionError(f"problème pour obtenir le quotien de la Fraction({self.num},{self.den}) !")
+    return self.num / self.den
+  ...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Les instances de type <code>ArithmeticError</code> et <code>ZeroDivisionError</code> vont remonter
+la pile des appels de fonctions,
+et pourront être attrapées par n&#8217;importe quelle fonction en cours d&#8217;exécution.
+Toute instance non attrapée donnera lieu au comportement par défaut,
+à savoir interruption brutale du programme et écriture
+du message d&#8217;erreur standard.</p>
+</div>
+<div class="sect2">
+<h3 id="_exception_personnalisée"><a class="anchor" href="#_exception_personnalisée"></a>Exception personnalisée</h3>
+<div class="paragraph">
+<p>Si aucune exception prédéfinie ne correspond à ce que l&#8217;on veut signaler,
+ou bien si l&#8217;on veut remonter de l&#8217;information supplémentaire,
+alors il est possible de se créer un type particulier d&#8217;exception.
+Pour cela, il suffit de dériver une nouvelle classe de l&#8217;une des classes exceptions prédéfinies.
+Par exemple :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">class MonErreur(RuntimeError):
+  def __init__(self,msg,q):
+    super().__init__(msg)
+    self.num,self.den = q.num,q.den
+    self.strict_mode = q.strict_mode
+    self.auto_reduire = q.auto_reduire</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>que l&#8217;on peut utiliser ensuite comme :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">class Fraction:
+  strict_mode = True
+  auto_reduire = True
+
+  @classmethod
+  def strict_disable(cls):
+    cls.strict_mode = False
+
+  def __init__(self,n,d):
+    self.num = n
+    self.den = d
+    if Fraction.strict_mode:
+      if d==0:
+        raise MonErreur("problème à la création",self)
+    if Fraction.auto_reduire:
+        self.reduire()
+
+  def reduire(self):
+    if self.den==0:
+      raise MonErreur("problème à la simplification",self)
+
+    pgcd = gcd(self.num,self.den)
+    self.num //= pgcd
+    self.den //= pgcd
+    return self</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Avec cela, l&#8217;instruction :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">q = Fraction(1,0)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>donne</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>raise MonErreur("problème à la création",self)
+__main__.MonErreur: problème à la création</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>alors que :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">Fraction.strict_disable()
+q = Fraction(1,0)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>donne :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>raise MonErreur("problème à la simplification",self)
+__main__.MonErreur: problème à la simplification</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_attraper_une_exception"><a class="anchor" href="#_attraper_une_exception"></a>4. Attraper une exception</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Attraper une exception va permettre, avant que le programme
+ne s&#8217;arrête brutalement, de prendre la main pour expliquer clairement à l&#8217;utilisateur
+ ce qui s&#8217;est passé, ou mieux, pour tenter de corriger le problème
+ (ou moins bien, le mettre sous le tapis 😉).</p>
+</div>
+<div class="paragraph">
+<p>Par exemple, le code ci-dessous attrape les exceptions de type <code>ArithmeticError</code> et <code>ValueError</code>
+lancées soit par le constructeur de <code>Fraction</code> (instruction <code>f=Fraction(a,b)</code>),
+soit par la méthode <code>reduire</code> (instruction <code>f.reduire()</code>) :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">a = int(input("entrer un premier entier :"))
+b = int(input("entrer un second entier :"))
+try:                              <i class="conum" data-value="1"></i><b>(1)</b>
+  f = Fraction(a,b)
+  f.reduire()
+except ArithmeticError:    <i class="conum" data-value="2"></i><b>(2)</b>
+  print("problème pour calculer le PGCD")
+  exit(1)
+except ValueError:    <i class="conum" data-value="3"></i><b>(3)</b>
+  print("une fraction à dénominateur nul a été détectée")
+  exit(1)</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td><code>try</code> définit un bloc réceptif aux exceptions</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>si une exception de type <code>ArithmeticError</code> est lancée dans le bloc <code>try</code> précédent,
+alors elle sera attrapée, et l&#8217;exécution sera déroutée directement ici ;
+s&#8217;il s&#8217;agit d&#8217;un autre type d&#8217;exception, ou si aucune exception n&#8217;est lancée,
+alors ce bloc <code>except</code> n&#8217;est pas exécuté</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>même chose pour une <code>ValueError</code></td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>On peut récupérer l&#8217;objet lancé par <code>raise</code>.
+C&#8217;est intéressant, car cet objet peut fournir des infos utiles sur ce qu&#8217;il s&#8217;est passé :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">class Fraction:
+  strict_mode = True
+  auto_reduire = True
+
+  @classmethod
+  def strict_enable(cls):
+    cls.strict_mode = True
+
+  @classmethod
+  def strict_disable(cls):
+    cls.strict_mode = False
+
+  @classmethod
+  def reduire_enable(cls):
+    cls.auto_reduire = True
+
+  @classmethod
+  def reduire_disable(cls):
+    cls.auto_reduire = False
+
+  def __init__(self,n,d):
+    self.num = n
+    self.den = d
+    if Fraction.strict_mode:
+      if d==0:
+        raise ValueError(f"problème pour créer Fraction({n},{d}) !")
+    if Fraction.auto_reduire:
+        self.reduire()
+
+  def reduire(self):
+    if self.den==0:
+      raise ArithmeticError(f"problème pour réduire la Fraction({self.num},{self.den}) !")
+
+    pgcd = gcd(self.num,self.den)
+    self.num //= pgcd
+    self.den //= pgcd
+    return self</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>ce qui permet d&#8217;écrire :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">try:
+  f = Fraction(1,0)
+  f.reduire()
+except ArithmeticError as e :
+  print(e)                     <i class="conum" data-value="1"></i><b>(1)</b>
+  exit(1)
+except ValueError as e:    <i class="conum" data-value="2"></i><b>(2)</b>
+  print(e)
+  exit(1)</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>sort <code>"problème pour réduire la Fraction(1,0) !"</code></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>sort <code>"problème pour créer Fraction(1,0)"</code></td>
+</tr>
+</table>
+</div>
+<h3 id="_exemple_bob_alice_yann_2" class="discrete">Exemple Bob-Alice-Yann</h3>
+<div class="paragraph">
+<p>Dans exemple Bob-Alice-Yann, soit Alice possède tous les éléments pour tenter de corriger le problème,
+et, dans ce cas, elle le gère (et Bob n&#8217;a rien à faire) :</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="title">fichier appli.py - Bob</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">from moduleAlice import acquerirDonnees
+def traiterDonnees(jeuDonnees):
+  ...
+  acquerirDonnees(jeuDonnees)
+  ...</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">fichier moduleAlice.py - Alice</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">from moduleYann import lire
+def acquerirDonnees(filename):
+  ...
+  try:
+    lire(filename)
+  except FileNotFoundError:
+    ...
+  ...</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">fichier moduleYann.py - Yann</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">def lire(file):
+  ...
+  f = open(file, "r")
+  ...</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>ou sinon, Bob détient peut-être la clé du problème, et dans ce cas,
+c&#8217;est lui qui gère :</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="title">fichier appli.py - Bob</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">from moduleAlice import acquerirDonnees
+def traiterDonnees(jeuDonnees):
+  ...
+  try:
+    acquerirDonnees(jeuDonnees)
+  except FileNotFoundError:
+    ...
+  ...</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">fichier moduleAlice.py - Alice</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">from moduleYann import lire
+def acquerirDonnees(filename):
+  ...
+  lire(filename)
+  ...</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">fichier moduleYann.py - Yann</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">def lire(file):
+  ...
+  f = open(file, "r")
+  ...</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Le traitement de l&#8217;exception peut aussi être incrémental,
+c&#8217;est-à-dire géré par Alice et Bob, chacun à leur niveau :</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="title">fichier appli.py - Bob</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">from moduleAlice import acquerirDonnees
+def traiterDonnees(jeuDonnees):
+  ...
+  try:
+    acquerirDonnees(jeuDonnees)
+  except FileNotFoundError:
+    ...
+  ...</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">fichier moduleAlice.py - Alice</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">from moduleYann import lire
+def acquerirDonnees(filename):
+  ...
+  try:
+    lire(filename)
+  except FileNotFoundError:
+    ... # traitement partiel
+    raise # relance la même exception vers les couches hautes
+  ...</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">fichier moduleYann.py - Yann</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">def lire(file):
+  ...
+  f = open(file, "r")
+  ...</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Ici, Alice corrige partiellement le problème, puis relance la même exception,
+qui va donc continuer sa remontée vers Bob, qui l&#8217;attrapera à son tour
+pour terminer son traitement.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_pile_des_appels_de_fonctions"><a class="anchor" href="#_pile_des_appels_de_fonctions"></a>5. Pile des appels de fonctions</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Le module <code>traceback</code> permet de récupérer des informations relatives à l&#8217;état de la pile des appels de fonctions en cours, via notamment sa fonction <code>print_exc()</code> :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>traceback.print_exc()</code> affiche l&#8217;état de la pile comme le ferait le comportement standard d&#8217;une exception non attrapée,</p>
+</li>
+<li>
+<p><code>traceback.print_exc(limit=n)</code>, n&gt;0, affiche les n premier éléments de la pile des appels,</p>
+</li>
+<li>
+<p><code>traceback.print_exc(limit=-n)</code>, n&gt;0, affiche les n derniers éléments de la pile des appels.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_changer_dexception_en_cours_de_route"><a class="anchor" href="#_changer_dexception_en_cours_de_route"></a>6. Changer d&#8217;exception en cours de route</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Les données et même le type d&#8217;une exception peuvent être modifiés au cours de la remontée :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">def f():
+  raise ConnectionError
+
+def g():
+  try:
+    f()
+  except ConnectionError as e:
+    raise RuntimeError('Failed to open database') from e</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Ici, l&#8217;exception <code>ConnectionError</code> est attrapée, puis transformée en <code>RuntimeError</code>, et relancée.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p class="center">
+  <span style="font-size: 0.9em;">
+    <a href="https://jacquelincharbonnel.github.io/">Jacquelin Charbonnel</a>
+    <!-- &nbsp; &mdash; &nbsp; -->
+    &nbsp; &nbsp;
+    &copy;Creative Commons BY-NC-SA 4.0
+  </span>
+  </p>
+</footer>
+
+<script>
+var myDate = new Date(document.lastModified);
+myNewDate = new Intl.DateTimeFormat(
+            undefined,
+            {year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit"}
+        )
+        .format(myDate).replace(/\./g, '-');
+document.getElementById("lastmodify").innerHTML = myNewDate ;
+</script>
+
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

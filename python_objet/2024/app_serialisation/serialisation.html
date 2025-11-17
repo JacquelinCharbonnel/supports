@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Sérialisation :: Supports</title>
+    <link rel="canonical" href="https://jacquelincharbonnel.github.io/supports/python_objet/2024/app_serialisation/serialisation.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<!-- reference des feuilles de styles supplémentaires -->
+<link rel="stylesheet" href="../../../_/css/layout.css">
+<link rel="stylesheet" href="../../../_/css/content.css">
+
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://jacquelincharbonnel.github.io/supports">Supports</a>
+  <!-- suppression du burger du bandeau
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+-->      
+    </div>
+<!-- suppression des boutons du bandeau
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+-->
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="python_objet" data-version="2024">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">Python objet</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../poo/poo.html">Concepts de la POO</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../objet/objet.html">Objet</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../objet/Tortue/Tortue.html">Exercice 1</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../objet/Frigo/Frigo.html">Exercice 2</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../objet/IPaddr/IPaddr.html">Exercice 3</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../objet/TicTacToe/tictactoe.html">Problème 1</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../objet/Torche/torche.html">Problème 2</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../operateurs/operateurs.html">Opérateurs</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../operateurs/domino/domino.html">Problème</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../classe/classe.html">Membres de classe</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../classe/capteurs/capteurs.html">Problème</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../heritage/heritage.html">Héritage</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../heritage/Biodiversite/biodiversite.html">Problème 1</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../heritage/Formes/formes.html">Problème 2</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../heritage/debrief.html">Debriefing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../heritage/flotte/flotte.html">Problème 3</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../heritage/Biblio/biblio.html">Problème 4</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../exception/exception.html">Exceptions</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../exception/Poker/poker.html">Problème</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../internals/internals.html">Debriefing</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../internals/muabilite.html">Muabilité</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../internals/hashable.html">Hashable</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Applications</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../app_iter/iter.html">Itérable</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../app_files/files.html">Lecture/écriture de données</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../app_contextman/context.html">Context manager</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="serialisation.html">Sérialisation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../app_callable/callable.html">Callables</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../packaging/packaging.html">Packaging</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../eval/biblio.html">Projet</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../heritage/BiblioScrap/BiblioScrap.html">Projet</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Python objet</span>
+    <span class="version">2024</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../../C/2023/index.html">C (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../C/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../concurrence/2024/index.html">Concurrence (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../concurrence/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../linux_context/2025/index.html">Linux contexte (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../linux_context/2025/index.html">2025</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">Python objet</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Python objet</a></li>
+    <li>Applications</li>
+    <li><a href="serialisation.html">Sérialisation</a></li>
+  </ul>
+</nav>
+<!-- supression de "edit this page"
+  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/python_objet/./modules/app_serialisation/pages/serialisation.adoc">Edit this Page</a></div>
+-->
+</div>
+  <!-- ajout de la date de modification -->
+  <div class="lastmodify"> modifié le <span id="lastmodify"/> </div>
+  <!-- fin ajout -->
+  <div class="content">
+<aside class="toc sidebar" data-title="Plan" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Sérialisation</h1>
+<div class="sect1">
+<h2 id="_persistance"><a class="anchor" href="#_persistance"></a>1. Persistance</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Une donnée est persistante si son existence dépasse celle de l&#8217;application qui l&#8217;a créée.
+La donnée réside initialement en mémoire vive.
+Lorsque l&#8217;application se termine, elle disparait.
+Pour être persistante, elle doit donc être copiée sur un support non volatile,
+en attendant la prochaine exécution (qui la rechargera en mémoire vive).</p>
+</div>
+<div class="paragraph">
+<p>Recopier la donnée ne se résume pas à recopier le bloc de mémoire correspondant.
+Lorsque la structure de la donnée est complexe,
+lorsque notamment il existe des liens entre différentes composantes de cette données,
+il faut alors trouver une représentation qui reste valide en dehors de son environnement natif.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Par exemple, les relations entre les données utilisent souvent l&#8217;id, mais l&#8217;id perd son sens lorsque l&#8217;exécution se termine.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>La transposition de la donnée en un format valide
+au-delà de son contexte natif s&#8217;appelle <em>sérialisation</em>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_sérialisation"><a class="anchor" href="#_sérialisation"></a>2. Sérialisation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>La sérialisation (<em>serialization</em>, <em>flattening</em> ou encore <em>marshalling</em>) est le processus par lequel des données résidant en mémoire vive sont transformées (généralement en une suite d&#8217;octets) en vue de persister hors de ce contexte.
+Cette suite d&#8217;octets doit être suffisamment riche pour permettre de recréer la donnée à partir de rien (<em>from scratch</em>).
+L’opération réciproque (le décodage des informations pour créer une copie conforme à l’original) s’appelle la désérialisation (<em>deserialization</em> ou <em>unmarshalling</em>).
+Elle reforme l&#8217;objet en mémoire à partir d&#8217;une suite d&#8217;octets.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_la_méthode_repr"><a class="anchor" href="#_la_méthode_repr"></a>3. La méthode <code>__repr__()</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>La méthode <code>__repr__</code> est censée renvoyer une représentation complète de l&#8217;objet, qui doit permettre de le recréer from scratch dans un autre contexte.
+Concrètement, c&#8217;est une fonction qui renvoie un bytearray ou une string caractérisant complètement l&#8217;objet.
+Elle est à rapprocher de <code>__str__()</code>, mais <code>__str__()</code> est à destination des humains (développeur et utilisateur), alors que <code>__repr__()</code> est à destination des programmes.
+Cette méthode existe par défaut (elle est utilisée en interne par python, notamment par la fonction <code>repr()</code>), mais peut être personnalisée par le développeur.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_exemple_1"><a class="anchor" href="#_exemple_1"></a>4. Exemple 1</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Soit une class personnalisant sa méthode <code>__repr__()</code> :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">class Point:
+  def __init__(self,x,y):
+    self.x = x
+    self.y = y
+
+  def __str__(self):
+    return f"({self.x},{self.y})"
+
+  def __repr__(self):
+    return f"{self.__class__.__name__}({self.x},{self.y})"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A partir de là, on peut sérialiser le Point <code>a</code> :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">a = Point(1,2)
+print(a)          # (1,2)
+s = repr(a)
+print(s)    # Point(1,2)
+
+# ... et sauvegarder s sur support non volatile</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>puis, dans un autre contexte, créer un clone <code>b</code> par désérialisation :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python"># recharger s depuis le support non volatile, puis...
+
+b = eval(s)
+print(type(b))     # &lt;class '__main__.Point'&gt;
+print(b)           # (1,2)
+print(repr(b))     #  Point(1,2)</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_exemple_2"><a class="anchor" href="#_exemple_2"></a>5. Exemple 2</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>On veut sérialiser une liste :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">l1 = [ 1, 2, 1, 2 ]
+s = repr(l)
+...
+l2 = eval(s)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Cela fonctionne pour ce cas simple,
+mais qu&#8217;en est-il dans le cas général ?</p>
+</div>
+<div class="listingblock">
+<div class="title">sérialisation de 2 listes</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">l0 = [1,2]
+l1 = [l0,l0]
+print(f"{l1[0] is l1[1]=}")    # True
+
+# serialisation
+s = repr(l1)                  # '[[1, 2], [1, 2]]'
+
+# ... sauvegarde de s sur support non volatile
+...
+# recharge de s depuis le support non volatile, puis...
+
+# désérialisation
+l2 = eval(s)                  # '[[1, 2], [1, 2]]'
+print(f"{type(l2)=}, {l2=}")  # &lt;class 'list'&gt; [[1, 2], [1, 2]]
+
+print(f"{l1[0] is l1[1]=}")   # False</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>On constate que <code>l2</code> n&#8217;est pas un clone de l1 :
+la sérialisation n&#8217;est pas correcte.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/serializ1.png" alt="serializ1">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/serializ2.png" alt="serializ2">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_le_module_pickle"><a class="anchor" href="#_le_module_pickle"></a>6. Le module Pickle</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Ce module standard est spécialisé dans la sérialisation/désérialisation.</p>
+</div>
+<div class="listingblock">
+<div class="title">sérialisation d&#8217;une liste de Points avec Pickle</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">import pickle
+
+class Point:
+  def __init__(self,x,y):
+    self.x = x
+    self.y = y
+
+if __name__=="__main__":
+  l = []
+  for i in range(10):
+    l.append(Point(i,i))
+
+  with open("/tmp/picklefile","wb") as f:
+    pickle.dump(l,f)</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Le format des données contenues dans <code>/tmp/picklefile</code> est spécifique à <code>Pickle</code>.
+Par conséquent, l&#8217;application qui sérialise et celle qui désérialise
+doivent utiliser <code>Pickle</code> (et attention si la version de Pickle est différente !).
+ce qui sous-entend que ce sont 2 applications Python,
+Pour lever cette contrainte, il faudrait utiliser un format plus portable,
+un format ouvert indépendant, comme XML ou JSON.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p class="center">
+  <span style="font-size: 0.9em;">
+    <a href="https://jacquelincharbonnel.github.io/">Jacquelin Charbonnel</a>
+    <!-- &nbsp; &mdash; &nbsp; -->
+    &nbsp; &nbsp;
+    &copy;Creative Commons BY-NC-SA 4.0
+  </span>
+  </p>
+</footer>
+
+<script>
+var myDate = new Date(document.lastModified);
+myNewDate = new Intl.DateTimeFormat(
+            undefined,
+            {year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit"}
+        )
+        .format(myDate).replace(/\./g, '-');
+document.getElementById("lastmodify").innerHTML = myNewDate ;
+</script>
+
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

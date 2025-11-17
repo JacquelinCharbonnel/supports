@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Web scraping - aiohttp :: Supports</title>
+    <link rel="canonical" href="https://jacquelincharbonnel.github.io/supports/concurrence/2024/aiohttp/collecte.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<!-- reference des feuilles de styles supplémentaires -->
+<link rel="stylesheet" href="../../../_/css/layout.css">
+<link rel="stylesheet" href="../../../_/css/content.css">
+
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://jacquelincharbonnel.github.io/supports">Supports</a>
+  <!-- suppression du burger du bandeau
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+-->      
+    </div>
+<!-- suppression des boutons du bandeau
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+-->
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="concurrence" data-version="2024">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">Concurrence (preview)</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../introduction/intro.html">Aperçu</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../generateur/generateur.html">Générateur</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../asynchronisme/asyncio.html">Asynchronisme</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="collecte.html">Application #1</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asynchronisme/clientserveur/index.html">Application #2</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asynchronisme/bar/bar.html">Problème</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../multithreading/multithread.html">Multi-threading</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../multithreading/application.html">Application</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../multiprocessing/multiprocessing.html">Multi-processing</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../multiprocessing/sequenceur/sequenceur.html">Problème 1</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../multiprocessing/anagrammes/anagrammes.html">Problème 2</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Concurrence (preview)</span>
+    <span class="version">2024</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../../C/2023/index.html">C (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../C/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">Concurrence (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../linux_context/2025/index.html">Linux contexte (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../linux_context/2025/index.html">2025</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../python_objet/2024/index.html">Python objet</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../python_objet/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Concurrence (preview)</a></li>
+    <li><a href="../asynchronisme/asyncio.html">Asynchronisme</a></li>
+    <li><a href="collecte.html">Application #1</a></li>
+  </ul>
+</nav>
+<!-- supression de "edit this page"
+  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/concurrence/./modules/aiohttp/pages/collecte.adoc">Edit this Page</a></div>
+-->
+</div>
+  <!-- ajout de la date de modification -->
+  <div class="lastmodify"> modifié le <span id="lastmodify"/> </div>
+  <!-- fin ajout -->
+  <div class="content">
+<aside class="toc sidebar" data-title="Plan" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Web scraping - <code>aiohttp</code></h1>
+<div class="sect1">
+<h2 id="_un_client_mono_tâche"><a class="anchor" href="#_un_client_mono_tâche"></a>1. Un client mono-tâche</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Le module Python <code>requests</code> dispose de fonctions (get, post, etc.) implémentant chaque méthode HTTP.</p>
+</div>
+<div class="listingblock">
+<div class="title">exemple</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">response = requests.get('http://math.univ-angers.fr')</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Ces fonctions renvoient un objet réponse composé d&#8217;attributs
+<code>status_code</code>, <code>headers</code>, <code>content-type</code>, <code>encoding</code> et <code>text</code>.</p>
+</div>
+<div class="listingblock">
+<div class="title">exemple</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">import requests
+
+r = requests.get('http://math.univ-angers.fr')
+print(f"status_code: {r.status_code}, headers: {r.headers}")
+print(f"content-type: {r.headers['content-type']}")
+print(f"encoding: {r.encoding}")
+print(f"text: {r.text}")</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_un_client_multi_tâche"><a class="anchor" href="#_un_client_multi_tâche"></a>2. Un client multi-tâche</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Le module <code>aiohttp</code> offre des coroutines pour faire la même chose.
+En minimisant les temps d&#8217;attente,
+il permet de réaliser des programmes requeteurs dont le temps d&#8217;exécution est inférieur à la somme des temps d&#8217;exécution des requêtes.</p>
+</div>
+<div class="paragraph">
+<p>Le module <code>aiohttp</code> offre des coroutines pour soumettre des requêtes HTTP asynchrones,
+ce qui est particulièrement intéressant pour le moissonnage d&#8217;informations sur un grand nombre de serveurs disparates.</p>
+</div>
+<div class="paragraph">
+<p>Le principe est :</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">&lt;1&gt; Création d&#8217;une session</dt>
+<dd>
+<p>Une session permet de factoriser un contexte pour un ensemble de requêtes.
+Par exemple, des requêtes soumises à authentification peuvent être regroupées en une session.
+L&#8217;authentification (login/mot de passe) est alors fournie une seule fois (à la création de la session),
+et toutes les requêtes de cette session en bénéficient
+(sans avoir à les spécifier à chaque fois).</p>
+</dd>
+<dt class="hdlist1">&lt;2&gt; Dans cette session, envoi d&#8217;une rafale de requêtes</dt>
+<dd>
+<p>Cela  consiste à planifier l&#8217;exécution asynchrone d&#8217;un ensemble de requêtes GET,
+qui s&#8217;exécuteront indépendamment les unes des autres, chacunes à leur rythme.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>Schématiquement, cela donne :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">async with aiohttp.ClientSession(...) as session: <i class="conum" data-value="1"></i><b>(1)</b>
+  for u in urls: <i class="conum" data-value="2"></i><b>(2)</b>
+    async with session.get(u) as response: <i class="conum" data-value="3"></i><b>(3)</b>
+        print(response.status)</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>crée une session nommée <code>session</code></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>pour une liste d&#8217;URLs <code>urls</code>&#8230;&#8203;</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>&#8230;&#8203; soumettre une requête pour chaque URL <code>u</code>,
+et récupérer la réponse dans <code>response</code></td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>L&#8217;objet <code>response</code> dispose d&#8217;attributs et de méthodes pour récupérer les données de la réponse (code de retour, headers et body).
+Par exemple, <code>response.status</code> donne le code de retour HTTP,
+et le body peut être récupéré en asynchrone avec la coroutine <code>text()</code>
+(<code>await response.text()</code>).
+Récupérer le corps de la réponse en asynchrone est particulièrement intéressant lorsqu&#8217;il s&#8217;agit d&#8217;une ressource volumineuse (comme par exemple une vidéo).</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>La coroutine <code>text()</code> de <code>response</code> décode automatiquement ce qu&#8217;elle lit.
+Par défaut, elle suppose lire de l&#8217;UTF-8, sinon on peut lui fournir un argument <code>encoding</code>.</p>
+</div>
+<div class="paragraph">
+<p>Pour ne pas avoir avoir ce décodage, et lire simplement un simple flux d&#8217;octets,
+on peut utiliser la coroutine <code>read()</code> à la place.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Malgré tout cela,
+si le site web interrogé met un temps infini à répondre, la coroutine va attendre indéfiniment (sans toute fois bloquer les autres).
+Donc le programme ne se terminera jamais.
+Pour éviter cela, on peut prévoir un <em>timeout</em> à l&#8217;aide du module (à inclure) <code>async_timeout</code> :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">for u in urls:
+  try:
+    async with async_timeout.timeout(10): <i class="conum" data-value="1"></i><b>(1)</b>
+      async with session.get(u) as response:
+      ...
+  except asyncio.TimeoutError:
+    print("interrompu, car trop long à répondre")</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>l&#8217;exécution du sous-bloc est interrompu au bout de 10 secondes,
+et une exception <code>asyncio.TimeoutError</code> est lancée</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="streaming"><a class="anchor" href="#streaming"></a>3. Ressources volumineuses</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Les coroutines <code>text()</code> et <code>read()</code> sont à utiliser avec précaution,
+car elles chargent la ressource en mémoire vive.
+Si les ressources à récupérer sont volumineuses, il faut procéder par morceaux.
+L&#8217;objet réponse dispose d&#8217;un attribut <code>content</code> (de type <code>aiohttp.StreamReader</code>), offrant une coroutine <code>read()</code> pour récupérer un nombre d&#8217;octets déterminé (passé en argument).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_le_module_aiofiles"><a class="anchor" href="#_le_module_aiofiles"></a>4. Le module <code>aiofiles</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Si le stockage se fait sur un système distribué,
+il peut être intéressant d&#8217;aller plus loin en parallélisant aussi les écritures.
+C&#8217;est le but du module <code>aiofile</code>.
+Les fichiers de ce type s&#8217;utilisent de façon similaire aux fichiers habituels (ouverture avec <code>open</code>), mais disposent d&#8217;une coroutine <code>write()</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">import aiofiles
+import aiohttp
+import asyncio
+import async_timeout
+import os
+
+async def download_coroutine(session, url):
+    with async_timeout.timeout(10):
+        async with session.get(url) as response:
+            filename = os.path.basename(url)
+            async with aiofiles.open(filename, 'wb') as fd:
+                while True:
+                    bloc = await response.content.read(1024)
+                    if not block:
+                        break
+                    await fd.write(bloc)
+            return await response.release()</code></pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p class="center">
+  <span style="font-size: 0.9em;">
+    <a href="https://jacquelincharbonnel.github.io/">Jacquelin Charbonnel</a>
+    <!-- &nbsp; &mdash; &nbsp; -->
+    &nbsp; &nbsp;
+    &copy;Creative Commons BY-NC-SA 4.0
+  </span>
+  </p>
+</footer>
+
+<script>
+var myDate = new Date(document.lastModified);
+myNewDate = new Intl.DateTimeFormat(
+            undefined,
+            {year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit"}
+        )
+        .format(myDate).replace(/\./g, '-');
+document.getElementById("lastmodify").innerHTML = myNewDate ;
+</script>
+
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

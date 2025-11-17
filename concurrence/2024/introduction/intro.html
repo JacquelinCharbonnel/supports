@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Aperçu :: Supports</title>
+    <link rel="canonical" href="https://jacquelincharbonnel.github.io/supports/concurrence/2024/introduction/intro.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<!-- reference des feuilles de styles supplémentaires -->
+<link rel="stylesheet" href="../../../_/css/layout.css">
+<link rel="stylesheet" href="../../../_/css/content.css">
+
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://jacquelincharbonnel.github.io/supports">Supports</a>
+  <!-- suppression du burger du bandeau
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+-->      
+    </div>
+<!-- suppression des boutons du bandeau
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+-->
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="concurrence" data-version="2024">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">Concurrence (preview)</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="intro.html">Aperçu</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../generateur/generateur.html">Générateur</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../asynchronisme/asyncio.html">Asynchronisme</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../aiohttp/collecte.html">Application #1</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asynchronisme/clientserveur/index.html">Application #2</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asynchronisme/bar/bar.html">Problème</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../multithreading/multithread.html">Multi-threading</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../multithreading/application.html">Application</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../multiprocessing/multiprocessing.html">Multi-processing</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../multiprocessing/sequenceur/sequenceur.html">Problème 1</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../multiprocessing/anagrammes/anagrammes.html">Problème 2</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Concurrence (preview)</span>
+    <span class="version">2024</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../../C/2023/index.html">C (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../C/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">Concurrence (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../linux_context/2025/index.html">Linux contexte (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../linux_context/2025/index.html">2025</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../python_objet/2024/index.html">Python objet</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../python_objet/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Concurrence (preview)</a></li>
+    <li><a href="intro.html">Aperçu</a></li>
+  </ul>
+</nav>
+<!-- supression de "edit this page"
+  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/concurrence/./modules/introduction/pages/intro.adoc">Edit this Page</a></div>
+-->
+</div>
+  <!-- ajout de la date de modification -->
+  <div class="lastmodify"> modifié le <span id="lastmodify"/> </div>
+  <!-- fin ajout -->
+  <div class="content">
+<aside class="toc sidebar" data-title="Plan" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Aperçu</h1>
+<div class="sect1">
+<h2 id="_architecture_matérielle"><a class="anchor" href="#_architecture_matérielle"></a>1. Architecture matérielle</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Un ordinateur réalise 2 fonctions principales :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>stocker des programmes et des données,</p>
+</li>
+<li>
+<p>les traiter.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Il est donc logiquement composé d&#8217;unités de traitement (les CPU) et d&#8217;unités de stockage (la mémoire).</p>
+</div>
+<div class="sect2">
+<h3 id="_ram"><a class="anchor" href="#_ram"></a>1.1. RAM</h3>
+<div class="paragraph">
+<p>La RAM, ou mémoire vive, est volatile.
+Elle mémorise données et programmes.
+Sa taille est en 2020 de quelques dizaines ou centaines de Go
+(typiquement 2 Go pour un smartphone, 16 Go pour un poste de travail, 256 Go pour un serveur).
+Son accès est rapide : cela signifie qu&#8217;une information recherchée est rapidement localisée.
+Son taux de transfert est rapide : cela signifie que récupérer ou y déposer des données est rapide.
+Comme la RAM est volatile, pour conserver les données et les programmes sans énergie,
+ceux-ci doivent être déplacés vers de la mémoire non volatile  (disque, clé USB, etc.),
+située en périphérie de l&#8217;ordinateur,
+donc d&#8217;accès et de transfert beaucoup plus lent (mais de capacité plus importante).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_cpu"><a class="anchor" href="#_cpu"></a>1.2. CPU</h3>
+<div class="paragraph">
+<p>Le CPU, ou processeur, est le cerveau de l&#8217;ordinateur.
+Il séquence, décode et exécute les instructions d&#8217;une part,
+effectue les calculs d&#8217;autre part.
+Il se compose d&#8217;une unité de traitement pour l&#8217;exécution des programmes,
+d&#8217;une unité arithmétique et logique pour le calcul entier (ALU) et d&#8217;une unité flottante pour le calcul flottant (FPU).
+Ces unités de calcul travaillent sur des registres :
+données et instructions doivent être déposées dans ces registres pour pouvoir être manipulées.
+Un registre est une mémoire élémentaire, de la taille d&#8217;un entier dans l&#8217;ALU et d&#8217;un flottant dans le FPU.
+C&#8217;est une mémoire de transit :
+les données et instructions migrent de la RAM vers les registres en vue d&#8217;être traitées, et les résultats, obtenus dans les registres, sont déplacés à leur tour en RAM pour laisser place nette (pour les prochains calculs).</p>
+</div>
+<div class="paragraph">
+<p>Le CPU possède également une file d&#8217;instructions à exécuter, et un pointeur vers la prochaine instruction à exécuter : le compteur ordinal.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tâche"><a class="anchor" href="#_tâche"></a>2. Tâche</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Une tâche (ou processus) est une instance de programme ou de sous-programme
+(c&#8217;est-à-dire un programme ou sous-programme en cours d&#8217;exécution).</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Par exemple, soit :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>def f(x): return [ (i,i**2) for i in x ]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>alors <code>f(range(1,100,3))</code> et <code>f([])</code> sont 2 tâches, instances d&#8217;un même sous-programme <code>f(x)</code>.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Une tâche se compose d&#8217;instructions et du contexte dans lequel elle évolue :
+ses variables, la pile des appels de fonctions, le pointeur vers l&#8217;instruction en cours d&#8217;exécution,  etc.
+Elle n&#8217;a pas d&#8217;existence hors de ce contexte :
+suspendre, reprendre ou déplacer une tâche suppose de sauvegarder et de restaurer son contexte.</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Dans l&#8217;exemple précédent,
+suspendre l&#8217;une des tâches nécessite,  si on veut pouvoir la poursuivre plus tard, de sauvegarder les instructions, l&#8217;adresse de la prochaine à exécuter (le compteur ordinal),
+les variables <code>i</code> et <code>x</code> et la liste en construction.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_système_multi_tâche"><a class="anchor" href="#_système_multi_tâche"></a>2.1. Système multi-tâche</h3>
+<div class="paragraph">
+<p>C&#8217;est un système informatique capable de gérer l&#8217;exécution de plusieurs tâches <em>en même temps</em>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Cette caractéristique n&#8217;est pas liée au nombre de CPU sous-jacents :
+un système multi-tâche peut tourner sur une architecture mono-CPU.
+Dans ce cas, la simultanéité apparente est le résultat de l’alternance rapide et l&#8217;entrelacement des tâches.
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="title"><code>top</code> visualise l&#8217;exécution des taches d&#8217;un système Unix</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ top
+
+top - 08:50:57 up 19 days, 53 min,  2 users,  load average: 1,35, 1,23, 1,02
+Tasks: 286 total,   1 running, 285 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  5,0 us,  6,2 sy,  0,0 ni, 87,5 id,  0,0 wa,  1,2 hi,  0,0 si,  0,0 st
+MiB Mem :   7601,4 total,    165,6 free,   6130,6 used,   1305,2 buff/cache
+MiB Swap:   7760,0 total,   1675,1 free,   6084,9 used.    360,9 avail Mem
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+1037125 jaclin    20   0 9520008   3,4g  28632 S  10,5  45,6  41:06.08 thunder+
+1762370 jaclin    20   0  227620   4380   3636 R  10,5   0,1   0:00.04 top
+      1 root      20   0  177148   7976   3420 S   0,0   0,1   1:02.41 systemd
+      2 root      20   0       0      0      0 S   0,0   0,0   0:01.40 kthreadd
+      3 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 rcu_gp
+      4 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 rcu_par+
+      6 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">premier plan (<em>foreground</em>) / <em>arrière plan</em> (<em>background</em>) sous bash</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ sleep 5 ; echo fini     # 2 tâches en série
+$ sleep 5 &amp; echo fini     # 2 tâches en parallèle
+$ (sleep 5 ; echo fini1) &amp; echo fini2
+
+$ sleep 10 &amp;              # tâche en arrière plan (background)
+$ jobs                    # liste des tâches
+
+$ ( sleep 15 ; echo fini 15 ) &amp;   # tâche de fond #1
+$ ( sleep 10 ; echo fini 10 ) &amp;   # tâche de fond #2
+$ jobs                            # liste des tâches
+
+$ time sleep 100 &amp;
+$ kill %1              # destruction d'une tâche de fond</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">basculer une tâche du premier plan vers l&#8217;arrière plan, et inversement</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ find / -name notfound.txt    # foreground
+$ ^Z                # tâche mise en pause
+$ jobs
+$ bg                # tâche passée en background
+$ fg                # tâche passée en foreground</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_communication_entre_processus"><a class="anchor" href="#_communication_entre_processus"></a>2.2. Communication entre processus</h3>
+<div class="paragraph">
+<p>2 processus peuvent échanger de l&#8217;information de 2 façons :
+soit au travers de variables partagées,
+soit par envois de messages.</p>
+</div>
+<div class="paragraph">
+<p>Le partage de variables entre processus nécessite une mémoire commune accessibles aux processus.
+La communication par messages peut être, quant à elle, synchrone ou asynchrone.</p>
+</div>
+<div class="paragraph">
+<p>Dans une communication synchrone, l&#8217;émetteur et le récepteur se donnent rendez-vous,
+pour échanger de l&#8217;information.
+Dans une communication asynchrone,
+l&#8217;émetteur poursuit son exécution après avoir envoyé son message,
+sans se soucier du récepteur qui en prendra connaissance quand il voudra ou quand il le pourra.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="title">Analogie</div>
+Le téléphone est un mode de communication synchone (la boîte vocale vise à le rendre asynchrone).
+Le mail est un mode de communication asynchrone.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_interaction_de_2_processus_la_synchronisation"><a class="anchor" href="#_interaction_de_2_processus_la_synchronisation"></a>2.3. Interaction de 2 processus : la synchronisation</h3>
+<div class="paragraph">
+<p>2 processus sont synchronisés si leur exécution respective est liée.
+Cela implique que les processus puissent échanger de l&#8217;information (de contrôle) entre eux.
+Par exemple, si un processus A dépend de données produites par un processus B, alors A doit pouvoir attendre que les données soient disponibles.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_gestion_du_multi_tâche"><a class="anchor" href="#_gestion_du_multi_tâche"></a>2.4. Gestion du multi-tâche</h3>
+<div class="paragraph">
+<p>Le système doit gérer un ensemble de tâches en les faisant progresser <em>équitablement</em>
+(mais il peut y avoir un système de priorités).
+Il lance l&#8217;exécution de la 1<sup>ère</sup>, et passe à la seconde avant que la première soit terminée :
+l&#8217;exécution des tâches se fait donc par parties.
+Ces exécutions morcellées et entrelacées donnent l&#8217;illusion que toutes les tâches sont exécutées en même temps,
+alors qu&#8217;elles s&#8217;exécutent les unes après les autres sur des temps courts (1 CPU ne peut exécuter qu&#8217;une instruction à la fois).</p>
+</div>
+<div class="paragraph">
+<p>Passer d&#8217;une tâche à une autre (commutation de tâches) consiste à :</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>sauvegarder le contexte de la tâche à interrompre (le code, les variables, le compteur ordinal, la pile des appels de fonctions en cours, etc.),
+la suspendre et libérer les ressources qu&#8217;elle utilisait,</p>
+</li>
+<li>
+<p>restaurer le contexte de la tâche à ressusciter,
+et reprendre son exécution à l&#8217;endoit où elle s&#8217;était interrompue.</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="title">Analogie</div>
+Les simultanées de Kasparov.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Le choix de la tâche à exécuter parmi l&#8217;ensemble des tâches en attente dépend de la stratégie d&#8217;ordonancement du système,
+comme par exemple, choisir parmi les tâches suspendues
+celle qui attend depuis le plus longtemps.</p>
+</div>
+<div class="paragraph">
+<p>Cette commutation de contextes a un coût :
+on peut arriver à la situation paradoxale où le temps passé à commuter les contextes est supérieur au temps attribué aux tâches.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">swap</dt>
+<dd>
+<p>Il arrive parfois que les contextes sauvegardés soient si volumineux qu&#8217;ils ne tiennent pas en RAM.
+Dans ce cas, le système en déplace certains dans un espace plus volumineux (mais moins rapide) sur disque, suivant une stratégie prédéterminée : par exemple,
+en déplaçant les moins utilisés, ou bien les plus volumineux, ou bien les endormis depuis longtemps, etc.
+Cet espace de stockage de secours est appelé <em>swap</em> (ou, sous Windows, <em>fichier d&#8217;échange</em>).
+C&#8217;est pourquoi une machine surchargée par un trop grand nombre de tâches sollicite à outrance son disque :
+elle transfert les contextes de la RAM à la swap, et inversement.
+On dit alors que le système <em>swappe</em>.
+Il n&#8217;est pas rare que le phénomène s&#8217;emballe, conduisant une à congestion du système,
+dont le reboot est la seule issue.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>La commutation peut être à l&#8217;initiative de la tâche en cours d&#8217;exécution elle-même (multitâche coopératif)
+ou bien par le système (multitâche préemptif).</p>
+</div>
+<div class="sect3">
+<h4 id="_multitâche_coopératif"><a class="anchor" href="#_multitâche_coopératif"></a>2.4.1. Multitâche coopératif</h4>
+<div class="paragraph">
+<p>C&#8217;est une forme de multitâche,
+où chaque tâche doit explicitement permettre aux autres de s’exécuter.
+C&#8217;est ainsi que fonctionnent Microsoft Windows (1987) jusqu’à la version 3.11,
+Mac Système 7 (1991),
+ainsi que les coroutines de Python.
+Les tâches décident elles-mêmes du moment où elles passent la main.
+C&#8217;est donc au programmeur de la tâche de gérer le multi-tâche.
+Avantage : il en a la maitrise, il n&#8217;y a pas de surprise possible pour lui.
+Inconvénient : c&#8217;est du travail supplémentaire pour lui.</p>
+</div>
+<div class="paragraph">
+<p>S&#8217;il est plus simple du point de vue du système, le multitâche coopératif présente quand-même quelques défauts.
+Il fonctionne bien à condition que toutes les tâches respectent les règles.
+Il suffit d&#8217;une tâche qui ne joue pas le jeu pour qu&#8217;elle
+accapare la scène sans risque d&#8217;être interrompue.
+Par exemple, une tâche qui entre dans une boucle infinie peut paralyser le système
+et toutes les tâches en cours.
+La fluidité des traitements et l&#8217;équité des chances pour accéder aux ressources (temps CPU, mémoire, accès disque, etc.)
+dépendent de la façon dont chaque tâche rend périodiquement la main.
+Le système est donc incapable de garantir une efficacité, ni même une stabilité de fonctionnement.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_multitâche_préemptif"><a class="anchor" href="#_multitâche_préemptif"></a>2.4.2. Multitâche préemptif</h4>
+<div class="paragraph">
+<p>Dans cette forme de multitâche, le système lui-même donne la main aux tâches, et la reprend tout aussi autoritairement.
+C&#8217;est le mode de fonctionnement d&#8217;Unix (1969), de Microsoft Windows NT (1991) et suivant, et de MacOSX (2001).
+Chaque tâche est périodiquement suspendue
+pour permettre aux autres d&#8217;avancer.
+Pour cela, le système sauvegarde la tâche à suspendre (c&#8217;est-à-dire libère les ressources qu&#8217;elle utilise,
+après avoir sauvegardé son contexte),
+puis choisit une autre tâche en attente, restaure son contexte, et lui redonne la main pour un petit moment.</p>
+</div>
+<div class="paragraph">
+<p>Le multitâche préemptif est plus robuste que le multitâche coopératif :
+une tâche ne peut pas bloquer l’ensemble du système,
+le système connait toutes les tâches,
+et il peut toujours se débarasser (<code>kill</code>) d&#8217;une tâche défectueuse.
+Par rapport au multitâche coopératif, vue des tâches préemptées, la commutation est transparente :
+le programmeur n&#8217;a rien à faire, il ne la voit même pas dans son code
+(en revanche, vue du système, la gestion est plus complexe).
+Mais cette préemption peut arriver n&#8217;importe quand, ce qui peut poser d&#8217;autres problèmes.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_accès_concurrents"><a class="anchor" href="#_accès_concurrents"></a>2.5. Accès concurrents</h3>
+<div class="paragraph">
+<p>Plusieurs tâches peuvent vouloir accéder en même temps à une même ressource :
+la mémoire, le clavier, l&#8217;écran, l&#8217;imprimante, la carte son, la webcam, le micro.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Exemple d&#8217;accès concurrent dans la vie de tous les jours :
+2 personnes réservant par Internet en même temps, sur un même vol, la dernière place.
+A un moment donné au cours de la transaction, l&#8217;une des 2 réservations va échouer,
+et, au final, seule une personne pourra prendre l&#8217;avion.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Le code ci-dessous illustre des accès concurrents à la mémoire.
+Soit <code>y</code> une variable globale, <code>x</code> une variable locale, et <code>f()</code> une fonction
+qui incrémente la variable globale <code>y</code> en utilisant une variable intermédiaire <code>x</code> :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python3 hljs" data-lang="python3">y = 1
+
+def f():
+  x = y
+  x += 1
+  y = x
+
+f()           # y vaut 2</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Si l&#8217;on exécute 2 instances de <code>f</code>, on s&#8217;attend à ce que <code>y</code> soit incrémenté 2 fois
+(c&#8217;est-à-dire que <code>y</code> vaille 3).
+Et c&#8217;est en effet ce que l&#8217;on obtiendrait avec 2 exécutions successives.
+Si les 2 exécutions sont concurrentes (avec un multi-tâche préemptif),
+on peut obtenir le séquencement suivant :</p>
+</div>
+<div class="listingblock">
+<div class="title">simulation 1</div>
+<div class="content">
+<pre>           y = 1                  y:1
+
+  [tâche A]      [tâche B]
+
+  x = y                           y:1, A.x:1
+  x += 1                          y:1, A.x:2
+  y = x                           y:2, A.x:2
+                 x = y            y:2, A.x:2, B.x:2
+                 x += 1           y:2, A.x:2, B.x:3
+                 y = x            y:3, A.x:2, B.x:3</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>qui conduit au même résultat : <code>y</code> vaut 3.
+Mais ce n&#8217;est pas systématique :</p>
+</div>
+<div class="listingblock">
+<div class="title">simulation 2</div>
+<div class="content">
+<pre>          y = 1                   y:1
+
+  [tâche A]      [tâche B]
+  x = y                           y:1, A.x:1,
+                 x = y            y:1, A.x:1, B.x:1
+  x += 1                          y:1, A.x:2, B.x:1
+                 x += 1           y:1, A.x:2, B.x:2
+  y = x                           y:2, A.x:2, B.x:2
+                 y = x            y:2, B.x:2, B.x:2</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>ici <code>y</code> vaut 2, ce n&#8217;est plus le résultat intuité.</p>
+</div>
+<div class="paragraph">
+<p>Le résultat de l&#8217;exécution concurrente de plusieurs instances de f est donc indéterminé,
+il dépend du séquencement des instructions.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Une fonction est dite <em>réentrante</em> si l&#8217;exécution concurrente
+ de ses instances est déterministe,
+ c&#8217;est-à-dire donne toujours le même résultat.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><code>f</code> n&#8217;est donc pas <em>réentrante</em>.
+Et cela est dû au fait que :</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><code>y</code> est partagée (c&#8217;est une variable globale)</p>
+</li>
+<li>
+<p>sa modification n&#8217;étant pas atomique (3 instructions réalisent l&#8217;incrémentation),
+des interférences peuvent se produire entre le début et la fin (de l&#8217;incrémentation).</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_section_critique"><a class="anchor" href="#_section_critique"></a>2.6. Section critique</h3>
+<div class="paragraph">
+<p>On supprime l&#8217;indéterminisme de l&#8217;exemple précédent en rendant l&#8217;incrémentation ininterruptible :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">def f():
+  v.lock()
+  x = y
+  x += 1
+  y = x
+  v.unlock()</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>v</code> est un verrou, c&#8217;est-à-dire un objet à 2 états (ouvert/fermé)
+et doté de 2 méthodes <code>lock</code> et <code>unlock</code> qui le font changer d&#8217;état :</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><code>lock()</code> ferme le verrou, si le verrou est ouvert. Si le verrou est déjà fermé,
+alors <code>lock()</code> attend qu&#8217;il s&#8217;ouvre, puis le referme.
+Cette attente suspend l&#8217;exécution de la tâche</p>
+</li>
+<li>
+<p><code>unlock()</code> ouvre le verrou (ce qui peut débloquer du même coup une attente).</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Ce qui donne par exemple :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>          y = 1
+
+  [tâche A]      [tâche B]
+
+  v.lock()                       demande de fermeture : verrou fermé par A
+                 v.lock()        demande de fermeture : attente de B
+  x = y
+  x += 1
+  y = x
+  v.unlock()                     ouverture par A : déblocage de B et fermeture par B
+                 x = y
+                 x += 1
+                 y = x
+                 v.unlock()      ouverture par B</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>ou bien :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>           y = 1
+
+  [tâche A]      [tâche B]       [v]
+
+                 lock()          fermé par B
+                 x = y
+                 x += 1
+  lock()                         fermé, A attend pour le fermer à son tour
+                 y = x
+                 unlock()        ouvert par B, puis fermé par A
+  x = y                          fermé
+  x += 1
+  y = x
+  unlock()                       ouvert</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>et <code>y</code> vaut maintenant 3 à tous les coups.</p>
+</div>
+<div class="paragraph">
+<p>Le bloc d&#8217;instructions protégé par le verrou s&#8217;appelle une <em>section critique</em>.
+Par définition, c&#8217;est une portion de code qui doit être traitée comme une instruction atomique
+(on peut faire l&#8217;analogie avec la notion de transactions dans les SGBD).</p>
+</div>
+<div class="sect3">
+<h4 id="_ensemble_de_sections_critiques"><a class="anchor" href="#_ensemble_de_sections_critiques"></a>2.6.1. Ensemble de sections critiques</h4>
+<div class="paragraph">
+<p>La section critique permet donc de gérer correctement les accès concurrents à une ressource donnée.
+Si ces accès apparaissent à plusieurs endroits dans le code,
+ils devront être protégés de la même façon (avec le même verrou).
+On obtient alors un <em>ensemble de sections critiques</em> relatif à la protection d&#8217;une ressource donnée.</p>
+</div>
+<div class="paragraph">
+<p>Dans un programme, il y a autant d&#8217;ensembles de sections critiques qu&#8217;il y a de ressource à protéger.
+Toutes les sections critiques d&#8217;un même ensemble sont mutuellement exclusives :
+leurs exécutions ne peuvent pas se superposer.
+Par contre, l&#8217;exécution simultanée de sections critiques appartenant à des ensembles différents
+est possible.
+Dans l&#8217;exemple suivant, on a 2 variables globales partagées <code>a</code> et <code>b</code>,
+modifiées à 3 endroits dans le programme,
+donc
+3 sections critiques réparties en 2 ensembles (correspondant à 2 verrous <code>v1</code> et <code>v2</code>) :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python"># section critique 1 protégeant l'accès en écriture à a
+v1.lock()
+x = a
+x += 1
+a = x
+v1.unlock()
+...
+# section critique 2 protégeant l'accès en écriture à b
+v2.lock()
+y = b
+y *= 2
+b = y
+v2.unlock()
+...
+# section critique 3 protégeant l'accès en écriture à a
+v1.lock()
+z = a
+if (z&lt;0):
+  z = 0
+a = z
+v1.unlock()</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_exclusion_mutuelle"><a class="anchor" href="#_exclusion_mutuelle"></a>2.6.2. Exclusion mutuelle</h4>
+<div class="paragraph">
+<p>L&#8217;exécution d&#8217;une section critique ne peut commencer que si aucune autre section critique du même ensemble n&#8217;est en cours d&#8217;exécution.
+Pour qu&#8217;un système fonctionne correctement, sa gestion des exclusions mutuelles
+doit assurer quelques bonnes propriétés :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>au plus un seul processus exécute une section critique d&#8217;un ensemble donné</p>
+</li>
+<li>
+<p>un processus en attente d&#8217;entrer dans une section critique doit pouvoir le faire le moment venu sans qu&#8217;un processus nouveau venu lui passe sous le nez (<em>équité</em>)</p>
+</li>
+<li>
+<p>un processus souhaitant entrer en section critique doit y entrer au bout d&#8217;un temps fini (pas de <em>famine</em>)</p>
+</li>
+<li>
+<p>si le processus en section critique disparait inopinément (crash, kill), le système ne doit pas resté bloqué (tolérance aux pannes)</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="title">Généralisation</div>
+Le problème de l&#8217;accès critique de n processus à m ressources identiques (par exemple un pool d&#8217;imprimantes)
+peut se traiter avec des sémaphores (Dijkstra, 1965).
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_inter_blocage"><a class="anchor" href="#_inter_blocage"></a>2.7. Inter-blocage</h3>
+<div class="paragraph">
+<p>L&#8217;utilisation des sections critiques doit se faire avec précaution.
+Dans l&#8217;exemple suivant, on a 2 variables globales partagées <code>g1</code> et <code>g2</code>,
+une fonction <code>f()</code> qui permute <code>g1</code> et <code>g2</code>,
+et une fonction <code>g()</code> qui ajoute <code>g2</code> à <code>g1</code> et soustrait <code>g1</code> à <code>g2</code>.
+Les modifications de <code>g1</code> sont protégées par un verrou <code>v1</code>,
+et de même, les modifications de <code>g2</code> sont protégées par un verrou <code>v2</code> :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python3 hljs" data-lang="python3">g1 = 1
+g2 = 2
+
+def f():
+  v1.lock()
+  v2.lock()
+  x = g1
+  g1 = g2
+  g2 = x
+  v2.unlock()
+  v1.unlock()
+
+def g():
+  v2.lock()
+  v1.lock()
+  x = g1+g2
+  y = g2-g1
+  g2 = y
+  g1 = x
+  v1.unlock()
+  v2.unlock()</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>L&#8217;exécution concurrente de <code>f()</code> et <code>g()</code> peut se trouver séquencée comme :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>    f                 g
+
+  v1.lock()                       demande de fermeture de v1 par f : v1 fermé
+  ....
+                    v2.lock()     demande de fermeture de v2 par g : v2 fermé
+                    v1.lock()     demande de fermeture de v1 par g : attente
+                    ....
+  v2.lock()                       demande de fermeture de v2 par f : attente
+  ....</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>et là, la situation est définitivement bloquée.
+Cette situation d&#8217;inter-blocage est appelée <em>étreinte fatale</em>
+ou <em>deadlock</em>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_parallélisme"><a class="anchor" href="#_parallélisme"></a>3. Parallélisme</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Le parallélisme caractérise l&#8217;exécution simultanée d&#8217;instructions.
+Deux instructions s&#8217;exécutent en parallèle si elles se superposent dans le temps.
+Le but du parallélisme est de réduire le temps d&#8217;obtention d&#8217;un résultat.</p>
+</div>
+<div class="paragraph">
+<p>Le parallélisme est apparu dans les années 1970 au travers de machines spécifiques
+telles que les <em>calculateurs vectoriels</em> (Cray-1, 1976).
+En 2020, le moindre smartphone est <em>multi-coeurs</em>.</p>
+</div>
+<div class="paragraph">
+<p>Le parallélisme permet de réaliser toujours plus de tâches en toujours moins de temps,
+sans accroître la fréquence de traitement (qui augmenterait la température et la consommation d&#8217;énergie).</p>
+</div>
+<div class="sect2">
+<h3 id="_architecture_parallèle"><a class="anchor" href="#_architecture_parallèle"></a>3.1. Architecture parallèle</h3>
+<div class="paragraph">
+<p>C&#8217;est un matériel capable d’exécuter plusieurs instructions pendant le même intervalle de temps.
+Une architecture parallèle possède donc plusieurs unités de traitements.</p>
+</div>
+<div class="sect3">
+<h4 id="_ordinateur_multiprocesseur"><a class="anchor" href="#_ordinateur_multiprocesseur"></a>3.1.1. Ordinateur multiprocesseur</h4>
+<div class="paragraph">
+<p>C&#8217;est un ordinateur avec plusieurs CPU (de deux à plusieurs milliers dans les architectures massivement parallèles).
+Le but est d&#8217;accroitre la puissance de traitement.
+Il n&#8217;existe pas d&#8217;architecture unique pour ce type d&#8217;ordinateur,
+car il existe de multiples façons d&#8217;interconnecter les processeurs.
+L&#8217;architecture influe sur la structure des algorithmes et des programmes à implanter.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_processeur_multi_coeur"><a class="anchor" href="#_processeur_multi_coeur"></a>3.1.2. Processeur multi-coeur</h4>
+<div class="paragraph">
+<p>C&#8217;est un processeur capable de suivre plusieurs fils d&#8217;exécutions en même temps.
+Pour cela, il dispose de plusieurs unités de traitement appelées <em>coeurs</em>
+possèdant chacun une file d&#8217;instructions à exécuter, un compteur ordinal, des registres, une ALU, etc.</p>
+</div>
+<div class="listingblock">
+<div class="title"><code>dmidecode</code> donne des éléments sur le matériel</div>
+<div class="content">
+<pre>$ dmidecode
+...
+Processor Information
+        Socket Designation: CPU1
+        Type: Central Processor
+        Family: Opteron 6200
+        Version: AMD Opteron(TM) Processor 6276
+        Voltage: 1.0 V
+        External Clock: 3200 MHz
+        Max Speed: 3600 MHz
+        Current Speed: 2300 MHz
+        Core Count: 16
+        Core Enabled: 16
+        Thread Count: 16
+...
+Processor Information
+        Socket Designation: CPU2
+        Type: Central Processor
+        Family: Opteron 6200
+        Version: AMD Opteron(TM) Processor 6276
+        Voltage: 1.0 V
+        External Clock: 3200 MHz
+        Max Speed: 3600 MHz
+        Current Speed: 2300 MHz
+        Core Count: 16
+        Core Enabled: 16
+        Thread Count: 16
+...</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title"><code>lscpu</code> donne des informations sur les processeurs</div>
+<div class="content">
+<pre>$ lscpu
+Architecture :                          x86_64
+Mode(s) opératoire(s) des processeurs : 32-bit, 64-bit
+Boutisme :                              Little Endian
+Tailles des adresses:                   39 bits physical, 48 bits virtual
+Processeur(s) :                         4
+Liste de processeur(s) en ligne :       0-3
+Thread(s) par cœur :                    1
+Cœur(s) par socket :                    4
+...</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_architecture_vectorielle"><a class="anchor" href="#_architecture_vectorielle"></a>3.1.3. Architecture vectorielle</h4>
+<div class="paragraph">
+<p>C&#8217;est un exemple d&#8217;architecture parallèle, historiquement la première.
+Cette architecture permet d&#8217;exécuter une même opération simple (addition, multiplication, etc.) à un ensemble de données (vecteur, matrice, etc.).
+L&#8217;opération est effectuée en un seul cycle d&#8217;horloge sur la structure de données.
+Les calculs effectués sur les données sont identiques et indépendants les uns des autres.
+Concrètement, dans le code, les boucles sont remplacées par des instructions vectorielles :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>si U=(u1,u2,u3) et V=(v1,v2,v3), alors l&#8217;addition vectorielle <code>W=U+V</code> remplace :</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python3 hljs" data-lang="python3">for i in range(1,4):
+  W[i] = U[i]+V[i]</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>si M1 et M2 sont 2 matrices, alors <code>M3=M1+M2</code> remplace :</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python3 hljs" data-lang="python3">for i in range(1,4):
+  for j in range(1,4):
+    M3[i,j] = M1[i,j]+M2[i,j]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Les instructions vectorielles s&#8217;exécutent en parallèle sur les composantes du vecteur ou de la matrice (data parallelism).
+Le code devient plus simple et plus clair.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_programme_parallèle"><a class="anchor" href="#_programme_parallèle"></a>3.2. Programme parallèle</h3>
+<div class="paragraph">
+<p>C&#8217;est un programme conçu pour tirer partie des capacités d’une architecture parallèle.
+Par exemple,
+le calcul d’une intégrale sur un intervalle peut être décomposé
+ en la somme de n intégrales sur n sous-intervalles.
+ Le résultat final est la somme des n résultats.
+ Ces n calculs étant indépendants, ils peuvent être menés de front,
+ ce qui divise théoriquement par n le temps de calcul.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_parallélisation"><a class="anchor" href="#_parallélisation"></a>3.3. Parallélisation</h3>
+<div class="paragraph">
+<p>Mais dans le cas général, qui ne se réduit pas à appliquer une opération élémentaire à un groupe de données, c&#8217;est plus compliqué.
+Les programmes destinés à être exécutés sur une architecture parallèle doivent être conçus
+pour ce type d&#8217;architecture.
+Les algorithmes doivent être <em>parallélisés</em> :
+soit en développant des algorithmes spécifiques (par exemple <em>map-reduce</em>),
+soit en décomposant le problème à traiter, par exemple
+en agissant :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>sur les données, en les regroupant de façon à pouvoir appliquer simultanément un même traitement
+à chaque groupe de données
+(cas du calcul vectoriel, ou plus généralement du <em>data parallelism</em>),</p>
+</li>
+</ul>
+</div>
+<div class="exampleblock">
+<div class="content">
+par exemple, des nombres à sommer que l&#8217;on divise en n sous-ensembles à sommer par n tâches parallèles
+ instances d&#8217;un même code.
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>sur les traitements, en les découpant de façon à pouvoir les appliquer simultanément
+à un même ensemble de données (<em>task parallelism</em>).</p>
+</li>
+</ul>
+</div>
+<div class="exampleblock">
+<div class="content">
+par exemple, un code ΣΠ qui calcule la somme puis le produit d&#8217;un ensemble de nombres,
+et que l&#8217;on découpe en 2 codes Σ et Π pour engendrer 2 tâches parallèles.
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>La parallélisation ne doit pas être utilisée
+pour palier les faiblesses d&#8217;un algorithme :
+les gains de performances envisageables en améliorant un algorithme non parallèle peuvent être sans commune mesure à ce que l&#8217;on peut espérer en parallélisant un algorithme médiocre.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Paralléliser un code demande d&#8217;examiner les dépendances entres les instructions qui le compose :</p>
+</div>
+<div class="listingblock">
+<div class="title">Exemple 1</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python3 hljs" data-lang="python3">c = a+b
+d = 2*c</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Ici, ces 2 instructions ne sont pas indépendantes, elles ne peuvent pas être parallèlisées :
+<code>c</code> doit d&#8217;abord être calculé pour pouvoir calculer <code>d</code>.</p>
+</div>
+<div class="listingblock">
+<div class="title">Exemple 2</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python3 hljs" data-lang="python3">c = a+b
+d = 2*b
+e = a+e</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Ici, pas de dépendance entre ces 3 instructions,
+elles peuvent être exécutées en parallèle,
+par exemple sur 3 unités de traitement différentes.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_concurrence"><a class="anchor" href="#_concurrence"></a>4. Concurrence</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_multi_tâche_vs_parallélisme"><a class="anchor" href="#_multi_tâche_vs_parallélisme"></a>4.1. Multi-tâche vs parallélisme</h3>
+<div class="paragraph">
+<p>Des traitements concurrents sont des traitements susceptibles de se superposer dans le temps.
+C&#8217;est donc du multi-tâche, mais pas forcément parallèle :
+les tâches peuvent s&#8217;exécuter sur un seul CPU, par morceau, en s&#8217;entrelaçant.
+Si elles sont asynchrones, alors elles évoluent chacune à leur rythme, sans ralentir ou stresser les autres :
+elles peuvent attendre des résultats ou des données sans bloquer les autres.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/concur1.png" alt="concur1" width="400">
+</div>
+<div class="title">Figure 1. multi-tâche non parallèle</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/concur2.png" alt="concur2" width="400">
+</div>
+<div class="title">Figure 2. multi-tâche parallèle</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_contraintes"><a class="anchor" href="#_contraintes"></a>4.2. Contraintes</h3>
+<div class="paragraph">
+<p>Les performances d&#8217;un
+programme peuvent être tributaires du CPU
+ou bien des entrées/sorties (E/S).</p>
+</div>
+<div class="paragraph">
+<div class="title"><em>CPU bound</em></div>
+<p>Un programme limité par le CPU (<em>CPU bound</em>) est un programme qui serait plus rapide si les CPU étaient plus nombreux ou plus rapides.
+Cela signifie simplement qu&#8217;il passe la majorité de son temps à faire des calculs.
+C&#8217;est le cas des programmes de calcul scientifique qui moulinent  sans parler au réseau ou au système de fichiers (par exemple un programme calculant les décimales de &pi;).</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/time2.webp" alt="time2" width="600">
+</div>
+</div>
+<div class="paragraph">
+<p>Ses performances ne dépendant donc que des CPU,
+l&#8217;accélérer consiste à lui donner plus de puissance de calcul.</p>
+</div>
+<div class="paragraph">
+<div class="title"><em>I/O bound</em></div>
+<p>Un programme limité par les E/S est un programme dont la progression est limitée par la vitesse des E/S (disque, réseau).
+Cela concerne donc les programmes échangeant des données avec l&#8217;environnement extérieur
+(ceux qui coopérent avec des services beaucoup plus lents que les CPU,
+comme les disques, le réseau, les bases de données, etc.).</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/time1.webp" alt="time1" width="600">
+</div>
+</div>
+<div class="paragraph">
+<p>Accélerer un tel programme consiste à réduire les temps d&#8217;attente.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_lasynchronisme"><a class="anchor" href="#_lasynchronisme"></a>4.3. L&#8217;asynchronisme</h3>
+<div class="paragraph">
+<p>Il y a des programmes qui passent leur temps à attendre, mais qui n&#8217;ont rien d&#8217;autre à faire.
+C&#8217;est le cas des applications interactives, comme le shell (en mode interactif) ou le navigateur web
+(il y a des navigateurs qui font des choses dans le dos de l&#8217;utilisateur,
+justement pendant les moments libres).
+Il y en a d&#8217;autres (I/O bound) qui auraient bien des choses à faire en attendant :
+il est dommage qu&#8217;un web scraping passe son temps à attendre la réponse d&#8217;un serveur sans rien faire, alors qu&#8217;il pourrait pendant ce temps en solliciter d&#8217;autres ou bien traiter les données déjà récoltées.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="title">Analogie</div>
+Les vidanges chez le garagiste
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Organiser une application en tâches asynchrones est essentiel si l&#8217;application possède des activités pouvant être ralenties ou bloquées (comme par exemple accéder à des ressources web).
+Une telle organisation permet d&#8217;éviter que l&#8217;application reste bloquée à ne rien faire,
+alors qu&#8217;elle pourrait traiter d&#8217;autres tâches qui ne dépendent pas de la ressource bloquante, en attendant que la situation se débloque.</p>
+</div>
+<div class="paragraph">
+<p>Implémenter des tâches asynchrones, dans un programme,
+est un moyen de réduire le temps passé à ne rien faire.
+Dans cette approche,
+l&#8217;application optimise le temps total d’exécution en entrelaçant les instructions composant chacune des tâches,
+de façon à minimiser les temps d&#8217;attente.
+L&#8217;entrelacement des instructions vise à une progression harmonieuse de toutes les tâches.</p>
+</div>
+<div class="paragraph">
+<p>La programmation asynchrone permet de mener de front des traitements ayant des cadences différentes,
+chaque tâche avançant à son rythme (en espérant qu&#8217;elles se termineront toutes à peu près en même temps).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_coroutine"><a class="anchor" href="#_coroutine"></a>4.4. Coroutine</h3>
+<div class="paragraph">
+<p>Une coroutine ressemble à une fonction (routine) :
+une suite d’instructions empaquetée et appelable.
+La différence se situe à l’exécution.
+L’appel d’une fonction génère une tâche qui s&#8217;exécute sans interruption programmée, jusqu’à la dernière instruction et renvoie un résultat à l’appelant.
+L’appel d’une coroutine, quant à elle, génère une tâche susceptible de s&#8217;exécuter par partie.</p>
+</div>
+<div class="paragraph">
+<p>L’exécution entrelacée d’un ensemble de coroutines est supervisée par un gestionnaire (appelé scheduler ou boucle d’évènements) agissant comme un chef d’orchestre.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_modèle_producteur_consommateur"><a class="anchor" href="#_modèle_producteur_consommateur"></a>4.5. Modèle producteur-consommateur</h3>
+<div class="paragraph">
+<p>Le modèle producteur-consommateur est un modèle algorithmique adapté à un contexte asynchrone.
+Il modélise 2 types de tâche qui partagent une file d&#8217;attente :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>des producteurs, qui produisent les données et les entreposent dans la file d&#8217;attente,</p>
+</li>
+<li>
+<p>des consommateurs qui vont piocher leurs données dans la file précédente.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Ces tâches ne sont pas indépendantes, et des synchronisations doivent être ponctuellement mises en place :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>les producteurs doivent s&#8217;assurer que la file peut accueillir leurs données
+(sinon ils doivent attendre que la file se vide suffisamment),</p>
+</li>
+<li>
+<p>les consommateurs doivent s&#8217;assurer que la file contient assez de données à traiter
+(sinon ils doivent attendre que les données arrivent).</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p class="center">
+  <span style="font-size: 0.9em;">
+    <a href="https://jacquelincharbonnel.github.io/">Jacquelin Charbonnel</a>
+    <!-- &nbsp; &mdash; &nbsp; -->
+    &nbsp; &nbsp;
+    &copy;Creative Commons BY-NC-SA 4.0
+  </span>
+  </p>
+</footer>
+
+<script>
+var myDate = new Date(document.lastModified);
+myNewDate = new Intl.DateTimeFormat(
+            undefined,
+            {year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit"}
+        )
+        .format(myDate).replace(/\./g, '-');
+document.getElementById("lastmodify").innerHTML = myNewDate ;
+</script>
+
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

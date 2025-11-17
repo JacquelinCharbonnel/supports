@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Complément sur la fonction main :: Supports</title>
+    <link rel="canonical" href="https://jacquelincharbonnel.github.io/supports/C/2023/C/mainfunc.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<!-- reference des feuilles de styles supplémentaires -->
+<link rel="stylesheet" href="../../../_/css/layout.css">
+<link rel="stylesheet" href="../../../_/css/content.css">
+
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://jacquelincharbonnel.github.io/supports">Supports</a>
+  <!-- suppression du burger du bandeau
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+-->      
+    </div>
+<!-- suppression des boutons du bandeau
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+-->
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="C" data-version="2023">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">C (preview)</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Le langage C</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="base.html">Les bases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="fonctions.html">Fonctions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tableaux.html">Tableaux</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="pointeurs.html">Pointeurs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="strings.html">Chaînes de caractères</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="mainfunc.html">Fonction main</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bibliotheque.html">Organisation du code</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="fichiers.html">Fichiers de données</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="alloc.html">Allocation de mémoire</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="types.html">Complément sur les types</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="preproc.html">Le préprocesseur</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="typeinterpret.html">Interprétation des types</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ptrfunc.html">Pointeurs de fonctions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Programmation système</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../sys/sig.html">Signaux Unix</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../sys/proc.html">Processus</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../sys/thread.html">Multi-threading</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">C (preview)</span>
+    <span class="version">2023</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">C (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../concurrence/2024/index.html">Concurrence (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../concurrence/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../linux_context/2025/index.html">Linux contexte (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../linux_context/2025/index.html">2025</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../python_objet/2024/index.html">Python objet</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../python_objet/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">C (preview)</a></li>
+    <li>Le langage C</li>
+    <li><a href="mainfunc.html">Fonction main</a></li>
+  </ul>
+</nav>
+<!-- supression de "edit this page"
+  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/C/./modules/C/pages/mainfunc.adoc">Edit this Page</a></div>
+-->
+</div>
+  <!-- ajout de la date de modification -->
+  <div class="lastmodify"> modifié le <span id="lastmodify"/> </div>
+  <!-- fin ajout -->
+  <div class="content">
+<aside class="toc sidebar" data-title="Plan" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Complément sur la fonction <code>main</code></h1>
+<div class="sect1">
+<h2 id="_arguments_de_la_ligne_de_commande"><a class="anchor" href="#_arguments_de_la_ligne_de_commande"></a>1. Arguments de la ligne de commande</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>On récupère les arguments de la ligne de commande via les paramètres de  <code>main</code>.
+Il suffit pour cela de doter <code>main</code> de 2 paramètres :
+1 <code>int</code> pour récupérer le nombre d&#8217;arguments
+et 1 tableau/pointeur de chaînes de caractères
+pour les arguments.</p>
+</div>
+<div class="listingblock">
+<div class="title">exemple avec indice</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">int main(int argc, char *argv[])
+{
+  int i ;
+
+  printf("%d argument(s)\n",argc) ;
+  for (i=0 ; i&lt;argc ; i++)
+    printf("argv[%d]=%s\n",i,argv[i]) ;
+
+  return 0 ;
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">exemple avec pointeur</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">int main(int argc, char **argv)
+{
+
+  printf("%d argument(s)\n",argc) ;
+  while (*++argv) printf("%s ",*argv) ;
+  return 0 ;
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_getopt"><a class="anchor" href="#_getopt"></a>2. <code>getopt</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>La fonction <code>getopt()</code> analyse les arguments de la ligne de commande.
+Un argument commence par <code>-</code> est considéré comme une option.
+<code>getopt()</code> renvoit à chaque appel une nouvelle option.
+La  variable <code>optind</code> est l&#8217;indice de l&#8217;élément suivant à analyser dans <code>argv</code>.
+S&#8217;il  n&#8217;y  a plus de caractères d&#8217;option, <code>getopt()</code> renvoie -1,
+et <code>optind</code> devient alors l&#8217;index du premier élément de <code>argv</code> qui ne soit pas une option
+(cf <code>man 3 getopt</code> pour plus d&#8217;info).</p>
+</div>
+<div class="paragraph">
+<div class="title">Exemple</div>
+<p>L&#8217;exemple suivant parse la ligne de commande d&#8217;un programme
+s&#8217;utilisant avec 2 options : <code>-n</code> sans valeur associée et
+       <code>-t</code>  nécessitant une valeur.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">int main(int argc, char *argv[])
+{
+  int opt;
+
+  while ((opt=getopt(argc, argv, "nt:")) != -1)
+  {
+    switch (opt)
+    {
+      case 'n':
+          printf("option n présente\n") ;
+          break;
+      case 't':
+          printf("valeur de l'option t: %s\n",optarg) ;
+          break;
+      default:
+          printf("Usage: %s [-t valeur] [-n] name\n",argv[0]);
+          return 1 ;
+    }
+  }
+  while (argv[optind]!=NULL)
+  {
+    printf("argument = %s\n", argv[optind]);
+    optind++ ;
+  }
+  return 0 ;
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_getopt_long"><a class="anchor" href="#_getopt_long"></a>3. <code>getopt_long</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>La fonction <code>getopt_long</code> permet de récupérer les options (courtes et longues) spécifiées sur la ligne de commande,
+lors du lancement du programme :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">int getopt_long(int argc, char * const argv[],
+                  const char *shortopts,
+                  const struct option *longopts, int *indexptr);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>longopts</code> doit fournir l&#8217;adresse d&#8217;un tableau contenant un élément par option à gérer,
+de type :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">struct option {
+               const char *name;
+               int         has_arg;
+               int        *flag;
+               int         val;
+           };</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>name</code> est le nom de l&#8217;option à identifier</p>
+</li>
+<li>
+<p><code>has_arg</code> peut avoir 3 valeurs possibles : <code>no_argument</code>,` required_argument` et <code>optional_argument</code></p>
+</li>
+<li>
+<p><code>val</code> doit contenir un entier unique qui servira à identifier l&#8217;option traitée</p>
+<div class="ulist">
+<ul>
+<li>
+<p>si <code>flag</code> vaut <code>NULL</code>, alors <code>val</code> sera retourné par <code>getopt_long</code> quand l&#8217;option sera rencontrée</p>
+</li>
+<li>
+<p>si <code>flag</code> ne vaut pas <code>NULL</code>, alors il doit pointer vers une variable :  <code>val</code> sera alors stocké dans cette variable lorsque l&#8217;option sera rencontrée (et <code>getopt_long</code> renverra 0).</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><code>*indexptr</code> retourne l&#8217;indice de l&#8217;élément de <code>longopts</code> utilisé :
+par exemple, on peut récupérer le nom de l&#8217;option avec <code>longopts[*indexptr].name</code>.
+Lorsqu&#8217;une option a une valeur, celle-ci est stockée dans la variable globale :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">char *optarg ;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>(si l&#8217;option n&#8217;a pas de valeur, <code>optarg</code> vaut <code>NULL</code>).</p>
+</div>
+<div class="paragraph">
+<p>Quand toutes les options ont été extraites, <code>getopt_long</code> renvoie <code>-1</code>,
+et la variable globale</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">int optind ;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>contient l&#8217;indice du prochain élément de <code>argv</code> à traiter.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p class="center">
+  <span style="font-size: 0.9em;">
+    <a href="https://jacquelincharbonnel.github.io/">Jacquelin Charbonnel</a>
+    <!-- &nbsp; &mdash; &nbsp; -->
+    &nbsp; &nbsp;
+    &copy;Creative Commons BY-NC-SA 4.0
+  </span>
+  </p>
+</footer>
+
+<script>
+var myDate = new Date(document.lastModified);
+myNewDate = new Intl.DateTimeFormat(
+            undefined,
+            {year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit"}
+        )
+        .format(myDate).replace(/\./g, '-');
+document.getElementById("lastmodify").innerHTML = myNewDate ;
+</script>
+
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

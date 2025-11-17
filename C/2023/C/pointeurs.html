@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Pointeurs :: Supports</title>
+    <link rel="canonical" href="https://jacquelincharbonnel.github.io/supports/C/2023/C/pointeurs.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<!-- reference des feuilles de styles supplémentaires -->
+<link rel="stylesheet" href="../../../_/css/layout.css">
+<link rel="stylesheet" href="../../../_/css/content.css">
+
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://jacquelincharbonnel.github.io/supports">Supports</a>
+  <!-- suppression du burger du bandeau
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+-->      
+    </div>
+<!-- suppression des boutons du bandeau
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+-->
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="C" data-version="2023">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">C (preview)</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Le langage C</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="base.html">Les bases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="fonctions.html">Fonctions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tableaux.html">Tableaux</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="pointeurs.html">Pointeurs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="strings.html">Chaînes de caractères</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="mainfunc.html">Fonction main</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bibliotheque.html">Organisation du code</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="fichiers.html">Fichiers de données</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="alloc.html">Allocation de mémoire</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="types.html">Complément sur les types</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="preproc.html">Le préprocesseur</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="typeinterpret.html">Interprétation des types</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ptrfunc.html">Pointeurs de fonctions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Programmation système</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../sys/sig.html">Signaux Unix</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../sys/proc.html">Processus</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../sys/thread.html">Multi-threading</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">C (preview)</span>
+    <span class="version">2023</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">C (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../concurrence/2024/index.html">Concurrence (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../concurrence/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../linux_context/2025/index.html">Linux contexte (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../linux_context/2025/index.html">2025</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../python_objet/2024/index.html">Python objet</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../python_objet/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">C (preview)</a></li>
+    <li>Le langage C</li>
+    <li><a href="pointeurs.html">Pointeurs</a></li>
+  </ul>
+</nav>
+<!-- supression de "edit this page"
+  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/C/./modules/C/pages/pointeurs.adoc">Edit this Page</a></div>
+-->
+</div>
+  <!-- ajout de la date de modification -->
+  <div class="lastmodify"> modifié le <span id="lastmodify"/> </div>
+  <!-- fin ajout -->
+  <div class="content">
+<aside class="toc sidebar" data-title="Plan" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Pointeurs</h1>
+<div class="sect1">
+<h2 id="operateurs"><a class="anchor" href="#operateurs"></a>1. Opérateurs * et &amp;</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Un pointeur de type <em>T</em> est une variable destinée à stocker l&#8217;adresse d&#8217;un objet de type <em>T</em>.
+Il se définit par : <em>T</em> <code>*ptr</code>.</p>
+</div>
+<div class="paragraph">
+<p>Pour une variable <code>x</code>, <code>&amp;x</code> renvoie l&#8217;adresse de <code>x</code>.</p>
+</div>
+<div class="paragraph">
+<p>Réciproquement, pour une adresse <code>ad</code> stockée dans une variable <code>ptr</code>,
+<code>*ptr</code> renvoie l&#8217;objet situé à cette adresse
+(c&#8217;est-à-dire l&#8217;objet pointé par <code>ptr</code>).</p>
+</div>
+<div class="listingblock">
+<div class="title">exemple</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">// soit un entier i et un pointeur vers entier ptr
+int i=12 ;
+int *ptr ;
+
+ptr = &amp;i ;  // ptr pointe maintenant vers i
+*ptr = 21 ; // i vaut maintenant 21
+
+// écrire la valeur du pointeur et la valeur de l'objet pointé
+printf("ptr=%p *ptr=%d i=%d\n",ptr,*ptr,i) ;
+
+// lire une valeur et la ranger à l'adresse ptr
+scanf("%d",ptr) ;
+
+// i a bien été modifié
+printf("ptr=%p *ptr=%d i=%d\n",ptr,*ptr,i) ;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="arguments"><a class="anchor" href="#arguments"></a>2. Passage d&#8217;arguments par adresse</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>En C, les arguments d&#8217;une fonction sont passés par valeur :
+toute modification d&#8217;un paramètre n&#8217;a aucun impact sur l&#8217;argument correspondant.</p>
+</div>
+<div class="listingblock">
+<div class="title">exemple</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">// 2 paramètres passés par valeur
+void f(int i, int j)
+{
+  j = 2*i ;
+}
+
+int a=3, b=0 ;
+f(a,b) ;
+// ici, b vaut toujours 0 <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>la modification de <code>j</code> n&#8217;a pas eu d&#8217;impact sur <code>b</code></td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Pour permettre à une fonction de modifier la valeur de l&#8217;un de ses arguments,
+il est nécessaire de passer l&#8217;adresse de cet argument :</p>
+</div>
+<div class="listingblock">
+<div class="title">exemple</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">// 1 paramètre passé par valeur et 1 paramètre passé par adresse
+void g(int i, int *j)
+{
+  *j = 2*i ;
+}
+
+int a=1, b=0 ;
+g(a,&amp;b) ;
+// b vaut maintenant 2 <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>la modification de <code>*j</code> a modifié <code>b</code></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="tableau"><a class="anchor" href="#tableau"></a>3. Equivalence tableau &#8656;&#8658; pointeur</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">#define N 10
+
+void f(int t[],int n)
+{
+  int i ;
+
+  printf("ligne %d: %d\n",__LINE__,sizeof(t)) ;
+  for (i=0 ; i&lt;n ; i++) printf("%d ",t[i]) ;
+}
+
+int main()
+{
+  int t[N] = { 0,1,2,3,4,5,6,7,8,9 } ;
+
+  printf("ligne %d: %d\n",__LINE__,sizeof(t)) ;
+  f(t,N) ;
+
+  return 0 ;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>En fait, le paramètre <code>t</code> de la fonction peut être indifféremment déclaré comme :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">int t[]
+int t[N]
+int *t</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="arithmetique"><a class="anchor" href="#arithmetique"></a>4. Arithmétique des pointeurs</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_pointeur_entier"><a class="anchor" href="#_pointeur_entier"></a>4.1. pointeur + entier</h3>
+<div class="paragraph">
+<p>Soit <code>p</code> un pointeur de type <code>T*</code>, <code>i</code> un entier positif et <code>t</code> un tableau d&#8217;éléments de type <code>T</code>.
+Si <code>p</code> pointe vers un élément du tableau, alors <code>p+i</code> pointe vers le ième élément suivant.
+De même, <code>p-i</code> pointe vers le ième élément précédent.</p>
+</div>
+<div class="paragraph">
+<p>La valeur du pointeur est donc incrémentée (respectivement décrémentée) de <code>i*sizeof(T)</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_pointeur_pointeur"><a class="anchor" href="#_pointeur_pointeur"></a>4.2. pointeur - pointeur</h3>
+<div class="paragraph">
+<p>Soit <code>p1</code> et <code>p2</code> 2 pointeurs de type <code>T*</code>, chacun pointant vers un élément d&#8217;un tableau d&#8217;éléments de type <code>T</code>.
+Alors <code>p2-p1</code> est un entier représentant le nombre d&#8217;éléments compris entre ces 2 éléments.</p>
+</div>
+<div class="paragraph">
+<p>Cette valeur entière est donc égale à <code>(p2-p1)/sizeof(T)</code>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cast"><a class="anchor" href="#cast"></a>5. Cast</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>On peut changer le type d&#8217;un pointeur avec un <em>cast</em> :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">int i, *ptri ;
+char *ptrc ;
+
+i = 65 ;
+ptri = &amp;i ; // ptri à pour valeur l'adresse de i
+            // l'objet pointé par ptri est un entier (65)
+ptrc = (char *) ptri ;  // ptrc à pour valeur l'adresse de i
+                        // l'objet pointé par ptrc est un caractère (A)</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="retenir"><a class="anchor" href="#retenir"></a>6. A retenir</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Soit <code>tab</code> un tableau, alors</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><code>tab</code> est interprété comme <code>&amp;tab[0]</code></p>
+</li>
+<li>
+<p><code>*(tab+i)</code> est équivalent à <code>tab[i]</code></p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>avec une exception pour <code>sizeof(tab)</code> :  en effet, <code>sizeof(tab)</code> donne le nombre d&#8217;octets du tableau <code>tab</code> (et non pas de <code>&amp;tab[0]</code>).</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p class="center">
+  <span style="font-size: 0.9em;">
+    <a href="https://jacquelincharbonnel.github.io/">Jacquelin Charbonnel</a>
+    <!-- &nbsp; &mdash; &nbsp; -->
+    &nbsp; &nbsp;
+    &copy;Creative Commons BY-NC-SA 4.0
+  </span>
+  </p>
+</footer>
+
+<script>
+var myDate = new Date(document.lastModified);
+myNewDate = new Intl.DateTimeFormat(
+            undefined,
+            {year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit"}
+        )
+        .format(myDate).replace(/\./g, '-');
+document.getElementById("lastmodify").innerHTML = myNewDate ;
+</script>
+
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

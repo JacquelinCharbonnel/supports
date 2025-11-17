@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Programmation concurrente :: Supports</title>
+    <link rel="canonical" href="https://jacquelincharbonnel.github.io/supports/concurrence/2024/index.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../_/css/site.css">
+<!-- reference des feuilles de styles supplémentaires -->
+<link rel="stylesheet" href="../../_/css/layout.css">
+<link rel="stylesheet" href="../../_/css/content.css">
+
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://jacquelincharbonnel.github.io/supports">Supports</a>
+  <!-- suppression du burger du bandeau
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+-->      
+    </div>
+<!-- suppression des boutons du bandeau
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+-->
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="concurrence" data-version="2024">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">Concurrence (preview)</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="introduction/intro.html">Aperçu</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="generateur/generateur.html">Générateur</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="asynchronisme/asyncio.html">Asynchronisme</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="aiohttp/collecte.html">Application #1</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asynchronisme/clientserveur/index.html">Application #2</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asynchronisme/bar/bar.html">Problème</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="multithreading/multithread.html">Multi-threading</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="multithreading/application.html">Application</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="multiprocessing/multiprocessing.html">Multi-processing</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="multiprocessing/sequenceur/sequenceur.html">Problème 1</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="multiprocessing/anagrammes/anagrammes.html">Problème 2</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Concurrence (preview)</span>
+    <span class="version">2024</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../C/2023/index.html">C (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../C/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="index.html">Concurrence (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../linux_context/2025/index.html">Linux contexte (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../linux_context/2025/index.html">2025</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../python_objet/2024/index.html">Python objet</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../python_objet/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Concurrence (preview)</a></li>
+    <li><a href="index.html">Programmation concurrente</a></li>
+  </ul>
+</nav>
+<!-- supression de "edit this page"
+  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/concurrence/./modules/ROOT/pages/index.adoc">Edit this Page</a></div>
+-->
+</div>
+  <!-- ajout de la date de modification -->
+  <div class="lastmodify"> modifié le <span id="lastmodify"/> </div>
+  <!-- fin ajout -->
+  <div class="content">
+<aside class="toc sidebar" data-title="Plan" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Programmation concurrente</h1>
+<div class="quoteblock abstract">
+<blockquote>
+<div class="paragraph">
+<p>Introduction à la programmation concurrente,
+et application pratique en Python.
+Ce support de cours s’adresse aux étudiants en informatique.</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>Le nombre croissant d&#8217;applications connectées (informatique mobile, video surveillance, voiture autonome, etc.)
+et verbeuses (réseaux sociaux), les nouveaux types d&#8217;appareillage notamment en biochimie (séquenceurs haut débit) ainsi que l&#8217;augmentation de leur interconnexion (IoT) conduisent à une production gigantesque de données,
+où tout l&#8217;enjeu est de pouvoir les stocker et les traiter.</p>
+</div>
+<div class="paragraph">
+<p>Dans cet univers du big data,
+les volumes en jeu submergent les capacités de stockage, et les techniques traditionnelles (SGBD relationnels) deviennent inadaptées.
+Le traitement de ces données nécessitent de nouvelles approches (cloud, NoSQL, systèmes de fichiers distribués),
+de nouvelles pratiques (amener les traitements près des données) et
+de nouvelles architectures matérielles (cluster de PC, GPU) pour les traiter.
+Cette informatique parallèle à haute performance nécessite des algorithmes spécifiques, une autre façon de concevoir le logiciel.</p>
+</div>
+<div class="paragraph">
+<p>L&#8217;objectif de ce cours est de comprendre comment, en considérant un programme comme autre chose qu&#8217;une suite d&#8217;instructions destinées à être exécutées séquentiellement,
+il est possible de tirer partie des architectures informatiques actuelles pour réaliser des applications adaptées à cet univers de la donnée.</p>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p class="center">
+  <span style="font-size: 0.9em;">
+    <a href="https://jacquelincharbonnel.github.io/">Jacquelin Charbonnel</a>
+    <!-- &nbsp; &mdash; &nbsp; -->
+    &nbsp; &nbsp;
+    &copy;Creative Commons BY-NC-SA 4.0
+  </span>
+  </p>
+</footer>
+
+<script>
+var myDate = new Date(document.lastModified);
+myNewDate = new Intl.DateTimeFormat(
+            undefined,
+            {year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit"}
+        )
+        .format(myDate).replace(/\./g, '-');
+document.getElementById("lastmodify").innerHTML = myNewDate ;
+</script>
+
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

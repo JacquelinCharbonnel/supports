@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Générateurs python :: Supports</title>
+    <link rel="canonical" href="https://jacquelincharbonnel.github.io/supports/concurrence/2024/generateur/generateur.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<!-- reference des feuilles de styles supplémentaires -->
+<link rel="stylesheet" href="../../../_/css/layout.css">
+<link rel="stylesheet" href="../../../_/css/content.css">
+
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://jacquelincharbonnel.github.io/supports">Supports</a>
+  <!-- suppression du burger du bandeau
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+-->      
+    </div>
+<!-- suppression des boutons du bandeau
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+-->
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="concurrence" data-version="2024">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">Concurrence (preview)</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../introduction/intro.html">Aperçu</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="generateur.html">Générateur</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../asynchronisme/asyncio.html">Asynchronisme</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../aiohttp/collecte.html">Application #1</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asynchronisme/clientserveur/index.html">Application #2</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asynchronisme/bar/bar.html">Problème</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../multithreading/multithread.html">Multi-threading</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../multithreading/application.html">Application</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../multiprocessing/multiprocessing.html">Multi-processing</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../multiprocessing/sequenceur/sequenceur.html">Problème 1</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../multiprocessing/anagrammes/anagrammes.html">Problème 2</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Concurrence (preview)</span>
+    <span class="version">2024</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../../C/2023/index.html">C (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../C/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">Concurrence (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../linux_context/2025/index.html">Linux contexte (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../linux_context/2025/index.html">2025</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../python_objet/2024/index.html">Python objet</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../python_objet/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Concurrence (preview)</a></li>
+    <li><a href="generateur.html">Générateur</a></li>
+  </ul>
+</nav>
+<!-- supression de "edit this page"
+  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/concurrence/./modules/generateur/pages/generateur.adoc">Edit this Page</a></div>
+-->
+</div>
+  <!-- ajout de la date de modification -->
+  <div class="lastmodify"> modifié le <span id="lastmodify"/> </div>
+  <!-- fin ajout -->
+  <div class="content">
+<aside class="toc sidebar" data-title="Plan" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Générateurs python</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Les générateurs Python sont une façon d&#8217;implémenter des traitements asynchrones.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_un_exemple_de_producteurconsommateur"><a class="anchor" href="#_un_exemple_de_producteurconsommateur"></a>1. Un exemple de producteur/consommateur</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Soit un programme de traitement de données composé de 2 processus indépendants :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>un processus (coûteux) de génération de données (le <em>producteur</em>),</p>
+</li>
+<li>
+<p>un processus de traitement unitaire de chacune de ces données (le <em>consommateur</em>),</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>chacun de ces 2 processus étant implémenté sous forme d&#8217;une fonction.
+Un codage naïf du producteur pourrait être :</p>
+</div>
+<div class="listingblock">
+<div class="title">le producteur</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">def producteur():
+    result = []
+    for i in range(10000):
+        result.append(gros_calcul_couteux(i))
+    return result</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>le consommateur n&#8217;ayant plus qu&#8217;à récupérer le retour du producteur pour le traiter :</p>
+</div>
+<div class="listingblock">
+<div class="title">le consommateur</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">def consommateur():
+  for e in producteur():
+    traiter(e)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>L&#8217;inconvénient de cette solution,
+c&#8217;est que la génération des données doit être complète avant de pouvoir commencer le traitement,
+donc si pour une raison quelconque,
+à un moment donné, le consommateur échoue et plante le programme,
+on aura générer toutes les données pour rien.
+Un autre inconvénient est que toutes les données doivent tenir en mémoire.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_yield"><a class="anchor" href="#_yield"></a>2. yield</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Pour éviter ce gâchis, on va modifier le producteur :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">def producteur():
+    for i in range(10000):
+        yield gros_calcul_couteux(i)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>La présence de l&#8217;instruction <code>yield</code> dans le bloc de code fait passer <code>producteur</code>
+du statut de fonction au statut de <em>coroutine</em>.
+Ce changement n&#8217;a aucun impact sur le consommateur, qui reste identique.
+Pourtant, le comportement du programme en est fondamentalement impacté :
+producteur et consommateur vont se synchronisaer et leur exécution s&#8217;entrelacer,
+le consommateur demandant les données une par une au producteur,
+et le producteur calculant chaque donnée au moment où on les lui demande.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_fonctionnement"><a class="anchor" href="#_fonctionnement"></a>3. Fonctionnement</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Un sous-programme utilisant l&#8217;instruction <code>yield</code> s&#8217;appelle une <em>fonction génératrice</em>.
+Son comportement est très différent de celui d&#8217;une fonction habituelle.
+Lorsqu&#8217;on l&#8217;appelle, elle ne s&#8217;exécute pas, mais renvoie simplement un itérateur.
+C&#8217;est cet itérateur, appelé <em>générateur</em>, qui va piloter la fonction génératrice.
+L&#8217;ensemble {fonction génératrice,itérateur} est une façon d&#8217;implémenter le concept de coroutine.</p>
+</div>
+<div class="paragraph">
+<p>Un premier <code>next()</code> sur l&#8217;itérateur  va exécuter les premières instructions de la fonction génératrice, jusqu&#8217;à rencontrer <code>yield</code>.
+La valeur spécifiée par <code>yield</code> est renvoyée à l&#8217;appelant,
+et le contrôle est redonné à l&#8217;appelant.
+Mais contrairement à <code>return</code>, <code>yield</code> ne termine pas la fonction, il la suspend.</p>
+</div>
+<div class="paragraph">
+<p>Le <code>next()</code> suivant reprendra l&#8217;exécution à l&#8217;endroit où elle a été interrompue,
+jusqu&#8217;à rencontrer à nouveau <code>yield</code>, ou la fin de la fonction.
+Conséquence : les valeurs sont renvoyées au coup par coup, à chaque appel, sans stockage ni anticipation.</p>
+</div>
+<div class="paragraph">
+<p>Exemple :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">def semaine():
+    print("début_de_semaine", end=" ")
+    for j in ("lu","ma","me","je","ve"):
+        yield j
+    print("fin_de_semaine")</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>semaine()</code> est une fonction génératrice.
+Elle ne s&#8217;exécute donc pas lorsqu&#8217;on l&#8217;appelle :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">semaine()  # rien n'est écrit</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Elle renvoie simplement un itérateur :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">s = semaine()
+print(s)         # &lt;generator object semaine at 0x7fc99d33c410&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>L&#8217;itérateur va, à chaque <code>next()</code>, exécuter la fonction jusqu&#8217;au prochain <code>yield</code> :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">s = semaine()
+print(next(s))    # début_de_semaine lu
+print(next(s))    # ma
+print(next(s))    # me
+print(next(s))    # je
+print(next(s))    # ve
+print(next(s))    # fin_de_semaine - StopIteration</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>On peut donc écrire:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">for jour in semaine():
+  print(jour, end=" ")</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>pour obtenir :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">début_de_semaine lu ma me je ve fin_de_semaine</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>L&#8217;itération se termine lorsque l&#8217;itérateur n&#8217;a plus rien à renvoyer,
+lorsqu&#8217;il exécute un <code>return</code>,
+ou lorsqu&#8217;il lance une <code>StopIteration</code>.
+L&#8217;itérateur ne sert qu&#8217;une seule fois,
+il faut ré-exécuter la fonction génératrice pour en obtenir un nouveau.
+On peut donc voir un générateur comme une fonction
+produisant une succession de résultats à la demande,
+et se mettant en pause entre chaque demande.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Le générateur est une façon de faire du multi-tâche coopératif :
+tant qu&#8217;il n&#8217;exécute pas <code>yield</code>, il conserve la main.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p class="center">
+  <span style="font-size: 0.9em;">
+    <a href="https://jacquelincharbonnel.github.io/">Jacquelin Charbonnel</a>
+    <!-- &nbsp; &mdash; &nbsp; -->
+    &nbsp; &nbsp;
+    &copy;Creative Commons BY-NC-SA 4.0
+  </span>
+  </p>
+</footer>
+
+<script>
+var myDate = new Date(document.lastModified);
+myNewDate = new Intl.DateTimeFormat(
+            undefined,
+            {year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit"}
+        )
+        .format(myDate).replace(/\./g, '-');
+document.getElementById("lastmodify").innerHTML = myNewDate ;
+</script>
+
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

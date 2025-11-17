@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Asynchronisme :: Supports</title>
+    <link rel="canonical" href="https://jacquelincharbonnel.github.io/supports/concurrence/2024/asynchronisme/asyncio.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<!-- reference des feuilles de styles supplémentaires -->
+<link rel="stylesheet" href="../../../_/css/layout.css">
+<link rel="stylesheet" href="../../../_/css/content.css">
+
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://jacquelincharbonnel.github.io/supports">Supports</a>
+  <!-- suppression du burger du bandeau
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+-->      
+    </div>
+<!-- suppression des boutons du bandeau
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+-->
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="concurrence" data-version="2024">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">Concurrence (preview)</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../introduction/intro.html">Aperçu</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../generateur/generateur.html">Générateur</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="asyncio.html">Asynchronisme</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../aiohttp/collecte.html">Application #1</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="clientserveur/index.html">Application #2</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bar/bar.html">Problème</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../multithreading/multithread.html">Multi-threading</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../multithreading/application.html">Application</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../multiprocessing/multiprocessing.html">Multi-processing</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../multiprocessing/sequenceur/sequenceur.html">Problème 1</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../multiprocessing/anagrammes/anagrammes.html">Problème 2</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Concurrence (preview)</span>
+    <span class="version">2024</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../../C/2023/index.html">C (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../C/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">Concurrence (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../linux_context/2025/index.html">Linux contexte (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../linux_context/2025/index.html">2025</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../python_objet/2024/index.html">Python objet</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../python_objet/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Concurrence (preview)</a></li>
+    <li><a href="asyncio.html">Asynchronisme</a></li>
+  </ul>
+</nav>
+<!-- supression de "edit this page"
+  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/concurrence/./modules/asynchronisme/pages/asyncio.adoc">Edit this Page</a></div>
+-->
+</div>
+  <!-- ajout de la date de modification -->
+  <div class="lastmodify"> modifié le <span id="lastmodify"/> </div>
+  <!-- fin ajout -->
+  <div class="content">
+<aside class="toc sidebar" data-title="Plan" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Asynchronisme</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>La programmation asynchrone consiste à écrire une application (multi-tâche)
+capable de gérer un ensemble de tâches progressant de concert,
+à leur propre rythme.
+C&#8217;est du multi-tâche coopératif.
+Le but, pour l&#8217;application, est de minimiser le temps passé à ne rien faire.
+Les tâches sont des instances de co-routines
+(une co-routine est une fonction pouvant s&#8217;exécuter par morceaux).</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Asynchronisme en Python </dt>
+<dd>
+<p>L&#8217;asynchronisme est implémenté nativement en Python à partir de la version 3.4,
+avec l&#8217;introduction de 2 nouveaux mot-clés : <code>await</code> et <code>async</code>.
+A la suite de quoi le module <code>asyncio</code> est apparu avec Python 3.6,
+a tâtonné avant de se stabiliser avec Python 3.9.
+<code>asyncio</code> est une boite à outils (parmi d&#8217;autres) permettant de faire de l&#8217;asynchronisme.
+Ce document correspond à ce que propose Python depuis la version 3.11.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_fonction_coroutine"><a class="anchor" href="#_fonction_coroutine"></a>1. Fonction coroutine</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>C&#8217;est une fonction qui renvoie un <em>objet coroutine</em>.
+C&#8217;est à rapprocher de la fonction génératrice vue dans un chapitre précédent,
+qui renvoie un générateur.
+Syntaxiquement, définir une fonction coroutine est identique à définir une fonction,
+en remplaçant <code>def</code> par <code>async def</code> :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">import time
+
+async def say(n,what):
+  for i in range(n):
+    time.sleep(0.1)
+    print(what, end=" ", flush=True)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>L&#8217;appeler n&#8217;exécute pas ses instructions :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">say(5,"hello") # &lt;coroutine object say at 0x7f38f7793790&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>L&#8217;objet coroutine renvoyé est un callable susceptible de s&#8217;exécuter par parties.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Pour simplifier dans la suite, on ne fera pas de différence entre la fonction coroutine
+et l&#8217;objet coroutine, et on parlera simplement de <em>coroutine</em>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_exécuter_une_coroutine"><a class="anchor" href="#_exécuter_une_coroutine"></a>2. Exécuter une coroutine</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Dans un fonctionnement normal, et contrairement à une fonction,
+une coroutine ne s&#8217;appelle pas directement :
+l&#8217;exécution d&#8217;une coroutine se planifie.
+Une coroutine planifiée pour exécution sera alors exécutée en temps utile par un <em>chef d&#8217;orchestre</em> (appelé <em>scheduler</em> ou <em>boucle d&#8217;évènement</em>) pour donner naissance à une tâche.</p>
+</div>
+<div class="sect2">
+<h3 id="_exécution_unitaire"><a class="anchor" href="#_exécution_unitaire"></a>2.1. Exécution unitaire</h3>
+<div class="paragraph">
+<p>Malgré tout, pour exécuter immédiatement une coroutine
+à des fins de mise au point par exemple,
+on peut passer par la fonction <code>asyncio.run</code> :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">import asyncio
+...
+asyncio.run(say(3,"+"))</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Mais exécuter de la sorte plusieurs coroutines ne donne pas ce que l&#8217;on souhaite :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">asyncio.run(say(2,"-"))
+asyncio.run(say(3,"|"))</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>say(2,"-")</code> est totalement exécutée, puis ensuite de même pour <code>say(3,"|")</code>.
+Donc pas de concurrence ici.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_exécution_depuis_une_autre_coroutine"><a class="anchor" href="#_exécution_depuis_une_autre_coroutine"></a>2.2. Exécution depuis une autre coroutine</h3>
+<div class="paragraph">
+<p>Une coroutine (et seule une coroutine) peut exécuter une autre coroutine.
+Cela s&#8217;exprime avec le mot-clé <code>await</code> :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">async def repeat(n,l):
+  for c in l:
+    print("avant")
+    await say(n,c) <i class="conum" data-value="1"></i><b>(1)</b>
+    print("\naprès")</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Cette instruction exécute et attend le retour de la tâche <code>say(n,c)</code>.
+En détail, cette instruction :
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>planifie l&#8217;exécution de la tâche <code>say(n,c)</code>,</p>
+</li>
+<li>
+<p>rend le contrôle au scheduler, qui va en profiter pour faire progresser d&#8217;autres tâches planifiées,</p>
+</li>
+<li>
+<p>et lorsque, plus tard, <code>say(n,c)</code> se terminera, le scheduler redonnera le contrôle à la coroutine <code>repeat</code>
+pour qu&#8217;elle poursuive son déroulement.</p>
+</li>
+</ol>
+</div></td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><code>repeat</code> peut être tester avec :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">asyncio.run(repeat(10,["un","deux","trois"]))</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_le_multi_tâche"><a class="anchor" href="#_le_multi_tâche"></a>3. Le multi-tâche</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>L&#8217;intérêt des coroutines se révèle lorsqu&#8217;on en exécute plusieurs en concurrence :
+on planifie leur exécution, ce qui donne des tâches (1 exécution=1 tâche),
+puis on attend qu&#8217;elles se terminent toutes.
+Pendant ce labs de temps, les tâches progressent de concert, à leur propre rythme.</p>
+</div>
+<div class="paragraph">
+<p>Concrèrement, on peut réaliser cela de 2 façons :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>soit créer séquentiellement les tâches dans un context manager  <code>async with asyncio.TaskGroup()</code></p>
+</li>
+<li>
+<p>soit rassembler les tâches via la fonction <code>asyncio.gather()</code></p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_créer_explicitement_les_tâches_via_create_task"><a class="anchor" href="#_créer_explicitement_les_tâches_via_create_task"></a>3.1. Créer explicitement les tâches (via <code>create_task()</code>)</h3>
+<div class="paragraph">
+<p>C&#8217;est une première façon de faire,
+consistant à créer les tâches, dans un context manager,
+via <code>create_task()</code> :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">async def main():
+  async with asyncio.TaskGroup() as tg:
+      task1 = tg.create_task(say(6, '-'))
+      task2 = tg.create_task(say(9, '*'))
+      print(f"début : {time.strftime('%X')}")
+  <i class="conum" data-value="1"></i><b>(1)</b>
+  print(f"\nfin : {time.strftime('%X')}")
+
+asyncio.run(main())</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>on attend ici que toutes les tâches créées se terminent avant de poursuivre.
+Le fonctionnement est le suivant :
+<div class="ulist">
+<ul>
+<li>
+<p>dans le context manager, les coroutines sont planifiées pour être exécutées,</p>
+</li>
+<li>
+<p>à la sortie du context manager, les tâches sont créées, leurs exécutions commencent,
+et on attend qu&#8217;elles se terminent.</p>
+</li>
+</ul>
+</div></td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_exécuter_un_pool_de_coroutines_via_gather"><a class="anchor" href="#_exécuter_un_pool_de_coroutines_via_gather"></a>3.2. Exécuter un pool de coroutines (via <code>gather()</code>)</h3>
+<div class="paragraph">
+<p>Une autre façon de faire consiste à rassembler les co-routines
+et à lancer en concurrence l&#8217;exécution de l&#8217;ensemble (via <code>gather()</code>) :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">async def main():
+    await asyncio.gather(
+      say(6, '-'),
+      say(9, '|')
+    )
+
+asyncio.run(main())</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_coopération"><a class="anchor" href="#_coopération"></a>4. Coopération</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Les 2 exemples ci-dessus ne montrent aucun entrelacement dans l&#8217;exécution des tâches.
+Pour y parvenir, les tâches doivent coopérer,
+en redonnant la main de temps en temps au scheduler (cf multitâche coopératif).
+Cela passe par l&#8217;utilisation de coroutines prédéfinies (<em>native coroutines</em> telles que <code>asyncio.sleep</code>),
+qui interagissent avec la boucle d&#8217;évènement.</p>
+</div>
+<div class="sect2">
+<h3 id="_asyncio_sleep"><a class="anchor" href="#_asyncio_sleep"></a>4.1. <code>asyncio.sleep()</code></h3>
+<div class="paragraph">
+<p>La coroutine <code>asyncio.sleep()</code> réalise une attente non bloquante
+(contrairement à la fonction <code>time.sleep()</code>).
+Par exemple, l&#8217;instruction <code>await asyncio.sleep(10)</code> planifie une temporisation de 10 secondes,
+et redonne la main au scheduler qui va en profiter pour faire avancer d&#8217;autres tâches suspendues.</p>
+</div>
+<div class="paragraph">
+<p>En d&#8217;autres termes, <code>asyncio.sleep(10)</code> suspend la tâche courante pour 10 secondes (dans le meilleur des cas, plus sinon),
+Pendant ce temps, la boucle d&#8217;évènements prend le contrôle et s&#8217;occupe de faire progresser les tâches suspendues.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_asyncio_sleep_vs_time_sleep"><a class="anchor" href="#_asyncio_sleep_vs_time_sleep"></a>4.2. <code>asyncio.sleep()</code> vs <code>time.sleep()</code></h3>
+<div class="paragraph">
+<p>Les 2 exemples ci-dessous illustrent la différence entre <code>time.sleep</code> et <code>asyncio.sleep</code> :</p>
+</div>
+<div class="listingblock">
+<div class="title">time.sleep()</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">import time,asyncio
+
+msg = f"time.sleep(1)"
+starttime = time.time()
+
+async def tsleep(i):
+    print(f"tâche {i}: exécute {msg:20} {time.time()-starttime:.4f}s écoulées depuis le début du programme")
+    time.sleep(1)
+    print(f"tâche {i}: retour de {msg:18} {time.time()-starttime:.4f}s écoulées depuis le début du programme")
+
+async def main():
+    await asyncio.gather(tsleep(1),tsleep(2),tsleep(3))
+
+asyncio.run(main())</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>donne :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>tâche 1: exécute time.sleep(1)       0.0002s écoulées depuis le début du programme
+tâche 1: retour de time.sleep(1)     1.0005s écoulées depuis le début du programme
+tâche 2: exécute time.sleep(1)       1.0006s écoulées depuis le début du programme
+tâche 2: retour de time.sleep(1)     2.0007s écoulées depuis le début du programme
+tâche 3: exécute time.sleep(1)       2.0007s écoulées depuis le début du programme
+tâche 3: retour de time.sleep(1)     3.0010s écoulées depuis le début du programme</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>La coroutine <code>tsleep</code> ne rend jamais la main, elle s&#8217;exécute sans coopérer, comme le ferait une fonction.
+Les 3 tâches s&#8217;exécutent donc séquentiellement.
+Par contre :</p>
+</div>
+<div class="listingblock">
+<div class="title">asyncio.sleep()</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">import time,asyncio
+
+msg = f"asyncio.sleep(1)²"
+starttime = time.time()
+
+async def asleep(i):
+    print(f"tâche {i}: exécute {msg:20} {time.time()-starttime:.4f}s écoulées depuis le début du programme")
+    await asyncio.sleep(1)
+    print(f"tâche {i}: retour de {msg:18} {time.time()-starttime:.4f}s écoulées depuis le début du programme")
+
+async def main():
+    await asyncio.gather(asleep(1),asleep(2),asleep(3))
+
+asyncio.run(main())</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>f
+donne :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>tâche 1: exécute asyncio.sleep(1)     0.0002s écoulées depuis le début du programme
+tâche 2: exécute asyncio.sleep(1)     0.0002s écoulées depuis le début du programme
+tâche 3: exécute asyncio.sleep(1)     0.0002s écoulées depuis le début du programme
+tâche 1: retour de asyncio.sleep(1)   1.0014s écoulées depuis le début du programme
+tâche 2: retour de asyncio.sleep(1)   1.0014s écoulées depuis le début du programme
+tâche 3: retour de asyncio.sleep(1)   1.0014s écoulées depuis le début du programme</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Ici la coroutine <code>asleep</code>, quand à elle, coopère en rendant la main au scheduler via <code>asyncio.sleep()</code>.
+Les 3 tâches progressent donc de concert.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<code>await asyncio.sleep(0)</code> est un moyen de passer la main,
+sans délai, à la boucle d&#8217;évènement,
+donc de coopérer avec les autres tâches concurrentes.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p class="center">
+  <span style="font-size: 0.9em;">
+    <a href="https://jacquelincharbonnel.github.io/">Jacquelin Charbonnel</a>
+    <!-- &nbsp; &mdash; &nbsp; -->
+    &nbsp; &nbsp;
+    &copy;Creative Commons BY-NC-SA 4.0
+  </span>
+  </p>
+</footer>
+
+<script>
+var myDate = new Date(document.lastModified);
+myNewDate = new Intl.DateTimeFormat(
+            undefined,
+            {year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit"}
+        )
+        .format(myDate).replace(/\./g, '-');
+document.getElementById("lastmodify").innerHTML = myNewDate ;
+</script>
+
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

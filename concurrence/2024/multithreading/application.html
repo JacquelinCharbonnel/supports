@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Application serveur :: Supports</title>
+    <link rel="canonical" href="https://jacquelincharbonnel.github.io/supports/concurrence/2024/multithreading/application.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<!-- reference des feuilles de styles supplémentaires -->
+<link rel="stylesheet" href="../../../_/css/layout.css">
+<link rel="stylesheet" href="../../../_/css/content.css">
+
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://jacquelincharbonnel.github.io/supports">Supports</a>
+  <!-- suppression du burger du bandeau
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+-->      
+    </div>
+<!-- suppression des boutons du bandeau
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+-->
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="concurrence" data-version="2024">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">Concurrence (preview)</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../introduction/intro.html">Aperçu</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../generateur/generateur.html">Générateur</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../asynchronisme/asyncio.html">Asynchronisme</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../aiohttp/collecte.html">Application #1</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asynchronisme/clientserveur/index.html">Application #2</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asynchronisme/bar/bar.html">Problème</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="multithread.html">Multi-threading</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="application.html">Application</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../multiprocessing/multiprocessing.html">Multi-processing</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../multiprocessing/sequenceur/sequenceur.html">Problème 1</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../multiprocessing/anagrammes/anagrammes.html">Problème 2</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Concurrence (preview)</span>
+    <span class="version">2024</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../../C/2023/index.html">C (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../C/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">Concurrence (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../linux_context/2025/index.html">Linux contexte (preview)</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../linux_context/2025/index.html">2025</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../python_objet/2024/index.html">Python objet</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../python_objet/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Concurrence (preview)</a></li>
+    <li><a href="multithread.html">Multi-threading</a></li>
+    <li><a href="application.html">Application</a></li>
+  </ul>
+</nav>
+<!-- supression de "edit this page"
+  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/concurrence/./modules/multithreading/pages/application.adoc">Edit this Page</a></div>
+-->
+</div>
+  <!-- ajout de la date de modification -->
+  <div class="lastmodify"> modifié le <span id="lastmodify"/> </div>
+  <!-- fin ajout -->
+  <div class="content">
+<aside class="toc sidebar" data-title="Plan" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Application serveur</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Une application serveur est une application offrant des services à d&#8217;autres applications
+(locales ou distantes) appelées <em>applications clientes</em>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_aperçu"><a class="anchor" href="#_aperçu"></a>1. Aperçu</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>L&#8217;application serveur est un programme à l&#8217;écoute de requêtes provenant de clients connectés au réseau.
+Cette application choisit sur quelle IP et quel port elle écoute les requêtes.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Adresses IP d&#8217;écoute</dt>
+<dd>
+<p>Un serveur peut écouter via n&#8217;importe laquelle de ses adresses, dont en particulier :</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>127.0.0.1</code> accessible uniquement en local :
+s&#8217;il écoute seulement sur <code>127.0.0.1</code> (<code>localhost</code>), alors il ne pourra être sollicité que par des clients locaux (résidant sur la même machine)</p>
+</li>
+<li>
+<p><code>0.0.0.0</code> qui représentant toutes ses adresses (dont <code>127.0.0.1</code>).</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Port d&#8217;écoute</dt>
+<dd>
+<p>Le port est un entier identifiant le service.
+Les ports &lt;1024 sont normalisés et réservés à des services internet bien connus (<em>well-known ports</em>).
+Ils sont définis dans le fichier <code>/etc/services</code>.
+Une application sans droit particulier ne peut pas écouter sur un port &lt;1024.
+C&#8217;est pourquoi ces ports sont appelés <em>ports privilégiés</em>.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>Le couple <code>(IP,port)</code> s&#8217;appelle un <em>network socket</em>.
+C&#8217;est un point d&#8217;entrée de service unique sur le réseau.</p>
+</div>
+<div class="paragraph">
+<p>Un serveur digne de ce nom ne doit pas faire attendre ses clients,
+en étant par exemple monopolisé par un client accaparant.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_problème"><a class="anchor" href="#_problème"></a>2. Problème</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>On dispose d&#8217;un embryon d&#8217;application client/serveur :</p>
+</div>
+<div class="listingblock">
+<div class="title">le serveur</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">#!/bin/env python3
+
+from socket import *
+
+host = "localhost"
+port = 2074
+buf = 1024                            # taille du buffer
+s_addr = (host,port)
+
+UDPsock = socket(AF_INET,SOCK_DGRAM)  # création du socket
+UDPsock.bind(s_addr)                  # activation
+
+while True:
+    data,c_addr = UDPsock.recvfrom(buf)  # écoute
+    print(f"\nReçu {data} de {c_addr}")
+
+UDPsock.close()</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>et</p>
+</div>
+<div class="listingblock">
+<div class="title">le client</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">#!/bin/env python3
+
+from socket import *
+
+host = "localhost"
+port = 2074
+buf = 1024                              # taille du buffer
+s_addr = (host,port)
+
+UDPsock = socket(AF_INET,SOCK_DGRAM)    # création du socket
+
+while True:
+    msg = input('&gt;&gt; ')
+    if not msg: break
+
+    data = bytes(msg,'utf-8')
+    print(f"Envoi de {data}")
+    UDPsock.sendto(data,s_addr)         # envoi vers le serveur
+
+UDPsock.close()</code></pre>
+</div>
+</div>
+<h3 id="_question_1" class="discrete">Question 1</h3>
+<div class="paragraph">
+<p>Comprendre le fonctionnement de ces 2 programmes, et les tester en local.</p>
+</div>
+<h3 id="_question_2" class="discrete">Question 2</h3>
+<div class="paragraph">
+<p>Paramétrer le client de façon à pouvoir spécifier au lancement (en argument de la ligne de commande) le serveur à atteindre.
+Tester ensuite le cas où le client et le serveur ne sont pas sur la même machine.</p>
+</div>
+<h3 id="_question_3" class="discrete">Question 3</h3>
+<div class="paragraph">
+<p>On souhaite maintenant observer le comportement du serveur lorsque
+le traitement des requêtes prend du temps.
+On définit pour cela le protocole suivant :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>si le serveur reçoit une requete dont le format est :</p>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;entier&gt; "&lt;chaine 1&gt;" "&lt;chaine 2&gt;"</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>alors le serveur écrit sur son écran :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>"&lt;chaine1&gt;" envoyé par &lt;adresse du client&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>puis attend <code>entier</code> secondes avant d&#8217;écrire :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>"&lt;chaine2&gt;" envoyé par &lt;adresse du client&gt; il y a &lt;entier&gt; secondes</pre>
+</div>
+</div>
+</li>
+<li>
+<p>si la requête n&#8217;a pas le format précédent, le serveur écrit sur son écran :</p>
+<div class="listingblock">
+<div class="content">
+<pre>requête incompréhensible de &lt;adresse du client&gt;</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Exemple, le client envoie</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>10 "debut" "fin"</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>au serveur qui doit afficher :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>"debut" envoyé par 10.0.0.1</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>puis attendre 10 secondes, puis afficher :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>"fin" envoyé par 10.0.0.1 il y a 10 secondes</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Autre exemple, le client envoie :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>10 debut fin</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>au serveur qui doit afficher :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>requête incompréhensible de 10.0.0.1</pre>
+</div>
+</div>
+<h3 id="_question_4" class="discrete">Question 4</h3>
+<div class="paragraph">
+<p>On souhaite maintenant que le serveur ne fasse pas attendre inutilement ses clients.
+A l&#8217;aide du module Python <code>threading</code>, réaliser un serveur qui traite équitablement ses clients.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p class="center">
+  <span style="font-size: 0.9em;">
+    <a href="https://jacquelincharbonnel.github.io/">Jacquelin Charbonnel</a>
+    <!-- &nbsp; &mdash; &nbsp; -->
+    &nbsp; &nbsp;
+    &copy;Creative Commons BY-NC-SA 4.0
+  </span>
+  </p>
+</footer>
+
+<script>
+var myDate = new Date(document.lastModified);
+myNewDate = new Intl.DateTimeFormat(
+            undefined,
+            {year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit"}
+        )
+        .format(myDate).replace(/\./g, '-');
+document.getElementById("lastmodify").innerHTML = myNewDate ;
+</script>
+
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
