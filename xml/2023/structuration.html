@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Structuration :: Supports</title>
+    <link rel="canonical" href="https://jacquelincharbonnel.github.io/supports/xml/2023/structuration.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../_/css/site.css">
+<!-- reference des feuilles de styles supplémentaires -->
+<link rel="stylesheet" href="../../_/css/layout.css">
+<link rel="stylesheet" href="../../_/css/content.css">
+
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://jacquelincharbonnel.github.io/supports">Supports</a>
+  <!-- suppression du burger du bandeau
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+-->      
+    </div>
+<!-- suppression des boutons du bandeau
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+-->
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="xml" data-version="2023">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">XML</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="structuration.html">Structuration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="modele.html">Modèle</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="bdd.html">Base de données</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="python.html">Python</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">XML</span>
+    <span class="version">2023</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../C/2023/index.html">C</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../C/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../concurrence/2024/index.html">Concurrence</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../concurrence/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../linux_context/2025/index.html">Linux contexte</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../linux_context/2025/index.html">2025</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../python_objet/2024/index.html">Python objet</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../python_objet/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../supports/index.html">Supports</a></div>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="index.html">XML</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../supports/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">XML</a></li>
+    <li><a href="structuration.html">Structuration</a></li>
+  </ul>
+</nav>
+<!-- supression de "edit this page"
+  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/xml/./modules/ROOT/pages/structuration.adoc">Edit this Page</a></div>
+-->
+</div>
+  <!-- ajout de la date de modification -->
+     <div class="lastmodify"> dernière modification : 2023 </div>
+  <!-- fin ajout -->
+  <div class="content">
+<aside class="toc sidebar" data-title="Plan" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Structuration</h1>
+<div class="sect1">
+<h2 id="_elément"><a class="anchor" href="#_elément"></a>1. Elément</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Un document XML se compose d'<em>éléments</em> :</p>
+</div>
+<div class="listingblock">
+<div class="title">élément latitude</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;latitude&gt;39° 17′ N&lt;/latitude&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Un élément peut contenir du texte (comme dans l&#8217;exemple ci-dessus).
+Dans ce cas, il est délimité par des balises, de la forme
+<code>&lt;balise&gt;</code> (balise de début) et <code>&lt;/balise&gt;</code> (balise de fin).</p>
+</div>
+<div class="paragraph">
+<p>Un élément peut contenir des sous-élements :</p>
+</div>
+<div class="listingblock">
+<div class="title">sous-éléments latitude et longitude</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;position&gt;
+  &lt;latitude&gt;39° 17′ N&lt;/latitude&gt;
+  &lt;longitude&gt;76° 36′ O&lt;/longitude&gt;
+&lt;/position&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Un élément peut être vide :</p>
+</div>
+<div class="listingblock">
+<div class="title">élement vide hémisphère_nord</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;position&gt;
+  &lt;latitude&gt;39° 17′ N&lt;/latitude&gt;
+  &lt;longitude&gt;76° 36′ O&lt;/longitude&gt;
+  &lt;hémisphère_nord/&gt;  <i class="conum" data-value="1"></i><b>(1)</b>
+&lt;/position&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>élément vide</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>auquel cas il est de la forme <code>&lt;balise/&gt;</code></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_entité"><a class="anchor" href="#_entité"></a>2. Entité</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Certains caractères sont interdits dans le contenu d&#8217;un élément,
+comme par exemple <code>&lt;</code> qui symbolise le début d&#8217;une balise.
+Une entité est une représentation alternative de ces caractères.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Exemple d&#8217;entités</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Caractère</th>
+<th class="tableblock halign-left valign-top">Entité</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&amp;lt;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&amp;gt;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&amp;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&amp;amp;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">’</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&amp;pos;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&amp;quot;</p></td>
+</tr>
+</tbody>
+</table>
+<div class="listingblock">
+<div class="title">utilité des entités</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;intervals&gt;
+  &lt;interval&gt; x&amp;lt;=-1 &lt;/interval&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+  &lt;interval&gt; x&amp;gt;-1 &amp;amp;&amp;amp; x&amp;lt;=1 &lt;/interval&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+  &lt;interval&gt; x&amp;gt;1 &lt;/interval&gt; <i class="conum" data-value="3"></i><b>(3)</b>
+&lt;/intervals&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td><code>x<=1</code></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td><code>x&gt;-1 &amp;&amp; x<=1</code></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td><code>x&gt;1</code></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_attribut"><a class="anchor" href="#_attribut"></a>3. Attribut</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Un élément peut être caractérisé par des attributs,
+c&#8217;est-à-dire des couples (nom,valeur)
+spécifiés comme <code>nom='valeur'</code> ou <code>nom="valeur"</code> à l&#8217;intérieur de la balise ouvrante de l&#8217;élément.</p>
+</div>
+<div class="listingblock">
+<div class="title">attribut hémisphère</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;latitude hémisphère="sud"&gt;39° 17′ N&lt;/latitude&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Etant donné un élément :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>chacun de ses attributs doit être unique,</p>
+</li>
+<li>
+<p>l&#8217;ordre de ses attributs n&#8217;est pas significatif</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Il n&#8217;existe donc pas une façon unique d&#8217;exprimer la structure d&#8217;un ensemble de données.
+Par exemple, voici 2 représentations d&#8217;un même ensemble de données :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;position ville="Boston"&gt;
+  &lt;latitude&gt;39° 17′ N&lt;/latitude&gt;
+  &lt;longitude&gt;76° 36′ O&lt;/longitude&gt;
+  &lt;hémisphère hs="nord"/&gt;
+&lt;/position&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;position latitude="39° 17′ N" longitude="76° 36′ O" hémisphère="nord" &gt;
+  Boston
+&lt;/position&gt;</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_arbre_xml"><a class="anchor" href="#_arbre_xml"></a>4. Arbre XML</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Un document XML est un arbre dont les noeuds sont les éléments XML.
+Cet arbre est exprimé par un jeu de balises ouvrantes et fermantes, correctement parenthésées.
+Il n&#8217;y a donc qu&#8217;un seul élément racine.</p>
+</div>
+<div class="listingblock">
+<div class="title">Exemple 1&#8201;&#8212;&#8201;Arbre d&#8217;éléments</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;personne&gt;
+  &lt;nom&gt;
+     &lt;prenom&gt;Jules&lt;/prenom&gt;
+     &lt;patronyme&gt;Durand&lt;/patronyme&gt;
+  &lt;/nom&gt;
+  &lt;adresse&gt;
+     &lt;numero&gt;15&lt;/numero&gt;
+     &lt;voie&gt;rue du chat noir&lt;/voie&gt;
+     &lt;commune&gt;Félixville&lt;/commune&gt;
+  &lt;/adresse&gt;
+&lt;/personne&gt;</code></pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/personne.jpg" alt="personne">
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Exemple 2&#8201;&#8212;&#8201;Contenu mixte : alternance de textes et d&#8217;éléments</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;para&gt;
+   Du col du Crand Crêt suivre la ligne de crête qui mène
+   à la pointe du Loup Noir &lt;note&gt;les crampons sont
+   utiles au printemps&lt;/note&gt;, puis redescendre dans la vallée.
+&lt;/para&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Exemple 3&#8201;&#8212;&#8201;Avec attributs</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;adresses&gt;
+  &lt;personne id ="p01"&gt;
+    &lt;type rang="maître de conférences" /&gt;
+    &lt;nom&gt;Perrin&lt;/nom&gt;
+    &lt;prenom&gt;Olivier&lt;prenom&gt;
+    &lt;adresse&gt;IUT Nancy-Charlemagne, Université de Nancy 2&lt;/adresse&gt;
+  &lt;/personne&gt;
+&lt;/adresses&gt;</code></pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/xml2.png" alt="xml2" width="600">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_elément_vs_attribut"><a class="anchor" href="#_elément_vs_attribut"></a>4.1. Elément vs attribut</h3>
+<div class="paragraph">
+<p>Soit par exemple les données d&#8217;une bibliothèque :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;biblio nbtitre="2"&gt;
+    &lt;livre cote="681.321 A9-CHA" annee="2000"&gt;
+        &lt;titre&gt;Programmation HTML et JavaScript&lt;/titre&gt;
+        &lt;auteur&gt;&lt;nom&gt;Chaléat&lt;/nom&gt;&lt;prenom&gt;Philippe&lt;/prenom&gt;&lt;/auteur&gt;
+        &lt;auteur&gt;&lt;nom&gt;Charnay&lt;/nom&gt;&lt;prenom&gt;Daniel&lt;/prenom&gt;&lt;/auteur&gt;
+        &lt;editeur&gt;Eyrolles&lt;/editeur&gt;
+        &lt;pages&gt;450&lt;/pages&gt;
+    &lt;/livre&gt;
+    &lt;livre cote="681.321 XML-MIC" annee="2001"&gt;
+        &lt;titre&gt;XML langage et applications&lt;/titre&gt;
+        &lt;auteur&gt;&lt;nom&gt;Michard&lt;/nom&gt;&lt;prenom&gt;Alain&lt;/prenom&gt;&lt;/auteur&gt;
+        &lt;editeur&gt;Eyrolles&lt;/editeur&gt;
+        &lt;pages&gt;499&lt;/pages&gt;
+    &lt;/livre&gt;
+&lt;/biblio&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Cette information aurait pu être représentée à l&#8217;extrême sans attribut :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;biblio&gt;
+    &lt;nbtitre&gt;2 &lt;/nbtitre&gt;
+    &lt;livre&gt;
+        &lt;cote&gt;681.321 A9-CHA&lt;/cote&gt;
+        &lt;titre&gt;Programmation HTML et JavaScript&lt;/titre&gt;
+        &lt;auteur&gt;&lt;nom&gt;Chaléat&lt;/nom&gt;&lt;prenom&gt;Philippe&lt;/prenom&gt;&lt;/auteur&gt;
+        &lt;auteur&gt;&lt;nom&gt;Charnay&lt;/nom&gt;&lt;prenom&gt;Daniel&lt;/prenom&gt;&lt;/auteur&gt;
+        &lt;editeur&gt;Eyrolles&lt;/editeur&gt;
+        &lt;annee&gt;2000&lt;/annee&gt;
+        &lt;pages&gt;450&lt;/pages&gt;
+    &lt;/livre&gt;
+    &lt;livre&gt;
+        &lt;cote&gt;681.321 XML-MIC&lt;/cote&gt;
+        &lt;titre&gt;XML langage et applications&lt;/titre&gt;
+        &lt;auteur&gt;&lt;nom&gt;Michard&lt;/nom&gt;&lt;prenom&gt;Alain&lt;/prenom&gt;&lt;/auteur&gt;
+        &lt;editeur&gt;Eyrolles&lt;/editeur&gt;
+        &lt;annee&gt;2001&lt;/annee&gt;
+        &lt;pages&gt;499&lt;/pages&gt;
+    &lt;/livre&gt;
+&lt;/biblio&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>ou au contraire avec un minimum d&#8217;éléments :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;biblio nbtitre="2"&gt;
+    &lt;livre
+         cote="681.321 A9-CHA"
+         titre="Programmation HTML et JavaScript"
+         auteur_1="Chaléat Philippe"
+         auteur_2="Charnay Daniel"
+         editeur="Eyrolles"
+         annee="2000"
+         pages="450"/&gt;
+    &lt;livre
+         cote="681.321 XML-MIC"
+         titre="XML langage et applications"
+         auteur="Michard Alain"
+         editeur="Eyrolles"
+         annee="2001"
+         pages="499"/&gt;
+&lt;/biblio&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_utiliser_un_élément_ou_un_attribut"><a class="anchor" href="#_utiliser_un_élément_ou_un_attribut"></a>4.2. Utiliser un élément ou un attribut ?</h3>
+<div class="paragraph">
+<p>Conceptuellement, un sous-élément caractérise une relation de composition
+(un sous-élement est un composant de l&#8217;élément parent),
+alors qu&#8217;un attribut qualifie l&#8217;élément auquel il se rattache (un attribut est une propriété).
+Choisir entre élément et attribut revient donc à choisir entre relation de composition et relation de qualification.</p>
+</div>
+<div class="paragraph">
+<p>Dans la pratique, sous-élément et attribut sont des noeuds de l&#8217;arbre XML,
+et on y accède de la même façon. Seulement, l&#8217;attribut est un noeud terminal,
+ce qui n&#8217;est pas forcément le cas d&#8217;un sous-élément.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Concrétement, on utilise un élément</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>lorsque l’ordre est important (l’ordre des attributs n&#8217;est pas significatif),</p>
+</li>
+<li>
+<p>lorsqu’on veut une entité multi-valuée
+(plusieurs occurrences d&#8217;un élément sont possibles au sein d&#8217;un même élément,
+alors qu&#8217;un attribut ne peut pas apparaître plusieurs fois dans un élément),</p>
+</li>
+<li>
+<p>lorsqu’on veut se réserver la possibilité d&#8217;avoir une descendance (un attribut est une feuille dans l&#8217;arbre),</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">On utilise un attribut</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>lorsque l&#8217;on veut une valeur par défaut (spécifiée alors dans la DTD ou le schéma).</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_document_xml"><a class="anchor" href="#_document_xml"></a>5. Document XML</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Un document XML contient un arbre XML.
+Mais divers documents peuvent aussi y être liés :
+une feuille de style (pour définir une présentation du document),
+une feuille XSL (pour la transformer),
+une DTD ou un schéma, etc.</p>
+</div>
+<div class="sect2">
+<h3 id="prologue"><a class="anchor" href="#prologue"></a>5.1. Prologue</h3>
+<div class="paragraph">
+<p>Le prologue, ou déclaration XML, est facultatif mais sa présence est recommandée.
+S&#8217;il est présent il doit apparaitre en première ligne  et
+ne doit être précédé d&#8217;aucun blanc.</p>
+</div>
+<div class="paragraph">
+<p>Le prologue minimum informe sur la version du langage :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;?xml version="1.0" ?&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>On peut y ajouter l&#8217;encodage
+(en l&#8217;absence de cette indication, UTF-8 est pris par défaut) :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;?xml version="1.0" encoding="ISO-8859-1" ?&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="commentaires"><a class="anchor" href="#commentaires"></a>5.2. Commentaires</h3>
+<div class="paragraph">
+<p>La syntaxe est :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!-- texte du commentaire --&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Les commentaires peuvent apparaître n&#8217;importe où dans un contenu d&#8217;élément,
+mais pas à l&#8217;intérieur d&#8217;une balise.
+Ils ne peuvent pas être imbriqués.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_exemple"><a class="anchor" href="#_exemple"></a>5.3. Exemple</h3>
+<div class="listingblock">
+<div class="title">Exemple de document XML complet</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;!-- itinéraire fictif --&gt;
+&lt;itineraire&gt;
+  &lt;etape distance="0km"&gt;départ&lt;/etape&gt;
+  &lt;etape distance="13km"&gt;tourner à droite&lt;/etape&gt;
+  &lt;etape distance="22km"&gt;arrivée&lt;/etape&gt;
+&lt;/itineraire&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="wellform"><a class="anchor" href="#wellform"></a>5.4. Document bien formé</h3>
+<div class="paragraph">
+<p>Un document XML est dit <strong>bien formé</strong> (<em>well-formed</em>) s&#8217;il est syntaxiquement correct,
+c&#8217;est-à-dire s&#8217;il respecte les règles d&#8217;XML comme :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>à toute balise ouvrante correspond une balise fermante,</p>
+</li>
+<li>
+<p>les zones balisées sont correctement imbriquées,</p>
+</li>
+<li>
+<p>il existe une racine unique,</p>
+</li>
+<li>
+<p>aucun élément ne possède 2 attributs de même nom,</p>
+</li>
+<li>
+<p>les valeurs d&#8217;attributs sont entre apostrophes ou guillemets, etc.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>On vérifie qu&#8217;un document est bien formé à l&#8217;aide d&#8217;un valideur XML,
+comme par exemple :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>la commande <code>xmllint</code></p>
+</li>
+<li>
+<p>un navigateur tel que <code>Firefox</code> ou <code>Chrome</code></p>
+</li>
+<li>
+<p>des sites web spécialisés (comme <a href="http://www.xmlvalidation.com" class="bare">http://www.xmlvalidation.com</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p class="center">
+  <span style="font-size: 0.9em;">
+    <a href="https://jacquelincharbonnel.github.io/">Jacquelin Charbonnel</a>
+    <!-- &nbsp; &mdash; &nbsp; -->
+    &nbsp;
+    &copy;Creative Commons BY-NC-SA 4.0
+  </span>
+  </p>
+</footer>
+
+<script>
+var myDate = new Date(document.lastModified);
+myNewDate = new Intl.DateTimeFormat(
+            undefined,
+            {year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit"}
+        )
+        .format(myDate).replace(/\./g, '-');
+document.getElementById("lastmodify").innerHTML = myNewDate ;
+</script>
+
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Modèle :: Supports</title>
+    <link rel="canonical" href="https://jacquelincharbonnel.github.io/supports/xml/2023/modele.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../_/css/site.css">
+<!-- reference des feuilles de styles supplémentaires -->
+<link rel="stylesheet" href="../../_/css/layout.css">
+<link rel="stylesheet" href="../../_/css/content.css">
+
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://jacquelincharbonnel.github.io/supports">Supports</a>
+  <!-- suppression du burger du bandeau
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+-->      
+    </div>
+<!-- suppression des boutons du bandeau
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+-->
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="xml" data-version="2023">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">XML</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="structuration.html">Structuration</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="modele.html">Modèle</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="bdd.html">Base de données</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="python.html">Python</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">XML</span>
+    <span class="version">2023</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../C/2023/index.html">C</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../C/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../concurrence/2024/index.html">Concurrence</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../concurrence/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../linux_context/2025/index.html">Linux contexte</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../linux_context/2025/index.html">2025</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../python_objet/2024/index.html">Python objet</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../python_objet/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../supports/index.html">Supports</a></div>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="index.html">XML</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../supports/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">XML</a></li>
+    <li><a href="modele.html">Modèle</a></li>
+  </ul>
+</nav>
+<!-- supression de "edit this page"
+  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/xml/./modules/ROOT/pages/modele.adoc">Edit this Page</a></div>
+-->
+</div>
+  <!-- ajout de la date de modification -->
+     <div class="lastmodify"> dernière modification : 2023 </div>
+  <!-- fin ajout -->
+  <div class="content">
+<aside class="toc sidebar" data-title="Plan" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Modèle</h1>
+<div class="sect1">
+<h2 id="_expressions_des_modèles"><a class="anchor" href="#_expressions_des_modèles"></a>1. Expressions des modèles</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Un modèle est un fomalisme qui définit des contraintes pour un ensemble de documents.
+Il peut s&#8217;exprimer de différentes façon.</p>
+</div>
+<div class="paragraph">
+<p>Un modèle de document permet d&#8217;uniformiser un cadre d&#8217;expression au sein d&#8217;une communauté : documentaliste (RDF), généalogiste, journaliste (NITF, NewsML), chimiste (CML), etc.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>On peut faire un parallèle avec la programmation objet :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>définir un modèle, c&#8217;est définir une classe de documents,</p>
+</li>
+<li>
+<p>créer un document conforme à un modèle, c&#8217;est créer une instance de cette classe.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>De même, on voit apparaître deux types d&#8217;acteurs :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>le <em>rédacteur en chef</em> qui fixe l&#8217;organisation et la structure des documents : c&#8217;est lui qui conçoit le modèle</p>
+</li>
+<li>
+<p>les auteurs des documents, qui se conforment au modèle pour rédiger.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Le modèle fixe donc la structure des documents.
+Il existe différents langages pour l&#8217;exprimer :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>la DTD,</p>
+</li>
+<li>
+<p>XML Schema</p>
+</li>
+<li>
+<p>RelaxNG, etc.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Le modèle d&#8217;un document permet d&#8217;en fixer :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>le vocabulaire (c&#8217;est-à-dire les balises et attributs utilisables)</p>
+</li>
+<li>
+<p>la grammaire (les règles d&#8217;imbrication, etc.)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Un document XML associé à un modèle est dit <strong>valide</strong> :</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>s&#8217;il est bien formé, et</p>
+</li>
+<li>
+<p>s&#8217;il respecte les spécifications de son modèle.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_dtd"><a class="anchor" href="#_dtd"></a>2. DTD</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Une DTD (Document Type Definition) est une liste de déclarations définissant la structure des documents qui s&#8217;y conforment.
+Elle doit être déclarée au début des documents, avant l&#8217;élément racine.</p>
+</div>
+<div class="sect2">
+<h3 id="_interne_ou_externe"><a class="anchor" href="#_interne_ou_externe"></a>2.1. Interne ou externe</h3>
+<div class="paragraph">
+<p>La DTD peut être définie dans le document XML :</p>
+</div>
+<div class="listingblock">
+<div class="title">Exemple&#8201;&#8212;&#8201;DTD interne</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">&lt;?xml version="1.0" encoding="UTF-8" standalone="yes" ?&gt;
+&lt;!DOCTYPE personne [
+  &lt;!--début de la DTD interne --&gt;
+  &lt;!ELEMENT personne (prenom, nom)&gt;
+  &lt;!ELEMENT prenom (\#PCDATA)&gt;
+  &lt;!ELEMENT nom (\#PCDATA)&gt;
+  &lt;!--fin de la DTD interne --&gt;
+ ] &gt;
+
+&lt;!--début du document--&gt;
+&lt;personne&gt;
+   &lt;prenom&gt;Albert&lt;/prenom&gt;
+   &lt;nom&gt;Camus&lt;/nom&gt;
+&lt;/personne&gt;
+&lt;!--fin du document--&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Mais en général, la DTD est externe, car elle est partagée par un ensemble de documents :</p>
+</div>
+<div class="listingblock">
+<div class="title">DTD externe personne.dtd</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!ELEMENT personne (prenom, nom)&gt;
+&lt;!ELEMENT prenom (\#PCDATA)&gt;
+&lt;!ELEMENT nom (\#PCDATA)&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Elle est ensuite référencée dans le document XML de la façon suivante :</p>
+</div>
+<div class="listingblock">
+<div class="title">référence à une DTD locale</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE personne SYSTEM "./DTD/personne.dtd"&gt;
+&lt;!--début du document--&gt;
+&lt;personne&gt;
+...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Le plus souvent, elle est même distante et accessible via une URL :</p>
+</div>
+<div class="listingblock">
+<div class="title">référence à une DTD distante</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE personne SYSTEM "http://serveur.domaine/DTD/personne.dtd"&gt;
+&lt;!--début du document--&gt;
+&lt;personne&gt;
+...</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_structure_dune_dtd"><a class="anchor" href="#_structure_dune_dtd"></a>2.2. Structure d&#8217;une DTD</h3>
+<div class="paragraph">
+<p>Une DTD contient en particulier, dans un ordre indifférent :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>des déclarations d&#8217;éléments,</p>
+</li>
+<li>
+<p>des déclarations d&#8217;attributs,</p>
+</li>
+<li>
+<p>des commentaires,</p>
+</li>
+<li>
+<p>&#8230;&#8203;</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="_déclaration_des_éléments"><a class="anchor" href="#_déclaration_des_éléments"></a>2.2.1. Déclaration des éléments</h4>
+<div class="paragraph">
+<p>Les éléments se déclarent dans un ordre indifférent,
+si bien qu&#8217;une simple lecture ne permet pas de voir directement quel est l&#8217;élément racine
+(il faut chercher l&#8217;élément qui n&#8217;a pas de père).</p>
+</div>
+<div class="paragraph">
+<p>Un élément se déclare selon la syntaxe suivante :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!ELEMENT nom_élément modèle_contenu &gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>modèle_contenu</code> décrit la structure de l&#8217;élément
+au travers d&#8217;un langage emprunté aux expressions régulières.
+Exemple :</p>
+</div>
+<div class="listingblock">
+<div class="title">Exemple&#8201;&#8212;&#8201;personne.dtd</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!ELEMENT personne (nom, prenom+, telephone*, adresse?)&gt;
+&lt;!ELEMENT nom (#PCDATA)&gt;
+&lt;!ELEMENT prenom (#PCDATA)&gt;
+&lt;!ELEMENT telephone (#PCDATA)&gt;
+&lt;!ELEMENT adresse (#PCDATA)&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>signifie que l&#8217;élément <code>personne</code> est composé, dans cet ordre, de :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>un élément <code>nom</code></p>
+</li>
+<li>
+<p>un ou plusieurs éléments <code>prenom</code></p>
+</li>
+<li>
+<p>zéro, un ou plusieurs éléments <code>telephone</code></p>
+</li>
+<li>
+<p>zéro ou un élément <code>adresse</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>que les quatre éléments <code>nom</code>, <code>prenom</code>, <code>telephone</code> et <code>adresse</code> sont des éléments textuels (<code>#PCDATA</code>).</p>
+</div>
+<div class="paragraph">
+<p>Le document :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE personne SYSTEM "personne.dtd"&gt;
+&lt;personne&gt;
+  &lt;nom&gt;Martin&lt;/nom&gt;
+  &lt;prenom&gt;Flora&lt;/prenom&gt;
+  &lt;adresse&gt;rue des oiseaux, Paris&lt;/adresse&gt;
+&lt;/personne&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>est valide, alors que le suivant ne l&#8217;est pas :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE personne SYSTEM "personne.dtd"&gt;
+&lt;personne&gt;
+  &lt;prenom&gt;Flora&lt;/prenom&gt;
+  &lt;nom&gt;Martin&lt;/nom&gt;
+  &lt;telephone&gt;0240123456&lt;/telephone&gt;
+  &lt;telephone&gt;0681234567&lt;/telephone&gt;
+&lt;/personne&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Autre exemple :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE para [
+  &lt;!ELEMENT para (#PCDATA | note | renvoi)*&gt;
+  &lt;!ELEMENT note (#PCDATA)&gt;
+  &lt;!ELEMENT renvoi (#PCDATA)&gt;
+]&gt;
+
+&lt;para&gt;
+  Prendre le chemin de l'Inca &lt;renvoi&gt;1&lt;/renvoi&gt; et marcher
+  jusqu'à la porte du Soleil &lt;renvoi&gt;2&lt;/renvoi&gt;.
+  Ne pas oublier de prendre un foulard et de bonnes chaussures.
+  &lt;note&gt;1. en suivant le plan&lt;/note&gt;
+  &lt;note&gt;2. voir page 2&lt;/note&gt;
+&lt;/para&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_déclaration_des_attributs"><a class="anchor" href="#_déclaration_des_attributs"></a>2.2.2. Déclaration des attributs</h4>
+<div class="paragraph">
+<p>La définition d&#8217;un attribut contient, dans cet ordre :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>le nom de l&#8217;élément auquel il appartient,</p>
+</li>
+<li>
+<p>son nom,</p>
+</li>
+<li>
+<p>son type,</p>
+</li>
+<li>
+<p>son statut ou une mention de valeur par défaut.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>La syntaxe est la suivante :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!ATTLIST nom_élément nom_attribut type_attribut statut_ou_valeur_par_defaut&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Exemple&#8201;&#8212;&#8201;Définition des attributs de l&#8217;élément image</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!ELEMENT image EMPTY&gt;
+&lt;!ATTLIST image source CDATA #REQUIRED&gt;
+&lt;!ATTLIST image hauteur CDATA #IMPLIED&gt;
+&lt;!ATTLIST image largeur CDATA #IMPLIED&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>ce qui s&#8217;écrit aussi :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!ELEMENT image EMPTY&gt;
+&lt;!ATTLIST image source  CDATA #REQUIRED
+                hauteur CDATA #IMPLIED
+                largeur CDATA #IMPLIED&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>et pour lequel les 2 éléments ci-dessous seraient conformes :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;image source="photo.jpg" hauteur="300" largeur="200"/&gt;
+&lt;image largeur="200" hauteur="300" source="photo.jpg" /&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>En ce qui concerne le type de l&#8217;attribut, citons sans être exhaustif :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>CDATA</code> : une chaîne de caractères quelconque</p>
+</li>
+<li>
+<p><code>(val1 | val2 | &#8230;&#8203; | valn)</code> : une énumération des valeurs autorisées</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Et en ce qui concerne le <em>statut_ou_valeur_par_defaut</em> :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>#IMPLIED</code> : l&#8217;attribut est facultatif</p>
+</li>
+<li>
+<p><code>#REQUIRED</code> : l&#8217;attribut est obligatoire</p>
+</li>
+<li>
+<p><code>#FIXED "valeur"</code> : l&#8217;attribut a cette valeur et celle-ci n&#8217;est pas modifiable</p>
+</li>
+<li>
+<p><code>"valeur"</code> : l&#8217;attribut a cette valeur par défaut, mais celle-ci peut être modifiée</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Exemple</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!ELEMENT agence (nom, periode, voyage*) &gt;
+&lt;!ATTLIST agence  niveau CDATA #REQUIRED &gt; <i class="conum" data-value="1"></i><b>(1)</b>
+&lt;!ELEMENT nom (#PCDATA)&gt;
+&lt;!ELEMENT periode (#PCDATA) &gt;
+&lt;!ELEMENT voyage (pays, duree, descriptif, prix) &gt;
+&lt;!ATTLIST voyage niveau (1 | 2 | 3 | 4 | 5) #IMPLIED &gt; <i class="conum" data-value="2"></i><b>(2)</b>
+&lt;!ELEMENT descriptif  (#PCDATA | remarque )* &gt;
+&lt;!ATTLIST descriptif  langue CDATA "fr" &gt; <i class="conum" data-value="3"></i><b>(3)</b>
+&lt;!ELEMENT remarque (#PCDATA) &gt;
+&lt;!ELEMENT prix (#PCDATA) &gt;
+&lt;!ELEMENT  pays (#PCDATA) &gt;
+&lt;!ELEMENT duree (#PCDATA) &gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>L&#8217;élément <code>agence</code> a un attribut obligatoire nommé <code>niveau</code> dont la valeur est un texte quelconque.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>L&#8217;élément <code>voyage</code> a un attribut facultatif nommé <code>niveau</code> dont la valeur doit être l&#8217;un des cinq premiers nombres entiers,</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>L&#8217;élément <code>descriptif</code> a un attribut nommé <code>langue</code> avec une valeur par défaut égale à <code>fr</code>.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="schema"><a class="anchor" href="#schema"></a>3. XML schéma</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Les schémas XML ont le même objectif que les DTD.
+Un schéma XML est lui-même un document XML (fichier <code>XSD</code>).
+Par rapport aux DTD, les schémas apportent :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>des types de données : les DTD ne considèrent que le type chaine de caractères</p>
+</li>
+<li>
+<p>la spécification de cardinalité (par exemple, on peut spécifier qu&#8217;un élément de type A doit contenir de 3 à 5 éléments de type B)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Exemple de schéma XML :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
+
+&lt;xs:element name="shiporder"&gt;
+  &lt;xs:complexType&gt;
+    &lt;xs:sequence&gt;
+      &lt;xs:element name="orderperson" type="xs:string"/&gt;
+      &lt;xs:element name="shipto"&gt;
+        &lt;xs:complexType&gt;
+          &lt;xs:sequence&gt;
+            &lt;xs:element name="name" type="xs:string"/&gt;
+            &lt;xs:element name="address" type="xs:string"/&gt;
+            &lt;xs:element name="city" type="xs:string"/&gt;
+            &lt;xs:element name="country" type="xs:string"/&gt;
+          &lt;/xs:sequence&gt;
+        &lt;/xs:complexType&gt;
+      &lt;/xs:element&gt;
+      &lt;xs:element name="item" maxOccurs="unbounded"&gt;
+        &lt;xs:complexType&gt;
+          &lt;xs:sequence&gt;
+            &lt;xs:element name="title" type="xs:string"/&gt;
+            &lt;xs:element name="note" type="xs:string" minOccurs="0"/&gt;
+            &lt;xs:element name="quantity" type="xs:positiveInteger"/&gt;
+            &lt;xs:element name="price" type="xs:decimal"/&gt;
+          &lt;/xs:sequence&gt;
+        &lt;/xs:complexType&gt;
+      &lt;/xs:element&gt;
+    &lt;/xs:sequence&gt;
+    &lt;xs:attribute name="orderid" type="xs:string" use="required"/&gt;
+  &lt;/xs:complexType&gt;
+&lt;/xs:element&gt;
+
+&lt;/xs:schema&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Exemple de document conforme à ce schéma :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;shiporder orderid="889923"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="shiporder.xsd"&gt;
+  &lt;orderperson&gt;John Smith&lt;/orderperson&gt;
+  &lt;shipto&gt;
+    &lt;name&gt;Ola Nordmann&lt;/name&gt;
+    &lt;address&gt;Langgt 23&lt;/address&gt;
+    &lt;city&gt;4000 Stavanger&lt;/city&gt;
+    &lt;country&gt;Norway&lt;/country&gt;
+  &lt;/shipto&gt;
+  &lt;item&gt;
+    &lt;title&gt;Empire Burlesque&lt;/title&gt;
+    &lt;note&gt;Special Edition&lt;/note&gt;
+    &lt;quantity&gt;1&lt;/quantity&gt;
+    &lt;price&gt;10.90&lt;/price&gt;
+  &lt;/item&gt;
+  &lt;item&gt;
+    &lt;title&gt;Hide your heart&lt;/title&gt;
+    &lt;quantity&gt;1&lt;/quantity&gt;
+    &lt;price&gt;9.90&lt;/price&gt;
+  &lt;/item&gt;
+&lt;/shiporder&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Le schéma étant un document XML, il suit lui-même un modèle défini par un schéma : <a href="https://www.w3.org/2001/XMLSchema.xsd">le schéma des schémas</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_dialecte_xml"><a class="anchor" href="#_dialecte_xml"></a>4. Dialecte XML</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Un dialecte XML est une instance XML contrainte par un modèle XML
+Voici 3 exemples de dialectes XML.</p>
+</div>
+<div class="sect2">
+<h3 id="svg"><a class="anchor" href="#svg"></a>4.1. SVG (Scalable Vector Graphics)</h3>
+<div class="paragraph">
+<p>SVG est un dialecte XML de définition vectorielle de graphiques 2D.
+Il permet d&#8217;exprimer des formes (rectangle, ellipse, etc.),
+des chemins (ligne, courbe de Bézier, etc.),
+des textures de remplissages et des transformations (translation, rotation, zoom, etc.).
+Voici un extrait de code SVG :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-xml hljs" data-lang="xml"> &lt;path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="M 50,80 L 170,80"
+     id="path2330" /&gt;
+  &lt;path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="M 170,80 L 170,170"
+     id="path2332" /&gt;
+  &lt;path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="M 170,170 L 110,170"
+     id="path2334" /&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="mathml"><a class="anchor" href="#mathml"></a>4.2. MathML</h3>
+<div class="paragraph">
+<p>MathML est un dialecte XML de définition de formules mathématiques.
+Exemple :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">  &lt;math xmlns="http://www.w3.org/1998/Math/MathML" display="block"&gt;
+  &lt;mrow&gt;
+    &lt;mi&gt;x&lt;/mi&gt;
+    &lt;mo&gt;=&lt;/mo&gt;
+    &lt;mfrac&gt;
+      &lt;mrow&gt;
+        &lt;mrow&gt;
+          &lt;mo&gt;-&lt;/mo&gt;
+          &lt;mi&gt;b&lt;/mi&gt;
+        &lt;/mrow&gt;
+        &lt;mo&gt;±&lt;/mo&gt;
+        &lt;msqrt&gt;
+          &lt;mrow&gt;
+            &lt;msup&gt;
+              &lt;mi&gt;b&lt;/mi&gt;
+              &lt;mn&gt;2&lt;/mn&gt;
+            &lt;/msup&gt;
+            &lt;mo&gt;-&lt;/mo&gt;
+            &lt;mrow&gt;
+              &lt;mn&gt;4&lt;/mn&gt;
+              &lt;mo&gt;⁢&lt;/mo&gt;
+              &lt;mi&gt;a&lt;/mi&gt;
+              &lt;mo&gt;⁢&lt;/mo&gt;
+              &lt;mi&gt;c&lt;/mi&gt;
+            &lt;/mrow&gt;
+          &lt;/mrow&gt;
+        &lt;/msqrt&gt;
+      &lt;/mrow&gt;
+      &lt;mrow&gt;
+        &lt;mn&gt;2&lt;/mn&gt;
+        &lt;mo&gt;⁢&lt;/mo&gt;
+        &lt;mi&gt;a&lt;/mi&gt;
+      &lt;/mrow&gt;
+    &lt;/mfrac&gt;
+  &lt;/mrow&gt;
+&lt;/math&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="xhtml"><a class="anchor" href="#xhtml"></a>4.3. XHTML</h3>
+<div class="paragraph">
+<p>XHTML est un dialecte XML de définition de page web.
+C&#8217;est HTML revisité pour être conforme à la syntaxe XML, c&#8217;est-à-dire
+avec quelques contraintes supplémentaires.
+Parmi les différences :</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">les balises et attributs sont en minuscules</dt>
+<dd>
+<p>ex: <code>&lt;body&gt;</code> et non <code>&lt;BODY&gt;</code></p>
+</dd>
+<dt class="hdlist1">les éléments vides se terminent par <code>/</code></dt>
+<dd>
+<p>ex: <code>&lt;br/&gt;</code> et non <code>&lt;br&gt;</code></p>
+</dd>
+<dt class="hdlist1">les valeurs des attributs sont délimités</dt>
+<dd>
+<p>ex: <code>&lt;image witdh="80"</code> et non <code>&lt;image witdh=80</code>&gt;</p>
+</dd>
+<dt class="hdlist1">les attributs doivent avoir une valeur</dt>
+<dd>
+<p>ex: <code>&lt;input checked="true"&gt;</code> et non <code>&lt;input checked&gt;</code></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>Conformément à XML, XHTML est syntaxiquement plus strict et rigoureux que HTML :
+les document XHTML doivent être a minima bien-formés (à défaut d&#8217;être valides).
+A contrario, les navigateurs web ignorent joyeusement les erreurs dans les pages HTML,
+ pour essayer d&#8217;afficher quelque chose coûte que coûte
+(et le rendu obtenu dépend alors du navigateur utilisé).</p>
+</div>
+<div class="paragraph">
+<p>Rédiger en XHTML est donc plus contraint que de rédiger en HTML,
+mais offre l&#8217;avantage de disposer de
+documents plus inter-opérables,
+dont la syntaxe peut être vérifiée, et pouvant être traités avec toutes les bibliothèques et outils XML existants.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p class="center">
+  <span style="font-size: 0.9em;">
+    <a href="https://jacquelincharbonnel.github.io/">Jacquelin Charbonnel</a>
+    <!-- &nbsp; &mdash; &nbsp; -->
+    &nbsp;
+    &copy;Creative Commons BY-NC-SA 4.0
+  </span>
+  </p>
+</footer>
+
+<script>
+var myDate = new Date(document.lastModified);
+myNewDate = new Intl.DateTimeFormat(
+            undefined,
+            {year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit"}
+        )
+        .format(myDate).replace(/\./g, '-');
+document.getElementById("lastmodify").innerHTML = myNewDate ;
+</script>
+
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

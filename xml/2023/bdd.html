@@ -1,0 +1,1636 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Bases de données :: Supports</title>
+    <link rel="canonical" href="https://jacquelincharbonnel.github.io/supports/xml/2023/bdd.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../_/css/site.css">
+<!-- reference des feuilles de styles supplémentaires -->
+<link rel="stylesheet" href="../../_/css/layout.css">
+<link rel="stylesheet" href="../../_/css/content.css">
+
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://jacquelincharbonnel.github.io/supports">Supports</a>
+  <!-- suppression du burger du bandeau
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+-->      
+    </div>
+<!-- suppression des boutons du bandeau
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+-->
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="xml" data-version="2023">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">XML</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="structuration.html">Structuration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="modele.html">Modèle</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="bdd.html">Base de données</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="python.html">Python</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">XML</span>
+    <span class="version">2023</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../C/2023/index.html">C</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../C/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../concurrence/2024/index.html">Concurrence</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../concurrence/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../linux_context/2025/index.html">Linux contexte</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../linux_context/2025/index.html">2025</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../python_objet/2024/index.html">Python objet</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../python_objet/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../supports/index.html">Supports</a></div>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="index.html">XML</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../supports/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">XML</a></li>
+    <li><a href="bdd.html">Base de données</a></li>
+  </ul>
+</nav>
+<!-- supression de "edit this page"
+  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/xml/./modules/ROOT/pages/bdd.adoc">Edit this Page</a></div>
+-->
+</div>
+  <!-- ajout de la date de modification -->
+     <div class="lastmodify"> dernière modification : 2023 </div>
+  <!-- fin ajout -->
+  <div class="content">
+<aside class="toc sidebar" data-title="Plan" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Bases de données</h1>
+<div class="sect1">
+<h2 id="_xml_vs_bd_relationnelle"><a class="anchor" href="#_xml_vs_bd_relationnelle"></a>1. XML vs BD relationnelle</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>XML permet donc de structurer, à un degré plus ou moins important, de l&#8217;information.
+Aux extrêmes, on trouve :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>des documents <em>orientés texte</em> (comme XHTML) : le document est construit pour être facilement lisible, la structure est souple et les éléments contiennent une grande quantité de texte.</p>
+</li>
+<li>
+<p>des documents <em>orientés données</em> (comme SVG) :
+le document, très structuré, est utilisé pour organiser des données,
+il peut être difficile à lire.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Assimiler un ensemble de documents XML à une base de données suppose de disposer également d&#8217;un langage de manipulation
+A ce niveau, il existe :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>XQuery</code>, qui, pour XML, joue le rôle de <code>SQL</code> pour les bases de données relationnelles</p>
+</li>
+<li>
+<p><code>XSLT</code>, un langage de transformation XML</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><code>XQuery</code> et <code>XSLT</code> s&#8217;appuient sur <code>XPath</code>, un formalisme pour identifier une portion de document XML.</p>
+</div>
+<div class="paragraph">
+<p>Mais les performances sont loin de celles des SGBD relationnels :
+l&#8217;accès à un document texte est, par nature, lent et séquentiel (sans index).
+Même chose au niveau des fonctionnalités :
+il n&#8217;y a aucune granularité au niveau du contrôle d&#8217;accès
+(soit on a accès à tout le document, soit on n&#8217;y a pas accès du tout),
+et les notions de transaction et d&#8217;accès concurrents sont absentes.
+Les méta-données disséminées dans les données en augmentent le volume :
+<em>l&#8217;habillage</em> prend beaucoup de place.</p>
+</div>
+<div class="paragraph">
+<p>En revanche, un document XML est auto-suffisant
+(il contient les données, les méta-données, et les relations entre les 2).
+Il est indépendant de tout OS, de tout logiciel et de tout langage de programmation.
+On l&#8217;échange sans problème entre des systèmes hétérogènes (sans problème d&#8217;encodage).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_xpath"><a class="anchor" href="#_xpath"></a>2. XPath</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>C&#8217;est une brique de base, sur laquelle s&#8217;appuient les autres briques : XQuery, XSLT, etc.</p>
+</div>
+<div class="paragraph">
+<p>XPath permet de naviguer dans un arbre XML,
+d&#8217;effectuer des recherches,
+d&#8217;accéder à des fragments (éléments, attributs, commentaires, etc&#8230;&#8203;) d&#8217;un document XML
+et de les extraire.</p>
+</div>
+<div class="paragraph">
+<p>XPath opère à partir d&#8217;un chemin,
+et produit une liste de noeuds et/ou d&#8217;attributs.
+Il peut également appliquer une fonction (<code>count()</code>, <code>empty()</code>, <code>exists()</code>, etc.)
+à cette liste.</p>
+</div>
+<div class="paragraph">
+<p>Exemple, étant donné :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;messages&gt;
+  &lt;message number="1" date="2020-12-25"&gt;
+    &lt;to&gt;masterDS1-2021&lt;/to&gt;
+    &lt;cc&gt;jacquelin.charbonnel@math.cnrs.fr&lt;/cc&gt;
+    &lt;data&gt;Joyeux Noël !&lt;/data&gt;
+  &lt;/message&gt;
+  &lt;message number="2" date="2021-01-01"&gt;
+    &lt;to&gt;masterDS1-2021&lt;/to&gt;
+    &lt;cc&gt;jacquelin.charbonnel@math.cnrs.fr&lt;/cc&gt;
+    &lt;data&gt;Bonne année !&lt;/data&gt;
+  &lt;/message&gt;
+&lt;/messages&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>extraire le contenu du message n°2 s’écrit ainsi en XPath :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">/messages/message[@number=2]/data</code></pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>C’est un peu comme un nom absolu de fichier sous Unix,
+mais avec beaucoup plus de possibilités
+pour écrire le chemin.
+Par exemple, des conditions peuvent être spécifiées
+(on en voit une ci-dessus entre <code>[]</code>).</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Un chemin peut renvoyer une liste de noeuds.
+Par exemple,</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">/messages/message/data</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>renvoie une liste de 2 éléments.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="chemin"><a class="anchor" href="#chemin"></a>2.1. Chemin</h3>
+<div class="paragraph">
+<p>Un chemin relie potentiellement un noeud (le nœud de départ, appelé également <em>nœud contexte</em>) à
+un ensemble de noeuds cibles.
+Ce sont ces noeuds cibles (triés dans l’ordre du document) qui sont retournés par l&#8217;expression XPath.</p>
+</div>
+<div class="paragraph">
+<p>Un chemin est une suite d’étapes.
+Par exemple, à partir du document suivant :</p>
+</div>
+<div class="listingblock">
+<div class="title">fichier books.xml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;bookstore&gt;
+
+&lt;!-- ceci est un commentaire --&gt;
+Ceci est un noeud de type text
+
+&lt;book category="cooking"&gt;
+  &lt;!-- ceci est un commentaire --&gt;
+  &lt;title lang="en" vo="it"&gt;Everyday Italian&lt;/title&gt;
+  &lt;author&gt;Giada De Laurentiis&lt;/author&gt;
+  &lt;year&gt;2005&lt;/year&gt;
+  &lt;price&gt;30.00&lt;/price&gt;
+&lt;/book&gt;
+
+&lt;book category="children"&gt;
+  &lt;!-- ceci est un commentaire --&gt;
+  &lt;title lang="en"&gt;Harry Potter&lt;/title&gt;
+  &lt;author&gt;J K. Rowling&lt;/author&gt;
+  &lt;year&gt;2005&lt;/year&gt;
+  &lt;price&gt;29.99&lt;/price&gt;
+&lt;/book&gt;
+
+&lt;book category="web"&gt;
+  &lt;!-- ceci est un commentaire --&gt;
+  &lt;title lang="en" vo="fr"&gt;XQuery Kick Start&lt;/title&gt;
+  &lt;author&gt;James McGovern&lt;/author&gt;
+  &lt;author&gt;Per Bothner&lt;/author&gt;
+  &lt;author&gt;Kurt Cagle&lt;/author&gt;
+  &lt;author&gt;James Linn&lt;/author&gt;
+  &lt;author&gt;Vaidyanathan Nagarajan&lt;/author&gt;
+  &lt;year&gt;2003&lt;/year&gt;
+  &lt;price&gt;49.99&lt;/price&gt;
+&lt;/book&gt;
+
+&lt;book category="web"&gt;
+  &lt;!-- ceci est un commentaire --&gt;
+  &lt;title lang="en"&gt;Learning XML&lt;/title&gt;
+  &lt;author&gt;Erik T. Ray&lt;/author&gt;
+  &lt;year&gt;2003&lt;/year&gt;
+  &lt;price&gt;39.95&lt;/price&gt;
+&lt;/book&gt;
+
+&lt;/bookstore&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>alors :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>/bookstore</code> est un chemin à 1 étape</p>
+</li>
+<li>
+<p><code>/bookstore/book</code> est un chemin à 2 étapes</p>
+</li>
+<li>
+<p><code>/bookstore/book/year</code> est un chemin à 3 étapes</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Le chemin est :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>absolu, si le nœud contexte est la racine : <code>/étape1/&#8230;&#8203;/étapeN</code></p>
+</li>
+<li>
+<p>relatif à l&#8217;objet courant sinon : <code>étape1/&#8230;&#8203;/étapeN</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>La commande Unix <code>xpath</code> permet d&#8217;exécuter une requête XPath sur un fichier XML :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash"># 1 chemin à 1 étape
+xpath -e /bookstore books.xml     # l'élément bookstore sous la racine
+xpath -e bookstore books.xml      # les éléments bookstore sous l'objet courant
+xpath -e book books.xml           # les éléments book sous l'objet courant
+
+# 1 chemin à 2 étapes
+xpath -e /bookstore/book books.xml     # les éléments book sous l'élément bookstores sous la racine
+# 2 chemins à 1 étape
+xpath -e /bookstore -e book books.xml  # même chose
+
+# 1 chemin à 3 étapes
+xpath -e /bookstore/book/year books.xml
+# 3 chemins à 1 étape
+xpath -e /bookstore -e book -e year books.xml</code></pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>La commande <code>xmllint</code> permet également d&#8217;évaluer une expression XPath.
+Par exemple :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">xpath -e '/bookstore' books.xml</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>est équivalent à :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">xmllint --xpath '/bookstore' books.xml</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="etape"><a class="anchor" href="#etape"></a>2.2. Etapes d&#8217;un chemin XPath</h3>
+<div class="paragraph">
+<p>Une étape est ce qui se trouve entre 2 caractères <code>/</code>.
+Elle est de la forme :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>axe::type[filtre]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Elle retourne l&#8217;ensemble des nœuds correspondant au type spécifié,
+reliés au nœud courant par la relation <code>axe</code>,
+et satisfaisant le filtre.
+Exemples d&#8217;étapes :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">child::para
+child::figure[attribute::id=”fr”]
+child::*[position()=last()]</code></pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_type"><a class="anchor" href="#_type"></a>2.2.1. Type</h4>
+<div class="paragraph">
+<p>Il permet de restreindre l&#8217;ensemble des nœuds sélectionnés à un certain type de nœuds :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>l_élément</code> : oriente la progression vers les éléments <code>l_élément</code></p>
+<div class="literalblock">
+<div class="content">
+<pre>/bookstore/title  # tous les sous-éléments title de bookstore</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>*</code> : oriente la progression vers tout élément</p>
+<div class="literalblock">
+<div class="content">
+<pre>/bookstore/*/title  # tous les sous-éléments title des sous-élements de bookstore
+/bookstore/*/*      # tous les sous-éléments des sous-éléments de bookstore</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>node()</code> : oriente la progression vers tous types de nœuds (éléments, commentaires, textes, etc.)</p>
+<div class="literalblock">
+<div class="content">
+<pre>/bookstore/*/node()  # tous les nœuds sous les sous-élements de bookstore</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>text()</code> : oriente la progression vers les nœuds de type texte</p>
+<div class="literalblock">
+<div class="content">
+<pre>/bookstore/*/author/text()  # tous les nœuds texte sous les sous-élements des sous-éléments de bookstore</pre>
+</div>
+</div>
+</li>
+<li>
+<p><code>comment()</code> : restreint la recherche aux nœuds de type commentaire</p>
+<div class="literalblock">
+<div class="content">
+<pre>/bookstore/*/comment() # tous les commentaires sous les sous-élements de bookstore</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Exemple sur le document :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!-- des fruits --&gt;
+&lt;fruits&gt;
+    &lt;item&gt;pomme&lt;/item&gt;
+    &lt;item&gt;banane&lt;/item&gt;
+    &lt;item variete="William"&gt;poire&lt;/item&gt;
+&lt;/fruits&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>alors les chemins ci-dessous produisent les résultats indiqués :</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 28.5714%;">
+<col style="width: 14.2857%;">
+<col style="width: 57.1429%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">chemin</th>
+<th class="tableblock halign-center valign-top">#nœuds</th>
+<th class="tableblock halign-left valign-top">nœuds</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/*</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>[&lt;fruit&gt;&#8230;&#8203;&lt;/fruit&gt;]</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/fruits/*</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>[&lt;item&gt;pomme&lt;/item&gt;,&lt;item&gt;banane&lt;/item&gt;,&lt;item variete="William"&gt;poire&lt;/item&gt;]</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">`/fruits/comment()</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>[]</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">`/comment()</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>[&lt;!-- des fruits --\&gt;]</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Autre exemple sur le document :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;fruits&gt;
+  avant pomme
+  &lt;item&gt;pomme&lt;/item&gt;
+  entre pomme et banane
+  &lt;item&gt;banane&lt;/item&gt;
+  entre banane et poire
+  &lt;item variete="William"&gt;poire&lt;/item&gt;
+  après poire
+&lt;/fruits&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>alors les chemins ci-dessous produisent les résultats indiqués :</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 28.5714%;">
+<col style="width: 14.2857%;">
+<col style="width: 57.1429%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">chemin</th>
+<th class="tableblock halign-center valign-top">#nœuds</th>
+<th class="tableblock halign-left valign-top">nœuds</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/fruits/*</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>[&lt;item&gt;pomme&lt;/item&gt;,&lt;item&gt;banane&lt;/item&gt;,&lt;item variete="William"&gt;poire&lt;/item&gt;]</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/fruits/node()</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>[avant pomme,&lt;item&gt;pomme&lt;/item&gt;,entre pomme et banane,&lt;item&gt;banane&lt;/item&gt;,entre banane et poire,&lt;item variete="William"&gt;poire&lt;/item&gt;,après poire]</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/fruits/text()</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>[avant pomme,entre pomme et banane,entre banane et poire,après poire]</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_axe"><a class="anchor" href="#_axe"></a>2.2.2. Axe</h4>
+<div class="paragraph">
+<p>L&#8217;axe définit la direction du parcours :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>en avant</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>child::</code> (défaut)</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>self::</code> (ou <code>.</code>)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p><code>descendant::</code></p>
+</li>
+<li>
+<p><code>descendant-or-self::</code> (ou <code>//</code>)</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="_images/xpath/child.png" alt="child" width="128">
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="_images/xpath/self.png" alt="self" width="128">
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="_images/xpath/descendant.png" alt="descendant" width="128">
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>en arrière</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>parent::</code> (ou <code>..</code>)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p><code>ancestor::</code></p>
+</li>
+<li>
+<p><code>ancestor-or-self::</code></p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="_images/xpath/parent.png" alt="parent" width="128">
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="_images/xpath/ancestor.png" alt="ancestor" width="128">
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>à gauche et à droite</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>preceding-sibling::</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>following-sibling::</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="_images/xpath/preceding-sibling.png" alt="preceding sibling" width="128">
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="_images/xpath/following-sibling.png" alt="following sibling" width="128">
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>avant et après</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>preceding::</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>following::</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="_images/xpath/preceding.png" alt="preceding" width="128">
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="_images/xpath/following.png" alt="following" width="128">
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<ul>
+<li>
+<p>cible les attributs : <code>attribute::</code> (ou <code>@</code>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>L&#8217;axe est optionnel, sa valeur par défaut étant <code>child::</code>.</p>
+</div>
+<div class="listingblock">
+<div class="title">Exemple</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash"># tous les attributs des éléments titres sous /bookstore/book
+xpath -e '/bookstore/book/title/attribute::*'  books.xml
+xpath -e /bookstore/book/title -e 'attribute::*'  books.xml
+xpath -e '/bookstore/book/title/@*'  books.xml
+
+# tous les attributs de chaque élément books sous bookstore
+xpath -e "/bookstore/book/@*" books.xml
+
+# tous les attributs des sous-élements directs de /bookstore/books
+xpath -e "/bookstore/book/*/@*" books.xml
+
+# tous les attributs des éléments (tout niveau) sous /bookstore/books
+xpath -e "/bookstore/book//@*" books.xml</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_filtre"><a class="anchor" href="#_filtre"></a>2.2.3. Filtre</h4>
+<div class="paragraph">
+<p>Un filtre oriente la progression, parmi les objets sélectionnés dans le contexte courant, vers ceux qui satisfont une condition. Exemples :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash"># le contenu textuel des éléments title ayant un attribut vo
+xpath -e '//title[@vo]/text()' books.xml
+
+# le title du 2^ème^ book sélectionné jusque là
+xpath -e '//book[2]/title' books.xml
+
+# les prix&gt;35
+xpath -e "//book[price&gt;35]/price" books.xml
+
+# le nom de l'auteur de Harry Potter
+xpath -e '//book[title="Harry Potter"]/author/text()' books.xml
+
+# le titre des livre de catégorie web
+xpath -e '//book[@category="web"]/title/text()' books.xml
+
+# les valeurs de l'attribut `lang` des titres
+xpath -e '//book/title/@*[name()="lang"]' books.xml</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_xquery_aperçu"><a class="anchor" href="#_xquery_aperçu"></a>3. XQuery : aperçu</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>XQuery est un langage de requête qui s&#8217;applique aux documents XML.
+Il se positionne par rapport à XML comme SQL par rapport aux bases de données relationnelles.
+Il s&#8217;appuie sur XPath.</p>
+</div>
+<div class="paragraph">
+<p>XQuery possède de quoi faire des boucles (<code>for</code>), des tests (<code>if</code>), des regroupements (<code>group by</code>), des jointures (<code>where</code>), etc.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Une autre approche est d&#8217;utiliser une bibliothèque XML et utiliser un langage de programmation plus <em>universel</em>.
+C&#8217;est pourquoi XQuery ne sera pas détaillé dans ce cours.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Exemple, à partir d&#8217;un fichier de données et d&#8217;un fichier de requête :</p>
+</div>
+<div class="openblock colblock">
+<div class="content">
+<div class="listingblock col3">
+<div class="title">data.xml</div>
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-xml hljs" data-lang="xml">&lt;employes&gt;
+  &lt;employe&gt;
+    &lt;nom&gt;Durant&lt;/nom&gt;
+    &lt;prenom&gt;Albert&lt;/prenom&gt;
+    &lt;nele&gt;23/09/1958&lt;/nele&gt;
+  &lt;/employe&gt;
+  &lt;employe&gt;
+    &lt;nom&gt;Dupont&lt;/nom&gt;
+    &lt;prenom&gt;Alphonse&lt;/prenom&gt;
+    &lt;nele&gt;23/12/1975&lt;/nele&gt;
+  &lt;/employe&gt;
+  &lt;employe&gt;
+    &lt;nom&gt;Dupont&lt;/nom&gt;
+    &lt;prenom&gt;Isabelle&lt;/prenom&gt;
+    &lt;nele&gt;12/03/1967&lt;/nele&gt;
+  &lt;/employe&gt;
+ ...
+ &lt;/employes&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>et du programme XQuery :</p>
+</div>
+<div class="listingblock col3">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-xquery hljs" data-lang="xquery">for $b in document ("http://example.com/exemple.xml")//employe
+where $b/nom = "Dupont"
+return
+  &lt;dupont&gt;{
+    $b/prenom,
+    $b/nele
+  }&lt;/dupont&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>on obtient (<code>xqilla</code> étant un interpréteur XQuery) :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ xqilla -i data.xml req.xquery
+&lt;dupont&gt;
+   &lt;prenom&gt;Alphonse&lt;/prenom&gt;
+   &lt;nele&gt;23/12/1975&lt;/nele&gt;
+ &lt;/dupont&gt;
+ &lt;dupont&gt;
+   &lt;prenom&gt;Isabelle&lt;/prenom&gt;
+   &lt;nele&gt;12/03/1967&lt;/nele&gt;
+ &lt;/dupont&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_xslt"><a class="anchor" href="#_xslt"></a>4. XSLT</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>XSLT  (eXtensible Stylesheet Language Transformations) permet de transformer un fichier XML,
+c&#8217;est-à-dire permet de créer de nouveaux documents (XML, HTML, texte) à partir d&#8217;informations issues d&#8217;un fichier XML.</p>
+</div>
+<div class="paragraph">
+<p>Les transformations elles-mêmes sont exprimées en XML, dans une feuille XSL.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/xsl/xslt.png" alt="xslt" width="600">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_structure_dune_feuille_xsl"><a class="anchor" href="#_structure_dune_feuille_xsl"></a>4.1. Structure d&#8217;une feuille XSL</h3>
+<div class="paragraph">
+<p>Elle débute par une en-tête, suivi de templates.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+
+&lt;!-- l'élément racine --&gt;
+&lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+
+  &lt;!-- l'élément output --&gt;
+  &lt;xsl:output                                          <i class="conum" data-value="2"></i><b>(2)</b>
+    method="html"
+    encoding="UTF-8"
+    doctype-public="-//W3C//DTD HTML 4.01//EN"
+    doctype-system="http://www.w3.org/TR/html4/strict.dtd"
+    indent="yes" &gt;&lt;/xsl:output&gt;
+
+  &lt;xsl:template match="expression XPath"&gt; <i class="conum" data-value="3"></i><b>(3)</b>
+      ...
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match="expression XPath"&gt; <i class="conum" data-value="3"></i><b>(3)</b>
+      ...
+  &lt;/xsl:template&gt;
+    ...
+&lt;/xsl:stylesheet&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>l&#8217;attribut <code>xmlns:xsl</code> déclare un espace de nommage <code>xsl</code> : toutes les balises utilisées dans une feuille XSL doivent être préfixées par <code>xsl:</code>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>l&#8217;élément <code>output</code> précise le type du document à produire ;
+l&#8217;attribut <code>method</code> spécifie le format du document de sortie : XML, HTML ou Text</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>chaque élément template définit les transformations à appliquer aux données sélectionnées par l&#8217;expression XPath spécifiée comme valeur de l&#8217;attribut <code>match</code></td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Chacun de ces templates va remplacer une portion du document XML source
+ par le contenu du template
+(les nœuds du document source qui ne sont pas sélectionnés restent  inchangés).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="template"><a class="anchor" href="#template"></a>4.2. Templates XSL</h3>
+<div class="paragraph">
+<p>Un template permet donc de définir une transformation à appliquer à la portion
+ du fichier source sélectionnée par l&#8217;expression XPath
+ qui lui est attachée.
+Sa forme générale est :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;xsl:template match="xpath expression"&gt;
+  ... <i class="conum" data-value="1"></i><b>(1)</b>
+&lt;/xsl:template&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>le contenu de l&#8217;élément se compose d’éléments XSL et de texte
+(conformes à la syntaxe XML si on génère de l&#8217;XML).</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_exemples"><a class="anchor" href="#_exemples"></a>4.3. Exemples</h3>
+<div class="sect3">
+<h4 id="_exemple_simplicite"><a class="anchor" href="#_exemple_simplicite"></a>4.3.1. Exemple simplicite</h4>
+<div class="paragraph">
+<p>Voici un bête exemple pour comprendre le principe.
+Primo, un fichier de données XML (ici quasiment vide) :</p>
+</div>
+<div class="listingblock">
+<div class="title">data.xml</div>
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-xml hljs" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;data&gt;
+  &lt;!-- mon commentaire --&gt;
+  &lt;ma_donnée&gt;x=123.7&lt;/ma_donnée&gt;
+&lt;/data&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Secundo, une feuille XSL qui va générer un fichier HTML :</p>
+</div>
+<div class="listingblock col3">
+<div class="title">tr.xsl</div>
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-xml hljs" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;
+  &lt;xsl:output
+    method="html"
+    encoding="UTF-8"
+    doctype-public="-//W3C//DTD HTML 4.01//EN"
+    doctype-system="http://www.w3.org/TR/html4/strict.dtd"
+    indent="yes" &gt;
+  &lt;/xsl:output&gt;
+
+  &lt;xsl:template match="/"&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+    &lt;html&gt;
+      &lt;head&gt;
+        &lt;title&gt;Mon premier document généré&lt;/title&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;p&gt;XSLT ? fastoche !&lt;/p&gt;
+      &lt;/body&gt;
+    &lt;/html&gt;
+  &lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>puisque le xpath spécifié est <code>"/"</code>, alors le contenu de ce template va remplacer la totalité de de l&#8217;arbre XML originel</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Tertio, on applique la transformation au fichier XML
+via la commande <code>xsltproc</code> :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ xsltproc tr.xsl data.xml
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;
+&lt;title&gt;Mon premier document généré&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;&lt;p&gt;XSLT ? Fastoche !&lt;/p&gt;&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top">original</th>
+<th class="tableblock halign-center valign-top">transformé</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="_images/xsl/sample1a.png" alt="sample1a" width="500">
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="_images/xsl/sample1b.png" alt="sample1b" width="500">
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_exemple_plus_concret"><a class="anchor" href="#_exemple_plus_concret"></a>4.3.2. Exemple plus concret</h4>
+<div class="paragraph">
+<p>On voudrait maintenant récupérer la donnée présente dans le fichier xml dans le fichier transformé.
+On utilise pour cela l&#8217;élément :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;xsl:value-of select="xpath expression"/&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>qui récupère la valeur du noeud pointé par l’expression xpath.
+Ce qui donne la feuille de transformation :</p>
+</div>
+<div class="listingblock col3">
+<div class="title">tr.xsl</div>
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-xml hljs" data-lang="xml">...
+  &lt;xsl:template match="/"&gt;
+    &lt;html&gt;
+      &lt;head&gt;
+        &lt;title&gt;Mon premier document généré&lt;/title&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;p&gt;
+          &lt;xsl:value-of select="//ma_donnée/text()"/&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+        &lt;/p&gt;
+      &lt;/body&gt;
+    &lt;/html&gt;
+  &lt;/xsl:template&gt;
+...</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>pour récupérer le texte de l&#8217;élément <code>ma_donnée</code></td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Ce qui donne :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ xsltproc tr.xsl data.xml
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;
+&lt;title&gt;Mon premier document généré&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;&lt;p&gt;x=123.7&lt;/p&gt;&lt;/body&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+&lt;/html&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>la donnée est bien là</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top">original</th>
+<th class="tableblock halign-center valign-top">transformé</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="_images/xsl/sample2a.png" alt="sample2a" width="500">
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="_images/xsl/sample2b.png" alt="sample2b" width="500">
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_exemple_embelli"><a class="anchor" href="#_exemple_embelli"></a>4.3.3. Exemple embelli</h4>
+<div class="paragraph">
+<p>On veut maintenant ajouter de l&#8217;information pour bien présenter les données.
+On utilise pour cela l&#8217;élément :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;xsl:text&gt; du texte littéral &lt;/xsl:text&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>qui insère du texte dans le flux de sortie :</p>
+</div>
+<div class="listingblock col3">
+<div class="title">tr.xsl</div>
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-xml hljs" data-lang="xml">...
+  &lt;xsl:template match="/"&gt;
+    &lt;html&gt;
+      &lt;head&gt;
+        &lt;title&gt;Mon premier document généré&lt;/title&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;h1&gt;Mes données&lt;/h1&gt;
+        &lt;p&gt;
+          &lt;xsl:text&gt;Mon premier jeu de données : &lt;/xsl:text&gt;  <i class="conum" data-value="1"></i><b>(1)</b>
+          &lt;xsl:value-of select="//ma_donnée/text()"/&gt;
+        &lt;/p&gt;
+      &lt;/body&gt;
+    &lt;/html&gt;
+  &lt;/xsl:template&gt;
+...</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>texte littéral</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Ce qui donne :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ xsltproc tr.xsl data.xml
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;
+&lt;title&gt;Mon premier document généré&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Mes données&lt;/h1&gt;
+&lt;p&gt;Mon premier jeu de données : x=123.7&lt;/p&gt;&lt;/body&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+&lt;/html&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>le texte est bien là</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top">original</th>
+<th class="tableblock halign-center valign-top">transformé</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="_images/xsl/sample3a.png" alt="sample3a" width="500">
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="_images/xsl/sample3b.png" alt="sample3b" width="500">
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_exemple_généralisé"><a class="anchor" href="#_exemple_généralisé"></a>4.3.4. Exemple généralisé</h4>
+<div class="paragraph">
+<p>Il y a maintenant plusieurs données dans le fichier xml :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;data&gt;
+  &lt;!-- mon commentaire --&gt;
+  &lt;ma_donnée&gt;x=123.7&lt;/ma_donnée&gt;
+  &lt;ma_donnée&gt;y=0&lt;/ma_donnée&gt;
+  &lt;ma_donnée&gt;z = (1.1,-2)&lt;/ma_donnée&gt;
+&lt;/data&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>On va faire template pour générer l&#8217;ossature de la page,
+et qui applique un second pour chaque données :</p>
+</div>
+<div class="listingblock col3">
+<div class="title">tr.xsl</div>
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-xml hljs" data-lang="xml">...
+  &lt;xsl:template match="/"&gt;
+    &lt;html&gt;
+      &lt;head&gt;
+        &lt;title&gt;Mon premier document généré&lt;/title&gt;
+        &lt;style&gt; table,th,td { border: solid 1px red ; } &lt;/style&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;p&gt;
+          &lt;xsl:text&gt;Mon premier jeu de données : &lt;/xsl:text&gt;
+          &lt;xsl:apply-templates/&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+        &lt;/p&gt;
+      &lt;/body&gt;
+    &lt;/html&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match="//ma_donnée"&gt;
+    &lt;xsl:value-of select="text()"/&gt;
+  &lt;/xsl:template&gt;
+...</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>on recherche des templates et on applique les transformations</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>ce qui donne :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ xsltproc tr.xsl data.xml
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;
+&lt;title&gt;Mon premier document généré&lt;/title&gt;
+&lt;style&gt; table,th,td { border: solid 1px red ; } &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;&lt;p&gt;Mon premier jeu de données : &lt;table&gt;
+
+  &lt;tr&gt;&lt;td&gt;x=123.7&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;y=0&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;z = (1.1,-2)&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;&lt;/p&gt;&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top">original</th>
+<th class="tableblock halign-center valign-top">transformé</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="_images/xsl/sample4a.png" alt="sample4a" width="500">
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="_images/xsl/sample4b.png" alt="sample4b" width="500">
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_associer_une_feuille_xsl_à_un_document_xml"><a class="anchor" href="#_associer_une_feuille_xsl_à_un_document_xml"></a>4.4. Associer une feuille XSL à un document XML</h3>
+<div class="paragraph">
+<p>Un navigateur web est capable appliquer des transformations XSL à un document XML.
+Pour cela, il faut que le document XML
+(correspondant à l&#8217;URL spécifiée dans la navigateur)
+référence la feuille XSL :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;?xml-stylesheet type="text/xsl" href="mafeuille.xsl"?&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_eléments_xsl"><a class="anchor" href="#_eléments_xsl"></a>4.5. Eléments XSL</h3>
+<div class="paragraph">
+<p>Ces éléments peuvent apparaitre dans le contenu du template.</p>
+</div>
+<div class="sect3">
+<h4 id="_xslvalue_of"><a class="anchor" href="#_xslvalue_of"></a>4.5.1. <code>xsl:value-of</code></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;xsl:value-of select="xpath expression"/&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>xsl:value-of</code> extrait la valeur d&#8217;un noeud pointé par l&#8217;expression XPath
+ <code>select</code>.
+Exemple :</p>
+</div>
+<div class="listingblock col3">
+<div class="title">tr.xsl</div>
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-xml hljs" data-lang="xml">...
+&lt;xsl:template match="/"&gt;
+    &lt;html&gt;
+      &lt;head&gt;
+        &lt;title&gt;Mon premier document généré&lt;/title&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;p&gt;XSLT ? fastoche !&lt;/p&gt;
+        *****
+        &lt;xsl:value-of select="//personne[nom='Erre']/nom/text()" &gt;&lt;/xsl:value-of&gt;
+        *****
+      &lt;/body&gt;
+    &lt;/html&gt;
+&lt;/xsl:template&gt;
+...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Il peut être intéressant d&#8217;utiliser ici les fonction XPath, comme :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>count(expression)</code>, qui retourne le nombre de nœuds sélectionnés par l&#8217;expression,</p>
+</li>
+<li>
+<p><code>sum(expression)</code>, qui retourne la somme des nombres sélectionnés par l&#8217;expression,</p>
+</li>
+<li>
+<p>etc.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Exemple :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xsl hljs" data-lang="xsl">&lt;xsl:value-of select="sum(.//participant/qualification) div count(.//participant/qualification)"/&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_xslcopy_of"><a class="anchor" href="#_xslcopy_of"></a>4.5.2. <code>xsl:copy-of</code></h4>
+<div class="paragraph">
+<p>Identique à <code>xsl:value-of</code>, mais insère le noeud (et non pas la valeur du noeud).</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_xslfor_each"><a class="anchor" href="#_xslfor_each"></a>4.5.3. <code>xsl:for-each</code></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;xsl:for-each select="xpath expression"&gt;
+CONTENU
+&lt;/xsl:for-each&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>xsl:for-each</code> itère sur un ensemble de noeuds, et génère
+autant d’exemplaires de <code>CONTENU</code> que de nœuds sélectionnés par l&#8217;expression xpath.</p>
+</div>
+<div class="paragraph">
+<p>Exemple, à partir du même fichier de données et du fichier de transformation :</p>
+</div>
+<div class="listingblock col3">
+<div class="title">tr.xsl</div>
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-xml hljs" data-lang="xml">...
+&lt;xsl:template match="/"&gt;
+    &lt;mailing_list&gt;
+      &lt;xsl:for-each select="repertoire/personne"&gt;
+        &lt;item&gt;
+          &lt;xsl:text&gt;nom:  &lt;/xsl:text&gt;
+          &lt;xsl:value-of select="nom/text()" &gt;&lt;/xsl:value-of&gt;
+        &lt;/item&gt;
+      &lt;/xsl:for-each&gt;
+    &lt;/mailing_list&gt;
+&lt;/xsl:template&gt;
+...</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_xslsort"><a class="anchor" href="#_xslsort"></a>4.5.4. <code>xsl:sort</code></h4>
+<div class="paragraph">
+<p><code>xsl:sort</code> trie suivant une clé alphabétique ou numérique,
+en ordre croissant ou décroissant.
+Exemple :</p>
+</div>
+<div class="listingblock col3">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-xml hljs" data-lang="xml">...
+&lt;xsl:template match="/"&gt;
+    &lt;mailing_list&gt;
+      &lt;xsl:for-each select="repertoire/personne"&gt;
+        &lt;xsl:sort select="nom" order="descending"&gt;
+        &lt;xsl:sort select="prenom"&gt;
+        &lt;item&gt;
+          &lt;xsl:text&gt;nom:  &lt;/xsl:text&gt;
+          &lt;xsl:value-of select="nom/text()" &gt;&lt;/xsl:value-of&gt;
+        &lt;/item&gt;
+      &lt;/xsl:for-each&gt;
+    &lt;/mailing_list&gt;
+&lt;/xsl:template&gt;
+...</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_xslelement"><a class="anchor" href="#_xslelement"></a>4.5.5. <code>xsl:element</code></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;xsl:element name="..."&gt;
+  ...
+&lt;/xsl:element&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>construit un noeud élément avec les attributs
+et le contenu définis dans le corps de l’élément <code>xsl:element</code>.</p>
+</div>
+<div class="paragraph">
+<p>Exemple :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;xsl:element name="p"&gt;
+  &lt;xsl:value-of select="para" /&gt;
+&lt;/xsl:element&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>crée <code>&lt;p&gt;&#8230;&#8203;&lt;/p&gt;</code> contenant le texte présent dans l’élément
+<code>para</code> du document d’origine.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_xslattribute"><a class="anchor" href="#_xslattribute"></a>4.5.6. <code>xsl:attribute</code></h4>
+<div class="paragraph">
+<p>Doit être placé dans un élément <code>xsl:element</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;xsl:attribute name="..."&gt;valeur&lt;/xsl:attribute&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>crée un attribut.
+Exemple :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;xsl:element name="image"&gt;
+  &lt;xsl:attribute name="src"&gt;
+    &lt;xsl:value-of select=”@adresse”/&gt;
+  &lt;/xsl:attribute&gt;
+....
+&lt;/xsl:element&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>crée une balise <code>image</code>,
+ayant un attribut <code>src</code> dont la valeur est
+celle de l’attribut adresse de l’élément d’origine :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;image src="maphoto.jpg"&gt;&lt;/image&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="XSLfromXML"><a class="anchor" href="#XSLfromXML"></a>4.6. Associer une feuille XSL à un document XML</h3>
+<div class="paragraph">
+<p>Un navigateur web est capable appliquer des transformations XSL à un document XML.
+Pour cela, il faut que le document XML
+(correspondant à l&#8217;URL spécifiée dans la navigateur)
+référence la feuille XSL :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;?xml-stylesheet type="text/xsl" href="mafeuille.xsl"?&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p class="center">
+  <span style="font-size: 0.9em;">
+    <a href="https://jacquelincharbonnel.github.io/">Jacquelin Charbonnel</a>
+    <!-- &nbsp; &mdash; &nbsp; -->
+    &nbsp;
+    &copy;Creative Commons BY-NC-SA 4.0
+  </span>
+  </p>
+</footer>
+
+<script>
+var myDate = new Date(document.lastModified);
+myNewDate = new Intl.DateTimeFormat(
+            undefined,
+            {year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit"}
+        )
+        .format(myDate).replace(/\./g, '-');
+document.getElementById("lastmodify").innerHTML = myNewDate ;
+</script>
+
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
