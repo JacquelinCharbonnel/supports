@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Le format JSON :: Supports</title>
+    <link rel="canonical" href="https://jacquelincharbonnel.github.io/supports/json/2023/intro.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../_/css/site.css">
+<!-- reference des feuilles de styles supplémentaires -->
+<link rel="stylesheet" href="../../_/css/layout.css">
+<link rel="stylesheet" href="../../_/css/content.css">
+
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://jacquelincharbonnel.github.io/supports">Supports</a>
+  <!-- suppression du burger du bandeau
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+-->      
+    </div>
+<!-- suppression des boutons du bandeau
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+-->
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="json" data-version="2023">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">JSON</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="intro.html">Le format JSON</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="jq.html">JSON et Unix</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="python.html">JSON et Python</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">JSON</span>
+    <span class="version">2023</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../C/2023/index.html">C</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../C/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../concurrence/2024/index.html">Concurrence</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../concurrence/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="index.html">JSON</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../linux_context/2025/index.html">Linux contexte</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../linux_context/2025/index.html">2025</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../python_objet/2024/index.html">Python objet</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../python_objet/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../supports/index.html">Supports</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../xml/2023/index.html">XML</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../xml/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../supports/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">JSON</a></li>
+    <li><a href="intro.html">Le format JSON</a></li>
+  </ul>
+</nav>
+<!-- supression de "edit this page"
+  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/json/./modules/ROOT/pages/intro.adoc">Edit this Page</a></div>
+-->
+</div>
+  <!-- ajout de la date de modification -->
+     <div class="lastmodify"> dernière modification : 2023 </div>
+  <!-- fin ajout -->
+  <div class="content">
+<aside class="toc sidebar" data-title="Plan" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Le format JSON</h1>
+<div class="sect1">
+<h2 id="_caractéristiques"><a class="anchor" href="#_caractéristiques"></a>1. Caractéristiques</h2>
+<div class="sectionbody">
+<div class="ulist">
+<div class="title">Les plus</div>
+<ul>
+<li>
+<p>format compréhensible par un humain</p>
+</li>
+<li>
+<p>syntaxe simple, concise et légère</p>
+</li>
+<li>
+<p>pris en charge par de nombreux langages</p>
+</li>
+<li>
+<p>dispose de types prédéfinis</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Les moins</div>
+<ul>
+<li>
+<p>absence de schéma</p>
+</li>
+<li>
+<p>peu de types pris en charge : pas de type <em>date</em>, de type <em>entier</em>, etc.</p>
+</li>
+<li>
+<p>pas de commentaire, et plus généralement, pas de méta-données :
+les données ne sont pas identifiées,
+leur signification doit être acquise par ailleurs,
+pas de possibilité de spécifier le charset et l&#8217;encodage</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>XML stocke données et méta-données :
+les données sont <em>enrobées</em> d&#8217;indications sémantiques qualitatives et quantitatives.
+Ainsi, il est possible de charger les données d&#8217;un fichier XML sans rien connaitre de son contenu,
+en se laissant guider, au fil de la lecture, par les méta-données.
+A contrario, JSON ne stocke pas de méta-données :
+il est donc nécessaire d&#8217;avoir une idée plus ou moins précise
+du contenu d&#8217;un fichier JSON pour pouvoir l&#8217;exploiter.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_eléments_constitutifs"><a class="anchor" href="#_eléments_constitutifs"></a>2. Eléments constitutifs</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>les littéraux (types scalaires)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>chaîne de caractères, entre guillemets :
+<code>"une chaine de caractères"</code></p>
+</li>
+<li>
+<p>nombre, (un seul et même type pour entiers et réels) :
+<code>3.14</code>, <code>-1</code>, <code>1E-10</code></p>
+</li>
+<li>
+<p>booléen : <code>true</code> et <code>false</code></p>
+</li>
+<li>
+<p>rien : <code>null</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>des aggrégations :</p>
+<div class="ulist">
+<ul>
+<li>
+<p>les listes : <code>[ "elem1", -1, 1.1, false ]</code></p>
+</li>
+<li>
+<p>les objets (collections de clé/valeur) : <code>{ "clé": "valeur", "clé2": 3.1 }</code></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Exemples :</p>
+</div>
+<div class="listingblock">
+<div class="title">1 objet</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "album": "MTV Unplugged ",
+  "interpreter": "Maná",
+  "released": 1999,
+  "genre": "Latin rock",
+  "lang": "español"
+  "label": "WEA Latina",
+  "live": true
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">1 objet composé de sous-objets et de listes</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{                                           <i class="conum" data-value="1"></i><b>(1)</b>
+  "firstName": "John",
+  "lastName": "Smith",
+  "address": {                              <i class="conum" data-value="2"></i><b>(2)</b>
+    "streetAddress": "21 2nd Street",
+    "city": "New York",
+    "state": "NY",
+    "postalCode": 10021
+  },
+  "phoneNumbers": [                         <i class="conum" data-value="3"></i><b>(3)</b>
+    "212-732-1234",
+    "646-123-4567"
+  ]
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>objet de niveau 0</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>sous-objet de niveau 1</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>liste</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Autre exemple :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{                                            # objet (niv 0)
+  "glucides": [                              # liste (niv 1)
+    {                                        # objet (niv 2)
+      "kiwis": 0.3,
+      "mangues": 1.4,
+      "pommes": 0.7
+    },
+    "pâtes",
+    "pain"
+  ],
+  "lipides": {                               # objet (niv 1)
+    "huile": [ colza, "olive", "arachide" ], # liste (niv 2)
+    "beurre": true
+  },
+  "protéines": [                             # liste (niv 1)
+      [ "saumon", "sardine" ],               # liste (niv 2)
+      [ "poulet", "boeuf", "porc" ]          # liste (niv 2)
+  ]
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Aucune possibilité de commenter un JSON, donc les commentaires ci-dessus ne font pas partie du JSON.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Encore un autre exemple :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "id": "0001",
+  "type": "donut",
+  "name": "Cake",
+  "ppu": 0.55,
+  "batters":
+    {
+      "batter":
+      [
+        { "id": "1001", "type": "Regular" },
+        { "id": "1002", "type": "Chocolate" },
+        { "id": "1003", "type": "Blueberry" },
+        { "id": "1004", "type": "Devil's Food" }
+      ]
+    },
+  "topping":
+    [
+      { "id": "5001", "type": "None" },
+      { "id": "5002", "type": "Glazed" },
+      { "id": "5005", "type": "Sugar" },
+      { "id": "5007", "type": "Powdered Sugar" },
+      { "id": "5006", "type": "Chocolate with Sprinkles" },
+      { "id": "5003", "type": "Chocolate" },
+      { "id": "5004", "type": "Maple" }
+    ]
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p class="center">
+  <span style="font-size: 0.9em;">
+    <a href="https://jacquelincharbonnel.github.io/">Jacquelin Charbonnel</a>
+    <!-- &nbsp; &mdash; &nbsp; -->
+    &nbsp;
+    &copy;Creative Commons BY-NC-SA 4.0
+  </span>
+  </p>
+</footer>
+
+<script>
+var myDate = new Date(document.lastModified);
+myNewDate = new Intl.DateTimeFormat(
+            undefined,
+            {year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit"}
+        )
+        .format(myDate).replace(/\./g, '-');
+document.getElementById("lastmodify").innerHTML = myNewDate ;
+</script>
+
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

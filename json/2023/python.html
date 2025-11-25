@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>JSON et Python :: Supports</title>
+    <link rel="canonical" href="https://jacquelincharbonnel.github.io/supports/json/2023/python.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../_/css/site.css">
+<!-- reference des feuilles de styles supplémentaires -->
+<link rel="stylesheet" href="../../_/css/layout.css">
+<link rel="stylesheet" href="../../_/css/content.css">
+
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://jacquelincharbonnel.github.io/supports">Supports</a>
+  <!-- suppression du burger du bandeau
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+-->      
+    </div>
+<!-- suppression des boutons du bandeau
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+-->
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="json" data-version="2023">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">JSON</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="intro.html">Le format JSON</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="jq.html">JSON et Unix</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="python.html">JSON et Python</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">JSON</span>
+    <span class="version">2023</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../C/2023/index.html">C</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../C/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../concurrence/2024/index.html">Concurrence</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../concurrence/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="index.html">JSON</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../linux_context/2025/index.html">Linux contexte</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../linux_context/2025/index.html">2025</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../python_objet/2024/index.html">Python objet</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../python_objet/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../supports/index.html">Supports</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../xml/2023/index.html">XML</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../xml/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../supports/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">JSON</a></li>
+    <li><a href="python.html">JSON et Python</a></li>
+  </ul>
+</nav>
+<!-- supression de "edit this page"
+  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/json/./modules/ROOT/pages/python.adoc">Edit this Page</a></div>
+-->
+</div>
+  <!-- ajout de la date de modification -->
+     <div class="lastmodify"> dernière modification : 2023 </div>
+  <!-- fin ajout -->
+  <div class="content">
+<aside class="toc sidebar" data-title="Plan" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">JSON et Python</h1>
+<div class="sect1">
+<h2 id="_le_module_json"><a class="anchor" href="#_le_module_json"></a>1. Le module <code>JSON</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Il permet d&#8217;importer et d&#8217;exporter simplement du JSON.
+Exemple :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">import json
+
+mydict = {
+    "jours_ouvré": [ "lun", "ma", "me", "je", "ve"]
+    , "mois_été": [ "jun", "jui", "aug", "sep" ]
+    , "solstices":
+      [
+        { "day": 21 , "month": "dec" }
+        , { "day": 21 , "month": "jun" }
+    ]
+}
+
+print(json.dumps(mydict))</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>donne :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>{"jours_ouvr\u00e9": ["lun", "ma", "me", "je", "ve"], "mois_\u00e9t\u00e9": ["jun", "jui", "aug", "sep"], "solstices": [{"day": 21, "month": "dec"}, {"day": 21, "month": "jun"}]}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>et inversement :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">import json
+
+s = '{"jours_ouvrés": ["lun", "ma", "me", "je", "ve"], "mois_été": ["jun", "jui", "aug", "sep"], "solstices": [{"day": 21, "month": "dec"}, {"day": 21, "month": "jun"}]}'
+var = json.loads(s)
+
+print(type(var))
+print(var["mois_été"])</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>donne :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;class 'dict'&gt;
+['jun', 'jui', 'aug', 'sep']</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_sérialisation"><a class="anchor" href="#_sérialisation"></a>2. Sérialisation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Sérialiser, c&#8217;est convertir une structure de données en un flux linéaire d&#8217;information, qui doit permettre de la recréer dans un autre contexte
+(c&#8217;est <em>mettre à plat</em> une structure de données potentiellement multi-dimentionnelle).
+C&#8217;est par exemple générer une représentation complète et non ambigüe d&#8217;une structure de données sous forme d&#8217;une chaine de caractères,
+qui peut alors être sauvegardée sur un support externe ou envoyée sur un réseau,
+et pourra être relue par la suite pour reformer l&#8217;objet en mémoire.</p>
+</div>
+<div class="paragraph">
+<p>JSON fait partie des format couramment utilisé pour sérialiser.</p>
+</div>
+<div class="sect2">
+<h3 id="_méthode_repr"><a class="anchor" href="#_méthode_repr"></a>2.1. Méthode <code>__repr__()</code></h3>
+<div class="paragraph">
+<p>La méthode <code>__repr__</code> est censée renvoyer une représentation de l&#8217;objet, qui doit permettre de le recréer dans un autre contexte.
+Concrètement, c&#8217;est une fonction qui renvoie une string caractérisant l&#8217;état de l&#8217;objet.</p>
+</div>
+<div class="paragraph">
+<p>Cette méthode <code>__repr__</code> existe par défaut, car elle est utilisée en interne par Python, mais peut être personnalisée.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_exemples"><a class="anchor" href="#_exemples"></a>2.2. Exemples</h3>
+<div class="paragraph">
+<p>Lorsque la structure est simple, la sérialisation est triviale :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">class Complex:
+  def __init__(self,x,y):
+    self.x = x
+    self.y = y
+  def __repr__(self):
+    return '{ "Complex": { "x": ' + f"{self.x}" + ', "y": ' + f"{self.y}" + ' } }'
+
+if __name__=="__main__":
+  z = Complex(1,2)
+  print(repr(z))          # { "Complex": { "x": 1, "y": 2 } }</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Lorsque la structure de données est multi-dimentionnelle, l&#8217;opération peut s&#8217;avérer difficile :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">class L:
+  def __init__(self,l):
+    self.l1 = self.l2 = l
+
+if __name__=="__main__":
+  l = L([1,2,3])</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>l</code> se visualise comme :</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/serial1.png" alt="serial1">
+</div>
+</div>
+<div class="paragraph">
+<p>et il est clair que <code>{ "l1": [1,2,3], "l2": [1,2,3] }}</code> n&#8217;est pas une bonne sérialisation pour <code>l</code>,
+car elle représente  :</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/serial2.png" alt="serial2">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_persistance"><a class="anchor" href="#_persistance"></a>2.3. Persistance</h3>
+<div class="paragraph">
+<p>Un objet est persistant si sa durée de vie dépasse celle du programme qui le crée.
+Pour qu&#8217;un objet soit persistant, il suffit qu&#8217;il sache sauvegarder son état sur un support externe (par sérialisation)
+puis qu&#8217;il sache se restaurer à partir de cette sauvegarde.</p>
+</div>
+<div class="paragraph">
+<p>Un programme manipulant des objets persistants peut donc commencer un calcul et s&#8217;interrompre avant d&#8217;avoir terminé (après avoir enregistrer son environnement),
+puis plus tard, initier une nouvelle exécution et reprendre le calcul là où il en était.</p>
+</div>
+<div class="paragraph">
+<p>Les objets issus d&#8217;une base de données sont naturellement persistants.
+Ceux qui savent se sérialiser/désérialiser aussi.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p class="center">
+  <span style="font-size: 0.9em;">
+    <a href="https://jacquelincharbonnel.github.io/">Jacquelin Charbonnel</a>
+    <!-- &nbsp; &mdash; &nbsp; -->
+    &nbsp;
+    &copy;Creative Commons BY-NC-SA 4.0
+  </span>
+  </p>
+</footer>
+
+<script>
+var myDate = new Date(document.lastModified);
+myNewDate = new Intl.DateTimeFormat(
+            undefined,
+            {year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit"}
+        )
+        .format(myDate).replace(/\./g, '-');
+document.getElementById("lastmodify").innerHTML = myNewDate ;
+</script>
+
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

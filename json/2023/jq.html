@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>JSON et Unix :: Supports</title>
+    <link rel="canonical" href="https://jacquelincharbonnel.github.io/supports/json/2023/jq.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../_/css/site.css">
+<!-- reference des feuilles de styles supplémentaires -->
+<link rel="stylesheet" href="../../_/css/layout.css">
+<link rel="stylesheet" href="../../_/css/content.css">
+
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://jacquelincharbonnel.github.io/supports">Supports</a>
+  <!-- suppression du burger du bandeau
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+-->      
+    </div>
+<!-- suppression des boutons du bandeau
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+-->
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="json" data-version="2023">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">JSON</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="intro.html">Le format JSON</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="jq.html">JSON et Unix</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="python.html">JSON et Python</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">JSON</span>
+    <span class="version">2023</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../C/2023/index.html">C</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../C/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../concurrence/2024/index.html">Concurrence</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../concurrence/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="index.html">JSON</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../linux_context/2025/index.html">Linux contexte</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../linux_context/2025/index.html">2025</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../python_objet/2024/index.html">Python objet</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../python_objet/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../supports/index.html">Supports</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../xml/2023/index.html">XML</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../xml/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../supports/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">JSON</a></li>
+    <li><a href="jq.html">JSON et Unix</a></li>
+  </ul>
+</nav>
+<!-- supression de "edit this page"
+  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/json/./modules/ROOT/pages/jq.adoc">Edit this Page</a></div>
+-->
+</div>
+  <!-- ajout de la date de modification -->
+     <div class="lastmodify"> dernière modification : 2023 </div>
+  <!-- fin ajout -->
+  <div class="content">
+<aside class="toc sidebar" data-title="Plan" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">JSON et Unix</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Certaines commandes Unix (de plus en plus) peuvent sortir leurs résultats au format JSON (par exemple <code>tree</code>, <code>journalctl</code>, <code>lsblk</code>, <code>ip</code>).
+D&#8217;autres requierent une configuration en JSON (<code>nmcli</code>, par exemple).</p>
+</div>
+<div class="paragraph">
+<p>Il est donc utile de savoir traiter rapidement des données JSON
+sans passer forcément par de la programmation.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_lexemple_de_lsblk"><a class="anchor" href="#_lexemple_de_lsblk"></a>1. L&#8217;exemple de <code>lsblk</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>La commande unix <code>lsblk</code> liste les périphériques de la machine :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ lsblk
+NAME                                          MAJ:MIN RM  SIZE RO TYPE  MOUNTPOINT
+nvme0n1                                       259:0    0  477G  0 disk
+├─nvme0n1p1                                   259:1    0    2G  0 part  /boot
+└─nvme0n1p2                                   259:2    0  475G  0 part
+  └─luks-7bf4f0c8-ca29-4f68-9b6e-069db5a6b326 253:0    0  475G  0 crypt
+    ├─vg-ro2                                  253:1    0   50G  0 lvm   /
+    ├─vg-swp                                  253:2    0  7,6G  0 lvm   [SWAP]
+    ├─vg-tmp                                  253:3    0    2G  0 lvm   /tmp
+    ├─vg-ro1                                  253:4    0 48,8G  0 lvm
+    └─vg-dat                                  253:5    0   50G  0 lvm   /data</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Pour récupérer une information précise dans cette sortie texte, il faut parser la sortie.
+Unix dispose de toutes les commandes de traitement de texte pour le faire (<code>sed</code>, <code>awk</code>, etc.),
+mais cela reste dépendant du formatage de la sortie, en espérant que celui-ci ne varie pas avec la langue ou les versions successives de la commande .</p>
+</div>
+<div class="paragraph">
+<p>Une sortie au format JSON permet de rigidifier la sortie :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ lsblk -J
+{
+   "blockdevices": [
+      {"name":"nvme0n1", "maj:min":"259:0", "rm":false, "size":"477G", "ro":false, "type":"disk", "mountpoint":null,
+         "children": [
+            {"name":"nvme0n1p1", "maj:min":"259:1", "rm":false, "size":"2G", "ro":false, "type":"part", "mountpoint":"/boot"},
+            {"name":"nvme0n1p2", "maj:min":"259:2", "rm":false, "size":"475G", "ro":false, "type":"part", "mountpoint":null,
+               "children": [
+                  {"name":"luks-7bf4f0c8-ca29-4f68-9b6e-069db5a6b326", "maj:min":"253:0", "rm":false, "size":"475G", "ro":false, "type":"crypt", "mountpoint":null,
+                     "children": [
+                        {"name":"vg-ro2", "maj:min":"253:1", "rm":false, "size":"50G", "ro":false, "type":"lvm", "mountpoint":"/"},
+                        {"name":"vg-swp", "maj:min":"253:2", "rm":false, "size":"7,6G", "ro":false, "type":"lvm", "mountpoint":"[SWAP]"},
+                        {"name":"vg-tmp", "maj:min":"253:3", "rm":false, "size":"2G", "ro":false, "type":"lvm", "mountpoint":"/tmp"},
+                        {"name":"vg-ro1", "maj:min":"253:4", "rm":false, "size":"48,8G", "ro":false, "type":"lvm", "mountpoint":null},
+                        {"name":"vg-dat", "maj:min":"253:5", "rm":false, "size":"50G", "ro":false, "type":"lvm", "mountpoint":"/data"}
+                     ]
+                  }
+               ]
+            }
+         ]
+      }
+   ]
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>La commande <code>jq</code> reformate plus lisiblement un JSON.
+Exemple avec la commande <code>journalctl</code> :</p>
+</div>
+<div class="listingblock">
+<div class="title">sortie plain text</div>
+<div class="content">
+<pre>$ journalctl
+mars 03 20:47:38 pc-jaclin kernel: nvme 0000:02:00.0:    [ 0] RxErr                  (First)
+mars 03 20:47:38 pc-jaclin kernel: nvme 0000:02:00.0:   device [1c5c:174a] error status/mask=00000001/00000000
+mars 03 20:47:38 pc-jaclin kernel: nvme 0000:02:00.0: PCIe Bus Error: severity=Corrected, type=Physical Layer, (Receiver ID)
+mars 03 20:47:38 pc-jaclin kernel: pcieport 0000:00:1b.0: AER: Corrected error received: 0000:02:00.0</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">sortie JSON</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">$ journalctl -o json
+{"_MACHINE_ID":"2d7c653c4ac94e65921bd7ccc1440bc9","SYSLOG_FACILITY":"0","_KERNEL_SUBSYSTEM":"pci","__MONOTONIC_TIMESTAMP":"259142405735","_SOURCE_MONOTONIC_TIMESTAMP":"259139129475","_KERNEL_DEVICE":"+pci:0000:02:00.0","SYSLOG_IDENTIFIER":"kernel","_HOSTNAME":"pc-jaclin","_TRANSPORT":"kernel","MESSAGE":"nvme 0000:02:00.0:    [ 0] RxErr                  (First)","__REALTIME_TIMESTAMP":"1677872858772770","__CURSOR":"s=2ff966ef3bfa4e619e4fd79a86ab8f5b;i=3a7f;b=75ddd32912244679a623baf6ff9a7249;m=3c56174e67;t=5f60437b9b522;x=a80de7dda6996a45","_BOOT_ID":"75ddd32912244679a623baf6ff9a7249","_UDEV_SYSNAME":"0000:02:00.0","PRIORITY":"4"}
+{"SYSLOG_IDENTIFIER":"kernel","_TRANSPORT":"kernel","_UDEV_SYSNAME":"0000:02:00.0","__CURSOR":"s=2ff966ef3bfa4e619e4fd79a86ab8f5b;i=3a7e;b=75ddd32912244679a623baf6ff9a7249;m=3c56174c6b;t=5f60437b9b326;x=1cfe88cc53854e9","_KERNEL_DEVICE":"+pci:0000:02:00.0","MESSAGE":"nvme 0000:02:00.0:   device [1c5c:174a] error status/mask=00000001/00000000","_MACHINE_ID":"2d7c653c4ac94e65921bd7ccc1440bc9","SYSLOG_FACILITY":"0","__MONOTONIC_TIMESTAMP":"259142405227","_KERNEL_SUBSYSTEM":"pci","_BOOT_ID":"75ddd32912244679a623baf6ff9a7249","__REALTIME_TIMESTAMP":"1677872858772262","PRIORITY":"4","_SOURCE_MONOTONIC_TIMESTAMP":"259139129467","_HOSTNAME":"pc-jaclin"}
+{"__REALTIME_TIMESTAMP":"1677872858771690","_BOOT_ID":"75ddd32912244679a623baf6ff9a7249","_SOURCE_MONOTONIC_TIMESTAMP":"259139129460","MESSAGE":"nvme 0000:02:00.0: PCIe Bus Error: severity=Corrected, type=Physical Layer, (Receiver ID)","_UDEV_SYSNAME":"0000:02:00.0","_KERNEL_SUBSYSTEM":"pci","SYSLOG_FACILITY":"0","__CURSOR":"s=2ff966ef3bfa4e619e4fd79a86ab8f5b;i=3a7d;b=75ddd32912244679a623baf6ff9a7249;m=3c56174a2f;t=5f60437b9b0ea;x=e6f263226938fe13","_MACHINE_ID":"2d7c653c4ac94e65921bd7ccc1440bc9","_HOSTNAME":"pc-jaclin","_KERNEL_DEVICE":"+pci:0000:02:00.0","SYSLOG_IDENTIFIER":"kernel","PRIORITY":"4","__MONOTONIC_TIMESTAMP":"259142404655","_TRANSPORT":"kernel"}
+{"SYSLOG_IDENTIFIER":"kernel","_UDEV_SYSNAME":"0000:00:1b.0","_SOURCE_MONOTONIC_TIMESTAMP":"259139129432","SYSLOG_FACILITY":"0","_MACHINE_ID":"2d7c653c4ac94e65921bd7ccc1440bc9","PRIORITY":"6","_HOSTNAME":"pc-jaclin","__CURSOR":"s=2ff966ef3bfa4e619e4fd79a86ab8f5b;i=3a7c;b=75ddd32912244679a623baf6ff9a7249;m=3c561746fa;t=5f60437b9adb3;x=8530ef8fb5a9309a","__MONOTONIC_TIMESTAMP":"259142403834","_KERNEL_DEVICE":"+pci:0000:00:1b.0","_TRANSPORT":"kernel","MESSAGE":"pcieport 0000:00:1b.0: AER: Corrected error received: 0000:02:00.0","_BOOT_ID":"75ddd32912244679a623baf6ff9a7249","_KERNEL_SUBSYSTEM":"pci","__REALTIME_TIMESTAMP":"1677872858770867"}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">formatage avec <code>jq</code></div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">$ journalctl -o json | jq
+{
+  "MESSAGE": "nvme 0000:02:00.0:    [ 0] RxErr                  (First)",
+  "PRIORITY": "4",
+  "_UDEV_SYSNAME": "0000:02:00.0",
+  "_SOURCE_MONOTONIC_TIMESTAMP": "259139129475",
+  "_HOSTNAME": "pc-jaclin",
+  "SYSLOG_FACILITY": "0",
+  "_BOOT_ID": "75ddd32912244679a623baf6ff9a7249",
+  "__REALTIME_TIMESTAMP": "1677872858772770",
+  "__MONOTONIC_TIMESTAMP": "259142405735",
+  "__CURSOR": "s=2ff966ef3bfa4e619e4fd79a86ab8f5b;i=3a7f;b=75ddd32912244679a623baf6ff9a7249;m=3c56174e67;t=5f60437b9b522;x=a80de7dda6996a45",
+  "_KERNEL_DEVICE": "+pci:0000:02:00.0",
+  "SYSLOG_IDENTIFIER": "kernel",
+  "_KERNEL_SUBSYSTEM": "pci",
+  "_MACHINE_ID": "2d7c653c4ac94e65921bd7ccc1440bc9",
+  "_TRANSPORT": "kernel"
+}
+{
+  "__MONOTONIC_TIMESTAMP": "259142405227",
+  "_HOSTNAME": "pc-jaclin",
+  "_UDEV_SYSNAME": "0000:02:00.0",
+  "__CURSOR": "s=2ff966ef3bfa4e619e4fd79a86ab8f5b;i=3a7e;b=75ddd32912244679a623baf6ff9a7249;m=3c56174c6b;t=5f60437b9b326;x=1cfe88cc53854e9",
+  "_KERNEL_SUBSYSTEM": "pci",
+  "_MACHINE_ID": "2d7c653c4ac94e65921bd7ccc1440bc9",
+  "_TRANSPORT": "kernel",
+  "SYSLOG_FACILITY": "0",
+  "MESSAGE": "nvme 0000:02:00.0:   device [1c5c:174a] error status/mask=00000001/00000000",
+  "PRIORITY": "4",
+  "SYSLOG_IDENTIFIER": "kernel",
+  "__REALTIME_TIMESTAMP": "1677872858772262",
+  "_SOURCE_MONOTONIC_TIMESTAMP": "259139129467",
+  "_KERNEL_DEVICE": "+pci:0000:02:00.0",
+  "_BOOT_ID": "75ddd32912244679a623baf6ff9a7249"
+}
+...</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_jo"><a class="anchor" href="#_jo"></a>2. jo</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Générer du JSON en shell est laborieux :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ echo '{"name":"Jane"}'</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ echo '{ "Maná": { "Fernando Olvera": { "role": [ "vocals", "guitar", "harmonica" ], "entrance": 1981, "exit": null }, "Alejandro González": { "role": [ "drums", "backup vocals", "percussions" ], "entrance": 1984, "exit": null }, "Juan Calleros": { "role": [ "bass guitar" ], "entrance": 1981, "exit": null }, "Sergio Vallin": { "role": [ "guitar", "backup vocals" ], "entrance": 1995, "exit": null } }, "Santana": { "Carlos Santana": { "role": [ "lead guitar" ], "entrance": 1966, "exit": null }, "Tom Fraser": { "role": [ "rythmic guitar" ], "entrance": 1966, "exit": 1970 }, "Mike Carabello": { "role": [ "percussion" ], "entrance": 1966, "exit": 1971 }, "Keith Jones": { "role": [ "bass guitar" ], "entrance": 1983, "exit": 1989 }, "Michael Shrieve": { "role": [ "drums" ], "entrance": 1969, "exit": 1988 } } }'</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>jo</code> simplifie l&#8217;opératon :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ jo name=Jane                         # {"name":"Jane"}
+$ jo time=$(date +%s) dir=$HOME        # {"time":1457195712,"dir":"/users/jaclin"}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ jo -p -a spring summer winter
+[
+   "spring",
+   "summer",
+   "winter"
+]</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ jo -p name=JP object=$(jo fruit=Orange point=$(jo x=10 y=20) number=17) sunday=false
+{
+   "name": "JP",
+   "object": {
+      "fruit": "Orange",
+      "point": {
+         "x": 10,
+         "y": 20
+      },
+      "number": 17
+   },
+   "sunday": false
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ jo -p number=17 pass=true geo[lon]=88 geo[cc]=ES point[]=1 point[]=2 geo[lat]=123.45
+{
+   "number": 17,
+   "pass": true,
+   "geo": {
+      "lon": 88,
+      "cc": "ES",
+      "lat": 123.45
+   },
+   "point": [
+      1,
+      2
+   ]
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_jq"><a class="anchor" href="#_jq"></a>3. jq</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code>jq</code> est un processeur JSON.
+Il est à JSON ce qu&#8217;est <code>xpath</code> à <code>XML</code>.</p>
+</div>
+<div class="paragraph">
+<p>Soit le JSON :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">jdata='{ "Maná": { "Fernando Olvera": { "role": [ "vocals", "guitar", "harmonica" ], "entrance": 1981, "exit": null }, "Alejandro González": { "role": [ "drums", "backup vocals", "percussions" ], "entrance": 1984, "exit": null }, "Juan Calleros": { "role": [ "bass guitar" ], "entrance": 1981, "exit": null }, "Sergio Vallin": { "role": [ "guitar", "backup vocals" ], "entrance": 1995, "exit": null } }, "Santana": { "Carlos Santana": { "role": [ "lead guitar" ], "entrance": 1966, "exit": null }, "Tom Fraser": { "role": [ "rythmic guitar" ], "entrance": 1966, "exit": 1970 }, "Mike Carabello": { "role": [ "percussion" ], "entrance": 1966, "exit": 1971 }, "Keith Jones": { "role": [ "bass guitar" ], "entrance": 1983, "exit": 1989 }, "Michael Shrieve": { "role": [ "drums" ], "entrance": 1969, "exit": 1988 } } }'</code></pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_formatage"><a class="anchor" href="#_formatage"></a>3.1. Formatage</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">echo $jdata | jq "."
+curl http://api.open-notify.org/iss-now.json | jq .</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_chemin"><a class="anchor" href="#_chemin"></a>3.2. Chemin</h3>
+<div class="paragraph">
+<p>En donnant un chemin à <code>jq</code>, on obtient la valeur (joliment formatée) de l&#8217;entité correspondant au chemin.</p>
+</div>
+<div class="paragraph">
+<p><code>'.'</code> est la racine de la structure de données,
+ce qui explique le résultat précédent.</p>
+</div>
+<div class="paragraph">
+<p>On progresse dans la structure avec le <code>'.'</code> :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">echo $jdata | jq '.Santana'
+echo $jdata | jq '."Maná"."Juan Calleros"'     <i class="conum" data-value="1"></i><b>(1)</b>
+echo $jdata | jq '.Santana."Keith Jones".role' <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>guillemets/quotes nécessaires en présence d&#8217;espaces ou de caractères non ASCII</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><code>'.Santana'</code> peut s&#8217;écrire aussi <code>'.["Santana"]'</code>.
+De même, <code>'."Maná"."Juan Calleros"'</code> peut s&#8217;écrire aussi :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">'.["Maná"]."Juan Calleros"'
+'."Maná"["Juan Calleros"]'
+'.["Maná"]["Juan Calleros"]'</code></pre>
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">sélection d&#8217;un élément de liste</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">jq '."Maná"."Fernando Olvera".role'        # une liste
+jq '."Maná"."Fernando Olvera".role[1]'     # un élement</code></pre>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_fonctions"><a class="anchor" href="#_fonctions"></a>3.3. Fonctions</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">echo $jdata | jq 'keys '
+echo $jdata | jq '.Santana | keys'
+echo $jdata | jq '.Santana | keys | length'</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_itérations"><a class="anchor" href="#_itérations"></a>3.4. Itérations</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">boucle sur une liste</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">echo $jdata | jq '."Maná"[]'
+echo $jdata | jq '. | keys[] '
+echo $jdata | jq '."Maná"[].entrance'
+echo $jdata | jq '.[][].entrance'</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">boucle sur un objet</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">echo $jdata | jq 'keys[] as $k | { ($k) : 1} '
+echo $jdata | jq 'keys[] as $k | { ($k) : (.[$k]) | keys} '</code></pre>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_créer_des_entités"><a class="anchor" href="#_créer_des_entités"></a>3.5. Créer des entités</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">générer des listes et dictionnaires</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">echo $jdata | jq '[.[][] | { entree: .entrance }]'</code></pre>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p class="center">
+  <span style="font-size: 0.9em;">
+    <a href="https://jacquelincharbonnel.github.io/">Jacquelin Charbonnel</a>
+    <!-- &nbsp; &mdash; &nbsp; -->
+    &nbsp;
+    &copy;Creative Commons BY-NC-SA 4.0
+  </span>
+  </p>
+</footer>
+
+<script>
+var myDate = new Date(document.lastModified);
+myNewDate = new Intl.DateTimeFormat(
+            undefined,
+            {year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit"}
+        )
+        .format(myDate).replace(/\./g, '-');
+document.getElementById("lastmodify").innerHTML = myNewDate ;
+</script>
+
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
