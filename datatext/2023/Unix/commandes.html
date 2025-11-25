@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Commandes de traitement de texte :: Supports</title>
+    <link rel="canonical" href="https://jacquelincharbonnel.github.io/supports/datatext/2023/Unix/commandes.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<!-- reference des feuilles de styles supplémentaires -->
+<link rel="stylesheet" href="../../../_/css/layout.css">
+<link rel="stylesheet" href="../../../_/css/content.css">
+
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://jacquelincharbonnel.github.io/supports">Supports</a>
+  <!-- suppression du burger du bandeau
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+-->      
+    </div>
+<!-- suppression des boutons du bandeau
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+-->
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="datatext" data-version="2023">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">DataText</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../regex/index.html">Expressions Régulières</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../regex/python.html">Regex en Python</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Traitement sous Unix</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="composition.html">Redirection et pipes</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="commandes.html">Traitement de texte</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="commandes/ed.html"><code>ed</code></a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="commandes/vi.html"><code>vi</code></a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="commandes/sed.html"><code>sed</code></a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="commandes/awk.html"><code>awk</code></a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="script.html">Script shell</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="python.html">Filtre en Python</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../Representation/index.html">Représentation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../Representation/numeration.html">Numération</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../Representation/charset.html">Charset &amp; encoding</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../Representation/unicode.html">Unicode (années 1990)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../Representation/environnement.html">Environnement de travail</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../Representation/conclusion.html">Conclusion</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">DataText</span>
+    <span class="version">2023</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../../C/2023/index.html">C</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../C/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../concurrence/2024/index.html">Concurrence</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../concurrence/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">DataText</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../json/2023/index.html">JSON</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../json/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../linux_context/2025/index.html">Linux contexte</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../linux_context/2025/index.html">2025</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../python_objet/2024/index.html">Python objet</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../python_objet/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../supports/index.html">Supports</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../xml/2023/index.html">XML</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../xml/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../supports/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">DataText</a></li>
+    <li><a href="index.html">Traitement sous Unix</a></li>
+    <li><a href="commandes.html">Traitement de texte</a></li>
+  </ul>
+</nav>
+<!-- supression de "edit this page"
+  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/datatext/./modules/Unix/pages/commandes.adoc">Edit this Page</a></div>
+-->
+</div>
+  <!-- ajout de la date de modification -->
+     <div class="lastmodify"> dernière modification : 2023 </div>
+  <!-- fin ajout -->
+  <div class="content">
+<aside class="toc sidebar" data-title="Plan" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Commandes de traitement de texte</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Voici une sélection de commandes Unix de traitement de données textuelles.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_commandes_historiques"><a class="anchor" href="#_commandes_historiques"></a>1. Commandes historiques</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Les commandes
+<code>cat</code>,
+<code>diff</code>,
+<code>grep</code>,
+<code>head</code>,
+<code>more</code>,
+<code>sort</code>,
+<code>tail</code>,
+<code>tr</code>,
+<code>uniq</code>,
+<code>wc</code>
+sont des commandes qui recherchent, extraient, reformatent, réordonnent, substituent du texte.
+Elles sont apparues  dès les premières versions d&#8217;Unix.</p>
+</div>
+<div class="sect2">
+<h3 id="_cat"><a class="anchor" href="#_cat"></a>cat</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ cat /etc/passwd</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_grep"><a class="anchor" href="#_grep"></a>grep</h3>
+<div class="paragraph">
+<p>Filtre les lignes d&#8217;un flux.
+De nombreuses options permettent de filtrer ce qui ne s&#8217;identifie pas (<code>-v</code>),
+de ne pas différencier majuscule/minuscule (<code>-i</code>),
+de sortir les n° de ligne (-n), les noms de fichiers contenant des lignes identifiées (<code>-l</code>),
+de comprendre les regex étendues (<code>-E</code>) et les Perl regex (<code>-P</code>),
+de simplement compter les correspondances (<code>-c</code>),
+de rechercher récursivement dans une arborescence de fichiers (<code>-R</code>), etc.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ ps aux | grep $USER
+$ curl -s https://math.univ-angers.fr | grep -i master</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_moreless"><a class="anchor" href="#_moreless"></a>more&#8201;&#8212;&#8201;less</h3>
+<div class="paragraph">
+<p><code>more</code> est la commande historique,
+<code>less</code> en est une amélioration.
+Ces 2 commandes paginent un flux.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ ps aux | less</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_tailhead"><a class="anchor" href="#_tailhead"></a>tail&#8201;&#8212;&#8201;head</h3>
+<div class="paragraph">
+<p>Extrait les dernières/premières lignes d&#8217;un flux.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ grep ^.aba /usr/share/dict/words | head -4
+$ grep ^.aba /usr/share/dict/words | tail -4</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>L&#8217;option <code>-f</code> de <code>tail</code> lui permet de rester en attente d&#8217;arrivée de nouvelles lignes
+dans le ou les fichiers spécifiés.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_wc"><a class="anchor" href="#_wc"></a>wc</h3>
+<div class="paragraph">
+<p>Compte les caractères-mots-lignes d&#8217;un flux.</p>
+</div>
+<div class="listingblock">
+<div class="title">example</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ ls | wc -l</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_sort"><a class="anchor" href="#_sort"></a>sort</h3>
+<div class="paragraph">
+<p>Trie les lignes d&#8217;un flux (par ordre alphabétique par défaut, numérique en option).</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ sort ~/.bash_history</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>L&#8217;option <code>-k</code> permet de spécifier la clé de tri.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="uniq"><a class="anchor" href="#uniq"></a>uniq</h3>
+<div class="paragraph">
+<p>Garde 1 seul exemplaire d&#8217;une suite de lignes consécutives identiques (et peut compter les exemplaires regroupés).</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ cat &lt;&lt; EOD | uniq
+un
+deux
+deux
+EOD
+
+$ cat &lt;&lt; EOD | uniq -c
+un
+un
+deux
+un
+EOD</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_tr"><a class="anchor" href="#_tr"></a>tr</h3>
+<div class="paragraph">
+<p>Transpose un ensemble de caractères d&#8217;un flux.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ man tr | tr AB BA
+$ man tr | tr '[A-Za-z]' '[a-zA-Z]'</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_diff"><a class="anchor" href="#_diff"></a>diff</h3>
+<div class="paragraph">
+<p>Sort les différences entre 2 fichiers.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-bash hljs" data-lang="bash">$ grep -v root /etc/passwd &gt; /tmp/passwd
+$ diff /etc/passwd /tmp/passwd
+1d0
+&lt; root:x:0:0:root:/root:/bin/bash
+10d8
+&lt; operator:x:11:0:operator:/root:/sbin/nologin</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_strings"><a class="anchor" href="#_strings"></a>strings</h3>
+<div class="paragraph">
+<p>Extrait les chaines de caractères d&#8217;un fichier binaire.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_commandes_xxl"><a class="anchor" href="#_commandes_xxl"></a>2. Commandes XXL</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Ce sont des des commandes historiques plus sophistiquées.
+Ces commandes sont de véritables couteaux suisses du traitement de texte,
+dont la prise en main demande du temps et de la pratique.
+Mais il n&#8217;est pas nécessaire de les maitriser entièrement pour en tirer profit.
+Se trouvent dans cette catégorie :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="commandes/ed.html" class="xref page"><code>ed</code></a>, l’ancêtre des éditeurs de texte</p>
+</li>
+<li>
+<p><a href="commandes/vi.html" class="xref page"><code>vi</code></a>, l&#8217;éditeur de texte standard</p>
+</li>
+<li>
+<p><a href="commandes/sed.html" class="xref page"><code>sed</code></a>, l&#8217;éditeur de flux</p>
+</li>
+<li>
+<p><a href="commandes/awk.html" class="xref page"><code>awk</code></a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_exercices"><a class="anchor" href="#_exercices"></a>3. Exercices</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_autres_commandes_de_traitement_de_texte"><a class="anchor" href="#_autres_commandes_de_traitement_de_texte"></a>4. Autres commandes de traitement de texte</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 12.5%;">
+<col style="width: 50%;">
+<col style="width: 37.5%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">nom</th>
+<th class="tableblock halign-left valign-top">objet</th>
+<th class="tableblock halign-left valign-top">example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>split</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">découpe un fichier en n fichiers de p lignes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>split -4 /etc/passwd</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cut</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">extrait une partie de chaque ligne</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cut -c 1-15 /etc/passwd</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>paste</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fusionne chaque ligne de n fichiers en une seule</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>join</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fusionne chaque ligne de 2 fichiers ayant des champs communs</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>fmt</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">reformate un texte</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>expand</code> <code>unexpand</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">convertit les tabulations en espace, et inversement</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>column</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">formate un texte en colonnes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>column -t -s : -c 120 -l 5 -H 2,5 /etc/passwd</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>colrm</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">supprime des colonnes de caractères d&#8217;un texte</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>tac</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cat</code> renversé</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rev</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">renverse les lignes</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p class="center">
+  <span style="font-size: 0.9em;">
+    <a href="https://jacquelincharbonnel.github.io/">Jacquelin Charbonnel</a>
+    <!-- &nbsp; &mdash; &nbsp; -->
+    &nbsp;
+    &copy;Creative Commons BY-NC-SA 4.0
+  </span>
+  </p>
+</footer>
+
+<script>
+var myDate = new Date(document.lastModified);
+myNewDate = new Intl.DateTimeFormat(
+            undefined,
+            {year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit"}
+        )
+        .format(myDate).replace(/\./g, '-');
+document.getElementById("lastmodify").innerHTML = myNewDate ;
+</script>
+
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

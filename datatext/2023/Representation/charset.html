@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Charset &amp; encoding :: Supports</title>
+    <link rel="canonical" href="https://jacquelincharbonnel.github.io/supports/datatext/2023/Representation/charset.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<!-- reference des feuilles de styles supplémentaires -->
+<link rel="stylesheet" href="../../../_/css/layout.css">
+<link rel="stylesheet" href="../../../_/css/content.css">
+
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://jacquelincharbonnel.github.io/supports">Supports</a>
+  <!-- suppression du burger du bandeau
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+-->      
+    </div>
+<!-- suppression des boutons du bandeau
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+-->
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="datatext" data-version="2023">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">DataText</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../regex/index.html">Expressions Régulières</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../regex/python.html">Regex en Python</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../Unix/index.html">Traitement sous Unix</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../Unix/composition.html">Redirection et pipes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../Unix/commandes.html">Traitement de texte</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../Unix/commandes/ed.html"><code>ed</code></a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../Unix/commandes/vi.html"><code>vi</code></a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../Unix/commandes/sed.html"><code>sed</code></a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../Unix/commandes/awk.html"><code>awk</code></a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../Unix/script.html">Script shell</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../Unix/python.html">Filtre en Python</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Représentation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="numeration.html">Numération</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="charset.html">Charset &amp; encoding</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="unicode.html">Unicode (années 1990)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="environnement.html">Environnement de travail</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="conclusion.html">Conclusion</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">DataText</span>
+    <span class="version">2023</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../../C/2023/index.html">C</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../C/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../concurrence/2024/index.html">Concurrence</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../concurrence/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">DataText</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../json/2023/index.html">JSON</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../json/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../linux_context/2025/index.html">Linux contexte</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../linux_context/2025/index.html">2025</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../python_objet/2024/index.html">Python objet</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../python_objet/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../supports/index.html">Supports</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../xml/2023/index.html">XML</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../xml/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../supports/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">DataText</a></li>
+    <li><a href="index.html">Représentation</a></li>
+    <li><a href="charset.html">Charset &amp; encoding</a></li>
+  </ul>
+</nav>
+<!-- supression de "edit this page"
+  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/datatext/./modules/Representation/pages/charset.adoc">Edit this Page</a></div>
+-->
+</div>
+  <!-- ajout de la date de modification -->
+     <div class="lastmodify"> dernière modification : 2023 </div>
+  <!-- fin ajout -->
+  <div class="content">
+<aside class="toc sidebar" data-title="Plan" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Charset &amp; encoding</h1>
+<div class="sect1">
+<h2 id="_introduction"><a class="anchor" href="#_introduction"></a>1. Introduction</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Un texte est composé de signes typographiques (les lettres) issus d&#8217;un alphabet.
+En informatique, on parle de caractères et de <em>jeu de caractères</em> (<em>charset</em>).
+Chaque caractère d&#8217;un charset est associé à un entier qui l&#8217;identifie.
+La correspondance caractère &#x2194; code entier pour l&#8217;ensemble des caractères du jeu s&#8217;appele un <em>encodage</em> (<em>encoding</em>).</p>
+</div>
+<div class="paragraph">
+<p>La liste ci-dessous représente les caractères imprimables de l&#8217;ASCII (<em>American Standard Code for Information Interchange</em>) et leurs codes (un entier compris entre 32 et 126).</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/asciitext.png" alt="asciitext">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_restrospective"><a class="anchor" href="#_restrospective"></a>2. Restrospective</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_années_60_début_de_lère_informatique_aux_us"><a class="anchor" href="#_années_60_début_de_lère_informatique_aux_us"></a>2.1. Années 60 : début de l&#8217;ère informatique aux US</h3>
+<div class="paragraph">
+<p>Les premiers ordinateurs sont apparus aux US.
+L&#8217;alphabet de la langue anglaise comporte peu de lettres (26).
+Le nombre de caractères nécessaires pour rédiger un texte
+(minuscules, majuscules, chiffres, ponctuation et caractères particuliers, comme <code>+</code>, <code>-</code>, <code>*</code>, <code>$</code>)
+ne dépasse pas 90.
+7 bits sont donc suffisants pour les encoder,
+ce qui laisse même de la place pour insérer de l&#8217;information supplémentaire :
+des fonctions, appelées <em>caractères de contrôle</em>.
+Ils correspondent aux codes compris entre 0 et 31, ainsi que 127.
+Par exemple, le caractère :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>8 (<code>x08</code>) est le retour arrière (<em>backspace</em>, <code>'\b'</code>),</p>
+</li>
+<li>
+<p>9 (<code>x09</code>) est la tabulation (<em>tab</em>, <code>'\t'</code>),</p>
+</li>
+<li>
+<p>10 (<code>x0A</code>) est le saut de ligne (<em>line feed</em>, <code>'\n'</code>),</p>
+</li>
+<li>
+<p>13 (<code>x0D</code>) est le retour chariot (<em>carriage return</em>, <code>'\r'</code>)</p>
+</li>
+<li>
+<p>le 127 (<code>x7F</code>) est l&#8217;effacement (<em>delete</em>).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Au final, cet ensemble de 128 caractères (caractères au sens large),
+connu sous le nom d&#8217;ASCII,
+est le premier jeu de caractères de l&#8217;ère numérique.</p>
+</div>
+<div class="paragraph">
+<p>Chaque caractère est stocké sous forme d&#8217;un octet dont le bit de poids fort est 0
+(ce bit unitilisé dans le codage sera utilisé comme bit de parité dans les transferts de données à cette époque où les communications ne sont pas super fiables).</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/ascii.png" alt="ascii">
+</div>
+<div class="title">Figure 1. table ASCII omniprésente dans les années 70</div>
+</div>
+<div class="paragraph">
+<p>La table se lit colonne par colonne.
+L&#8217;encodage est simple :
+chaque caractère est codé avec la valeur de son indice dans la table.
+Par exemple le code de <code>'A'</code> est <code>x41</code>, soit 65 en décimal.
+Le code du dernier caractère est <code>x7F</code>, soit 255 en décimal.</p>
+</div>
+<div class="paragraph">
+<p>La fonction Python <code>chr()</code> donne un caractère à partir de son code,
+et inversement, la fonction <code>ord()</code> fournit le code d&#8217;un caractère :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">chr(0x30)        # '0'
+chr(0x7e)        # '~'
+ord('0')         # 48
+ord('~')         # 126
+f"{ord('0'):2X}" # '30'
+f"{ord('~'):2X}" # '7E'</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Cet encodage ASCII reste fondamental même encore aujourd&#8217;hui,
+car la plupart des autres encodages n&#8217;en sont que des extensions.
+Ce qui veut dire par exemple que A est le caractère codé 65 dans la plupart des encodages utilisés aujourd&#8217;hui.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="80"><a class="anchor" href="#80"></a>2.2. Années 80 : les langues nationales s&#8217;expriment</h3>
+<div class="paragraph">
+<p>Pouvoir utiliser d&#8217;autres alphabets est revendiqué par les populations non anglophones.
+Pour y répondre, une idée consiste à utiliser la place libre de la table ASCII.
+Cela permet de la compléter avec 128 nouveaux caractères,
+tout en conservant un encodage sur 8 bits.
+L&#8217;avantage de cette idée c&#8217;est son faible impact au niveau logiciel, puisque la taille des codes reste inchangé.
+L&#8217;inconvénient est que 128 nouveaux caractères,
+c&#8217;est très insuffisant pour représenter tous les caractères de tous les alphabets.</p>
+</div>
+<div class="paragraph">
+<p>Des charsets nationaux (ou <em>pages de codes</em>) sont donc déclinés.
+On trouve en particulier les charsets ISO-8859 :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ISO 8859-1, appelé aussi latin-1, l&#8217;alphabet de la plupart des langues d&#8217;Afrique sub-sahararienne et d&#8217;Europe occidentale,</p>
+</li>
+<li>
+<p>ISO 8859-2 (latin-2, pour l&#8217;Europe centrale)</p>
+</li>
+<li>
+<p>ISO 8859-10 et ISO-8859-13 (respectivement latin-6 et latin-7, pour les pays scandinaves),</p>
+</li>
+<li>
+<p>ISO 8859-5 (Cyrillic),</p>
+</li>
+<li>
+<p>ISO 8859-6 (Arabic),</p>
+</li>
+<li>
+<p>ISO 8859-15 (une mise-à-jour de l&#8217;ISO 8859-1).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Des marques créent leur propres charsets :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>CP1252, créé par Microsoft, pour Windows,</p>
+</li>
+<li>
+<p>MacRoman, créé par Apple, pour MacOS.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Tous ces charsets utilisent un encodage sur 8 bits, disposent donc de 256 caractères, et englobent l&#8217;ASCII.
+Le principe de l&#8217;encodage, sur 1 octet, reste inchangé :
+chaque caractère est codé avec la valeur de son indice dans la table.</p>
+</div>
+<div class="paragraph">
+<p>Ces charsets sont exclusifs : on ne peut en utiliser qu&#8217;un seul à la fois.
+Par exemple, on ne peut pas rédiger un texte français contenant une citation russe en cyrillique.</p>
+</div>
+<div class="sect3">
+<h4 id="_autres_alphabets"><a class="anchor" href="#_autres_alphabets"></a>2.2.1. Autres alphabets</h4>
+<div class="paragraph">
+<p>D&#8217;autres charsets de plus de 256 caractères voient également le jour, comme par exemple :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>EUC-JP, pour les textes japonais, dont les caractères sont encodés sur 2 octets,</p>
+</li>
+<li>
+<p>Big5, utilisé pour exprimer le chinois traditionnel à Taïwan, dont les codes sont sur 1 ou 2 octets, suivant les caractères.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Changer la taille des codes a un impact colossal non seulement sur toutes les applications,
+mais aussi sur les langages de programmation,
+les compilateurs, les bibliothèques et même sur les systèmes d&#8217;exploitation :
+c&#8217;est une rupture technologique.
+C&#8217;est pourquoi, le principe des caractères codés sur 1 octet a été exploité aussi longtemps que possible.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_conclusion"><a class="anchor" href="#_conclusion"></a>2.2.2. Conclusion</h4>
+<div class="paragraph">
+<p>Les charsets nationaux et propriétaires ont été utilisés pendant plus de 20 ans.
+Mais ce principe a atteint ses limites,
+car il ne permet pas d&#8217;écrire des documents composites mêlant plusieurs alphabets.
+Mal compris par l&#8217;utilisateur lambda,
+il peut conduire à la production de documents inexploitables.</p>
+</div>
+<div class="paragraph">
+<p>Avec les réseaux, les échanges massifs de documents mettent le problème en évidence :
+l&#8217;utilisateur de base a bien du mal à comprendre pourquoi
+les caractères accentués ont été transformés
+dans le document qu&#8217;il a reçu en pièce jointe dans un mail envoyé depuis un Mac.
+Difficile à comprendre aussi pourquoi il ne doit pas coller une partie d&#8217;un texte
+qu&#8217;il a rédigé sur son Windows, dans le document de son collègue qui travaille sur Unix.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="python"><a class="anchor" href="#python"></a>3. Python et l&#8217;encodage</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Un <em>codec</em> (encodeur/décodeur) est un composant logiciel qui permet de passer d&#8217;un caractère à son code, et inversement.</p>
+</div>
+<div class="paragraph">
+<p>Le module Python <code>encodings</code> contient un ensemble de codecs.
+Chacun d&#8217;eux porte le nom du charset qu&#8217;il prend en charge.</p>
+</div>
+<div class="paragraph">
+<p>Il y a beaucoup de charsets synonymes, comme ISO 8859-1 &#8594; latin-1.
+<code>encodings.aliases.aliases</code> est un dictionnaire associant à chaque alias son nom canonique.</p>
+</div>
+<div class="sect2">
+<h3 id="_le_type_bytes"><a class="anchor" href="#_le_type_bytes"></a>3.1. Le type <code>bytes</code></h3>
+<div class="paragraph">
+<p>Le type <code>bytes</code> représente une séquence d&#8217;octets.
+Il est à rapproché du type <code>str</code> qui, lui, représente une séquence de caractères :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">s = "ABC"
+print(type(s))          # str
+print([c for c in s])   # ['A', 'B', 'C']
+
+b = b"ABC"
+print(type(b))          # bytes
+print([c for c in b])   # [65, 66, 67]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Le type <code>str</code> dispose d&#8217;une méthode <code>encode()</code> renvoyant la chaîne d&#8217;octets (de type <code>bytes</code>)
+produite par l&#8217;encodage spécifié :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">s = "ABCéèê"
+print(type(s))                       # str
+
+b = s.encode(encoding="iso8859-15")
+print(type(b))                       # bytes
+print(b)                             # b'ABC\xe9\xe8\xea'
+print([c for c in b])                # [65, 66, 67, 233, 232, 234]
+
+b = s.encode(encoding="iso8859-6")                    # erreur
+b = s.encode(encoding="iso8859-6", errors='replace')  # b'ABC???'
+print([c for c in b])                                 # ok</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Et réciproquement, le type <code>bytes</code> dispose d&#8217;une méthode <code>decode()</code>
+renvoyant la chaîne (de type <code>str</code>) produite par le décodage spécifié :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">b = b"ABC\xE9\xE8\xEA"
+print(type(b))    # bytes
+
+s = b.decode(encoding="iso8859-15")
+print(type(s))  # str
+print(s)   # ABCéèê
+print([c for c in s])   # ['A, 'B', 'C', 'é', 'è', 'ê']
+
+s = b.decode(encoding="iso8859-6")  # ABCىوي</code></pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/py3_string_bytes.png" alt="py3 string bytes">
+</div>
+<div class="title">Figure 2. l&#8217;encodage d&#8217;une chaîne de caractères produit une séquence d&#8217;octets, et inversement, le décodage d&#8217;une séquence d&#8217;octets produit une chaîne des caractères</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Les méthodes <code>encode</code> et <code>decode</code> possède un paramètre <code>error</code> permettant
+d&#8217;ajuster le comportement lorsque l&#8217;encodage ou le décodage est incertain.
+<code>error</code> peut prendre l&#8217;une des valeurs :</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>strict</code></dt>
+<dd>
+<p>une exception est lancée en cas d’erreur : c’est le comportement par défaut.</p>
+</dd>
+<dt class="hdlist1"><code>ignore</code></dt>
+<dd>
+<p>tout caractère qui provoque une erreur est ignoré.</p>
+</dd>
+<dt class="hdlist1"><code>replace</code></dt>
+<dd>
+<p>tout caractère qui provoque une erreur est remplacé par un point d’interrogation.</p>
+</dd>
+</dl>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Dans une string Python, on peut insérer littéralement des caractères, identifiés par leurs codes exprimés en hexa.
+Cela est particulièrement utile lorsque ces caractères n&#8217;existent pas sur le clavier,
+par exemple :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">s = "\xa9 \xbd \xf7 \xbf \xe6 n'existent pas sur mon clavier"</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_entréessorties"><a class="anchor" href="#_entréessorties"></a>3.2. Entrées/sorties</h3>
+<div class="paragraph">
+<p>Des opérations de codage/décodage ont lieu lorsqu&#8217;un qu&#8217;un texte change de support.
+Par exemple, un texte dans un fichier sur disque est encodé suivant un certain encodage.
+Un texte stocké dans une variable d&#8217;un programme est également encodé.
+Il n&#8217;y a aucune raison pour que ces 2 encodages soient les mêmes,
+Par conséquent, des transformations ont lieu à la lecture d&#8217;un fichier,
+et aussi à l&#8217;écritureI, qu&#8217;il est nécessaire de gérer correctement.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_questions_pratiques"><a class="anchor" href="#_questions_pratiques"></a>3.3. Questions pratiques</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Comment déterminer l&#8217;encodage d&#8217;un fichier ? </dt>
+<dd>
+<p>Dans le cas général, c&#8217;est-à-dire lorsqu&#8217;il n&#8217;y a pas de méta-données, il n&#8217;y a pas de méthode infaillible pour le déterminer.
+Il faut alors procéder par déduction :</p>
+<div class="ulist">
+<ul>
+<li>
+<p>une technique est de supposer un charset, et de voir ce que cela donne (c&#8217;est ce que permet par exemple <a href="http://string-functions.com/encodedecode.aspx" class="bare">http://string-functions.com/encodedecode.aspx</a>)</p>
+</li>
+<li>
+<p>les commandes Unix <code>xxd</code>, <code>file</code>, <code>iconv</code> sont utiles</p>
+</li>
+<li>
+<p>on peut également lire le fichier comme une suite d&#8217;octets sans chercher à y faire correspondre des caractères, pour voir simplement ce qu&#8217;il y a dedans.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Comment lire un fichier connaissant son encoding ? </dt>
+<dd>
+<p>Il suffit de spécifier l&#8217;encoding à l&#8217;ouverture du fichier :</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">fn = input("file name: ")
+with open(fn, "r", encoding="iso8859-1") as f:
+    char = f.read(1)
+    while char:
+        print(f"{char}",end=" ")
+        char = f.read(1)</code></pre>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Comment lire un fichier ne connaissant pas son encoding ? </dt>
+<dd>
+<p>On peut toujours le lire octet par octet, pour voir :</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">fn = input("file name: ")
+with open(fn, "rb") as f:
+    byte = f.read(1)
+    while byte:
+        print(f"{ord(byte):02x}",end=" ")
+        byte = f.read(1)</code></pre>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Comment écrire un fichier texte ? </dt>
+<dd>
+<p>Se poser d&#8217;abord la question : <em>quel encodage utiliser pour mon fichier de sortie ?</em>, puis ensuite :</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">with codecs.open("latin15.tab","w","ISO-8859-15") as f:
+    print(s, file=f)</code></pre>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="conclusion"><a class="anchor" href="#conclusion"></a>4. Conclusion</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Pour exploiter des données textuelles stockées sur un support numérique depuis une application, il est nécessaire de connaitre sous quelle forme elles sont encodées sur le support externe.
+Symétriquement, le programme doit spécifier comment doivent être encodées les données textuelles
+qu&#8217;il génère.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p class="center">
+  <span style="font-size: 0.9em;">
+    <a href="https://jacquelincharbonnel.github.io/">Jacquelin Charbonnel</a>
+    <!-- &nbsp; &mdash; &nbsp; -->
+    &nbsp;
+    &copy;Creative Commons BY-NC-SA 4.0
+  </span>
+  </p>
+</footer>
+
+<script>
+var myDate = new Date(document.lastModified);
+myNewDate = new Intl.DateTimeFormat(
+            undefined,
+            {year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit"}
+        )
+        .format(myDate).replace(/\./g, '-');
+document.getElementById("lastmodify").innerHTML = myNewDate ;
+</script>
+
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

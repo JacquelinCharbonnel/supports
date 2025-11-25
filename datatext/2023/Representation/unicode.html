@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Unicode (années 1990) :: Supports</title>
+    <link rel="canonical" href="https://jacquelincharbonnel.github.io/supports/datatext/2023/Representation/unicode.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<!-- reference des feuilles de styles supplémentaires -->
+<link rel="stylesheet" href="../../../_/css/layout.css">
+<link rel="stylesheet" href="../../../_/css/content.css">
+
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://jacquelincharbonnel.github.io/supports">Supports</a>
+  <!-- suppression du burger du bandeau
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+-->      
+    </div>
+<!-- suppression des boutons du bandeau
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+-->
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="datatext" data-version="2023">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">DataText</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../regex/index.html">Expressions Régulières</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../regex/python.html">Regex en Python</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../Unix/index.html">Traitement sous Unix</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../Unix/composition.html">Redirection et pipes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../Unix/commandes.html">Traitement de texte</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../Unix/commandes/ed.html"><code>ed</code></a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../Unix/commandes/vi.html"><code>vi</code></a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../Unix/commandes/sed.html"><code>sed</code></a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../Unix/commandes/awk.html"><code>awk</code></a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../Unix/script.html">Script shell</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../Unix/python.html">Filtre en Python</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Représentation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="numeration.html">Numération</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="charset.html">Charset &amp; encoding</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="unicode.html">Unicode (années 1990)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="environnement.html">Environnement de travail</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="conclusion.html">Conclusion</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">DataText</span>
+    <span class="version">2023</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../../C/2023/index.html">C</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../C/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../concurrence/2024/index.html">Concurrence</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../concurrence/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">DataText</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../json/2023/index.html">JSON</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../json/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../linux_context/2025/index.html">Linux contexte</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../linux_context/2025/index.html">2025</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../python_objet/2024/index.html">Python objet</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../python_objet/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../supports/index.html">Supports</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../xml/2023/index.html">XML</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../xml/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../supports/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">DataText</a></li>
+    <li><a href="index.html">Représentation</a></li>
+    <li><a href="unicode.html">Unicode (années 1990)</a></li>
+  </ul>
+</nav>
+<!-- supression de "edit this page"
+  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/datatext/./modules/Representation/pages/unicode.adoc">Edit this Page</a></div>
+-->
+</div>
+  <!-- ajout de la date de modification -->
+     <div class="lastmodify"> dernière modification : 2023 </div>
+  <!-- fin ajout -->
+  <div class="content">
+<aside class="toc sidebar" data-title="Plan" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Unicode (années 1990)</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>L&#8217;objectif d&#8217;Unicode est d&#8217;uniformiser le codage des signes typographiques de toutes les cultures (actuelles et passées),
+des symboles, smileys, etc.,
+de pouvoir utiliser tous ces signes au sein d&#8217;un même texte,
+et d&#8217;obtenir des documents utilisables à l&#8217;identique sur tout système informatique.</p>
+</div>
+<div class="paragraph">
+<p>Avec Unicode, un signe typographique est défini comme la plus petite composante d’un alphabet ayant une valeur sémantique.
+Par exemple, l&#8217;accent circonflexe est un signe,
+la cédille en est un autre.
+Unicode référence plus d&#8217;un million de signes.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+On les appellera, par habitude et par abus de langage, <em>caractères</em>, même si l&#8217;on voit bien la différence par rapport aux cas précédents.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Chaque signe typographique est identifié par son <em>code point</em>, canonique et unique.
+Il est noté <code>U+xxxx</code>, <code>U+xxxxx</code> ou <code>U+xxxxxx</code>, où <code>x</code> est un chiffre hexadécimal.
+Exemple : <code>U+0000</code> (le premier caractère), <code>U+FFFF</code>, <code>U+10FFFF</code>.</p>
+</div>
+<div class="paragraph">
+<p>Plus que des alphabets, Unicode gère des écritures.
+En effet, chaque caractère Unicode possède des attributs :
+un nom et un <em>code point</em>, mais aussi des méta-données indiquant s&#8217;il s’agit d’une majuscule, d’une minuscule, d&#8217;un chiffre (et si oui, sa valeur) ou d&#8217;une ponctuation,
+s&#8217;il se combine à d&#8217;autres caractères (accent, cédille, etc.), son orientation (droite &#8594; gauche, haut &#8594; bas, etc.),
+etc.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>La représentation graphique des caractères est un autre sujet, indépendant de la problématique de l&#8217;encodage.
+Un caractère peut se représenter graphiquement de différentes façons.
+Le <em>dessin</em> d&#8217;un caractère s&#8217;appelle <em>glyphe</em>, il est caractérisé par sa fonte, son corps, son style, sa graisse, etc.
+Un jeu de glyphes pour un alphabet donné s&#8217;appelle une <em>police de caractères</em>
+(par exemple Arial italique, Helvetica gras, etc.).
+Par exemple, a, <em>a</em>, <strong>a</strong> sont le même caractère <em>a minuscule</em>.
+De même pour :</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/a.png" alt="a" width="100">
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="encodage"><a class="anchor" href="#encodage"></a>1. Encodages Unicode</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Comme dans les charsets précédents,
+l&#8217;encodage détermine la représentation numérique d&#8217;un texte dans un environnement informatique donné.
+Mais la différence ici, c&#8217;est qu&#8217;Unicode en propose plusieurs.
+Par exemple, l&#8217;un deux, UTF-32, consiste simplement à encoder chaque caractère avec son code point.
+Mais cela n&#8217;est qu&#8217;un encodage parmi d&#8217;autres.
+Proposer plusieurs encodages permet de jouer sur 2 paramètres : la complexité de l&#8217;opération de codage/décodage et la taille des fichiers encodés.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Le code point d&#8217;un caractère Unicode est son identifiant abstrait.
+Mais ce n&#8217;est pas nécessairement lui qui le représente dans sa forme numérique.
+Sa représentatation numérique est fixée par l&#8217;encodage utilisé.
+Unicode proposant plusieurs encodage,
+la représentation numérique de ses caractères n&#8217;est donc pas unique.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Unicode est donc à la fois :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>un charset (un jeu de caractères dont chacun possède un nom, un code point, et des attributs),</p>
+</li>
+<li>
+<p>des encodages : UTF-8, UTF-16 et UTF-32.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/utf.png" alt="utf" width="320">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_utf_32"><a class="anchor" href="#_utf_32"></a>1.1. UTF-32</h3>
+<div class="paragraph">
+<p>Chaque caractère est codé directement avec son code point sur 4 octets.
+Cette simplicité est son principal avantage : le codage/décodage est simple.
+Par contre, il est particulièrement gourmand en taille, et il est évidemment incompatible avec l&#8217;ASCII.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+S&#8217;il fallait encoder tous les caractères sur 4 octets,
+les fichiers deviendraient inutilement gros.
+En effet, la plupart des caractères sont entre 0 à FFFF (donc codables sur 2 octets),
+et,  pour les caractères latins communs,
+la plupart sont même entre 0 et FF comme en ISO-8859-1 (donc codables sur 1 octet).
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_utf_16"><a class="anchor" href="#_utf_16"></a>1.2. UTF-16</h3>
+<div class="paragraph">
+<p>La plupart des caractères, notamment ceux des langues modernes, y sont représentés sur 2 octets, les autres le sont sur 4 octets.</p>
+</div>
+<div class="paragraph">
+<p>Il est plus économe en taille que UTF-32, et lui aussi incompatible avec l’ASCII.
+La longueur variable des codes complexifie les opérations de codage/décodage.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Détail de l&#8217;encodage</dt>
+<dd>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Si la représentation binaire du code point du caractère ne dépasse pas 16 bits, alors il est codé sur 2 octets : <code>xxxxxxxx xxxxxxxx</code></p>
+</li>
+<li>
+<p>Sinon il est scindé en deux blocs de 10 bits répartis sur 4 octets de la façon suivante : <code>110110xx xxxxxxxx 110111xx xxxxxxxx</code></p>
+</li>
+</ol>
+</div>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>UTF-16 est utilisé dans l&#8217;environnement Windows (au travers de son API Unicode)
+et également par l&#8217;UEFI (une interface matériel/OS).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_utf_8"><a class="anchor" href="#_utf_8"></a>1.3. UTF-8</h3>
+<div class="paragraph">
+<p>C&#8217;est l&#8217;encodage le plus utilisé en occident.
+Son codage de taille variable (entre 1 et 4 octets) lui permet d&#8217;être parcimonieux en taille pour les alphabets latin,
+au détriment de la vitesse de codage/décodage.
+Un autre avantage est sa compatibilité avec l&#8217;ASCII.
+Son inconvénient est la longueur variable de son codage, qui complexifie les traitements.
+Le principe est le suivant :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>si le code point est inférieur à 128,
+le code est égal au point de code,</p>
+</li>
+<li>
+<p>sinon, le code est une séquence de 2, 3 ou 4 octets,
+où chacun est compris entre 128 et 255.</p>
+</li>
+</ul>
+</div>
+<h4 id="_détail_de_lencodage" class="discrete">Détail de l&#8217;encodage</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Les caractères ASCII sont codés sur un octet dont le bit de poids fort est 0 : <code>0xxxxxxx</code></p>
+</li>
+<li>
+<p>Les caractères non-ASCII utilisent au moins deux octets :</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>le premier octet commence par autant de <code>1</code> que d&#8217;octets dans la séquence, suivis par un <code>0</code>.</p>
+</li>
+<li>
+<p>les autres octets commencent par <code>10</code>.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Ce qui donne :</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>code point ayant entre 8 à 11 bits : <code>110xxxxx 10xxxxxx</code></p>
+</li>
+<li>
+<p>code point ayant entre 12 à 16 bits : <code>1110xxxx 10xxxxxx 10xxxxxx</code></p>
+</li>
+<li>
+<p>code point ayant entre 17 à 21 bits : <code>11110xxx 10xxxxxx 10xxxxxx 10xxxxxx</code></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="python"><a class="anchor" href="#python"></a>2. Python 3 et Unicode</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Un littéral Unicode est exprimé sous l&#8217;une des formes suivantes :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-python hljs" data-lang="python">"\x41"                            # caractères ASCII
+"\u0041"                          # la même chose
+"\u0394"                          # caractères de code point de 2 octets en hexa <i class="conum" data-value="1"></i><b>(1)</b>
+"\U00000394"                      # caractères de code point de 4 octets en hexa<i class="conum" data-value="2"></i><b>(2)</b>
+"\N{GREEK CAPITAL LETTER DELTA}"  # caractères Unicode exprimé avec son nom <i class="conum" data-value="3"></i><b>(3)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td><code>\u</code> doit être suivi de 4 chiffres hexa</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td><code>\U</code> doit être suivi de 8 chiffres hexa</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>cf <a href="http://www.fileformat.info/info/unicode/char/0394">www.fileformat.info/info/unicode/char/0394</a></td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Le module <code>unicodedata</code> fournit un accès aux attributs Unicode :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">import unicodedata
+unicodedata.name('/')
+unicodedata.lookup('solidus')
+unicodedata.lookup('LEFT CURLY BRACKET')
+unicodedata.category('A')        # Letter uppercase
+unicodedata.category('a')        # Letter lowercase
+unicodedata.category('9')        # Numeric decimal
+unicodedata.category('€')        # Symbol currency
+unicodedata.numeric('9')
+unicodedata.numeric('a')</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_conclusion"><a class="anchor" href="#_conclusion"></a>3. Conclusion</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Dans un monde futur idéal, Unicode règnera en maître,
+et tous les documents seront encodés avec l&#8217;un de ses encodages.
+Les logiciels, systèmes et environnements sauront les reconnaitre et les gérer.
+Il n&#8217;y aura alors plus de problème.
+En attendant, il faut faire avec l&#8217;existant,
+en indiquant explicitement l&#8217;encodage des textes que nos programmes lisent et écrivent.</p>
+</div>
+<div class="paragraph">
+<p>Pour converger vers ce monde idéal,
+nous occidentaux, devons progressivement
+convertir nos fichiers en UTF-8 (c&#8217;est le plus raisonnable).</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p class="center">
+  <span style="font-size: 0.9em;">
+    <a href="https://jacquelincharbonnel.github.io/">Jacquelin Charbonnel</a>
+    <!-- &nbsp; &mdash; &nbsp; -->
+    &nbsp;
+    &copy;Creative Commons BY-NC-SA 4.0
+  </span>
+  </p>
+</footer>
+
+<script>
+var myDate = new Date(document.lastModified);
+myNewDate = new Intl.DateTimeFormat(
+            undefined,
+            {year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit"}
+        )
+        .format(myDate).replace(/\./g, '-');
+document.getElementById("lastmodify").innerHTML = myNewDate ;
+</script>
+
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

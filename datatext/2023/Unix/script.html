@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Script shell :: Supports</title>
+    <link rel="canonical" href="https://jacquelincharbonnel.github.io/supports/datatext/2023/Unix/script.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<!-- reference des feuilles de styles supplémentaires -->
+<link rel="stylesheet" href="../../../_/css/layout.css">
+<link rel="stylesheet" href="../../../_/css/content.css">
+
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://jacquelincharbonnel.github.io/supports">Supports</a>
+  <!-- suppression du burger du bandeau
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+-->      
+    </div>
+<!-- suppression des boutons du bandeau
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+-->
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="datatext" data-version="2023">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">DataText</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../regex/index.html">Expressions Régulières</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../regex/python.html">Regex en Python</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Traitement sous Unix</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="composition.html">Redirection et pipes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="commandes.html">Traitement de texte</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="commandes/ed.html"><code>ed</code></a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="commandes/vi.html"><code>vi</code></a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="commandes/sed.html"><code>sed</code></a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="commandes/awk.html"><code>awk</code></a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="script.html">Script shell</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="python.html">Filtre en Python</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../Representation/index.html">Représentation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../Representation/numeration.html">Numération</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../Representation/charset.html">Charset &amp; encoding</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../Representation/unicode.html">Unicode (années 1990)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../Representation/environnement.html">Environnement de travail</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../Representation/conclusion.html">Conclusion</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">DataText</span>
+    <span class="version">2023</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../../C/2023/index.html">C</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../C/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../concurrence/2024/index.html">Concurrence</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../concurrence/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">DataText</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../json/2023/index.html">JSON</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../json/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../linux_context/2025/index.html">Linux contexte</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../linux_context/2025/index.html">2025</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../python_objet/2024/index.html">Python objet</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../python_objet/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../supports/index.html">Supports</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../xml/2023/index.html">XML</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../xml/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../supports/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">DataText</a></li>
+    <li><a href="index.html">Traitement sous Unix</a></li>
+    <li><a href="script.html">Script shell</a></li>
+  </ul>
+</nav>
+<!-- supression de "edit this page"
+  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/datatext/./modules/Unix/pages/script.adoc">Edit this Page</a></div>
+-->
+</div>
+  <!-- ajout de la date de modification -->
+     <div class="lastmodify"> dernière modification : 2023 </div>
+  <!-- fin ajout -->
+  <div class="content">
+<aside class="toc sidebar" data-title="Plan" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Script shell</h1>
+<div class="sect1">
+<h2 id="_le_principe"><a class="anchor" href="#_le_principe"></a>1. Le principe</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Script est synonyme de <em>programme interprété</em>.
+C&#8217;est un fichier texte doté de l&#8217;attribut <code>x</code> d&#8217;exécution
+(que l&#8217;on positionne avec <code>chmod</code>),
+contenant des instructions destinées à être lues
+par l&#8217;interpréteur indiqué par le <em>shebang</em>
+(la première ligne commençant par <code>#!</code>).</p>
+</div>
+<div class="paragraph">
+<p>Exemple de script shell :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">$ ll mon_script_shell
+-rwxr-xr-x  1 jaclin jaclin 30 16 déc.  19:16 mon_script_shell <i class="conum" data-value="1"></i><b>(1)</b>
+
+$ head -1 mon_script_shell
+#!/bin/bash    <i class="conum" data-value="2"></i><b>(2)</b>
+
+$ ./mon_script_shell <i class="conum" data-value="3"></i><b>(3)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>le script doit posséder l&#8217;attribut <code>x</code></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>son shebang indique que c&#8217;est un script bash</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>on le lance comme ça</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Cette dernière instruction consiste :</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>à lancer l&#8217;interpréteur référencé dans le shebang, donc ici <code>/bin/bash</code></p>
+</li>
+<li>
+<p>lui envoyer les lignes suivantes sur <code>stdin</code>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Par conséquent, l&#8217;exécution :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ ./mon_script_shell</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>est équivalent à</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ /bin/bash &lt; ./mon_script_shell</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Le script est lancé par <code>./mon_script_shell</code>
+parce qu&#8217;il se trouve dans le répertoire courant,
+mais de manière générale, on doit indiquer son chemin (absolu ou relatif).
+Pour s&#8217;affranchir de cette contrainte
+(c&#8217;est-à-dire lancer le script comme une commande Unix quelconque avec son petit nom),
+il suffit de le déposer dans l&#8217;un des répertoires composant le <code>PATH</code>.
+Pour cela :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>regarder si le <code>PATH</code> contient un répertoire nous appartenant</p>
+</li>
+<li>
+<p>si oui, y déposer le script</p>
+</li>
+</ul>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ echo $PATH
+/users/jaclin/.local/bin:/usr/local/bin:/usr/bin:/bin</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Ici oui, <code>/users/jaclin/.local/bin</code> est un répertoire personnel,
+il suffit donc d&#8217;y mettre le script :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ mv mon_script_shell /users/jaclin/.local/bin</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>ce qui permet maintenant d&#8217;écrire, de n&#8217;importe où :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ mon_script_shell f1 f2 f3</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>si non :</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>créer un répertoire</p>
+</li>
+<li>
+<p>l&#8217;ajouter au <code>PATH</code> (la position dans le <code>PATH</code> est importante),
+et faire en sorte que cet ajout soit permanent</p>
+</li>
+<li>
+<p>y déposer le script</p>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>S&#8217;il n&#8217;y a pas de répertoire personnel dans le <code>PATH</code>, on le crée et on y dépose le script :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ mkdir ~/bin
+$ mv mon_script_shell ~/bin</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>0n insère ce nouveau répertoire dans le <code>PATH</code> :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ PATH=~/bin:$PATH</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>et on rend cette modification permanente,
+en l&#8217;inscrivant dans notre <code>.bashrc</code> :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ echo 'PATH=~/bin:$PATH' &gt;&gt; ~/.bashrc     # programme l'ajout pour chaque session</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Grace aux liens symboliques, on peut éviter de déplacer la commande que l&#8217;on veut pouvoir lancer de n&#8217;importe où :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ ln -s mon_script_shell ~/bin</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_script_élémentaire"><a class="anchor" href="#_script_élémentaire"></a>2. Script élémentaire</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Dans sa version la plus simple, un script est un fichier qui
+enchaîne l&#8217;exécution de plusieurs commandes :</p>
+</div>
+<div class="listingblock">
+<div class="title">fichier <code>moncd</code></div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">#!/bin/bash
+
+echo "le répertoire courant est `pwd`"
+echo "on le change en $1"
+cd $1
+echo "le répertoire courant est maintenant `pwd`"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>$1</code> représente le 1<sup>er</sup> argument de la ligne de commande,
+<code>$2</code> représenterait le 2<sup>ème</sup>, etc.,
+et <code>$*</code> tous les arguments.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_script_plus_évolué"><a class="anchor" href="#_script_plus_évolué"></a>3. Script plus évolué</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Il existe aussi les structures de contrôle classiques :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>if</code> &#8230;&#8203; <code>then</code> &#8230;&#8203; <code>else</code>&#8230;&#8203; <code>fi</code></p>
+</li>
+<li>
+<p><code>for</code> &#8230;&#8203; <code>do</code> &#8230;&#8203; <code>done</code></p>
+</li>
+<li>
+<p><code>while</code> &#8230;&#8203; <code>do</code> &#8230;&#8203; <code>done</code></p>
+</li>
+<li>
+<p>etc.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Par exemple ici, les données sont lues sur <code>stdin</code> (<code>read</code>) :</p>
+</div>
+<div class="listingblock">
+<div class="title"><code>home.sh</code></div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">#!/bin/bash
+
+echo -n "Enter a user name : "
+read name
+if grep ^$name: /etc/passwd &gt; /dev/null
+then
+        echo -n "$name has an account on this host, its homedir is "
+        awk 'BEGIN { FS=":" } '/^$name:/' {print $6}' /etc/passwd
+else
+        echo "$name doesn't have an account on this host"
+fi</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>ce qui donne :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ ./home.sh
+Enter a user name : root
+root has an account on this host, its homedir is /root</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Mieux, on peut lire chaque ligne arrivant sur <code>stdin</code> (<code>while &#8230;&#8203; do &#8230;&#8203; done</code>) :</p>
+</div>
+<div class="listingblock">
+<div class="title"><code>home.sh</code></div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">#!/bin/bash
+
+while read name
+do
+  if grep ^$name: /etc/passwd &gt; /dev/null
+  then
+    echo -n "$name has an account on this host, its homedir is "
+    awk 'BEGIN { FS=":" } '/^$name:/' {print $6}' /etc/passwd
+  else
+    echo "$name doesn't have an account on this host"
+  fi
+done</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>ce qui donne un filtre utilisable par exemple comme :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ sed 's/:.*//' /etc/group | home.sh</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_conclusion"><a class="anchor" href="#_conclusion"></a>4. Conclusion</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Pour faire des choses simples, comme enchaîner des commandes, le développement de scripts shell est pertinent :
+le langage est stable et universel, la syntaxe est simple, la mise au point est rapide.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p class="center">
+  <span style="font-size: 0.9em;">
+    <a href="https://jacquelincharbonnel.github.io/">Jacquelin Charbonnel</a>
+    <!-- &nbsp; &mdash; &nbsp; -->
+    &nbsp;
+    &copy;Creative Commons BY-NC-SA 4.0
+  </span>
+  </p>
+</footer>
+
+<script>
+var myDate = new Date(document.lastModified);
+myNewDate = new Intl.DateTimeFormat(
+            undefined,
+            {year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit"}
+        )
+        .format(myDate).replace(/\./g, '-');
+document.getElementById("lastmodify").innerHTML = myNewDate ;
+</script>
+
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

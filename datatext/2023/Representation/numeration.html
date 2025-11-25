@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Numération :: Supports</title>
+    <link rel="canonical" href="https://jacquelincharbonnel.github.io/supports/datatext/2023/Representation/numeration.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<!-- reference des feuilles de styles supplémentaires -->
+<link rel="stylesheet" href="../../../_/css/layout.css">
+<link rel="stylesheet" href="../../../_/css/content.css">
+
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://jacquelincharbonnel.github.io/supports">Supports</a>
+  <!-- suppression du burger du bandeau
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+-->      
+    </div>
+<!-- suppression des boutons du bandeau
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+-->
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="datatext" data-version="2023">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">DataText</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../regex/index.html">Expressions Régulières</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../regex/python.html">Regex en Python</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../Unix/index.html">Traitement sous Unix</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../Unix/composition.html">Redirection et pipes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../Unix/commandes.html">Traitement de texte</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../Unix/commandes/ed.html"><code>ed</code></a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../Unix/commandes/vi.html"><code>vi</code></a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../Unix/commandes/sed.html"><code>sed</code></a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../Unix/commandes/awk.html"><code>awk</code></a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../Unix/script.html">Script shell</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../Unix/python.html">Filtre en Python</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Représentation</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="numeration.html">Numération</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="charset.html">Charset &amp; encoding</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="unicode.html">Unicode (années 1990)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="environnement.html">Environnement de travail</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="conclusion.html">Conclusion</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">DataText</span>
+    <span class="version">2023</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../../C/2023/index.html">C</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../C/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../concurrence/2024/index.html">Concurrence</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../concurrence/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">DataText</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../json/2023/index.html">JSON</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../json/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../linux_context/2025/index.html">Linux contexte</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../linux_context/2025/index.html">2025</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../python_objet/2024/index.html">Python objet</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../python_objet/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../supports/index.html">Supports</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../xml/2023/index.html">XML</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../xml/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../supports/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">DataText</a></li>
+    <li><a href="index.html">Représentation</a></li>
+    <li><a href="numeration.html">Numération</a></li>
+  </ul>
+</nav>
+<!-- supression de "edit this page"
+  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/datatext/./modules/Representation/pages/numeration.adoc">Edit this Page</a></div>
+-->
+</div>
+  <!-- ajout de la date de modification -->
+     <div class="lastmodify"> dernière modification : 2023 </div>
+  <!-- fin ajout -->
+  <div class="content">
+<aside class="toc sidebar" data-title="Plan" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Numération</h1>
+<div class="sect1">
+<h2 id="_stockage_et_communication"><a class="anchor" href="#_stockage_et_communication"></a>1. Stockage et communication</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_stockage"><a class="anchor" href="#_stockage"></a>1.1. Stockage</h3>
+<div class="paragraph">
+<p>Un ordinateur ne traite que des données numériques.
+Dans sa mémoire, l&#8217;information n&#8217;est qu&#8217;une suite interminable
+de choix binaires (interprétés comme 0/1, vrai/faux, on/off, etc.),
+appelés bit (<em>binary digit</em>),
+et regroupés par paquet de 8 appelé <em>octet</em> (<em>byte</em>).
+L&#8217;octet est donc l&#8217;unité élémentaire de codage de l&#8217;information.
+Il peut être vu comme un entier compris entre 0 et 255 (2⁸).
+A partir de l&#8217;octet sont dérivées
+les unités usuelles que sont
+le kilo-octet (Ko, 10³ o),
+le méga-octet (Mo, 10⁶ o),
+le giga-octet (Go, 10⁹ o),
+le tera-octet (To, 10¹² o) et
+le peta-octet (Po, 10¹⁵ o).</p>
+</div>
+<div class="paragraph">
+<p>Le CPU de l&#8217;ordinateur est l&#8217;endroit où sont réalisés les calculs.
+Les données transitent entre la mémoire (où elles sont stockées) et le CPU (où elles sont traitées).
+Dans le CPU, le stockage se fait dans des registres (en petit nombre),
+destinés à conserver temporairement les opérandes et le résultat
+des opérations arithmétiques à réaliser.
+La taille d&#8217;un registre est appellée <em>mot</em> (ou <em>mot machine</em>).
+Sur une architecture 32 bits, il est de 4 octets,
+et sur une architecture 64 bits, il est de 8.
+Il était de 2 octets dans les ordinateurs 16 bits des années 80.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/CPU-RAM.png" alt="CPU RAM" width="400">
+</div>
+</div>
+<div class="paragraph">
+<p>Une donnée en mémoire de 2 octets <code>o1-o2</code> recopiée dans un registre 16 bits
+peut donner à l&#8217;arrivée, suivant le matériel, soit <code>o1-o2</code>, soit <code>o2-o1</code>.
+Cette caractéristique s&#8217;appelle  <em>boutisme</em> en français, <em>endianness</em> en anglais.
+Elle intervient à chaque fois que des données binaires transitent entre 2 composants électroniques,
+par exemple lorsque qu&#8217;un programme récupère des données numériques d&#8217;un appareil de mesure
+(capteur, sismographe, séquenceur du génôme&#8230;&#8203;).</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Par exemple, les processeurs <em>Intel x86</em> et <em>AMD64/x86-64</em> sont <em>petit boutistes</em> (<em>little-indian</em>),
+le processeur <em>Motorola 68000</em> est <em>gros boutiste</em> (<em>big-indian</em>).
+Il existe des processeurs (<em>PowerPC</em>, <em>Alpha</em>) où cela est configurable (<em>bi-indian</em>).
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_communication"><a class="anchor" href="#_communication"></a>1.2. Communication</h3>
+<div class="paragraph">
+<p>Les communications informatiques sont des échanges d&#8217;octets.
+Sur de courtes distances, le transfert peut s&#8217;effectuer octets par octets.
+On parle alors de liaison parallèle, dans laquelle
+les 8 bits de chaque octet circulent en parallèle sur 8 canaux en même temps :</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/nappe.jpg" alt="nappe" width="400">
+</div>
+</div>
+<div class="paragraph">
+<p>Sur de plus grandes distances (cas des réseaux),
+le transfert des octets se fait bit par bit ,
+à la queue leu-leu.
+On parle alors de liaison série.
+C&#8217;est pourquoi le débit d&#8217;une liaison série, par exemple une liaison réseau, s&#8217;exprime en bits par seconde (avec les mêmes unités : b/s, Kb/s, Mb/s, Gb/s).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_langage_de_bas_niveau_vs_langage_de_haut_niveau"><a class="anchor" href="#_langage_de_bas_niveau_vs_langage_de_haut_niveau"></a>1.3. Langage de bas niveau vs langage de haut niveau</h3>
+<div class="paragraph">
+<p>Les éléments d&#8217;informations que sont les octets
+sont aggrégés pour former des données structurées.
+Dans les langages de programmation de bas niveaux d&#8217;abstraction (comme les langages C ou Fortran),
+les types scalaires (entier, flottant, booléan) collent de près à l&#8217;architecture matérielle.
+Par exemple, les entiers correspondent à ce que le CPU est capable de traiter nativement,
+c&#8217;est-à-dire 4 octets sur une  architecture 32 bits, ou bien 8 octets sur une architecture 64 bits.
+Les programmes codés dans ses langages de bas niveau sont donc rapides,
+puisqu&#8217;ils manipulent des données formatées
+pour correspondre exactement aux caractéristiques physiques du matériel.</p>
+</div>
+<div class="paragraph">
+<p>Quand le niveau d&#8217;abstraction s&#8217;élève (comme avec Java ou Python), les types de données s&#8217;éloignent de la réalité, et
+deviennent des constructions de l&#8217;esprit.
+Les programmes sont alors plus lents, car une couche logicielle s&#8217;intercale entre ce que le programmeur écrit dans son code et ce qu&#8217;exécute le CPU de la machine.
+Par exemple, le type dictionnaire de Python n&#8217;a pas de correspondance physique
+ni dans le CPU, ni dans la mémoire de la machine.
+Les opérations effectuées sur un dictionnaire demandent à être traduite
+en des instructions manipulant des données réelles,
+d&#8217;où une perte d&#8217;efficacité.
+Même le type entier de Python est très éloigné de la représentation des entiers dans le CPU,
+ce qui explique en partie les temps de calcul médiocres des programmes Python.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Les lignes suivantes suffisent à s&#8217;en convaincre :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">import sys
+sys.getsizeof(0)                # 24 octets
+sys.getsizeof(100000)           # 28  octets
+sys.getsizeof(1000000000000000) # 32 octets
+sys.getsizeof(int)              # 424 octets</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_binaire_et_hexadécimal"><a class="anchor" href="#_binaire_et_hexadécimal"></a>2. Binaire et hexadécimal</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Habituellement, dans le code d&#8217;un programme, les entiers sont exprimés en base 10.
+Mais lorsque l&#8217;agencement des bits revêt une importance dans la compréhension des choses,
+il est pratique de pouvoir utiliser la base 2.</p>
+</div>
+<div class="paragraph">
+<p>Soit le programme :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">for n in range(0,128):
+        print(f"{n &amp; 31}", end=" ")</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>qui sort :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Pour comprendre le résultat, mieux vaut exprimer 31 en binaire :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>en décimal: 31
+en binaire: 00011111</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Sous cette forme, il est clair qu&#8217;un <em>ET</em> (<code>&amp;</code>) laisse les 5 bits de poids faibles inchangés
+et met les autres à 0.
+Il aurait été plus clair d&#8217;écrire :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">for n in range(0,128):
+  print(f"{n &amp; 0b00011111}", end=" ")</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Mais le binaire est fastidieux à écrire.
+L&#8217;hexadécimal (base 16) permet d&#8217;en compacter l&#8217;écriture,
+en groupant les bits 4 par 4.
+Les 16 chiffres de l&#8217;hexadécimal sont <code>0123456789ABCDEF</code>.</p>
+</div>
+<div class="paragraph">
+<p>Le programme aurait pu s&#8217;écrire :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">for n in range(0,128):
+  print(f"{n &amp; 0x1F}", end=" ")</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_numération_et_représentation_en_python"><a class="anchor" href="#_numération_et_représentation_en_python"></a>3. Numération et représentation en Python</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_constantes_entières"><a class="anchor" href="#_constantes_entières"></a>3.1. Constantes entières</h3>
+<div class="paragraph">
+<p>Dans un code Python, un entier littéral commençant par <code>0x</code> ou <code>0X</code> est une valeur hexadécimale,
+s&#8217;il commence par <code>0b</code> ou <code>0B</code>, c&#8217;est une valeur binaire,
+sinon c&#8217;est un décimal :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">0xF0       # 1111 0000 en binaire, 240 en décimal
+0xFFFF     # 1111 1111 1111 1111 en binaire, 65535 en décimal
+0b11111111      # FF en hexa, 255 en décimal
+0b_0001_0000    # 10 en hexa, 16 en décimal</code></pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/ram.jpg" alt="ram">
+</div>
+<div class="title">Figure 1. expression d&#8217;un littéral entier en différentes bases</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_représentation_textuelle_dun_entier"><a class="anchor" href="#_représentation_textuelle_dun_entier"></a>3.2. Représentation textuelle d&#8217;un entier</h3>
+<div class="paragraph">
+<p>Rendre un entier humainement lisible suppose de le transformer en une suite de caractères,
+représentant chacun 1 chiffre de l&#8217;entier.
+Par exemple, l&#8217;entier 123 est représenté en mémoire comme  <code>1111011</code>.
+ <code>print(123)</code> convertit donc <code>1111011</code> en une chaîne de 3 caractères <code>'1'</code>,<code>'2'</code> et <code>'3'</code>.
+De même, <code>print(0b11)</code> écrit le caractère <code>'3'</code>,
+et <code>print(0xff)</code> écrit les 3 caractères <code>'2'</code>, <code>'5'</code> et <code>'5'</code>.</p>
+</div>
+<div class="paragraph">
+<p><code>print</code> sort donc la représentation en base 10 de l&#8217;entier spécifié,
+quelle que soit la base dans laquelle l&#8217;entier est exprimé dans le code source.
+Les <em>f-strings</em> permettent de spécifier la base dans laquelle
+on souhaite l&#8217;écrire :</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/printf.png" alt="printf" width="500">
+</div>
+</div>
+<div class="paragraph">
+<p>Inversement,
+on peut obtenir un entier à partir d&#8217;une chaîne de caractères contenant ses chiffres, à condition de savoir en quelle base est cette représentation :</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/read.png" alt="read" width="600">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_fichier_binaire"><a class="anchor" href="#_fichier_binaire"></a>3.3. Fichier binaire</h3>
+<div class="paragraph">
+<p>Lorsque l&#8217;on stocke des données dans un fichier, on peut vouloir que ce fichier
+soit lisible par un humain sans super-pouvoir.
+On génère donc un <em>fichier texte</em>.</p>
+</div>
+<div class="paragraph">
+<p>Ecrire des nombres dans un fichier, avec par exemple <code>print(&#8230;&#8203;, file=&#8230;&#8203;)</code>, les formate pour être humainement compréhensibles.
+Par exemple, écrire de cette façon l&#8217;entier représenté par les 4 octets 00 00 00 64
+donne les 3 caractères <code>'1'</code>, <code>'0'</code>, <code>'0'</code>
+(puisque 00 00 00 64 est la représentation binaire de 100).</p>
+</div>
+<div class="paragraph">
+<p>Au contraire, on peut vouloir réaliser une recopie brute, sans formatage donc plus rapide, de ces entiers.
+On obtient alors dans le fichier une copie conforme de la mémoire
+(la même suite d&#8217;octets, à l&#8217;ordre près),
+mais le fichier obtenu est dans ce cas un <em>fichier binaire</em>, incompréhensible par un humain (sans super-pouvoir).</p>
+</div>
+<div class="sect3">
+<h4 id="_exemple_pour_des_entiers"><a class="anchor" href="#_exemple_pour_des_entiers"></a>3.3.1. Exemple pour des entiers</h4>
+<div class="listingblock">
+<div class="title">création d&#8217;un fichier binaire</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">with open("/tmp/f.bin", "wb") as f: <i class="conum" data-value="1"></i><b>(1)</b>
+  for i in range(32768):
+    f.write(i.to_bytes(2,"little"))</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>noter le <code>'b'</code></td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="title">lecture de ce fichier binaire</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">with open("/tmp/f.bin", "rb") as f:
+    while True:
+      i = f.read(2)
+      if len(i)&lt;2: break
+      print(int.from_bytes(i,"little"), end=" ")</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_cas_général"><a class="anchor" href="#_cas_général"></a>3.3.2. Cas général</h4>
+<div class="paragraph">
+<p>Les exemples précédents utilisent  les méthodes <code>from_bytes()</code> et <code>to_bytes()</code> du type <em>int</em> .
+Ils ne sont pas généralisables à d&#8217;autres types numériques.</p>
+</div>
+<div class="paragraph">
+<p>La fonction <code>pack</code> du module <code>struct</code> convertit des données binaires
+en séquence d&#8217;octets au format interopérable,
+ce qui est indispensable pour lire des données binaires issues de tous horizons
+(sondes, séquenceurs, de programme non Python, etc.).
+Et inversement, on reforme la donnée initiale avec la fonction <code>unpack</code>.</p>
+</div>
+<div class="paragraph">
+<p>Soit l&#8217;exercice consistant à socker les termes de la suite de Fibonacci inférieurs à une certaine valeur dans un fichier binaire.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Version 1</dt>
+<dd>
+<p>Pour l&#8217;écriture, on calcule un terme et on l&#8217;écrit dans la foulée :</p>
+</dd>
+</dl>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">from struct import pack
+
+last = 100000
+a = b = 1
+with open("/tmp/fib1.bin", "wb") as f:
+  f.write(pack("i",a))
+  while (b&lt;last):
+    f.write(pack("i",b))
+    a,b = b,a+b</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Pour la relecture, ne connaissant pas le nombre d&#8217;entiers dans le fichier,
+on récupérera les entiers un par un.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Version 2</dt>
+<dd>
+<p>On stocke les termes dans une liste, que l&#8217;on écrit, en une seule instruction, dans le fichier :</p>
+</dd>
+</dl>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">from struct import pack
+
+l = []
+last = 100000
+a = b = 1
+l.append(a)
+
+while (b&lt;last):
+  l.append(b)
+  a,b = b,a+b
+nb = len(l)
+
+with open("/tmp/fib2.bin", "wb") as f:
+  f.write(pack("i",nb))  <i class="conum" data-value="1"></i><b>(1)</b>
+  f.write(pack(f"{nb}i",*l))</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>on stocke le nombre d&#8217;entiers, pour faciliter les futures relectures.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_les_flottants"><a class="anchor" href="#_les_flottants"></a>4. Les flottants</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>La norme IEEE-754 définit le format des nombres à virgule flottante.
+Elle offre un format interopérable pour représenter (de façon approximative) les nombres réels.</p>
+</div>
+<div class="paragraph">
+<p>Dans cette norme, un réel est d&#8217;abord mis sous la forme
+<code>1,kkkkkkkk x 2<sup>n</sup></code>,
+<code>kkkkkkkkk</code> étant la mantisse et n l&#8217;exposant.
+Puis sont mémorisés son signe (1 bit)
+son exposant (8 bits),
+et sa mantisse (23 bits).</p>
+</div>
+<div class="paragraph">
+<p>Cette représentation est approximative.
+Pour s&#8217;en convaincre, il suffit de calculer par exemple <code>1.1 + 2.2</code>
+ou bien <code>0.1 + 0.1 + 0.1 - 0.3</code>.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p class="center">
+  <span style="font-size: 0.9em;">
+    <a href="https://jacquelincharbonnel.github.io/">Jacquelin Charbonnel</a>
+    <!-- &nbsp; &mdash; &nbsp; -->
+    &nbsp;
+    &copy;Creative Commons BY-NC-SA 4.0
+  </span>
+  </p>
+</footer>
+
+<script>
+var myDate = new Date(document.lastModified);
+myNewDate = new Intl.DateTimeFormat(
+            undefined,
+            {year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit"}
+        )
+        .format(myDate).replace(/\./g, '-');
+document.getElementById("lastmodify").innerHTML = myNewDate ;
+</script>
+
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

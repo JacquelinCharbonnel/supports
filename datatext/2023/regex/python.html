@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Les regex en Python :: Supports</title>
+    <link rel="canonical" href="https://jacquelincharbonnel.github.io/supports/datatext/2023/regex/python.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<!-- reference des feuilles de styles supplémentaires -->
+<link rel="stylesheet" href="../../../_/css/layout.css">
+<link rel="stylesheet" href="../../../_/css/content.css">
+
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://jacquelincharbonnel.github.io/supports">Supports</a>
+  <!-- suppression du burger du bandeau
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+-->      
+    </div>
+<!-- suppression des boutons du bandeau
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+-->
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="datatext" data-version="2023">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">DataText</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Expressions Régulières</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="python.html">Regex en Python</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../Unix/index.html">Traitement sous Unix</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../Unix/composition.html">Redirection et pipes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../Unix/commandes.html">Traitement de texte</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../Unix/commandes/ed.html"><code>ed</code></a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../Unix/commandes/vi.html"><code>vi</code></a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../Unix/commandes/sed.html"><code>sed</code></a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../Unix/commandes/awk.html"><code>awk</code></a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../Unix/script.html">Script shell</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../Unix/python.html">Filtre en Python</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../Representation/index.html">Représentation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../Representation/numeration.html">Numération</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../Representation/charset.html">Charset &amp; encoding</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../Representation/unicode.html">Unicode (années 1990)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../Representation/environnement.html">Environnement de travail</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../Representation/conclusion.html">Conclusion</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">DataText</span>
+    <span class="version">2023</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../../C/2023/index.html">C</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../C/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../concurrence/2024/index.html">Concurrence</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../concurrence/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">DataText</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../json/2023/index.html">JSON</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../json/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../linux_context/2025/index.html">Linux contexte</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../linux_context/2025/index.html">2025</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../python_objet/2024/index.html">Python objet</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../python_objet/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../supports/index.html">Supports</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../xml/2023/index.html">XML</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../xml/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../supports/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">DataText</a></li>
+    <li><a href="index.html">Expressions Régulières</a></li>
+    <li><a href="python.html">Regex en Python</a></li>
+  </ul>
+</nav>
+<!-- supression de "edit this page"
+  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/datatext/./modules/regex/pages/python.adoc">Edit this Page</a></div>
+-->
+</div>
+  <!-- ajout de la date de modification -->
+     <div class="lastmodify"> dernière modification : 2023 </div>
+  <!-- fin ajout -->
+  <div class="content">
+<aside class="toc sidebar" data-title="Plan" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Les regex en Python</h1>
+<div class="sect1">
+<h2 id="_raw_string"><a class="anchor" href="#_raw_string"></a>1. Raw string</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Les <em>string</em> Python interprêtent certaines séquences (comme <code>\n</code>, <code>\r</code>, <code>\t</code>, <code>\\</code>, etc.)
+de façon particulière.
+Donc par exemple, pour représenter littéralement la chaîne <code>"tangea\n\te"</code> :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">s1 = "tangea\n\te"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>n&#8217;est pas la solution, puisque <code>print(s1)</code> donne :</p>
+</div>
+<div class="listingblock">
+<div class="title">output</div>
+<div class="content">
+<pre>tangea
+      e</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Il faut écrire :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">s1 = "tangea\\n\\te"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><em>raw string</em> est un type chaîne de caractères dans lequel il n&#8217;y a aucune interprétation :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">s2 = r"tangea\n\te"   <i class="conum" data-value="1"></i><b>(1)</b>
+print(s2)
+print(s1==s2)               # True</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>le <code>r</code> qui signifie <em>rawstring</em></td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>donne :</p>
+</div>
+<div class="listingblock">
+<div class="title">output</div>
+<div class="content">
+<pre>tangeante
+True</pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_raw_string_et_regex"><a class="anchor" href="#_raw_string_et_regex"></a>1.1. Raw string et regex</h3>
+<div class="paragraph">
+<p>Dans une regex, le <code>"\"</code> a aussi une signification particulière.
+Mémoriser une regex dans une string nécessite de prendre en compte ce double niveau d&#8217;interprétation.</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Windows utilise le caractère <code>"\"</code> comme séparateur dans les noms de fichiers.
+Par exemple, le homedir d&#8217;un utilisateur <em>toto</em> ressemble à
+<code>c:\users\toto\documents\</code>.</p>
+</div>
+<div class="paragraph">
+<p>Pour capturer l&#8217;utilisateur, on a envie d&#8217;écrire une Perl regex comme :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>^c:\users\(.*?)\documents\$</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>mais comme dans une regex, le <code>"\"</code> possède  une signification particulière,
+la rexp correcte est :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>^c:\\users\\(.*?)\\document\\$</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Mémoriser cette regex dans une string Python donne donc :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">s = "^c:\\\\users\\\\(.*?)\\\\document\\\\$"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Pas très limpide !
+Utiliser une raw string rend les choses un peu plus lisibles :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">s = r"^c:\\users\\(.*?)\\document\\$"</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_conclusion"><a class="anchor" href="#_conclusion"></a>Conclusion</h4>
+<div class="paragraph">
+<p>En Python, il est plus simple de représenter une regex littérale avec une <em>raw string</em> :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre># représenter la regex '^\..'
+regex1 = "^\\.."     # par une string
+regex2 = r"^\.."     # par une raw string</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_le_module_re"><a class="anchor" href="#_le_module_re"></a>2. Le module <code>re</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Le module <code>re</code> offre des fonctions de manipulation de regex, principalement :
+<code>match()</code>, <code>search()</code>, <code>findall()</code>, <code>sub()</code> et <code>split()</code>.</p>
+</div>
+<div class="paragraph">
+<p>Les regex connues de Python sont un sous-ensemble des Perl regex
+(autrement dit, Python gère toutes les regex étendues, plus certaines Perl regex).</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Les regex pouvant apparaître abscons pour un néophyte,
+lorsque les opérations à réaliser sont simples,
+les méthodes de <code>str</code> (comme <code>replace</code>, <code>translate</code>, <code>index</code>, <code>find</code>, <code>split</code>, <code>count</code>) peuvent s’avérer suffisantes.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_rechercher_une_correspondance"><a class="anchor" href="#_rechercher_une_correspondance"></a>2.1. Rechercher une correspondance</h3>
+<div class="paragraph">
+<p><code>match()</code> détermine si une chaine commence par un motif donné, et
+<code>search()</code> détermine s&#8217;il est présent.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+la fonction <code>match()</code> est donc particulièrement mal nommée, puisqu&#8217;elle ne réalise pas ce qu&#8217;il est communément mis derrière  <em>matching a regex</em>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Elles s&#8217;utilisent soit comme des fonctions de module :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">import re
+
+s = "Le navire roulait sous un ciel sans nuages"
+
+print(re.match(r" un ",s))          # None
+print(bool(re.match(r" un ",s)))    # False
+print(re.search(r" un ",s))         # &lt;_sre.SRE_Match object at 0x7f752c57d648&gt;
+print(bool(re.search(r" un ",s)))   # True</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>soit comme des méthodes de l&#8217;objet créé par <code>re.compile()</code> :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">motif = re.compile(r" un ")
+print(type(motif))                  # &lt;class '_sre.SRE_Pattern'&gt;
+
+print(bool(motif.match(s)))         # False
+print(bool(motif.search(s)))        # True</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>En cas de succès, <code>match()</code> et <code>search()</code> renvoient un objet contenant la partie qui s&#8217;identifie au motif :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-python hljs" data-lang="python">motif = re.compile(r"c.*l")
+
+found=motif.match(s)
+print(found)   # None
+
+found=motif.search(s)
+print(found)   # &lt;_sre.SRE_Match object; span=(26, 30), match='ciel'&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Cet objet dispose des méthodes :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>group()</code> qui renvoie la portion qui s&#8217;identifie au motif,</p>
+</li>
+<li>
+<p><code>span()</code> qui renvoie un tuple (position de début, position de fin)</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-python hljs" data-lang="python">print(found.group())  # ciel
+print(found.span())   # (26, 30)</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_rechercher_toutes_les_occurrences_dun_motif"><a class="anchor" href="#_rechercher_toutes_les_occurrences_dun_motif"></a>2.2. Rechercher toutes les occurrences d&#8217;un motif</h3>
+<div class="paragraph">
+<p><code>findall()</code> renvoie une liste contenant toutes les sous-chaines s&#8217;identifiant à un motif.
+La version <em>itérateur</em> équivalente, <code>finditer()</code>, renvoie un itérateur parcourant toutes les sous-chaines s&#8217;identifiant à un motif</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-python hljs" data-lang="python">s = "Le navire roulait sous un ciel sans nuages"
+
+found = re.findall(r"l.",s)
+print(type(found))            # &lt;class 'list'&gt;
+print(found)                  # ['la', 'l ']</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_compiler_une_regex"><a class="anchor" href="#_compiler_une_regex"></a>2.3. Compiler une regex</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">motif = re.compile(r" un ")   # compilation
+found = motif.match(s)        # confrontation</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>est donc globalement équivalent à :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">found = re.match(r" un ",s)   # compilation + confrontation</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>mais il est plus performat d&#8217;écrire :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">motif = re.compile(r"^(.)(.).\2\1$")
+for line in liste:
+  if motif.match(line):
+    print(line)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>qui compile une fois pour toute la regex, que d&#8217;écrire :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">for line in liste:
+  if re.match(r"^(.)(.).\2\1$",line):
+    print(line)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>qui compile la regex à chaque tour de boucle.</p>
+</div>
+<div class="paragraph">
+<p>Autre avantage, des options peuvent être spécifiées à <code>compile()</code> pour modifier le comportement des confrontations ultérieures.
+Par exemple :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">motif = re.compile(r"l.?e",re.IGNORECASE)
+found=motif.findall(s)
+print(found)           # ['Le', 'la', 'l ']</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_capturer"><a class="anchor" href="#_capturer"></a>2.4. Capturer</h3>
+<div class="paragraph">
+<p>On capture avec des <code>()</code> dans la regex et on récupère la capture avec les méthodes <code>group()</code> et <code>groups()</code>.
+Exemple :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">import re
+
+s = "Le navire roulait sous un ciel sans nuages"
+
+capt = re.search(r" (.*?) .*n (.*?) ",s)
+print(bool(capt))        # True
+print(capt)              # &lt;re.Match object; span=(2, 31), match=' navire roulait sous un ciel '&gt;
+print(capt.groups())     # ('navire', 'ciel')
+print(capt.group(1))     # navire
+print(capt.group(2))     # ciel</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_substituer"><a class="anchor" href="#_substituer"></a>2.5. Substituer</h3>
+<div class="paragraph">
+<p>C&#8217;est le rôle de la méthode <code>sub</code>.
+La regex identifie la portion à remplacer, et <code>sub</code> spécifie par quoi il faut la remplacer.
+Exemple :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">import re
+
+s = "Le navire roulait sous un ciel sans nuages"
+
+capt = re.sub(r"\b(..)\b","[mot de 2 lettres]",s)
+print(capt) # [mot de 2 lettres] navire roulait sous [mot de 2 lettres] ciel sans nuages</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>La regex peut capturer des portions, qui peuvent être réutilisées dans la substitution avec <code>\1</code>, <code>\2</code>, etc. Exemple :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">motif = re.compile(r'^\s*(.*)\s*$')
+line = "    12 300    "
+print(motif.sub(r'\1',line))   # -&gt; "12 300"</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_eclater"><a class="anchor" href="#_eclater"></a>2.6. Eclater</h3>
+<div class="paragraph">
+<p>C&#8217;est le rôle de la méthode <code>split</code>.
+La regex spécifie les séparateurs, et <code>split</code> éclate la chaine suivant ces séparateurs.
+Exemple :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">sep = re.compile(r"\D+") # suite de caractères non numériques
+line = "1 + (2*3) = 7"
+print(sep.split(line))   # ['1', '2', '3', '7']</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_conclusion_2"><a class="anchor" href="#_conclusion_2"></a>3. Conclusion</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>L&#8217;utilisation des regex en Python passent par des fonctions, ce qui est assez lourd :
+Python n&#8217;est pas le langage le plus souple pour les manier.
+En proposant des opérateurs spécifiques pour cela, les langages Perl
+et Ruby offrent une syntaxe plus légère et une meilleure expressivité.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p class="center">
+  <span style="font-size: 0.9em;">
+    <a href="https://jacquelincharbonnel.github.io/">Jacquelin Charbonnel</a>
+    <!-- &nbsp; &mdash; &nbsp; -->
+    &nbsp;
+    &copy;Creative Commons BY-NC-SA 4.0
+  </span>
+  </p>
+</footer>
+
+<script>
+var myDate = new Date(document.lastModified);
+myNewDate = new Intl.DateTimeFormat(
+            undefined,
+            {year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit"}
+        )
+        .format(myDate).replace(/\./g, '-');
+document.getElementById("lastmodify").innerHTML = myNewDate ;
+</script>
+
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
