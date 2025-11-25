@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>sed :: Supports</title>
+    <link rel="canonical" href="https://jacquelincharbonnel.github.io/supports/datatext/2023/Unix/commandes/sed.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+<!-- reference des feuilles de styles supplémentaires -->
+<link rel="stylesheet" href="../../../../_/css/layout.css">
+<link rel="stylesheet" href="../../../../_/css/content.css">
+
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://jacquelincharbonnel.github.io/supports">Supports</a>
+  <!-- suppression du burger du bandeau
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+-->      
+    </div>
+<!-- suppression des boutons du bandeau
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+-->
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="datatext" data-version="2023">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../../index.html">DataText</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../regex/index.html">Expressions Régulières</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../regex/python.html">Regex en Python</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../index.html">Traitement sous Unix</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../composition.html">Redirection et pipes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../commandes.html">Traitement de texte</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="ed.html"><code>ed</code></a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="vi.html"><code>vi</code></a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="sed.html"><code>sed</code></a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="awk.html"><code>awk</code></a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../script.html">Script shell</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../python.html">Filtre en Python</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../Representation/index.html">Représentation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../Representation/numeration.html">Numération</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../Representation/charset.html">Charset &amp; encoding</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../Representation/unicode.html">Unicode (années 1990)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../Representation/environnement.html">Environnement de travail</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../Representation/conclusion.html">Conclusion</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">DataText</span>
+    <span class="version">2023</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../../../C/2023/index.html">C</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../C/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../../concurrence/2024/index.html">Concurrence</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../concurrence/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../../index.html">DataText</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../../json/2023/index.html">JSON</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../json/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../../linux_context/2025/index.html">Linux contexte</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../linux_context/2025/index.html">2025</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../../python_objet/2024/index.html">Python objet</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../python_objet/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../../supports/index.html">Supports</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../../xml/2023/index.html">XML</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../xml/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../../supports/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">DataText</a></li>
+    <li><a href="../index.html">Traitement sous Unix</a></li>
+    <li><a href="../commandes.html">Traitement de texte</a></li>
+    <li><a href="sed.html"><code>sed</code></a></li>
+  </ul>
+</nav>
+<!-- supression de "edit this page"
+  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/datatext/./modules/Unix/pages/commandes/sed.adoc">Edit this Page</a></div>
+-->
+</div>
+  <!-- ajout de la date de modification -->
+     <div class="lastmodify"> dernière modification : 2023 </div>
+  <!-- fin ajout -->
+  <div class="content">
+<aside class="toc sidebar" data-title="Plan" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page"><code>sed</code></h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><code>sed</code> (<em>stream editor</em>) est un éditeur de flux.
+Il agit sur chaque ligne du flux qui le traverse,
+(au même titre que <code>ed</code> agit sur chaque ligne d&#8217;un fichier).</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/sed_workflow.jpg" alt="sed workflow" width="300">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_comparaison_des_fonctionnements_de_ed_et_sed"><a class="anchor" href="#_comparaison_des_fonctionnements_de_ed_et_sed"></a>1. Comparaison des fonctionnements de <code>ed</code> et <code>sed</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>L&#8217;éditeur de texte <code>ed</code> :</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>charge en mémoire un fichier, puis</p>
+</li>
+<li>
+<p>lit les commandes séquentiellement, et pour chacune d&#8217;elles,
+exécute la commande sur le texte en mémoire.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Alors que <code>sed</code> :</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>charge les commandes en mémoire, puis</p>
+</li>
+<li>
+<p>pour chaque ligne du flux qui le traverse,
+applique séquentiellement toutes les commandes à la ligne.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/sed.png" alt="sed" width="300">
+</div>
+</div>
+<div class="paragraph">
+<p><code>ed</code> et <code>sed</code> ont donc un fonctionnnement inversé.</p>
+</div>
+<div class="sect2">
+<h3 id="_sed_est_un_filtre_pas_ed"><a class="anchor" href="#_sed_est_un_filtre_pas_ed"></a>1.1. <code>sed</code> est un filtre, pas <code>ed</code></h3>
+<div class="paragraph">
+<p>Comme tout filtre,
+ <code>sed</code> ne stocke pas en mémoire le texte qu&#8217;il traite.
+C&#8217;est pourquoi il peut traiter sans problème des données volumineuses.
+Ce n&#8217;est pas le cas de <code>ed</code> (et de la plupart des éditeurs de texte)
+qui peut signaler un manque de mémoire lorsqu&#8217;un fichier est trop gros.</p>
+</div>
+<div class="paragraph">
+<p>En contre-partie, seule la ligne courante a une réalité pour <code>sed</code>,
+qui ne connait plus <em>la ligne d&#8217;avant</em> (elle est passée, oubliée),
+ni <em>la ligne d&#8217;après</em> (elle n&#8217;est pas encore arrivée).
+Exemple,
+les commandes pour <code>ed</code> suivantes :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ ed /etc/services         # édite /etc/services
+1,$s/a/A/                  # substitue le 1^er^ a de chaque ligne par A
+w /tmp/modif.txt           # écrit dans /tmp/modif.txt</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>sont équivalentes à :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ sed 's/a/A/' /etc/services &gt; /tmp/modif.txt</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_compléments"><a class="anchor" href="#_compléments"></a>2. Compléments</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code>sed</code> par défaut écrit sur <code>stdout</code> toute ligne lue sur <code>stdin</code>, altérée ou non.
+L&#8217;option <code>-n</code> supprime cette fonctionnalité.
+Il faut alors utiliser la commandes <code>p</code> (<code>print</code>) pour écrire ce que l&#8217;on souhaite :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ sed 's/a/A/'     # sort les lignes modifiées et non modifiées
+$ sed -n 's/a/A/'  # ne sort rien (donc ne sert à rien)
+$ sed -n 's/a/A/p' # sort uniquement les lignes modifiées</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>sed</code> comprend par défaut les regex de base,
+et l&#8217;option <code>-r</code> lui demande de comprendre les regex étendues.
+Par contre, il ne comprend pas les Perl regex.</p>
+</div>
+<div class="paragraph">
+<p>Exemples :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-bash hljs" data-lang="bash"># les lignes contenant 'root:'
+#   équivalent à : grep 'root:' /etc/passwd
+$ sed -n '/root:/p' /etc/passwd
+
+# les n° des lignes contenant 'root:'
+#   équivalent à : grep -n 'root:' /etc/passwd
+$ sed -n '/root:/=' /etc/passwd
+
+# les lignes telles que le premier champ se retrouve en fin de ligne
+#   équivalent à : egrep '^([^:]*):.*\1$' /etc/passwd
+$ sed -rn '/^([^:]*):.*\1$/p' /etc/passwd
+
+# les lignes ne contenant pas 'nologin'
+#   équivalent à : grep -v nologin /etc/passwd
+$ sed '/nologin/d' /etc/passwd
+
+# les lignes 2 à 4
+$ sed -n '2,4p' /etc/passwd
+
+# les lignes comprises entre celle qui commence par bin et celle qui commence par shutdown
+$ sed -n '/^bin/,/^shutdown/p' /etc/passwd
+
+# sur chaque ligne, la 1ère occurence de 'root' est substituée par 'chef'
+$ sed  's/root/chef/' /etc/passwd
+
+# sur chaque ligne, toutes les occurences de 'root' sont substituées par 'chef'
+$ sed  's/root/chef/g' /etc/passwd
+
+# ajoute un commentaire en fin de chaque ligne faisant référence au 1er champ
+$ sed -r 's/^([^:]*):.*$/&amp; # user: \1/' /etc/passwd
+
+# dans les lignes suivant celle qui commence par mail, substitue les ':' en espace
+$ sed '/^mail/,$s/:/ /g' /etc/passwd</code></pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p class="center">
+  <span style="font-size: 0.9em;">
+    <a href="https://jacquelincharbonnel.github.io/">Jacquelin Charbonnel</a>
+    <!-- &nbsp; &mdash; &nbsp; -->
+    &nbsp;
+    &copy;Creative Commons BY-NC-SA 4.0
+  </span>
+  </p>
+</footer>
+
+<script>
+var myDate = new Date(document.lastModified);
+myNewDate = new Intl.DateTimeFormat(
+            undefined,
+            {year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit"}
+        )
+        .format(myDate).replace(/\./g, '-');
+document.getElementById("lastmodify").innerHTML = myNewDate ;
+</script>
+
+<script id="site-script" src="../../../../_/js/site.js" data-ui-root-path="../../../../_"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

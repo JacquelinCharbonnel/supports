@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ed :: Supports</title>
+    <link rel="canonical" href="https://jacquelincharbonnel.github.io/supports/datatext/2023/Unix/commandes/ed.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+<!-- reference des feuilles de styles supplémentaires -->
+<link rel="stylesheet" href="../../../../_/css/layout.css">
+<link rel="stylesheet" href="../../../../_/css/content.css">
+
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://jacquelincharbonnel.github.io/supports">Supports</a>
+  <!-- suppression du burger du bandeau
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+-->      
+    </div>
+<!-- suppression des boutons du bandeau
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+-->
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="datatext" data-version="2023">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../../index.html">DataText</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../regex/index.html">Expressions Régulières</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../regex/python.html">Regex en Python</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../index.html">Traitement sous Unix</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../composition.html">Redirection et pipes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../commandes.html">Traitement de texte</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="ed.html"><code>ed</code></a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="vi.html"><code>vi</code></a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="sed.html"><code>sed</code></a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="awk.html"><code>awk</code></a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../script.html">Script shell</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../python.html">Filtre en Python</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../Representation/index.html">Représentation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../Representation/numeration.html">Numération</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../Representation/charset.html">Charset &amp; encoding</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../Representation/unicode.html">Unicode (années 1990)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../Representation/environnement.html">Environnement de travail</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../Representation/conclusion.html">Conclusion</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">DataText</span>
+    <span class="version">2023</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../../../C/2023/index.html">C</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../C/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../../concurrence/2024/index.html">Concurrence</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../concurrence/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../../index.html">DataText</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../../json/2023/index.html">JSON</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../json/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../../linux_context/2025/index.html">Linux contexte</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../linux_context/2025/index.html">2025</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../../python_objet/2024/index.html">Python objet</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../python_objet/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../../supports/index.html">Supports</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../../xml/2023/index.html">XML</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../xml/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../../supports/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">DataText</a></li>
+    <li><a href="../index.html">Traitement sous Unix</a></li>
+    <li><a href="../commandes.html">Traitement de texte</a></li>
+    <li><a href="ed.html"><code>ed</code></a></li>
+  </ul>
+</nav>
+<!-- supression de "edit this page"
+  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/datatext/./modules/Unix/pages/commandes/ed.adoc">Edit this Page</a></div>
+-->
+</div>
+  <!-- ajout de la date de modification -->
+     <div class="lastmodify"> dernière modification : 2023 </div>
+  <!-- fin ajout -->
+  <div class="content">
+<aside class="toc sidebar" data-title="Plan" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page"><code>ed</code></h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>C&#8217;est le premier éditeur de ligne de texte.
+Il ne possède qu&#8217;un mode commande 😂,
+ce qui peut faire sourire au temps de <code>vscode</code>.
+Pourtant, cette antiquité procure encore aujourd&#8217;hui des avantages à celui qui la maitrise.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/ed.png" alt="ed" width="300">
+</div>
+</div>
+<div class="paragraph">
+<p>Une commande <code>ed</code> est une ligne de la forme :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre> [étendue] commande [arguments...]</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_principales_commandes"><a class="anchor" href="#_principales_commandes"></a>1. Principales commandes</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>ajouter des lignes :
+<code>a</code> (passage en mode append, pour ajouter des lignes après la ligne courante) ou
+<code>i</code> (passage en mode insert pour ajouter des lignes avant la ligne courante),
+on sort de ce mode par un <code>.</code></p>
+</li>
+<li>
+<p>afficher : <code>p</code> (print, affiche la ligne courante), <code>n</code> (affiche la ligne courante avec son n°) et <code>=</code> (affiche le n° de la ligne courante)</p>
+</li>
+<li>
+<p>modifier : <code>c</code> (change) et <code>s</code> (substitute)</p>
+</li>
+<li>
+<p>effacer : <code>d</code> (delete)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>auxquelles s&#8217;ajoutent d&#8217;autres opérations indispensables :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>sauvegarder : <code>w</code> (write) ou <code>w fichier</code></p>
+</li>
+<li>
+<p>lire un fichier et l&#8217;insérer : <code>r fichier</code> (read)</p>
+</li>
+<li>
+<p>quitter : <code>q</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_déplacement_de_la_ligne_courante"><a class="anchor" href="#_déplacement_de_la_ligne_courante"></a>2. Déplacement de la ligne courante</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>n : la ligne n° n devient la ligne courante</p>
+</li>
+<li>
+<p>-1 : la ligne précédente devient la ligne courante</p>
+</li>
+<li>
+<p>+1 : la ligne suivante devient la ligne courante</p>
+</li>
+<li>
+<p>P : mode prompt on/off (bascule)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Exemple :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ ed /etc/services
+p                    # affiche la ligne courante
+.=                    # affiche le n° de la ligne courante
+s/tcp/****/          # substitue la première occurence de 'tcp' en '****' sur la ligne courante
+p                    # affiche la ligne courante
+a                    # entrée dans le mode append
+un
+deux
+trois
+.                    # sortie du mode append
+w /tmp/services      # sauvegarde (write)
+q                    # quitte</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_létendue"><a class="anchor" href="#_létendue"></a>3. L&#8217;étendue</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>La commande peut être précédée d&#8217;une étendue,
+qui précise sur quelles lignes on applique la commande qui suit
+(par défaut, elle est appliquée sur la ligne courante seulement) :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>n            # la ligne n
+.            # ligne courante
++n           # n lignes après la courante
+-n           # n lignes avant la courante
+$            # la dernière ligne
+n,m          # les lignes de n à m
+-n,+m
+1,$          # toutes les lignes
+.,+3         # 3 lignes à partir de la courante
+
+/regex/            # première ligne s'identifiant à la regex (à partir de la courante vers la fin)
+?regex?            # première ligne s'identifiant à la regex (à partir de la courante vers le début)
+/regex1/,/regex2/  # de la ligne s'identifiant à regex1 à la ligne s'identifiant à regex2
+
+g/regex/           # groupe les lignes s'identifiant à la regex</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Exemple :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ ed /etc/services
+i                    # entrée en mode insert
+Première ligne
+Deuxième ligne
+.                          # fin du mode insert
+1,.p                       # les premières lignes jusqu'à la courante
+w /tmp/simple.txt          # sauvegarde
+20,30w /tmp/extrait.txt    # sauvegarde partielle
+1a                         # append
+Après la première
+.                          # fin append
+1,10p
+1i
+Encore avant la première
+.
+1,10p
+w
+
+$=                   # n° de la dernière ligne
+10r /etc/passwd      # lecture du fichier /etc/passwd et ajout à la ligne 10
+$=                   # adresse  de la dernière ligne
+1,20p
+11,15d               # suppression des lignes 11 à 15
+$=                   # adresse  de la dernière ligne
+
+15,$d                # suppression des lignes de la 15ème à la fin
+$=                   # adresse  de la dernière ligne
+
+1s/e/E/p             # ligne 1, remplace le premier 'e' par 'E', et écrit le résultat
+u                    # annule (undo)
+1s/e/E/gp            # ligne 1, remplace tous les 'e' par 'E' (g: global)
+1,$s/ /+/           # remplace le premier espace par un + sur chaque ligne
+1,$p</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_presse_papier"><a class="anchor" href="#_presse_papier"></a>4. Presse-papier</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>y : copie des lignes dans le presse-papier de <code>ed</code></p>
+</li>
+<li>
+<p>d : coupe des lignes et la met dans le presse-papier de <code>ed</code></p>
+</li>
+<li>
+<p>x : colle le presse-papier de <code>ed</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_focus_sur_la_commande_substitute"><a class="anchor" href="#_focus_sur_la_commande_substitute"></a>5. Focus sur la commande <em>substitute</em></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>C&#8217;est la commande la plus intéressante,
+qui justifie qu&#8217;on peut encore avec besoin de <code>ed</code> aujourd&#8217;hui.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>s/avant/après/        # 1ère occurrence sur la ligne courante
+1,$s/avant/après/     # 1ère occurrence sur toutes les lignes
+s/avant/après/g       # toutes les occurrences sur la ligne courante
+1,$s/avant/après/g    # toutes les occurrences sur toutes les lignes</pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p class="center">
+  <span style="font-size: 0.9em;">
+    <a href="https://jacquelincharbonnel.github.io/">Jacquelin Charbonnel</a>
+    <!-- &nbsp; &mdash; &nbsp; -->
+    &nbsp;
+    &copy;Creative Commons BY-NC-SA 4.0
+  </span>
+  </p>
+</footer>
+
+<script>
+var myDate = new Date(document.lastModified);
+myNewDate = new Intl.DateTimeFormat(
+            undefined,
+            {year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit"}
+        )
+        .format(myDate).replace(/\./g, '-');
+document.getElementById("lastmodify").innerHTML = myNewDate ;
+</script>
+
+<script id="site-script" src="../../../../_/js/site.js" data-ui-root-path="../../../../_"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

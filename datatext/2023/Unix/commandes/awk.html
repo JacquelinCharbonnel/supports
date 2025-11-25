@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>awk :: Supports</title>
+    <link rel="canonical" href="https://jacquelincharbonnel.github.io/supports/datatext/2023/Unix/commandes/awk.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+<!-- reference des feuilles de styles supplémentaires -->
+<link rel="stylesheet" href="../../../../_/css/layout.css">
+<link rel="stylesheet" href="../../../../_/css/content.css">
+
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://jacquelincharbonnel.github.io/supports">Supports</a>
+  <!-- suppression du burger du bandeau
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+-->      
+    </div>
+<!-- suppression des boutons du bandeau
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+-->
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="datatext" data-version="2023">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../../index.html">DataText</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../regex/index.html">Expressions Régulières</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../regex/python.html">Regex en Python</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../index.html">Traitement sous Unix</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../composition.html">Redirection et pipes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../commandes.html">Traitement de texte</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="ed.html"><code>ed</code></a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="vi.html"><code>vi</code></a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="sed.html"><code>sed</code></a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="awk.html"><code>awk</code></a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../script.html">Script shell</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../python.html">Filtre en Python</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../Representation/index.html">Représentation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../Representation/numeration.html">Numération</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../Representation/charset.html">Charset &amp; encoding</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../Representation/unicode.html">Unicode (années 1990)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../Representation/environnement.html">Environnement de travail</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../Representation/conclusion.html">Conclusion</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">DataText</span>
+    <span class="version">2023</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../../../C/2023/index.html">C</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../C/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../../concurrence/2024/index.html">Concurrence</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../concurrence/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../../index.html">DataText</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../../json/2023/index.html">JSON</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../json/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../../linux_context/2025/index.html">Linux contexte</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../linux_context/2025/index.html">2025</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../../python_objet/2024/index.html">Python objet</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../python_objet/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../../supports/index.html">Supports</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../../xml/2023/index.html">XML</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../xml/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../../supports/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">DataText</a></li>
+    <li><a href="../index.html">Traitement sous Unix</a></li>
+    <li><a href="../commandes.html">Traitement de texte</a></li>
+    <li><a href="awk.html"><code>awk</code></a></li>
+  </ul>
+</nav>
+<!-- supression de "edit this page"
+  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/datatext/./modules/Unix/pages/commandes/awk.adoc">Edit this Page</a></div>
+-->
+</div>
+  <!-- ajout de la date de modification -->
+     <div class="lastmodify"> dernière modification : 2023 </div>
+  <!-- fin ajout -->
+  <div class="content">
+<aside class="toc sidebar" data-title="Plan" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page"><code>awk</code></h1>
+<div class="sect1">
+<h2 id="_fonctionnement"><a class="anchor" href="#_fonctionnement"></a>1. Fonctionnement</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code>awk</code> est un filtre.
+Il interprête un script de la forme :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-awk hljs" data-lang="awk">condition { action ; action ; action ; ... }
+condition { action ; action ; action ; ... }
+condition { action ; action ; action ; ... }
+...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Pour chacune des lignes de texte du flux vérifiant la condition,
+les actions associées sont exécutées.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_découpage_automatique_de_la_ligne_courante_en_champs"><a class="anchor" href="#_découpage_automatique_de_la_ligne_courante_en_champs"></a>2. Découpage automatique de la ligne courante en champs</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Les variables <code>$1</code>, <code>$2</code> &#8230;&#8203; contiennent le champ n°1, n°2 &#8230;&#8203; de la ligne courante.
+<code>$0</code> correspond à la ligne complète.</p>
+</div>
+<div class="listingblock">
+<div class="title">donne le login et le temps de connexion des utilisateurs connectés</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">who | awk '{print $1,$4}'</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Le séparateur qui sert au découpage peut être spécifié par
+l&#8217;option <code>-F</code> :</p>
+</div>
+<div class="listingblock">
+<div class="title">imprime chaque ligne après avoir effacé le deuxième champ</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">awk -F ":" '{ $2="" ; print $0 }' /etc/passwd</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_variables"><a class="anchor" href="#_variables"></a>3. Variables</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 40%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Field Separator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">separateur de champs en entrée</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OFS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Output Field Separator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">separateur de champs en sortie</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NF</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of Fields</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nombre de champs de la ligne courante</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NR</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number Record</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">n° de la ligne courante</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Record Separator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">separateur de ligne en entrée</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ORS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Output Record Separator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">separateur de ligne en sortie</p></td>
+</tr>
+</tbody>
+</table>
+<div class="listingblock">
+<div class="title">écrit les lignes de 2 à 10</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ man sed | awk 'NR&gt;2 &amp;&amp; NR&lt;10 { print }'   # print est équivalent à print $0</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">les lignes numérotées</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ awk '{print NR ":", $0}' /etc/passwd</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>La variable NF contient le nombre de champs de la ligne courante,
+donc $NF correspond à la valeur du dernier champ :</p>
+</div>
+<div class="listingblock">
+<div class="title">indice et valeur du dernier champ de chaque ligne</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">awk '{print NF,$NF}' /etc/mime.types</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_begin_et_end"><a class="anchor" href="#_begin_et_end"></a>4. <code>BEGIN</code> et <code>END</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Il existe 2 conditions particulières :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>BEGIN</code> qui est vraie avant l&#8217;arrivée de la première ligne, fausse ensuite</p>
+</li>
+<li>
+<p><code>END</code> qui est vraie après l&#8217;envoi de la dernière ligne, fausse avant.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/awk-workflow.jpg" alt="awk workflow" width="600">
+</div>
+</div>
+<div class="listingblock">
+<div class="title">nombre de lignes de <code>f</code></div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">awk 'END {print NR}' /etc/mime.types</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">awk 'BEGIN {FS=":";OFS=" -&gt; "}
+           {print $5,$1}
+' /etc/passwd</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">fait la somme des tailles des fichiers</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ ls -l | awk 'BEGIN { s=0 }
+                     { s=s+$5 }
+                END  { print s }'</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_conditions"><a class="anchor" href="#_conditions"></a>5. Conditions</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="title">sort les variables initialisées dans le fichier</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">awk -F= '/^[^ ]*=/ {print $1}' /etc/crontab</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">les lignes de moins de 75 caractères</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">awk 'length($0)&lt;75 {print}' /etc/services</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">awk '/^#/    {next}
+     $4!="#" {next}
+             {$1=$2=$3=$4="";print}
+' /etc/protocols</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">awk 'BEGIN   {OFS=" =&gt; "}
+     /^#/    {next}
+     /^\s*$/ {next}
+             {print $2,$3}
+' /etc/fstab</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">écrit toutes les lignes entre 2 lignes déterminée</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ man awk| awk '/^SYNOPSIS$/,/^DESCRIPTION$/ { print}'</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_exemples_plus_costauds"><a class="anchor" href="#_exemples_plus_costauds"></a>6. Exemples plus costauds</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">awk 'BEGIN { print "Verification des UID et GID dans le fichier /etc/passwd";
+              FS=":"}
+      $3 !~ /^[0-9][0-9]*$/ {print "UID  erreur ligne "NR" :\n"$0 }
+      $4 !~ /^[0-9][0-9]*$/ {print "GID  erreur ligne "NR" :\n"$0 }
+      END   { print "Fin" }
+' /etc/passwd</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">awk 'BEGIN { print "Verification du fichier /etc/passwd pour ...";
+              print "- les utilisateurs avec UID = 0 " ;
+              print "- les utilisateurs avec UID &gt;= 60000" ;
+              FS=":"}
+      $3 == 0 { print "UID 0 ligne "NR" :\n"$0 }
+      $3 &gt;= 60000  { print "UID &gt;= 60000 ligne "NR" :\n"$0 }
+      END   { print "Fin" }
+' /etc/passwd</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Créer un nouveau fichier de mot de passe <code>/tmp/passwd.new</code>
+en remplacant le shell <code>/bin/bash</code> par <code>/bin/zsh</code> :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">awk 'BEGIN { FS=":" ;
+             OFS=":"}
+      $NF != "/bin/bash" { print }
+      $NF == "/bin/bash" { $NF = "/bin/zsh" ;
+                           print }
+' /etc/passwd &gt; /tmp/passwd.new</code></pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p class="center">
+  <span style="font-size: 0.9em;">
+    <a href="https://jacquelincharbonnel.github.io/">Jacquelin Charbonnel</a>
+    <!-- &nbsp; &mdash; &nbsp; -->
+    &nbsp;
+    &copy;Creative Commons BY-NC-SA 4.0
+  </span>
+  </p>
+</footer>
+
+<script>
+var myDate = new Date(document.lastModified);
+myNewDate = new Intl.DateTimeFormat(
+            undefined,
+            {year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit"}
+        )
+        .format(myDate).replace(/\./g, '-');
+document.getElementById("lastmodify").innerHTML = myNewDate ;
+</script>
+
+<script id="site-script" src="../../../../_/js/site.js" data-ui-root-path="../../../../_"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
