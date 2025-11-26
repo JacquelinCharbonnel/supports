@@ -507,7 +507,7 @@ glob et regex ont le même objectif, mais sont différents et incompatibles.</p>
 <tr>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>|</code></p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">alternative</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">soit le caractère précédent, soit le caractère suivant</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">soit les caractères précédents, soit les caractères suivants</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>( )</code></p></td>
@@ -618,20 +618,20 @@ s&#8217;identifient à la regex <code>a(bil|de)a</code>, mais pas <code>"viabili
 </div>
 </div>
 <div class="sect2">
-<h3 id="_les_quantificateurs_et"><a class="anchor" href="#_les_quantificateurs_et"></a>Les quantificateurs <code>+</code>, <code>?</code> et <code>{ }</code></h3>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 100%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>a+</code> signifie : 1 ou plusieurs <code>"a"</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ab+c</code> signifie donc : <code>"a"</code>, suivi de 1 ou plusieurs <code>"b"</code>, suivi de <code>"c"</code></p></td>
-</tr>
-</tbody>
-</table>
+<h3 id="_le_quantificateur_2"><a class="anchor" href="#_le_quantificateur_2"></a>Le quantificateur <code>+</code></h3>
+<div class="paragraph">
+<p>Au moins 1 fois ce qui précède.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>a+</code> signifie : 1 ou plusieurs <code>"a"</code></p>
+</li>
+<li>
+<p><code>ab+c</code> signifie donc : <code>"a"</code>, suivi de 1 ou plusieurs <code>"b"</code>, suivi de <code>"c"</code></p>
+</li>
+</ul>
+</div>
 <div class="admonitionblock tip">
 <table>
 <tr>
@@ -644,38 +644,44 @@ s&#8217;identifient à la regex <code>a(bil|de)a</code>, mais pas <code>"viabili
 </tr>
 </table>
 </div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 100%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>a?</code> signifie : 0 ou 1 <code>"a"</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ab?c</code> signifie donc : <code>"a"</code> suivi de 0 ou 1 <code>"b"</code>, suivi de <code>""</code></p></td>
-</tr>
-</tbody>
-</table>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 100%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>a{n}</code> signifie <code>"a"</code> répété <em>n</em> fois</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>a{n,m}</code> signifie <code>"a"</code> répété entre <em>n</em> et <em>m</em> fois</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>a{,n}</code> signifie <code>"a"</code> répété au plus <em>n</em> fois</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>a{n,}</code> signifie <code>"a"</code> répété au moins <em>n</em> fois</p></td>
-</tr>
-</tbody>
-</table>
+</div>
+<div class="sect2">
+<h3 id="_le_quantificateur_3"><a class="anchor" href="#_le_quantificateur_3"></a>Le quantificateur <code>?</code></h3>
+<div class="paragraph">
+<p>Au plus 1 fois ce qui précède.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>a?</code> signifie : 0 ou 1 <code>"a"</code></p>
+</li>
+<li>
+<p><code>ab?c</code> signifie donc : <code>"a"</code> suivi de 0 ou 1 <code>"b"</code>, suivi de <code>""</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_les_quantificateurs"><a class="anchor" href="#_les_quantificateurs"></a>Les quantificateurs <code>{ }</code></h3>
+<div class="paragraph">
+<p>Au plus et au moins.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>a{n}</code> signifie <code>"a"</code> répété <em>n</em> fois</p>
+</li>
+<li>
+<p><code>a{n,m}</code> signifie <code>"a"</code> répété entre <em>n</em> et <em>m</em> fois</p>
+</li>
+<li>
+<p><code>a{,n}</code> signifie <code>"a"</code> répété au plus <em>n</em> fois</p>
+</li>
+<li>
+<p><code>a{n,}</code> signifie `</p>
+</li>
+</ul>
+</div>
 <div class="admonitionblock tip">
 <table>
 <tr>
