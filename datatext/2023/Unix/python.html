@@ -248,7 +248,7 @@ for line in sys.stdin:
 </div>
 </div>
 <div class="paragraph">
-<p>Cette commande n&#8217;a pas le comportement standard d&#8217;une commande Unix :</p>
+<p>Mais malheureusement, cette commande n&#8217;a pas exactement le comportement standard d&#8217;une commande Unix :</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -257,16 +257,17 @@ $ ./upper.py &lt; /etc/passwd           # OK
 $ ./upper.py /etc/passwd             # NOT ok</code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>Cette commande n&#8217;a toujours pas exactement le comportement standard d&#8217;une commande Unix
+car elle ne sait pas traiter plusieurs fichiers.</p>
+</div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_le_module_fileinput"><a class="anchor" href="#_le_module_fileinput"></a>2. Le module <code>fileinput</code></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Cette commande n&#8217;a toujours pas exactement le comportement standard d&#8217;une commande Unix
-car elle ne sait pas traiter plusieurs fichiers.
-C&#8217;est ici que le module <code>fileinput</code> intervient,
-puisque son but est justement de gérer souplement l&#8217;entrée standard du programme qui l&#8217;utilise.</p>
+<p>Le module Python <code>fileinput</code> a pour objectif l&#8217;écriture de filtres parfaitement conformes au standard Unix.</p>
 </div>
 </div>
 </div>
