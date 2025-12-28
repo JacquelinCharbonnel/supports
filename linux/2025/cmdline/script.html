@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Script shell :: Supports</title>
+    <link rel="canonical" href="https://jacquelincharbonnel.github.io/supports/linux/2025/cmdline/script.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<!-- reference des feuilles de styles supplémentaires -->
+<link rel="stylesheet" href="../../../_/css/layout.css">
+<link rel="stylesheet" href="../../../_/css/content.css">
+
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://jacquelincharbonnel.github.io/supports">Supports</a>
+  <!-- suppression du burger du bandeau
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+-->      
+    </div>
+<!-- suppression des boutons du bandeau
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+-->
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="linux" data-version="2025">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">Linux</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../context/overview.html">Le contexte</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../context/news.html">L&#8217;actualité</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="priseenmain.html">Utiliser le système</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="fs.html">Système de fichiers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="shell.html">Le shell</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="proc.html">Processus</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="redirect.html">Redirection et pipes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="remote.html">Connexions distantes</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="script.html">Script shell</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cron.html">Planifier les tâches</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="admin.html">Gérer le système</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="su.html">Privilèges</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="appli.html">Les applications</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="admfs.html">L&#8217;espace de stockage</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="user.html">Les comptes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="services.html">Les services</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="nfs.html">NFS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="sshd.html">sshd</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Linux</span>
+    <span class="version">2025</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../../C/2023/index.html">C</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../C/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../concurrence/2024/index.html">Concurrence</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../concurrence/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../datatext/2023/index.html">DataText</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../datatext/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../json/2023/index.html">JSON</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../json/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">Linux</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">2025</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../python_objet/2024/index.html">Python objet</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../python_objet/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../supports/index.html">Supports</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../xml/2023/index.html">XML</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../xml/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../supports/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Linux</a></li>
+    <li><a href="priseenmain.html">Utiliser le système</a></li>
+    <li><a href="script.html">Script shell</a></li>
+  </ul>
+</nav>
+<!-- supression de "edit this page"
+  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/linux/./modules/cmdline/pages/script.adoc">Edit this Page</a></div>
+-->
+</div>
+  <!-- ajout de la date de modification -->
+     <div class="lastmodify"> dernière modification : 2025 </div>
+  <!-- fin ajout -->
+  <div class="content">
+<aside class="toc sidebar" data-title="Plan" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Script shell</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Un shell script est un fichier contenant une suite de commandes (une par ligne).
+Par exemple :</p>
+</div>
+<div class="listingblock">
+<div class="title">fichier mon_script</div>
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-bash hljs" data-lang="bash">#!/bin/bash
+
+# ce script affiche 2 variables et le répertoire courant
+
+echo "mon login est $USER"
+echo "mon homedir est $HOME"
+echo -n "je suis actuellement dans le répertoire " # l'option -n supprime le retour à la ligne
+pwd</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>La première ligne, qui ressemble à un commentaire, indique que ce script doit être interprété par <code>/bin/bash</code>.
+Le reste n&#8217;est rien d&#8217;autre que les commandes que l&#8217;on aurait pu saisir au clavier.</p>
+</div>
+<div class="paragraph">
+<p>Pour que ce script soit exécutable, il faut le doter de l&#8217;attribut <code>x</code> :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-bash hljs" data-lang="bash">$ chmod +x mon_script</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>On peut alors l&#8217;exécuter par :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-bash hljs" data-lang="bash">$ ./mon_script</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_read"><a class="anchor" href="#_read"></a>1. <code>read</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code>read var</code> attend une frappe au clavier, récupère ce qui a été frappé et le stocke dans la variable <code>var</code>.
+Exemple :</p>
+</div>
+<div class="listingblock">
+<div class="title">fichier quiestu</div>
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-bash hljs" data-lang="bash">#!/bin/bash
+
+echo -n "quel est ton nom ? "
+read nom
+echo -n "quel est ton prenom ? "
+read prenom
+
+echo -n "Nous sommes "
+date +%A
+date +"il est %H:%M"
+echo "$prenom $nom travaille actuellement sur la machine `hostname` !"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>alors l&#8217;exécution donne :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-bash hljs" data-lang="bash">$ ./quiestu
+quel est ton nom ?
+Ritchie
+quel est ton prenom ?
+Dennis
+Nous sommes mercredi
+il est 20:18
+Dennis Ritchie travaille actuellement sur la machine PDP-10 !</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_arguments"><a class="anchor" href="#_arguments"></a>2. Arguments</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Un script peut récupérer ses arguments via les variables <code>$1</code>, <code>$2</code>, <code>$3</code>, etc.
+Exemple, soit le script :</p>
+</div>
+<div class="listingblock">
+<div class="title">fichier test</div>
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-bash hljs" data-lang="bash">#!/bin/bash
+
+echo $3, $2, $1</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>alors son exécution donne par exemple :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-bash hljs" data-lang="bash">$ ./test un deux trois quatre
+trois, deux, un</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>$*</code>, quant à lui, récupère tous les arguments :</p>
+</div>
+<div class="listingblock">
+<div class="title">fichier test2</div>
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-bash hljs" data-lang="bash">#!/bin/bash
+
+echo "les arguments sont $*."</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>ce qui donne :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-none hljs">$ ./test2 un deux trois quatre
+les arguments sont un deux trois quatre.</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_instruction_conditionnelle"><a class="anchor" href="#_instruction_conditionnelle"></a>3. Instruction conditionnelle</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Il s&#8217;agit d&#8217;exécuter une instruction sous certaines conditions.
+Dans l&#8217;exemple ci-dessous, le message envoyé dépend de l&#8217;utilisateur courant :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-bash hljs" data-lang="bash">#!/bin/bash
+
+if [ $USER == jaclin ]
+then
+  echo "Salut $USER !"
+else
+  echo "tu n'es pas celui que j'attendais :-( "
+fi</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Autre exemple,
+le script ci-dessous crée un répertoire <code>archive</code> s&#8217;il n&#8217;existe pas déjà :</p>
+</div>
+<div class="listingblock">
+<div class="title">fichier <code>archive</code></div>
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-bash hljs" data-lang="bash">#!/bin/bash
+
+dossier=archive
+
+if [ -e $dossier ]
+then
+  echo "$dossier existe, on ne touche à rien"
+else
+  mkdir $dossier
+  echo "création du répertoire $dossier"
+fi
+ls -ld $dossier</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>ce qui donne :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-bash hljs" data-lang="bash">$ ./archive
+création du répertoire archive
+drwxr-xr-x 2 jaclin jaclin 40 20 févr. 19:40 archive/
+
+$ ./archive
+archive existe, on ne touche à rien
+drwxr-xr-x 2 jaclin jaclin 40 20 févr. 19:40 archive/</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Autre exemple,
+le script ci-dessous affiche un message d&#8217;erreur si on l&#8217;appelle sans argument :</p>
+</div>
+<div class="listingblock">
+<div class="title">fichier mon_script</div>
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-bash hljs" data-lang="bash">#!/bin/bash
+
+if [ "$1" == "" ]
+then
+  echo "erreur, argument manquant"
+else
+  echo "l'argument vaut : $1"
+fi</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>ce qui donne :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-bash hljs" data-lang="bash">$ ./mon_script
+erreur, argument manquant
+
+$ ./mon_script mon_argument
+l'argument vaut : mon_argument</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_instruction_itérative"><a class="anchor" href="#_instruction_itérative"></a>4. Instruction itérative</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Il s&#8217;agit d&#8217;exécuter une instruction de façon répétitive.
+Par exemple :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-bash hljs" data-lang="bash">#!/bin/bash
+
+for couleur in coeur pique trefle carreau
+do
+  echo $couleur
+done</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>donne :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="nowrap">coeur
+pique
+trefle
+carreau</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Autre exemple :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-bash hljs" data-lang="bash">#!/bin/bash
+
+for i in {1..9}
+do
+  echo -n "$i "
+done</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>ce qui donne :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-none hljs">1 2 3 4 5 6 7 8 9</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Autre exemple :</p>
+</div>
+<div class="listingblock">
+<div class="title">fichier <code>les_args</code></div>
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-bash hljs" data-lang="bash">#!/bin/bash
+
+for f in $*
+do
+  echo "arg = $f"
+done</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Ce script parcours tous les arguments fournis, ce qui donne :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-bash hljs" data-lang="bash">$ ./les_args un deux trois
+arg = un
+arg = deux
+arg = trois</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>et aussi :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-bash hljs" data-lang="bash">$ ./les_args *
+arg = Bureau
+arg = Documents
+arg = Images
+arg = Modèles
+arg = Musique
+arg = Public
+arg = Téléchargements
+arg = Vidéos</code></pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p class="center">
+  <span style="font-size: 0.9em;">
+    <a href="https://jacquelincharbonnel.github.io/">Jacquelin Charbonnel</a>
+    <!-- &nbsp; &mdash; &nbsp; -->
+    &nbsp;
+    &copy;Creative Commons BY-NC-SA 4.0
+  </span>
+  </p>
+</footer>
+
+<script>
+var myDate = new Date(document.lastModified);
+myNewDate = new Intl.DateTimeFormat(
+            undefined,
+            {year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit"}
+        )
+        .format(myDate).replace(/\./g, '-');
+document.getElementById("lastmodify").innerHTML = myNewDate ;
+</script>
+
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

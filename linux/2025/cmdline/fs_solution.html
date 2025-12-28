@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Solution exercice fs4 :: Supports</title>
+    <link rel="canonical" href="https://jacquelincharbonnel.github.io/supports/linux/2025/cmdline/fs_solution.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<!-- reference des feuilles de styles supplémentaires -->
+<link rel="stylesheet" href="../../../_/css/layout.css">
+<link rel="stylesheet" href="../../../_/css/content.css">
+
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://jacquelincharbonnel.github.io/supports">Supports</a>
+  <!-- suppression du burger du bandeau
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+-->      
+    </div>
+<!-- suppression des boutons du bandeau
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+-->
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="linux" data-version="2025">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">Linux</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../context/overview.html">Le contexte</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../context/news.html">L&#8217;actualité</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="priseenmain.html">Utiliser le système</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="fs.html">Système de fichiers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="shell.html">Le shell</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="proc.html">Processus</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="redirect.html">Redirection et pipes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="remote.html">Connexions distantes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="script.html">Script shell</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cron.html">Planifier les tâches</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="admin.html">Gérer le système</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="su.html">Privilèges</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="appli.html">Les applications</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="admfs.html">L&#8217;espace de stockage</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="user.html">Les comptes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="services.html">Les services</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="nfs.html">NFS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="sshd.html">sshd</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Linux</span>
+    <span class="version">2025</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../../C/2023/index.html">C</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../C/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../concurrence/2024/index.html">Concurrence</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../concurrence/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../datatext/2023/index.html">DataText</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../datatext/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../json/2023/index.html">JSON</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../json/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">Linux</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">2025</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../python_objet/2024/index.html">Python objet</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../python_objet/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../supports/index.html">Supports</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../xml/2023/index.html">XML</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../xml/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../supports/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Linux</a></li>
+    <li><a href="fs_solution.html">Solution exercice fs4</a></li>
+  </ul>
+</nav>
+<!-- supression de "edit this page"
+  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/linux/./modules/cmdline/pages/fs_solution.adoc">Edit this Page</a></div>
+-->
+</div>
+  <!-- ajout de la date de modification -->
+     <div class="lastmodify"> dernière modification : 2025 </div>
+  <!-- fin ajout -->
+  <div class="content">
+<aside class="toc sidebar" data-title="Plan" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Solution exercice fs4</h1>
+<div class="olist arabic">
+<div class="title">Question fs4.1</div>
+<ol class="arabic">
+<li>
+<p>L&#8217;archive initiale est :</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-none hljs">$ tree archive
+archive/
+├── f1.txt
+├── f2.txt
+├── f3.txt
+├── lf1.txt -&gt; f1.txt
+├── rep1
+│   ├── f11.txt
+│   ├── lf11.txt -&gt; ../rep2/f21.txt
+│   ├── rep11
+│   │   └── f111.txt
+│   └── rep12
+└── rep2
+    ├── f21.txt
+    └── lr21 -&gt; ../rep1/rep11</code></pre>
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Cette arborescence contient des fichiers, des répertoires et des liens symboliques <em>valides</em>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Dans la suite, on se positionne dans le répertoire <code>archive</code>
+(il faut bien être quelque part). <code>archive</code> devient donc le répertoire courant.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-none hljs">$ cd archive</code></pre>
+</div>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>contenu du fichier <code>f11.txt</code></p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-none hljs">$ cat rep1/f11.txt
+contenu du fichier f11.txt</code></pre>
+</div>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>contenu du répertoire <code>rep11</code></p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-none hljs">$ ls rep1/rep11
+f111.txt</code></pre>
+</div>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>contenu du lien symbolique lf11.txt</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-none hljs">$ cat rep1/lf11.txt
+contenu du fichier f21.txt</code></pre>
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>créer, dans le répertoire <code>rep11</code>, une copie nommée <code>f112.txt</code> du fichier <code>f21.txt</code></p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-none hljs">$ cp rep2/f21.txt rep1/rep11/f112.txt</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">état</div>
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-none hljs">$ tree .
+.
+├── f1.txt
+├── f2.txt
+├── f3.txt
+├── lf1.txt -&gt; f1.txt
+├── rep1
+│   ├── f11.txt
+│   ├── lf11.txt -&gt; ../rep2/f21.txt
+│   ├── rep11
+│   │   ├── f111.txt
+│   │   └── f112.txt
+│   └── rep12
+└── rep2
+    ├── f21.txt
+    └── lr21 -&gt; ../rep1/rep11
+
+$ cat rep1/rep11/f112.txt
+contenu du fichier f21.txt</code></pre>
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>créer, dans le répertoire <code>rep1</code>, une copie nommée <code>rep13</code> du répertoire <code>rep2</code> (et de tout ce qu&#8217;il contient)</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-none hljs">$ cp -r rep2 rep1/rep13</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">état</div>
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-none hljs">$ tree .
+.
+├── f1.txt
+├── f2.txt
+├── f3.txt
+├── lf1.txt -&gt; f1.txt
+├── rep1
+│   ├── f11.txt
+│   ├── lf11.txt -&gt; ../rep2/f21.txt
+│   ├── rep11
+│   │   ├── f111.txt
+│   │   └── f112.txt
+│   ├── rep12
+│   └── rep13
+│       ├── f21.txt
+│       └── lr21 -&gt; ../rep1/rep11
+└── rep2
+    ├── f21.txt
+    └── lr21 -&gt; ../rep1/rep11</code></pre>
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>que devient le lien symbolique <code>lr21</code> du répertoire <code>rep13</code> ?</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>La cible du lien <code>rep1/rep13/lr21</code> n&#8217;existe pas.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-none hljs">$ ls rep2/lr21/
+f111.txt  f112.txt
+
+$ ls rep1/rep13/lr21/
+"rep1/rep13/lr21/": No such file or directory (os error 2)</code></pre>
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>supprimer <code>f2.txt</code> et <code>rep2</code></p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-none hljs">$ rm -r f2.txt rep2/</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">état</div>
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-none hljs">.
+├── f1.txt
+├── f3.txt
+├── lf1.txt -&gt; f1.txt
+└── rep1
+    ├── f11.txt
+    ├── lf11.txt -&gt; ../rep2/f21.txt
+    ├── rep11
+    │   ├── f111.txt
+    │   └── f112.txt
+    ├── rep12
+    └── rep13
+        ├── f21.txt
+        └── lr21 -&gt; ../rep1/rep11</code></pre>
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>que devient le lien symbolique <code>lf11.txt</code> ?</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>La cible du lien <code>rep1/lf11.txt</code> n&#8217;existe plus :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-none hljs">$ cat rep1/lf11.txt
+cat: rep1/lf11.txt: Aucun fichier ou dossier de ce nom</code></pre>
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>créer un répertoire <code>rep14</code> dans <code>rep1</code></p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-none hljs">$ mkdir rep1/rep14</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="title">état</div>
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-none hljs">.
+├── f1.txt
+├── f3.txt
+├── lf1.txt -&gt; f1.txt
+└── rep1
+    ├── f11.txt
+    ├── lf11.txt -&gt; ../rep2/f21.txt
+    ├── rep11
+    │   ├── f111.txt
+    │   └── f112.txt
+    ├── rep12
+    ├── rep13
+    │   ├── f21.txt
+    │   └── lr21 -&gt; ../rep1/rep11
+    └── rep14</code></pre>
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>déplacer <code>f3.txt</code> et <code>f112.txt</code> dans <code>rep14</code></p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-none hljs">$ mv f3.txt rep1/rep11/f112.txt rep1/rep14</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">état</div>
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-none hljs">.
+├── f1.txt
+├── lf1.txt -&gt; f1.txt
+└── rep1
+    ├── f11.txt
+    ├── lf11.txt -&gt; ../rep2/f21.txt
+    ├── rep11
+    │   └── f111.txt
+    ├── rep12
+    ├── rep13
+    │   ├── f21.txt
+    │   └── lr21 -&gt; ../rep1/rep11
+    └── rep14
+        ├── f112.txt
+        └── f3.txt</code></pre>
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>créer une copie nommée <code>rep1/rep14/rep141/f1411.txt</code> de <code>f111.txt</code></p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-none hljs">$ mkdir rep1/rep14/rep141
+$ cp rep1/rep11/f111.txt rep1/rep14/rep141/f1411.txt</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">état</div>
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-none hljs">.
+├── f1.txt
+├── lf1.txt -&gt; f1.txt
+└── rep1
+    ├── f11.txt
+    ├── lf11.txt -&gt; ../rep2/f21.txt
+    ├── rep11
+    │   └── f111.txt
+    ├── rep12
+    ├── rep13
+    │   ├── f21.txt
+    │   └── lr21 -&gt; ../rep1/rep11
+    └── rep14
+        ├── f112.txt
+        ├── f3.txt
+        └── rep141
+            └── f1411.txt</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<div class="title">Question fs4.2</div>
+<p>Intervertir <code>rep14</code> et <code>rep141</code>, de façon à avoir :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-none hljs">$ mv rep1/rep14/rep141/ rep1
+$ mv rep1/rep14 rep1/rep141/</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">état</div>
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-none hljs">.
+├── f1.txt
+├── lf1.txt -&gt; f1.txt
+└── rep1
+    ├── f11.txt
+    ├── lf11.txt -&gt; ../rep2/f21.txt
+    ├── rep11
+    │   └── f111.txt
+    ├── rep12
+    ├── rep13
+    │   ├── f21.txt
+    │   └── lr21 -&gt; ../rep1/rep11
+    └── rep141
+        ├── f1411.txt
+        └── rep14
+            ├── f112.txt
+            └── f3.txt</code></pre>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p class="center">
+  <span style="font-size: 0.9em;">
+    <a href="https://jacquelincharbonnel.github.io/">Jacquelin Charbonnel</a>
+    <!-- &nbsp; &mdash; &nbsp; -->
+    &nbsp;
+    &copy;Creative Commons BY-NC-SA 4.0
+  </span>
+  </p>
+</footer>
+
+<script>
+var myDate = new Date(document.lastModified);
+myNewDate = new Intl.DateTimeFormat(
+            undefined,
+            {year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit"}
+        )
+        .format(myDate).replace(/\./g, '-');
+document.getElementById("lastmodify").innerHTML = myNewDate ;
+</script>
+
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

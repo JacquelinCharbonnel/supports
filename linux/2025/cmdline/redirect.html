@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Redirection et pipes :: Supports</title>
+    <link rel="canonical" href="https://jacquelincharbonnel.github.io/supports/linux/2025/cmdline/redirect.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<!-- reference des feuilles de styles supplémentaires -->
+<link rel="stylesheet" href="../../../_/css/layout.css">
+<link rel="stylesheet" href="../../../_/css/content.css">
+
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://jacquelincharbonnel.github.io/supports">Supports</a>
+  <!-- suppression du burger du bandeau
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+-->      
+    </div>
+<!-- suppression des boutons du bandeau
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+-->
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="linux" data-version="2025">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">Linux</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../context/overview.html">Le contexte</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../context/news.html">L&#8217;actualité</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="priseenmain.html">Utiliser le système</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="fs.html">Système de fichiers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="shell.html">Le shell</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="proc.html">Processus</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="redirect.html">Redirection et pipes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="remote.html">Connexions distantes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="script.html">Script shell</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cron.html">Planifier les tâches</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="admin.html">Gérer le système</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="su.html">Privilèges</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="appli.html">Les applications</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="admfs.html">L&#8217;espace de stockage</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="user.html">Les comptes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="services.html">Les services</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="nfs.html">NFS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="sshd.html">sshd</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Linux</span>
+    <span class="version">2025</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../../C/2023/index.html">C</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../C/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../concurrence/2024/index.html">Concurrence</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../concurrence/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../datatext/2023/index.html">DataText</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../datatext/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../json/2023/index.html">JSON</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../json/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">Linux</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">2025</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../python_objet/2024/index.html">Python objet</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../python_objet/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../supports/index.html">Supports</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../xml/2023/index.html">XML</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../xml/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../supports/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Linux</a></li>
+    <li><a href="priseenmain.html">Utiliser le système</a></li>
+    <li><a href="redirect.html">Redirection et pipes</a></li>
+  </ul>
+</nav>
+<!-- supression de "edit this page"
+  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/linux/./modules/cmdline/pages/redirect.adoc">Edit this Page</a></div>
+-->
+</div>
+  <!-- ajout de la date de modification -->
+     <div class="lastmodify"> dernière modification : 2025 </div>
+  <!-- fin ajout -->
+  <div class="content">
+<aside class="toc sidebar" data-title="Plan" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Redirection et pipes</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Les redirections des E/S permettent d&#8217;assembler des processus en <em>pipeline</em>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_entréessorties_standard"><a class="anchor" href="#_entréessorties_standard"></a>1. Entrées/sorties standard</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>De base, tout processus dispose de 3 flux de communication :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>1 flux d&#8217;entrée <em>stdin</em> (descripteur 0) pour l&#8217;acquisition de données, affecté par défaut au clavier,</p>
+</li>
+<li>
+<p>2 flux de sortie : <em>stdout</em> (descripteur 1) pour la sortie des résultats,
+et <em>stderr</em> (descripteur 2) pour l&#8217;envoi des messages d&#8217;erreur,
+tous deux affectés par défaut à l&#8217;écran.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/redirect/redirect1.svg" alt="redirect1">
+</div>
+</div>
+<div class="paragraph">
+<p>Ainsi :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>read line</code> lit une ligne depuis <code>stdin</code>,</p>
+</li>
+<li>
+<p><code>echo $line</code> écrit une ligne sur <code>stdout</code>, et</p>
+</li>
+<li>
+<p><code>echo $line &gt;/dev/stderr</code> écrit une ligne sur <code>stderr</code>.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Un processus peut ouvrir d&#8217;autres flux, en plus de ces 3 flux parv défaut,
+pour par exemple lire ou écrire des données depuis ou dans des fichiers.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Par exemple, en exécutant :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ find / -type d -name lib
+find: ‘/boot/efi’: Permission non accordée
+find: ‘/boot/grub2’: Permission non accordée
+/tmp/lib</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>on constate que <code>find</code> sort 2 types de messages :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ceux correspondant aux répertoires trouvés</p>
+</li>
+<li>
+<p>ceux correspondant aux interdictions</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_redirection"><a class="anchor" href="#_redirection"></a>2. Redirection</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>C&#8217;est l&#8217;opération consistant à modifier les affectations ci-dessus.</p>
+</div>
+<div class="sect2">
+<h3 id="_redirection_de_lentrée_standard"><a class="anchor" href="#_redirection_de_lentrée_standard"></a>2.1. Redirection de l&#8217;entrée standard</h3>
+<div class="imageblock">
+<div class="content">
+<img src="_images/redirect/redirect2.svg" alt="redirect2">
+</div>
+</div>
+<div class="listingblock">
+<div class="title">exemples de redirection de l&#8217;entrée standard</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ less &lt; /etc/passwd</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ read line &lt; /etc/passwd
+$ echo $line
+root:x:0:0:root:/root:/bin/bash</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_redirection_de_la_sortie_standard"><a class="anchor" href="#_redirection_de_la_sortie_standard"></a>2.2. Redirection de la sortie standard</h3>
+<div class="imageblock">
+<div class="content">
+<img src="_images/redirect/redirect3.svg" alt="redirect3">
+</div>
+</div>
+<div class="listingblock">
+<div class="title">exemple redirection de la sortie standard</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ ls &gt; /tmp/ls.out        # écrase /tmp/ls.out s'il existait
+$ ls / &gt;&gt; /tmp/ls.out     # ajoute à la fin de /tmp/ls.out s'il existe, le crée sinon</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ find / -type d -name lib &gt; /dev/null
+find: ‘/boot/efi’: Permission non accordée
+find: ‘/boot/grub2’: Permission non accordée</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_redirection_de_la_sortie_derreur_standard"><a class="anchor" href="#_redirection_de_la_sortie_derreur_standard"></a>2.3. Redirection de la sortie d&#8217;erreur standard</h3>
+<div class="imageblock">
+<div class="content">
+<img src="_images/redirect/redirect4.svg" alt="redirect4">
+</div>
+</div>
+<div class="listingblock">
+<div class="title">exemple redirection de la sortie d&#8217;erreur standard</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ grep -R unix /etc 2&gt;/tmp/grep.err        # écrase /tmp/grep.err s'il existait
+$ grep -R unix /etc 2&gt;&gt;/tmp/grep.err       # n'écrase pas /tmp/grep.err s'il existait</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ find / -type d -name lib 2&gt;/dev/null
+/tmp/lib</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_combiner_les_redirections"><a class="anchor" href="#_combiner_les_redirections"></a>2.4. Combiner les redirections</h3>
+<div class="paragraph">
+<p>On peut mixer tout ça, afin de rediriger plusieurs flux pour un même processus :</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/redirect/redirect5.svg" alt="redirect5">
+</div>
+</div>
+<div class="listingblock">
+<div class="title">exemple</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ grep -R unix /etc &gt;/tmp/grep.out 2&gt;/tmp/grep.err  # redirige [1] et [2]
+$ grep bin &lt; /etc/passwd &gt; /tmp/bin.lines           # redirige [0] et [1]</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_autres_possibilités"><a class="anchor" href="#_autres_possibilités"></a>2.5. Autres possibilités</h3>
+<div class="paragraph">
+<p>D&#8217;autres redirections sont possibles, comme rediriger <code>stderr</code> vers <code>stdout</code>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/redirect/redirect6.svg" alt="redirect6">
+</div>
+</div>
+<div class="listingblock">
+<div class="title">exemple</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ grep -R unix /etc &gt;/tmp/grep.out 2&gt;&amp;1</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_devtty_et_devnull"><a class="anchor" href="#_devtty_et_devnull"></a>2.6. <code>/dev/tty</code> et <code>/dev/null</code></h3>
+<div class="paragraph">
+<p>Ce sont 2 fichiers périphériques particuliers :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ ls -l /dev/null /dev/tty
+crw-rw-rw-. 1 root root 1, 3 27 déc.  09:51 /dev/null
+crw-rw-rw-. 1 root tty  5, 0 27 déc.  09:51 /dev/tty</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>/dev/tty</code> correspond à la console courante.
+Lire depuis le fichier <code>/dev/tty</code> revient à lire sur le clavier.
+Ecrire sur <code>/dev/tty</code> revient à écrire sur l&#8217;écran.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Exemple d&#8217;utilisation :
+dans une commande dont la sortie a été redirigée vers un fichier,
+vouloir malgré tout écrire sur l&#8217;écran
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><code>/dev/null</code> est un <em>trou noir</em>.
+Lire sur <code>/dev/null</code> renvoie aussitôt une fin de fichier.
+De même, tout ce qui part sur <code>/dev/null</code> est perdu.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<code>/dev/null</code> est souvent utilisé pour faire disparaitre des information non souhaitées :
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ grep -il linux /etc/* 2&gt;/dev/null</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_pipe"><a class="anchor" href="#_pipe"></a>3. Pipe</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>C&#8217;est une chaîne de processus dont les flux d&#8217;E/S sont interconnectés 2 à 2.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/redirect/pipe1.svg" alt="pipe1">
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ ps aux | grep $USER | less
+$ ps aux | grep $USER &gt; /tmp/ps.out</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_filtres"><a class="anchor" href="#_filtres"></a>4. Filtres</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Un filtre est une commande destinée à agir sur le flux de données qui la traverse.
+Les données arrivent sur <code>stdin</code> et ressortent modifiées sur <code>stdout</code> :</p>
+</div>
+<div class="listingblock">
+<div class="title">schéma d&#8217;utilisation d&#8217;un filtre</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ ./un_filtre &lt;entree &gt;sortie</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Il s&#8217;intercale dans un pipe :</p>
+</div>
+<div class="listingblock">
+<div class="title">filtre dans un pipe</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ ./premier | ./un_filtre | ./dernier</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>La plupart des commandes Unix lisent leurs données au choix sur l&#8217;entrée standard ou depuis un fichier.</p>
+</div>
+<div class="paragraph">
+<p>Exemple de la commande <code>less</code> :
+si on lui fournit un argument, alors <code>less</code> le considère comme le nom d&#8217;un fichier à visualiser,
+et s&#8217;il n&#8217;y a pas d&#8217;argument, alors <code>less</code> visualise ce qui lui arrive sur <code>stdin</code> :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ less /etc/passwd        # données lues depuis un fichier
+$ less &lt; /etc/passwd      # données lues depuis stdin
+$ ls -l | less            # données lues depuis stdin</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Donc souvent, les commandes Unix se comportent comme un filtre lorsqu&#8217;on ne leur fournit pas
+le nom de fichier qu&#8217;elles attendent. Exemple :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ grep root /etc/passwd        # grep lisant ses données depuis un fichier
+$ ps aux | grep $USER | less   # grep utilisé comme filtre</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_commandes_anodines"><a class="anchor" href="#_commandes_anodines"></a>5. Commandes <em>anodines</em></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Les commandes historiques d&#8217;Unix sont souvent simples.
+Elles suivent généralement le principe suivant :
+<em>faire une chose précise, sans chercher à en faire trop</em>
+(« <em>Do one thing and do it well</em> »).</p>
+</div>
+<div class="paragraph">
+<p>Voici donc quelques commandes anodines de manipulation de texte.
+Malgré leur simplicité apparente,
+elle peuvent s&#8217;avèrer extrêmement utiles lorsqu&#8217;on les combine entre elles.</p>
+</div>
+<div class="sect2">
+<h3 id="_lexemple_de_cat"><a class="anchor" href="#_lexemple_de_cat"></a>5.1. L&#8217;exemple de <code>cat</code></h3>
+<div class="paragraph">
+<p><code>cat</code> est l&#8217;une des commandes les plus simples qu&#8217;il soit.</p>
+</div>
+<h4 id="_consulter_le_contenu_dun_fichier" class="discrete">consulter le contenu d&#8217;un fichier</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ cat /etc/passwd</code></pre>
+</div>
+</div>
+<h4 id="_consulter_le_contenu_de_plusieurs_fichiers" class="discrete">consulter le contenu de plusieurs fichiers</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ cat /etc/passwd /etc/group</code></pre>
+</div>
+</div>
+<h4 id="_concaténer_plusieurs_fichiers" class="discrete">concaténer plusieurs fichiers</h4>
+<div class="paragraph">
+<p>Par conséquent, on peut l&#8217;utiliser pour concaténer plusieurs fichiers
+(d&#8217;où son nom) :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ cat /etc/passwd /etc/group &gt; /tmp/concat</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Si on ne lui fournit pas d&#8217;argument, alors elle recopie sur sa sortie standard
+ce qui arrive sur son entrée stanbdard.
+C&#8217;est une fonctionnalité vraiment toute bête.
+Mais cela permet de remplir un fichier à partir du clavier sans utiliser un éditeur de texte :</p>
+</div>
+<h4 id="_créer_un_fichier" class="discrete">créer un fichier</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ cat &gt; /tmp/test <i class="conum" data-value="1"></i><b>(1)</b>
+un
+deux
+trois
+^D</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td><code>stdin</code> affecté au clavier,
+<code>stdout</code> redirigé vers <code>/tmp/test</code></td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>ou de le compléter :</p>
+</div>
+<h4 id="_compléter_un_fichier" class="discrete">compléter un fichier</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ cat &gt;&gt; /tmp/concat
+un
+deux
+trois
+^D</code></pre>
+</div>
+</div>
+<h4 id="_numéroter_les_lignes" class="discrete">numéroter les lignes</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ cat -n /etc/services
+$ ls | cat -n</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_wc"><a class="anchor" href="#_wc"></a>5.2. wc</h3>
+<div class="paragraph">
+<p><code>wc</code> (<em>word count</em>) renvoie le nombres de caractères, de mots et de lignes d&#8217;un flux.
+C&#8217;est un filtre utile pour compter.
+Par exemple, combien y a-t-il de fichiers dans son homedir :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ find ~ -type f | wc -l</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_more_less"><a class="anchor" href="#_more_less"></a>5.3. more - less</h3>
+<div class="paragraph">
+<p><code>more</code> est la commande historique, <code>less</code> en est une amélioration.
+Ces 2 commandes paginent un flux.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ ps -edf | less</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_grep"><a class="anchor" href="#_grep"></a>5.4. grep</h3>
+<div class="paragraph">
+<p><code>grep</code> filtre les lignes d’un flux.
+<code>grep</code> s&#8217;intercale fréquemment dans un pipe pour éliminer des lignes :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ ps -edf | grep $USER | less</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_awk"><a class="anchor" href="#_awk"></a>5.5. awk</h3>
+<div class="paragraph">
+<p><code>awk</code> est l&#8217;exception de cette liste, car elle n&#8217;est pas anodine,
+c&#8217;est une puissante commande de traitement de texte.
+Aujourd&#8217;hui, elle n&#8217;est plus indispensable
+(awk est le précurseur du langage Perl qui l&#8217;a supplanté),
+mais sa faculté à découper une ligne de texte
+la rend encore utile au quotidien.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ ps aux | awk '{print $1,$2,$11}'
+USER PID COMMAND
+root 1 /usr/lib/systemd/systemd
+root 980 /usr/lib/systemd/systemd-journald
+root 1019 /usr/lib/systemd/systemd-nsresourced
+root 1020 /usr/lib/systemd/systemd-userdbd
+root 1036 /usr/lib/systemd/systemd-udevd
+rpc 1226 /usr/bin/rpcbind
+systemd+ 1234 /usr/lib/systemd/systemd-oomd
+systemd+ 1236 /usr/lib/systemd/systemd-resolved</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ awk -F : '{print $1," -&gt; ",$5}' /etc/passwd
+root  -&gt;  Super User
+bin  -&gt;  bin
+daemon  -&gt;  daemon
+adm  -&gt;  adm
+lp  -&gt;  lp
+sync  -&gt;  sync
+shutdown  -&gt;  shutdown
+halt  -&gt;  halt
+mail  -&gt;  mail
+operator  -&gt;  operator
+games  -&gt;  games
+ftp  -&gt;  FTP User
+nobody  -&gt;  Kernel Overflow User</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_sort"><a class="anchor" href="#_sort"></a>5.6. sort</h3>
+<div class="paragraph">
+<p><code>sort</code> trie les lignes d’un flux (par ordre alphabétique par défaut) :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ sort /etc/passwd | head -7
+abrt:x:173:173::/etc/abrt:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/usr/sbin/nologin
+apache:x:48:48:Apache:/usr/share/httpd:/sbin/nologin
+backuppc:x:976:976::/var/lib/BackupPC:/sbin/nologin
+bin:x:1:1:bin:/bin:/usr/sbin/nologin
+chrony:x:997:995:chrony system user:/var/lib/chrony:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/usr/sbin/nologin</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Par exemple, avoir la liste de ses répertoires personnels par taille décroissante :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ du -d1 ~ | sort -rn
+14269060        /home/jaclin
+11658832        /home/jaclin/Documents
+219080          /home/jaclin/.mozilla
+192776          /home/jaclin/.local
+61424           /home/jaclin/Téléchargements
+24784           /home/jaclin/tmp
+2944            /home/jaclin/Images
+56              /home/jaclin/bin
+32              /home/jaclin/.ssh
+24              /home/jaclin/.bashrc.d
+4               /home/jaclin/Desktop
+0               /home/jaclin/Vidéos</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>ou avec des tailles plus parlante :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ du -hd1 ~ | sort -rh
+14G     /home/jaclin
+12G     /home/jaclin/Documents
+214M    /home/jaclin/.mozilla
+189M    /home/jaclin/.local
+60M     /home/jaclin/Téléchargements
+25M     /home/jaclin/tmp
+2,9M    /home/jaclin/Images
+56K     /home/jaclin/bin
+32K     /home/jaclin/.ssh
+24K     /home/jaclin/.bashrc.d
+4,0K    /home/jaclin/Desktop
+0       /home/jaclin/Vidéos</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_uniq"><a class="anchor" href="#_uniq"></a>5.7. uniq</h3>
+<div class="paragraph">
+<p><code>uniq</code> garde 1 seul exemplaire d’une suite de lignes consécutives identiques
+(et peut compter les exemplaires regroupés).</p>
+</div>
+<div class="paragraph">
+<p>Par exemple :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ cat  f
+un
+un
+deux
+un
+trois
+trois
+trois
+trois
+deux
+deux
+
+$ cat f | uniq -c
+2 un
+1 deux
+1 un
+4 trois
+2 deux</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Par exemple, sortir la liste des utilisateurs associés à leur nombre de processus, triée par nombre de processus :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ ps aux | sort | awk '{print $1}' | uniq -c | sort -n
+      1 chrony
+      1 colord
+      1 geoclue
+      1 polkitd
+      1 rtkit
+      1 USER
+      2 avahi
+      2 dbus
+      2 postfix
+      2 systemd+
+    120 jaclin
+    265 root</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_tail_head"><a class="anchor" href="#_tail_head"></a>5.8. tail - head</h3>
+<div class="paragraph">
+<p>Extrait les dernières/premières lignes d’un flux.</p>
+</div>
+<div class="listingblock">
+<div class="title">les 10 premiers mots contenant <code>baba</code></div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ grep baba /usr/share/dict/words | head
+Ababa
+baba
+babacoote
+babai
+babajaga
+baba-koto
+babakoto
+babas
+babasco
+babassu</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">les 10 derniers mots contenant <code>baba</code></div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ grep baba /usr/share/dict/words | tail
+babasco
+babassu
+babassus
+babasu
+babaylan
+babaylanes
+Barbabas
+Cayubaba
+Cayubaban
+Mbabane</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">les 3 plus gros répertoires</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ du -h ~ | sort -h | tail -3
+367M    /home/jaclin/.config
+12G     /home/jaclin/Documents
+14G     /home/jaclin</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A noter l’option -f de <code>tail</code>, qui lui permet de rester en attente d’arrivée de nouvelles lignes dans le ou les fichiers spécifiés.
+Très utile pour surveiller les logs.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ tail -f /var/log/messages</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_tee"><a class="anchor" href="#_tee"></a>5.9. <code>tee</code></h3>
+<div class="paragraph">
+<p><code>tee</code> est un dupliqueur de flux.
+Les données issues de <code>stdin</code> ressortent de <code>tee</code> à la fois sur <code>stdout</code>
+et dans les fichiers dont les noms lui sont donnés.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/redirect/tee.svg" alt="tee">
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ find /usr -name '*lib*' | tee /tmp/find.out | less</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_heredoc"><a class="anchor" href="#_heredoc"></a>6. Heredoc</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>C&#8217;est une construction syntaxique permettant d&#8217;envoyer des lignes de texte sur <code>stdin</code>,
+sans créer de fichier :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ ssh data &lt;&lt; EOT
+whoami
+hostname
+pwd
+EOT</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Cette écriture est pratique dans un script, car elle évite de créer un fichier de données à part.
+La commande ci-dessus est équivalente aux 2 commandes ci-dessous :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ cat &gt; /tmp/cmd
+whoami
+hostname
+pwd
+^D
+
+$ ssh data &lt; /tmp/cmd</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_conclusion"><a class="anchor" href="#_conclusion"></a>7. Conclusion</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Les commandes Unix sont généralement minimalistes, mais pensées pour coopérer.
+Les composer via les pipes permet de réaliser des traitements sophistiqués.
+Elles sont simples par conception, spécialisées par fonction, et puissantes par composition.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p class="center">
+  <span style="font-size: 0.9em;">
+    <a href="https://jacquelincharbonnel.github.io/">Jacquelin Charbonnel</a>
+    <!-- &nbsp; &mdash; &nbsp; -->
+    &nbsp;
+    &copy;Creative Commons BY-NC-SA 4.0
+  </span>
+  </p>
+</footer>
+
+<script>
+var myDate = new Date(document.lastModified);
+myNewDate = new Intl.DateTimeFormat(
+            undefined,
+            {year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit"}
+        )
+        .format(myDate).replace(/\./g, '-');
+document.getElementById("lastmodify").innerHTML = myNewDate ;
+</script>
+
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

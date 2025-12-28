@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Le contexte :: Supports</title>
+    <link rel="canonical" href="https://jacquelincharbonnel.github.io/supports/linux/2025/context/overview.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<!-- reference des feuilles de styles supplémentaires -->
+<link rel="stylesheet" href="../../../_/css/layout.css">
+<link rel="stylesheet" href="../../../_/css/content.css">
+
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://jacquelincharbonnel.github.io/supports">Supports</a>
+  <!-- suppression du burger du bandeau
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+-->      
+    </div>
+<!-- suppression des boutons du bandeau
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+-->
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="linux" data-version="2025">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">Linux</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="overview.html">Le contexte</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="news.html">L&#8217;actualité</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../cmdline/priseenmain.html">Utiliser le système</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cmdline/fs.html">Système de fichiers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cmdline/shell.html">Le shell</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cmdline/proc.html">Processus</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cmdline/redirect.html">Redirection et pipes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cmdline/remote.html">Connexions distantes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cmdline/script.html">Script shell</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cmdline/cron.html">Planifier les tâches</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../cmdline/admin.html">Gérer le système</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cmdline/su.html">Privilèges</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cmdline/appli.html">Les applications</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cmdline/admfs.html">L&#8217;espace de stockage</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cmdline/user.html">Les comptes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../cmdline/services.html">Les services</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../cmdline/nfs.html">NFS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../cmdline/sshd.html">sshd</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Linux</span>
+    <span class="version">2025</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../../C/2023/index.html">C</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../C/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../concurrence/2024/index.html">Concurrence</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../concurrence/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../datatext/2023/index.html">DataText</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../datatext/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../json/2023/index.html">JSON</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../json/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">Linux</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">2025</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../python_objet/2024/index.html">Python objet</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../python_objet/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../supports/index.html">Supports</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../xml/2023/index.html">XML</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../xml/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../supports/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Linux</a></li>
+    <li><a href="overview.html">Le contexte</a></li>
+  </ul>
+</nav>
+<!-- supression de "edit this page"
+  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/linux/./modules/context/pages/overview.adoc">Edit this Page</a></div>
+-->
+</div>
+  <!-- ajout de la date de modification -->
+     <div class="lastmodify"> dernière modification : 2025 </div>
+  <!-- fin ajout -->
+  <div class="content">
+<aside class="toc sidebar" data-title="Plan" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Le contexte</h1>
+<div class="sect1">
+<h2 id="_linux"><a class="anchor" href="#_linux"></a>1. Linux</h2>
+<div class="sectionbody">
+<div class="imageblock right">
+<div class="content">
+<img src="_images/overview/torvals.jpg" alt="Linus Torvalds" width="120">
+</div>
+<div class="title">Linus Torvalds</div>
+</div>
+<div class="paragraph">
+<p>En 1991, Linus Torvalds crée, pendant ses études, un noyau de système d&#8217;exploitation, qu&#8217;il nomme Linux.</p>
+</div>
+<div class="paragraph">
+<p>L&#8217;objectif d&#8217;un noyau système est d&#8217;interagir avec les composants physiques de l&#8217;ordinateur (processeurs, mémoire, stockage, réseau, etc.).
+C&#8217;est l&#8217;interface entre le matériel et les applications,
+un ensemble de fonctions (les fonctions systèmes) que les développeurs d&#8217;applications appellent pour interagir avec le matériel.</p>
+</div>
+<div class="paragraph">
+<p>Pour avoir un système d&#8217;exploitation complet, il faut envelopper le noyau de commandes
+permettant à un humain de le piloter.
+C&#8217;est ce qu&#8217;apporte GNU.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Linux est aussi le noyau du système Android.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gnulinux"><a class="anchor" href="#_gnulinux"></a>2. GNU/Linux</h2>
+<div class="sectionbody">
+<div class="imageblock left">
+<div class="content">
+<img src="_images/overview/gnu.png" alt="GNU" width="100">
+</div>
+</div>
+<div class="paragraph">
+<p>GNU est un projet qui débute en 1983, à l&#8217;initiative de Richard Stallman (MIT).
+Son but est de créer un jeu de commandes permettant à un utilisateur de gérer un ordinateur.</p>
+</div>
+<div class="paragraph">
+<p>Les commandes GNU sont une réécriture des commandes Unix.
+Par conséquent, l&#8217;association GNU+Linux donne un système d&#8217;exploitation de type Unix.</p>
+</div>
+<div class="paragraph">
+<p>Le code de GNU est ouvert : c&#8217;est du logiciel libre.</p>
+</div>
+<div class="imageblock right">
+<div class="content">
+<img src="_images/overview/stallman.jpg" alt="Richard Stallman" width="120">
+</div>
+<div class="title">Richard Stallman</div>
+</div>
+<h3 id="_richard_stallman" class="discrete">Richard Stallman</h3>
+<div class="paragraph">
+<p>C&#8217;est avec le projet GNU que le concept de logiciel libre est clairement défini et promu.</p>
+</div>
+<div class="paragraph">
+<p>Stallman est l&#8217;auteur de la GPL, la <em>licence publique générale</em> GNU.
+La GPL fixe les conditions légales de distribution d&#8217;un logiciel libre.
+Elle garantit à l&#8217;utilisateur le droit :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>d&#8217;exécuter le logiciel, pour n&#8217;importe quel usage ;</p>
+</li>
+<li>
+<p>d&#8217;étudier le fonctionnement d&#8217;un programme et de l&#8217;adapter à ses besoins, ce qui suppose un accès aux codes sources ;</p>
+</li>
+<li>
+<p>de modifier le logiciel d&#8217;origine et de redistribuer librement les versions modifiées.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Le projet GNU a joué un rôle crucial dans l&#8217;histoire du logiciel libre en le structurant, en le popularisant et en créant un écosystème florissant.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Stallman a donné une conférence à l&#8217;université d&#8217;Angers en 2016
+(dont on trouve encore des traces dans <a href="https://www.ouest-france.fr/pays-de-la-loire/maine-et-loire/les-recettes-informatiques-de-stallman-4174367">Ouest-France</a>)
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_unix"><a class="anchor" href="#_unix"></a>3. Unix</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_lhistoire"><a class="anchor" href="#_lhistoire"></a>3.1. L&#8217;histoire</h3>
+<div class="paragraph">
+<p>Unix est un système d&#8217;exploitation créé en 1969 par Ken Thompson (Bell Labs, AT&amp;T).</p>
+</div>
+<div class="paragraph">
+<p>Fin des années 1960, les laboratoires Bell, réputés pour leurs avancées en télécommunications, travaillent sur un système d&#8217;exploitation ambitieux nommé Multics.
+Mais ce projet, bien que novateur, s&#8217;avère trop complexe et gourmand en ressources.</p>
+</div>
+<div class="imageblock right">
+<div class="content">
+<img src="_images/overview/thompson-ritchie.jpg" alt="Ken Thompson &amp; Dennis Ritchie" width="220">
+</div>
+<div class="title">Thompson &amp; Ritchie</div>
+</div>
+<div class="paragraph">
+<p>Deux chercheurs des Bell Labs impliqués dans le projet Multics, Ken Thompson et Dennis Ritchie, décident alors de développer leur propre système, plus simple et efficace.
+C&#8217;est ainsi que nait le système Unics, développé sur un vieux DPD-7, un mini-ordinateur DEC.
+Mais Unics, écrit en assembleur, n&#8217;est pas transposable sur d&#8217;autres architectures matérielles.
+L&#8217;idée germe alors de créer un langage de programmation spécialement pour réécrire Unics.
+C&#8217;est ainsi que Ritchie crée le langage C, et que Unics, alias Unix, est réécrit en C.
+Il devient ainsi portable, et se diffuse rapidement dans les universités.
+Unix devient populaire.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Aujourd&#8217;hui, le langage C est toujours très utilisé.
+C&#8217;est un langage de bas niveau, qui colle de près à l&#8217;architecture matérielle.
+Il est de ce fait efficace, c&#8217;est-à-dire que les exécutables obtenus par compilation d&#8217;un code C sont petits en taille et rapides.
+C est inégalable dans le développement des systèmes d&#8217;exploitation (le noyau Windows est écrit en C), des applications serveur (PostgreSQL, Apache le sont également), des drivers, et du temps réel. Les interpréteurs PHP, Perl, Python sont aussi écrits en C.</p>
+</div>
+<div class="paragraph">
+<p>Unix est encore aujourd&#8217;hui majoritairement écrit en C.
+Mais récemment, pour le code de Linux, Thorvals ouvre petit à petit la porte à un nouveau langage, plus sécurisé : Rust.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Unix représente une grande famille de systèmes d&#8217;exploitation.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="_images/overview/Unix_history.svg"><img src="_images/overview/Unix_history.svg" alt="Unix history"></a>
+</div>
+<div class="title"><a href="https://upload.wikimedia.org/wikipedia/commons/7/77/Unix_history-simple.svg">Unix history version simple (source wikipédia)</a></div>
+</div>
+<div class="paragraph">
+<p>Que ce soit Ultrix, Irix, Xenix, Aix,
+<span class="line-through">Astérix</span>,
+<span class="line-through">Obélix</span>
+ou n&#8217;importe quel système de cette grande famille,
+l&#8217;utilisateur dispose d&#8217;un jeu de commandes de base à peu près standard, utilisable en mode texte depuis un terminal.</p>
+</div>
+<h4 id="_deux_branches_principales" class="discrete">Deux branches principales</h4>
+<div class="paragraph">
+<p>Cette grande famille se divise en 2 branches : <em>BSD</em> et <em>System V</em>.</p>
+</div>
+<div class="paragraph">
+<p>BSD (<em>Berkeley Software Distribution</em>) est une branche majeure de l&#8217;arbre ci-dessus, issue de l&#8217;Université californienne Berkeley (à partir de 1977).</p>
+</div>
+<div class="paragraph">
+<p>System V est l&#8217;autre branche majeure d&#8217;Unix (développée par AT&amp;T, à partir de 1983).</p>
+</div>
+<div class="paragraph">
+<p>Ces deux branches ont des philosophies différentes et ont évolué indépendamment.
+BSD a mis l&#8217;accent sur la portabilité et l&#8217;open-source, tandis que System V s&#8217;est concentré sur les performances et les fonctionnalités.</p>
+</div>
+<div class="paragraph">
+<p>System V a joué un rôle crucial dans la standardisation de l&#8217;interface système Unix.
+Un grand nombre de systèmes Unix commerciaux sont des descendants directs de System V.
+Et GNU/Linux lui a emprunté de nombreux concepts et outils.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_propriétaires_ou_libres"><a class="anchor" href="#_propriétaires_ou_libres"></a>3.2. Propriétaires ou libres</h3>
+<div class="paragraph">
+<p>Certains Unix sont propriétaires, donc vendus sous licence.
+Ils sont développés par des sociétés commerciales, principalement des constructeurs de mini-ordinateurs et stations de travail.
+On peut citer :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Ultrix (Digital Equipment Corporation)</p>
+</li>
+<li>
+<p>NeXTSTEP (NeXT)</p>
+</li>
+<li>
+<p>SunOS et Solaris (SUN)</p>
+</li>
+<li>
+<p>Xenix (créé par Microsoft, puis cédé à SCO)</p>
+</li>
+<li>
+<p>Unixware (Novell)</p>
+</li>
+<li>
+<p>AIX (IBM)</p>
+</li>
+<li>
+<p>IRIX (Silicon Graphics)</p>
+</li>
+<li>
+<p>BOS (Bull)</p>
+</li>
+<li>
+<p>HP-UX (Hewlett-Packard)</p>
+</li>
+<li>
+<p>True64 (DEC/Compaq)</p>
+</li>
+<li>
+<p>MacOS (Apple)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Xenix est le premier Unix propriétaire pour PC.</p>
+</div>
+<div class="paragraph">
+<p>A partir de la fin des années 80, l&#8217;arrivée progressive des Unix libres sur PC
+(GNU/Linux, FreeBSD, OpenBSD et NetBSD)
+a relativisé l&#8217;importance des Unix propriétaires.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_caractéristiques_techniques"><a class="anchor" href="#_caractéristiques_techniques"></a>3.3. Caractéristiques techniques</h3>
+<div class="paragraph">
+<p>Unix est un OS multi-tâches et multi-utilisateurs.
+Multi-tâches signifie qu&#8217;il peut réaliser plusieurs choses en même temps.
+Et multi-utilisateurs signifie que plusieurs personnes peuvent travailler dans leur propre environnement sur une même machine.</p>
+</div>
+<div class="paragraph">
+<p>Dans les années 80, les systèmes des ordinateurs personnels, comme CP/M, Apple DOS, MS/DOS, n&#8217;étaient ni multi-tâches, ni multi-utilisateurs.
+Et même jusqu&#8217;au milieu des années 90, Windows 95 n&#8217;était toujours pas multi-utilisateurs.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_posix"><a class="anchor" href="#_posix"></a>3.4. POSIX</h3>
+<div class="paragraph">
+<p>POSIX (Portable Operating System Interface) est une norme pour la portabilité des logiciels.
+POSIX garantit qu&#8217;un logiciel écrit pour un système conforme à POSIX fonctionnera correctement sur un autre système conforme, sans nécessiter de modifications majeures.
+Les systèmes conformes à POSIX offrent un ensemble commun d&#8217;outils et de commandes.</p>
+</div>
+<div class="paragraph">
+<p>La norme POSIX est étroitement lié à UNIX, car elle s&#8217;en est largement inspirée.
+Et donc nombreux sont les systèmes UNIX à y être conformes.
+Linux est hautement conforme POSIX.
+Windows, quant à lui, en est loin, c&#8217;est pourquoi une application Unix ne fonctionne pas sous Windows (et inversement).
+MacOS (basé sur un noyau Unix) l&#8217;est beaucoup plus, bien qu&#8217;un certain nombre d&#8217;extensions développées par Apple l&#8217;éloigne de la norme.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_distributions_linux"><a class="anchor" href="#_distributions_linux"></a>4. Distributions Linux</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Une distribution Linux se compose du système GNU/Linux et d&#8217;un ensemble d&#8217;applications open-source minutieusement sélectionnées.
+Une distribution est gérée par une communauté plus ou moins diffuse de contributeurs.
+Créer une distribution consiste à choisir les applications intéressantes (<em>faire son marché</em> sur Internet), et les intégrer
+ (les compiler, les configurer) de façon à constituer un environnement de travail opérationnel et cohérent.</p>
+</div>
+<div class="paragraph">
+<p>Dans la plupart des distributions, chaque application se présente, avant installation, sous la forme d&#8217;un paquet (<em>package</em>).
+Un package est une archive contenant l&#8217;exécutable de l&#8217;application, sa configuration ainsi que des informations de dépendance envers d&#8217;autres packages.
+Installer une application consiste alors à récupérer sur Internet son package et à le désarchiver, ce qui va éparpiller (façon puzzle) les fichiers de l&#8217;archive sur tout le filesystem.</p>
+</div>
+<div class="paragraph">
+<p>Chaque distribution propose un dépot (<em>repository</em>) de packages, qui n&#8217;est rien dautre qu&#8217;un entrepot contenant tous les packages sélectionnés par la distribution, et qui sont destinés au téléchargement.
+Ces dépots sont répliqués sur Internet, pour notamment optimiser la qualité de service.</p>
+</div>
+<div class="paragraph">
+<p>Exemples de distribution Linux :
+Debian,
+RHEL,
+Fedora,
+Ubuntu,
+CentOS,
+AlmaLinux,
+Scientific Linux,
+Rocky Linux,
+Oracle Linux,
+openSUSE,
+Mageia,
+Mandriva.</p>
+</div>
+<div class="paragraph">
+<p>Un système GNU/Linux est donc un assemblage de packages.
+Installer un système consiste donc à
+choisir une distributionv,
+et à lancer le processus d&#8217;installation, qui recopie localement le noyau Linux et installe les packages souhaités.</p>
+</div>
+<div class="sect2">
+<h3 id="_critères_distinctifs"><a class="anchor" href="#_critères_distinctifs"></a>4.1. Critères distinctifs</h3>
+<div class="paragraph">
+<p>Il existe différents systèmes de packaging, dont les plus connus sont RPM et DEB.
+Chaque distribution repose sur l&#8217;un d&#8217;eux.
+C&#8217;est un critère de différentation important entre les distributions.
+En effet, deux distributions basées sur le même système de packaging possèdent des filesystem identiques :
+les répertoires sont organisés de la même façon, les fichiers portent le même nom et sont situés au même endroit.
+Et elles utilisent aussi les mêmes commandes pour gérer les applications.</p>
+</div>
+<div class="paragraph">
+<p>A contrario, deux distributions reposant sur deux systèmes de packaging distincts ont des façons différentes de rechercher, installer et mettre à jour les applications.
+Les dépôts de paquets ne sont pas les mêmes, et les noms de paquets pas forcément non plus.</p>
+</div>
+<div class="paragraph">
+<p>Les distributions se distinguent aussi par :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>le public visé : par exemple,
+le grand public (Ubuntu, Fedora),
+les enfants (PrimTux, Sugar on a Stick),
+les informaticiens (Gentoo, Arch Linux),
+l&#8217;embarqué (Yocto Project, Buildroot et OpenWrt),
+ etc. ;</p>
+</li>
+<li>
+<p>la machine cible :
+poste de travail (Ubuntu, Linux Mint, Fedora, OpenSuse),
+serveur (RHEL, Debian, CentOS) ou smartphone ;</p>
+</li>
+<li>
+<p>la stabilité : les applications proposées sont éprouvées (Debian), ou au contraire fraichement sorties (Fedora) ;</p>
+</li>
+<li>
+<p>la tolérance aux logiciels non libres, notamment au niveau des pilotes et des codecs ;</p>
+</li>
+<li>
+<p>la durée de vie des versions et la cadence des sorties, des plus sereines
+(par exemple Debian ou RHEL avec une durée de vie de 10 ans)
+aux plus dynamiques
+(par exemple Fedora, avec une version majeure tous les 6 mois, maintenue 1 an).</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_libre_ou_commerciale"><a class="anchor" href="#_libre_ou_commerciale"></a>4.2. Libre ou commerciale</h3>
+<div class="paragraph">
+<p>La distribution peut être gérée par une communauté diffuse (distribution libre) ou par une entreprise privée (distribution commerciale).
+Cela n&#8217;a pas d&#8217;impact sur le résultat final proposé qui reste libre, mais cela influe sur la stratégie et la philosophie de la distribution
+(car souvent ces sociétés comptent générer des profits sur le support qu&#8217;elles proposent).</p>
+</div>
+<div class="paragraph">
+<p>Parmi les distributions commerciales répandues, on peut citer :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>RHEL (RedHat Enterprise Linux), créée et maintenue par RedHat,</p>
+</li>
+<li>
+<p>Ubuntu, financé par Canonical,</p>
+</li>
+<li>
+<p>SLE (SUSE Linux Enterprise), maintenue aujourd&#8217;hui par Suse,</p>
+</li>
+<li>
+<p>Oracle Linux.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Parmi les distributions libres répandues, on peut citer :
+Debian, Fedora, CentOS, Gentoo, AlmaLinux, Arch Linux, openSUSE.</p>
+</div>
+<div class="imageblock right">
+<div class="content">
+<img src="_images/overview/redhat.svg" alt="redhat" width="64">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_packaging_rpm"><a class="anchor" href="#_packaging_rpm"></a>4.3. Packaging RPM</h3>
+<div class="paragraph">
+<p>RPM (RedHat Package Manager) est l&#8217;un des systèmes de packaging incontournables, créé par la société RedHat.</p>
+</div>
+<div class="sect3">
+<h4 id="_histoire_mouvementée_de_cette_famille_de_distributions"><a class="anchor" href="#_histoire_mouvementée_de_cette_famille_de_distributions"></a>4.3.1. Histoire mouvementée de cette famille de distributions</h4>
+<div class="paragraph">
+<p>RedHat crée sa distribution <em>RedHat Linux</em> en 1997, et définit à cette occasion le format RPM de ses packages et des dépôts associés.
+Mais en 2001, elle décide de remplacer sa distribution <em>RedHat Linux</em> par deux nouvelles distributions : <em>RedHat Enterprise Linux</em> (RHEL) et Fedora.
+Soubressauts dans la communauté libriste, car
+RHEL n&#8217;est pas téléchargeable gratuitement.
+Elle est commercialisée sous la forme d&#8217;une souscription à un contrat de maintenance.</p>
+</div>
+<div class="paragraph">
+<p>Fedora, quant à elle, est une distribution communautaire.
+C&#8217;est une sorte de laboratoire
+qui teste les dernières versions des applications, valide de nouveaux concepts, etc.
+Les technologies ainsi validées et éprouvées grandeur nature sont destinées à intégrer quelques années plus tard RHEL.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Malgré son caractère expérimental, Fedora est une distribution fiable.
+Par contre, on n’est pas à l’abri d’un saut technologique entre 2 versions majeures successives.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>La disparition de la distribution gratuite <em>RedHat Linux</em>,
+couramment utilisée à l&#8217;époque sur serveurs en entreprise et dans l&#8217;enseignement supérieur/recherche,
+a fait réagir la communauté,
+qui a alors créer, en réponse, la distribution CentOS (2002), un clone de RHEL.</p>
+</div>
+<div class="paragraph">
+<p>En 2018, IBM rachète RedHat pour 34 milliards de dollars (la plus grosse acquisition de son histoire).</p>
+</div>
+<div class="paragraph">
+<p>CentOS, qui devient de fait un parasite de RedHat, traverse alors des moments difficiles.
+Mais RedHat finit par la soutenir, à condition qu&#8217;elle passe du statut de clone de RHEL à celui d&#8217;incubateur (comme Fedora, mais avec une durée de vie longue).</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="_images/overview/rhel_cycle_small.png"><img src="_images/overview/rhel_cycle_small.png" alt="rhel"></a>
+</div>
+</div>
+<div class="paragraph">
+<p>C&#8217;est pendant les moments d&#8217;incertitude quant à la survie de CentOS qu&#8217;apparait la distribution <em>Scientific Linux</em>,
+un clone de CentOS créé et maintenu par la communauté des laboratoires de recherche en physique des particules (dont le CERN).
+C&#8217;est aussi à cette époque qu&#8217;apparait AlmaLinux (2020).</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_en_résumé"><a class="anchor" href="#_en_résumé"></a>4.3.2. En résumé</h4>
+<div class="paragraph">
+<p>En résumé, ces 5 distributions RHEL, Fedora, CentOS, Scientific Linux et AlmaLinux sont très proches les unes des autres.
+Elles ne se distinguent, hormis l&#8217;aspect libre/commercial,
+que par le rythme des versions et leur durée de vie.</p>
+</div>
+<div class="paragraph">
+<p>D&#8217;autres distributions utilisent le packaging RPM, comme par exemple
+Rocky Linux, Oracle Linux, SUSE Linux Enterprise Server et openSUSE, Mageia et Mandriva.</p>
+</div>
+<div class="paragraph">
+<p><em>Proposer une bonne application pour chaque besoin</em> pourrait être la devise du packaging RPM.
+Autrement dit, il ne s&#8217;agit pas de tout packager : il existe des applications opensource qui ne sont pas packagées RPM.</p>
+</div>
+<div class="paragraph">
+<p>RedHat a été la première entreprise à commercialiser une distribution Linux.
+En proposant un support commercial, elle a rendu le système plus accessible aux entreprises et a contribué à le légitimer dans le monde professionnel.
+RedHat investit fortement dans la communauté Linux en contribuant à de nombreux projets open source, en organisant des conférences et en soutenant les développeurs.</p>
+</div>
+<div class="imageblock right">
+<div class="content">
+<img src="_images/overview/debian.svg" alt="debian" width="64">
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_packaging_deb"><a class="anchor" href="#_packaging_deb"></a>4.4. Packaging DEB</h3>
+<div class="paragraph">
+<p>C&#8217;est l&#8217;autre système de packaging incontournable, créé par la distribution Debian.</p>
+</div>
+<div class="paragraph">
+<p>Debian est créée en 1994 par le <em>Debian Project</em>, une organisation communautaire.
+Celle-ci élabore une constitution qui définit son fonctionnement interne, comme les méthodes de prise de décisions et les rôles des différents acteurs.
+La plupart des décisions sont prises par résolution générale ou par vote.</p>
+</div>
+<div class="paragraph">
+<p>Debian se distingue par son caractère résolument non commercial et par son mode de gouvernance démocratique.
+Sa communauté est active.</p>
+</div>
+<div class="paragraph">
+<p>La distribution se présente sous 3 déclinaisons :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>stable : version par défaut et la seule réellement stable,</p>
+</li>
+<li>
+<p>testing : version en amont de la stable, offrant des paquets récents,</p>
+</li>
+<li>
+<p>unstable : version en amont de la testing, en constante évolution, version expérimentale exposée à des bugs de sévérité grave.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Le cycle de développement est de 2 ans, avec une nouvelle version stable en début d&#8217;année paire.</p>
+</div>
+<div class="paragraph">
+<p>La réputation de Debian repose sur sa grande stabilité, et le vaste catalogue d&#8217;applications qu&#8217;elle propose
+(mais les applications au catalogue ne sont pas forcément dans leur dernière version).</p>
+</div>
+<div class="paragraph">
+<p>Les distributions
+Ubuntu,
+Linux Mint,
+KDE Neon,
+elementary OS,
+Zorin OS,
+Kali Linux utilisent le packaging Debian.</p>
+</div>
+<div class="paragraph">
+<p>Ubuntu est une distribution qui s&#8217;appuie sur Debian, en misant sur la convivialité.
+Elle est populaire en France, appréciée pour sa facilité d&#8217;utilisation et sa large communauté francophone.
+Sa documentation en français est abondante.
+Elle est sponsorisée par la société Canonical qui finance les développeurs, organise les événements et fournit un support commercial.
+Canonical assure la stabilité financière au projet, ce qui garantit sa pérennité.
+La versions LTS (Long Term Support) d&#8217;Ubuntu, publiée tous les deux ans, offre un support à long terme (5 ans) pour les mises à jour de sécurité.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_environnements_de_bureau"><a class="anchor" href="#_environnements_de_bureau"></a>5. Environnements de bureau</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Unix n&#8217;a pas d&#8217;environnement de bureau (<em>desktop</em>) par défaut.
+Il fonctionne très bien sans desktop, ce qui est souvent le cas pour des serveurs.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/overview/console.webp" alt="serveur" width="256">
+</div>
+<div class="title">console typique d&#8217;un serveur</div>
+</div>
+<div class="paragraph">
+<p>Le desktop est une couche logicielle qu&#8217;on installe (ou pas).
+C&#8217;est comme Windows 2 qu&#8217;on lançait depuis MS/DOS.</p>
+</div>
+<div class="paragraph">
+<p>Conséquence : Unix n&#8217;a pas un look qui lui est propre.
+Il existe des dizaines de desktops : GNOME, KDE Plasma, Cinnamon, MATE, XFCE, LXQt, etc.</p>
+</div>
+<div class="paragraph">
+<p>Les deux environnements de bureau GNOME et KDE Plasma sont les plus élaborés.
+GNOME offre peu de réglage, il convient très bien aux utilisateurs qui veulent un environnement qui marche, sans se poser plus de questions.
+KDE Plasma, au contraire, est très personnalisable.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">L&#8217;histoire de GNOME</dt>
+<dd>
+<p>Le passage de GNOME version 2 à GNOME version 3 en 2011 a chamboulé les utilisateurs.
+GNOME 3 a complétement revu son look pour proposer une apparence unifiée sur ordinateur et sur smartphone (!).
+Un traumatisme pour les utilisateurs de GNOME 2 qui n&#8217;aiment pas le changement
+(GNOME 2 a un look familier, proche de celui de Windows).
+Le look de GNOME 3 n&#8217;a rien à voir.
+Son utilisation est également différente.
+C&#8217;est pourquoi un certain nombre d&#8217;utilisateurs déconcertés n&#8217;ont pas sauté le pas, et sont restés en version 2.</p>
+<div class="paragraph">
+<p>C&#8217;est ainsi qu&#8217;est apparu MATE, un fork de GNOME 2.
+MATE vise à préserver l&#8217;apparence et le fonctionnement de l&#8217;environnement GNOME 2,
+donc idéal pour ceux qui préfèrent une interface <em>à l&#8217;ancienne</em>.</p>
+</div>
+<div class="paragraph">
+<p>C&#8217;est ainsi qu&#8217;est également apparu Cinnamon, un fork de GNOME 3, mais doté d&#8217;un look plus classique (mais plus moderne que MATE).
+Cinnamon est apprécié pour son utilisation sans surprise et sa personnalisation facile.</p>
+</div>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>GNOME et KDE Plasma sont des environnements relativement gourmands en ressources.
+Pour une machine peu puissante, un environnement léger comme XFCE est préférable,
+ou même LXQt, encore plus léger.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+On peut installer autant d&#8217;environnements de bureau que l&#8217;on souhaite sur un même poste de travail Linux.
+L&#8217;utilisateur sélectionne alors le desktop de son choix à chaque fois qu&#8217;il ouvre sa session.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p class="center">
+  <span style="font-size: 0.9em;">
+    <a href="https://jacquelincharbonnel.github.io/">Jacquelin Charbonnel</a>
+    <!-- &nbsp; &mdash; &nbsp; -->
+    &nbsp;
+    &copy;Creative Commons BY-NC-SA 4.0
+  </span>
+  </p>
+</footer>
+
+<script>
+var myDate = new Date(document.lastModified);
+myNewDate = new Intl.DateTimeFormat(
+            undefined,
+            {year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit"}
+        )
+        .format(myDate).replace(/\./g, '-');
+document.getElementById("lastmodify").innerHTML = myNewDate ;
+</script>
+
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

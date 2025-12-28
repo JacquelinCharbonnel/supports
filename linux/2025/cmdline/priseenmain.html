@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Utiliser le système :: Supports</title>
+    <link rel="canonical" href="https://jacquelincharbonnel.github.io/supports/linux/2025/cmdline/priseenmain.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<!-- reference des feuilles de styles supplémentaires -->
+<link rel="stylesheet" href="../../../_/css/layout.css">
+<link rel="stylesheet" href="../../../_/css/content.css">
+
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://jacquelincharbonnel.github.io/supports">Supports</a>
+  <!-- suppression du burger du bandeau
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+-->      
+    </div>
+<!-- suppression des boutons du bandeau
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+-->
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="linux" data-version="2025">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">Linux</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../context/overview.html">Le contexte</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../context/news.html">L&#8217;actualité</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="priseenmain.html">Utiliser le système</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="fs.html">Système de fichiers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="shell.html">Le shell</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="proc.html">Processus</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="redirect.html">Redirection et pipes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="remote.html">Connexions distantes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="script.html">Script shell</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cron.html">Planifier les tâches</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="admin.html">Gérer le système</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="su.html">Privilèges</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="appli.html">Les applications</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="admfs.html">L&#8217;espace de stockage</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="user.html">Les comptes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="services.html">Les services</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="nfs.html">NFS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="sshd.html">sshd</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Linux</span>
+    <span class="version">2025</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../../C/2023/index.html">C</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../C/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../concurrence/2024/index.html">Concurrence</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../concurrence/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../datatext/2023/index.html">DataText</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../datatext/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../json/2023/index.html">JSON</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../json/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">Linux</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">2025</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../python_objet/2024/index.html">Python objet</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../python_objet/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../supports/index.html">Supports</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../xml/2023/index.html">XML</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../xml/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../supports/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Linux</a></li>
+    <li><a href="priseenmain.html">Utiliser le système</a></li>
+  </ul>
+</nav>
+<!-- supression de "edit this page"
+  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/linux/./modules/cmdline/pages/priseenmain.adoc">Edit this Page</a></div>
+-->
+</div>
+  <!-- ajout de la date de modification -->
+     <div class="lastmodify"> dernière modification : 2025 </div>
+  <!-- fin ajout -->
+  <div class="content">
+<aside class="toc sidebar" data-title="Plan" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Utiliser le système</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="quoteblock abstract">
+<blockquote>
+Des généralités sur l&#8217;interface de travail
+</blockquote>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_linterface_graphique"><a class="anchor" href="#_linterface_graphique"></a>1. L&#8217;interface graphique</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Quand on débute aujourd&#8217;hui avec Unix, l&#8217;interface graphique semble plus simple à utiliser que la ligne de commandes, car il suffit de cliquer pour réaliser les actions souhaitées.
+Si on sait utiliser une souris, un gestionnaire de fichiers et un éditeur de texte, on s&#8217;en sort.</p>
+</div>
+<div class="paragraph">
+<p><em>Gestionnaire de fichiers</em>, <em>éditeur de texte</em> et <em>terminal</em> sont les applications graphiques incontournables.
+Chaque desktop en possède un jeu qui lui est propre.
+Par exemple, <code>Nautilus</code> est le gestionnaire de fichiers de GNOME, alors que sous KDE Plasma, c&#8217;est <code>Dolphin</code>.
+Il y a donc pléthore  d&#8217;applications de type gestionnaire de fichiers, éditeur de texte et terminal.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Gestionnaire de fichiers</dt>
+<dd>
+<p>Il permet de se déplacer dans l&#8217;arborescence des dossiers (ou <em>répertoires</em>) et de manipuler leur contenu :
+créer des fichiers, les renommer, les déplacer, les dupliquer, etc.</p>
+</dd>
+<dt class="hdlist1">Editeur de texte</dt>
+<dd>
+<p>Il permet d&#8217;ajouter, modifier et supprimer du texte dans un fichier.</p>
+</dd>
+<dt class="hdlist1">Terminal</dt>
+<dd>
+<p>C&#8217;est une fenêtre permettant d&#8217;exécuter des <em>commandes en ligne</em>
+(comme l&#8217;écran d&#8217;une station de travail des années 70, mais dans une fenêtre).</p>
+</dd>
+</dl>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/priseenmain/terminal.png" alt="doc" width="640">
+</div>
+</div>
+<div class="paragraph">
+<p>Peu à peu, avec l&#8217;expérience, et contrairement aux apparences, on se rend compte que l&#8217;on est souvent plus efficace avec la ligne de commande,
+pour peu que l&#8217;on connaisse les commandes essentielles.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_la_ligne_de_commande"><a class="anchor" href="#_la_ligne_de_commande"></a>2. La ligne de commande</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Dans un terminal, on frappe une commande, on valide et on attend la réponse.
+Et on recommence.</p>
+</div>
+<div class="paragraph">
+<p>A l&#8217;époque où les interfaces graphiques sont omniprésentes, utiliser la ligne de commande peut s&#8217;apparenter à un retour au passé.
+Pourtant :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>savoir utiliser les commandes en ligne permet d&#8217;élagir son domaine de compétence au-delà de Linux et d&#8217;être opérationnel sur tout système Unix ;</p>
+</li>
+<li>
+<p>les commandes en ligne peuvent s&#8217;enchainer dans des scripts, ce qui permet d&#8217;automatiser et de planifier des actions ; automatiser des actions dans un desktop est difficile ;</p>
+</li>
+<li>
+<p>une procédure en ligne de commandes est plus facile à documenter qu&#8217;une procédure en environnement graphique, qui nécessite de faire des copies d&#8217;écran :</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/priseenmain/doc.png" alt="doc" width="640">
+</div>
+</div>
+</li>
+<li>
+<p>l&#8217;environnement graphique agrémente la vie des utilisateurs, mais il n&#8217;apporte aucune nouvelle fonctionnalité.</p>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Sous Unix, tout est réalisable avec les commandes en ligne, alors que tout n&#8217;est pas réalisable via le desktop.</p>
+</div>
+<div class="paragraph">
+<p>C&#8217;est l&#8217;inverse sous Windows : tout n&#8217;est pas réalisable en ligne de commandes, il faut parfois passer par l&#8217;interface graphique.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>En caricaturant, on peut dire que travailler en environnement graphique demande de passer du temps à rechercher la bonne option dans le bon menu, la bonne case à cocher dans le bon formulaire, le bon bouton à presser dans la bonne popup.
+Alors que travailler dans un terminal demande de connaitre les commandes et leurs options usuelles.</p>
+</div>
+<div class="paragraph">
+<p>Heureusement pour la ligne de commande, il existe un manuel en ligne.
+C&#8217;est la commande <code>man</code> qui, pour chaque commande, explique son objectif, ses paramètres, ses options.
+Elle peut citer également d&#8217;autres commandes connexes,
+ce qui permet d&#8217;élargir progressivement son champ de connaissance.
+Le manuel est <strong>LA</strong> documentation de référence : les informations qu&#8217;il fournit sont précises et exhaustives
+(les pages de manuel sont généralement rédigées par les auteurs des commandes eux-mêmes).</p>
+</div>
+<div class="paragraph">
+<p>Par exemple, la commande :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ man man</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>affiche le mode d&#8217;emploi complet de la commande <code>man elle-même</code>.
+On a des exemples d&#8217;utilisation,
+et on apprend qu&#8217;il existe aussi une commande <code>whatis</code>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Les pages de manuel peuvent sembler rébarbatives au début,
+mais on s&#8217;y habitue rapidement, car elles ont toutes la même structure :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>NOM
+       le nom et l'objet de la commande en 1 ligne
+
+SYNOPSIS
+        la syntaxe d'appel
+
+DESCRIPTION
+        ce qu'elle fait en détail
+
+OPTIONS
+        énumération des options
+
+EXEMPLES
+        exemples d'utilisation
+
+VOIR AUSSI
+        des commandes connexes</pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_le_système_de_fichiers_filesystem"><a class="anchor" href="#_le_système_de_fichiers_filesystem"></a>3. Le système de fichiers (<em>filesystem</em>)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Le système de fichiers est l&#8217;organisation de l&#8217;espace disque.
+C&#8217;est une arborescence de répertoires.</p>
+</div>
+<div class="paragraph">
+<p>Par exemple, le répertoire personnel (le <em>homedir</em>) d&#8217;un utilisateur contient typiquement les sous-répertoires suivant :</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="_images/priseenmain/home.png"><img src="_images/priseenmain/home.png" alt="home"></a>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">.
+├── Bureau
+├── Documents
+├── Images
+├── Modèles
+├── Musique
+├── Public
+├── Téléchargements
+└── Vidéos</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Un répertoire peut contenir des sous-répertoires, des fichiers, des liens, etc.
+On appelle <em>entrée</em> tout ce que peut contenir un répertoire.
+Par conséquent, répertoires, fichiers, liens <em>hard</em>, liens symboliques sont des entrées de répertoire.</p>
+</div>
+<div class="paragraph">
+<p>Le répertoire racine de l&#8217;arborescence est nommée <code>/</code>.
+Voici à quoi ressemble l&#8217;arborescence de répertoires typique d&#8217;un système Unix :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>/
+├── bin
+├── boot
+├── dev
+├── etc
+├── home
+│   ├── linus
+│   ├── ken
+│   ├── richard
+│   └── jacquelin
+├── lib
+├── mnt
+├── root
+├── sbin
+├── tmp
+├── usr
+└── var</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Quelques répertoires à repérer :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>bin</code> : commandes pour les utilisateurs (<em>binaries</em>)</p>
+</li>
+<li>
+<p><code>dev</code> : périphériques (<em>devices</em>)</p>
+</li>
+<li>
+<p><code>etc</code> : fichiers de configuration</p>
+</li>
+<li>
+<p><code>home</code> : répertoires des dossiers personnels (<em>homedirs</em>)</p>
+</li>
+<li>
+<p><code>lib</code> : bibliothèques (<em>librairies</em>)</p>
+</li>
+<li>
+<p><code>mnt</code> : répertoire vide destiné aux montages</p>
+</li>
+<li>
+<p><code>sbin</code> : commandes pour le super utilisateur (<em>system binaries</em>)</p>
+</li>
+<li>
+<p><code>tmp</code> : répertoire ouvert à tout le monde en lecture et écriture, destiné aux fichiers temporaires</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Remarques :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>sur certains Unix, <code>home</code> s&#8217;appelle <code>users</code> ;</p>
+</li>
+<li>
+<p>à l&#8217;origine, il n&#8217;y avait pas de répertoires <code>sbin</code>, toutes les commandes étaient dans <code>bin</code>
+(et cette idée revient à l&#8217;ordre du jour actuellement).</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_commandes_en_ligne"><a class="anchor" href="#_commandes_en_ligne"></a>4. Commandes en ligne</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Les commandes ont la forme suivante :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">$ commande option1 options2... argument1 argument2...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Un argument peut être obligatoire ou facultatif.
+Une option est une lettre précédée d'1 tiret (option courte, exemple <code>-a</code>) ou bien
+d&#8217;un mot précédé de 2 tirets (option longue, exemple <code>--group</code>).
+Exemple :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ id <i class="conum" data-value="1"></i><b>(1)</b>
+$ id root <i class="conum" data-value="2"></i><b>(2)</b>
+$ id root daemon <i class="conum" data-value="3"></i><b>(3)</b>
+$ id -g <i class="conum" data-value="4"></i><b>(4)</b>
+$ id -g -n <i class="conum" data-value="5"></i><b>(5)</b>
+$ id -gn <i class="conum" data-value="6"></i><b>(6)</b>
+$ id -g operator <i class="conum" data-value="7"></i><b>(7)</b>
+$ id --group <i class="conum" data-value="8"></i><b>(8)</b>
+$ id --group --name <i class="conum" data-value="9"></i><b>(9)</b>
+$ id --group --name root <i class="conum" data-value="10"></i><b>(10)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>commande sans argument et sans option</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>commande avec 1 argument</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>commande avec 2 arguments</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>commande avec 1 option courte</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>commande avec 2 options courtes</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td>équivalent à la commande précédente</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="7"></i><b>7</b></td>
+<td>commande avec 1 option courte et un argument</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="8"></i><b>8</b></td>
+<td>commande avec 1 option longue</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="9"></i><b>9</b></td>
+<td>commande avec 2 options longues</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="10"></i><b>10</b></td>
+<td>commande avec 2 options longues et un argument</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Une option peut nécessiter une valeur :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ ls --color=always /
+$ ls --color=never /
+$ ls --color=toto /</code></pre>
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Résumé</dt>
+<dd>
+<p>commande à retenir : <code>man</code></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p class="center">
+  <span style="font-size: 0.9em;">
+    <a href="https://jacquelincharbonnel.github.io/">Jacquelin Charbonnel</a>
+    <!-- &nbsp; &mdash; &nbsp; -->
+    &nbsp;
+    &copy;Creative Commons BY-NC-SA 4.0
+  </span>
+  </p>
+</footer>
+
+<script>
+var myDate = new Date(document.lastModified);
+myNewDate = new Intl.DateTimeFormat(
+            undefined,
+            {year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit"}
+        )
+        .format(myDate).replace(/\./g, '-');
+document.getElementById("lastmodify").innerHTML = myNewDate ;
+</script>
+
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
