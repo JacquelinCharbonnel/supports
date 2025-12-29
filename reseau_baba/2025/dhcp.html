@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>DHCP :: Supports</title>
+    <link rel="canonical" href="https://jacquelincharbonnel.github.io/supports/reseau_baba/2025/dhcp.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../_/css/site.css">
+<!-- reference des feuilles de styles supplémentaires -->
+<link rel="stylesheet" href="../../_/css/layout.css">
+<link rel="stylesheet" href="../../_/css/content.css">
+
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://jacquelincharbonnel.github.io/supports">Supports</a>
+  <!-- suppression du burger du bandeau
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+-->      
+    </div>
+<!-- suppression des boutons du bandeau
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+-->
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="reseau_baba" data-version="2025">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">Réseau</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Aperçu</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Services d&#8217;infrastructure</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="arp.html">ARP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="nat.html">NAT</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="dns.html">DNS</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="dhcp.html">DHCP</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Réseau</span>
+    <span class="version">2025</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../C/2023/index.html">C</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../C/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../concurrence/2024/index.html">Concurrence</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../concurrence/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../datatext/2023/index.html">DataText</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../datatext/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../json/2023/index.html">JSON</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../json/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../linux/2025/index.html">Linux</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../linux/2025/index.html">2025</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../python_objet/2024/index.html">Python objet</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../python_objet/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="index.html">Réseau</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">2025</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../supports/index.html">Supports</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../xml/2023/index.html">XML</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../xml/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../supports/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Réseau</a></li>
+    <li>Services d&#8217;infrastructure</li>
+    <li><a href="dhcp.html">DHCP</a></li>
+  </ul>
+</nav>
+<!-- supression de "edit this page"
+  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/reseaubaba/./modules/ROOT/pages/dhcp.adoc">Edit this Page</a></div>
+-->
+</div>
+  <!-- ajout de la date de modification -->
+     <div class="lastmodify"> dernière modification : 2025 </div>
+  <!-- fin ajout -->
+  <div class="content">
+<aside class="toc sidebar" data-title="Plan" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">DHCP</h1>
+<div class="sect1">
+<h2 id="_objectif"><a class="anchor" href="#_objectif"></a>1. Objectif</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Chaque équipement a besoin d&#8217;une adresse IP pour communiquer sur un réseau IP.
+Mais le nombre d&#8217;adresses IP utilisables sur un LAN est limité.
+Par exemple, si le LAN dispose de 256 adresses IP, cela signifie qu&#8217;il ne peut pas y avoir plus de 256 équipements actifs en même temps.</p>
+</div>
+<div class="paragraph">
+<p>D&#8217;où l&#8217;idée de mutualiser les adresses IP, de telle sorte qu&#8217;elles puissent passer d&#8217;un équipement à un autre.
+Ainsi, l&#8217;adresse IP d&#8217;un équipement éteint peut être réaffectée à un équipement actif.</p>
+</div>
+<div class="paragraph">
+<p>Le service DHCP (Dynamic Host Configuration Protocol) a pour objectif l&#8217;affectation dynamique d&#8217;adresses IP.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_comportement_dun_équipement"><a class="anchor" href="#_comportement_dun_équipement"></a>2. Comportement d&#8217;un équipement</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Lorsqu&#8217;un équipement se connecte au réseau, 2 cas se présentent :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>soit son adresse IP est fixée dans sa configuration (configuration en IP fixe),
+et dans ce cas, c&#8217;est elle qui est utilisée inconditionnellement,</p>
+</li>
+<li>
+<p>soit il est configuré pour faire appel au service DHCP (configuration en IP dynamique)
+afin d&#8217;obtenir son adresse IP.</p>
+</li>
+</ul>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">IP fixe</dt>
+<dd>
+<p>L&#8217;équipement connait son adresse IP,
+car elle est définie dans sa configuration.
+Elle est donc constante au cours du temps.<br>
+Une configuration en IP fixe est bien adaptée aux équipements auxquels on  se connecte (comme les serveurs), puisque l&#8217;on a besoin de les identifier pour s&#8217;y connecter.</p>
+</dd>
+<dt class="hdlist1">IP dynamique</dt>
+<dd>
+<p>Pour un portable ou un smartphone qui change sans cesse de réseau, une IP dynamique est indispensable.
+L&#8217;équipement récupère une adresse IP à chaque fois qu&#8217;il se connecte à un réseau.</p>
+</dd>
+</dl>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Une gestion sérieuse des adresses IP actives sur un réseau est impérative,
+car 2 équipements en fonctionnement ne doivent absolument pas utiliser la même adresse IP
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_serveur_dhcp"><a class="anchor" href="#_serveur_dhcp"></a>3. Serveur DHCP</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Le serveur DHCP est physiquement connecté au LAN auquel sont connectés les équipements configurés en adressage dynamique.
+Le service ne s&#8217;adresse qu&#8217;aux équipements situés sur ce LAN
+(les requêtes DHCP ne traversent pas les routeurs).</p>
+</div>
+<div class="paragraph">
+<p>Le serveur dispose d&#8217;une table de correspondance adresses <code>MAC</code> &#8592;&#8594; <code>IP_souhaitée</code>.
+Cette table contient les adresses MAC de tous les équipements que l&#8217;on veut associer à une IP fixe (c&#8217;est-à-dire qui ne change pas au cours du temps).
+Cela concerne principalement les équipements auxquels on veut se connecter (comme les serveurs).</p>
+</div>
+<div class="paragraph">
+<p>Le serveur dispose également d&#8217;une plage d&#8217;adresses IP dans laquelle il peut piocher les IP qu&#8217;il va distribuer.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_fonctionnement_du_service"><a class="anchor" href="#_fonctionnement_du_service"></a>4. Fonctionnement du service</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Un équipement configuré en adresse dynamique démarre.
+Il broadcaste une requête DHCP.</p>
+</li>
+<li>
+<p>Le serveur DHCP récupère cette requête</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Si elle vient d&#8217;une adresse MAC répertoriée dans sa table, alors il renvoit l&#8217;IP associée.
+Conclusion : l&#8217;équipement reçoit toujours la même IP (l&#8217;IP n&#8217;est pas partagée).</p>
+</li>
+<li>
+<p>Sinon, le serveur choisit une IP libre dans la plage d&#8217;adresses à distribuer, et la renvoie à l&#8217;équipement.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Généralement, le serveur DHCP fournit également d&#8217;autres informations à l&#8217;équipement,
+comme par exemple l&#8217;adresse IP de la passerelle et l&#8217;adresse IP des serveurs DNS.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p class="center">
+  <span style="font-size: 0.9em;">
+    <a href="https://jacquelincharbonnel.github.io/">Jacquelin Charbonnel</a>
+    <!-- &nbsp; &mdash; &nbsp; -->
+    &nbsp;
+    &copy;Creative Commons BY-NC-SA 4.0
+  </span>
+  </p>
+</footer>
+
+<script>
+var myDate = new Date(document.lastModified);
+myNewDate = new Intl.DateTimeFormat(
+            undefined,
+            {year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit"}
+        )
+        .format(myDate).replace(/\./g, '-');
+document.getElementById("lastmodify").innerHTML = myNewDate ;
+</script>
+
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>DNS :: Supports</title>
+    <link rel="canonical" href="https://jacquelincharbonnel.github.io/supports/reseau_baba/2025/dns.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../_/css/site.css">
+<!-- reference des feuilles de styles supplémentaires -->
+<link rel="stylesheet" href="../../_/css/layout.css">
+<link rel="stylesheet" href="../../_/css/content.css">
+
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://jacquelincharbonnel.github.io/supports">Supports</a>
+  <!-- suppression du burger du bandeau
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+-->      
+    </div>
+<!-- suppression des boutons du bandeau
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+-->
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="reseau_baba" data-version="2025">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">Réseau</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Aperçu</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Services d&#8217;infrastructure</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="arp.html">ARP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="nat.html">NAT</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="dns.html">DNS</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="dhcp.html">DHCP</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Réseau</span>
+    <span class="version">2025</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../C/2023/index.html">C</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../C/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../concurrence/2024/index.html">Concurrence</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../concurrence/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../datatext/2023/index.html">DataText</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../datatext/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../json/2023/index.html">JSON</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../json/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../linux/2025/index.html">Linux</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../linux/2025/index.html">2025</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../python_objet/2024/index.html">Python objet</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../python_objet/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="index.html">Réseau</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">2025</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../supports/index.html">Supports</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../xml/2023/index.html">XML</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../xml/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../supports/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Réseau</a></li>
+    <li>Services d&#8217;infrastructure</li>
+    <li><a href="dns.html">DNS</a></li>
+  </ul>
+</nav>
+<!-- supression de "edit this page"
+  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/reseaubaba/./modules/ROOT/pages/dns.adoc">Edit this Page</a></div>
+-->
+</div>
+  <!-- ajout de la date de modification -->
+     <div class="lastmodify"> dernière modification : 2025 </div>
+  <!-- fin ajout -->
+  <div class="content">
+<aside class="toc sidebar" data-title="Plan" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">DNS</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Le DNS (Domain Name Service) permet d&#8217;associer des noms à des adresses IP,
+par exemple associer <code>dns.google.com</code> à <code>8.8.8.8</code>.</p>
+</div>
+<div class="paragraph">
+<p>Les résolutions de noms sont effectuées par des serveurs DNS.
+Pour qu&#8217;un équipement puisse résoudre les noms en IP ou inversement, il doit connaitre l&#8217;adresse IP d&#8217;au moins un serveur DNS
+(qui peut être définie dans la configurartion réseau de l&#8217;équipement, ou bien être récupérée par DHCP).</p>
+</div>
+<div class="paragraph">
+<p>Historiquement sur Unix, les IP d'1, 2 ou 3 serveurs DNS sont définies dans le fichier <code>/etc/resolv.conf</code>.
+Mais aujourd&#8217;hui, cela est remis en cause par <code>systemd</code>.</p>
+</div>
+<div class="listingblock">
+<div class="title">exemple de résolution DNS avec la commande <code>host</code></div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ host 8.8.8.8 <i class="conum" data-value="1"></i><b>(1)</b>
+8.8.8.8.in-addr.arpa domain name pointer dns.google.com <i class="conum" data-value="2"></i><b>(2)</b>
+
+$ host dns.google.com <i class="conum" data-value="3"></i><b>(3)</b>
+dns.google.com has address 8.8.8.8 <i class="conum" data-value="4"></i><b>(4)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>quel est le nom de l&#8217;équipement d&#8217;IP <code>8.8.8.8</code></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>c&#8217;est <code>dns.google.com</code></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>quel est l&#8217;IP de l&#8217;équipement nommé <code>dns.google.com</code></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>c&#8217;est <code>8.8.8.8</code></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_architecture_des_noms_de_domaines"><a class="anchor" href="#_architecture_des_noms_de_domaines"></a>1. Architecture des noms de domaines</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="_images/tld.jpg" alt="tld" width="640">
+</div>
+</div>
+<div class="paragraph">
+<p>Chaque domaine possède au moins un serveur qui sert (en première main) ses informations,
+c&#8217;est-à-dire les associations nom
+&#8592;&#8594;IP.
+Ce serveur connait aussi les serveurs DNS de ses sous-domaines.</p>
+</div>
+<div class="paragraph">
+<p>Par exemple, le domaine <code>.fr</code> est servi par les 3 serveurs ci-dessous :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ host -t ns fr
+fr name server f.ext.nic.fr.
+fr name server d.nic.fr.
+fr name server g.ext.nic.fr.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Chaque serveur DNS sur Internet connait les IP des serveurs des TLD (<em>top level domains</em>)</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_fonctionnement_du_dns"><a class="anchor" href="#_fonctionnement_du_dns"></a>2. Fonctionnement du DNS</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Exemple :</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>saisie d&#8217;une requête <a href="https://www.inria.fr" class="bare">https://www.inria.fr</a> sur le navigateur web d&#8217;un poste de travail</p>
+</li>
+<li>
+<p>le poste de travail effectue une requête auprès de son serveur DNS préféré
+(l&#8217;un de ceux référencés dans <code>/etc/resolv.conf</code>) pour récupérer l&#8217;adresse IP de <code>www.inria.fr</code></p>
+</li>
+<li>
+<p>le serveur DNS contacté cherche dans son cache cette information</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>s&#8217;il la possède, il la retourne au poste de travail, et c&#8217;est fini</p>
+</li>
+<li>
+<p>sinon, il recherche dans son cache quel est le serveur DNS du domaine <code>inria.fr</code></p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>s&#8217;il la possède, alors :</p>
+<div class="ulist">
+<ul>
+<li>
+<p>ou bien il questionne lui-même ce serveur (requête récursive),</p>
+</li>
+<li>
+<p>ou bien il renvoie au poste de travail l&#8217;adresse de ce serveur DNS qui connait la réponse cherchée</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>sinon, il récupère le nom du serveur DNS de <code>inria.fr</code> auprès du TLD <code>.fr</code> dont il a l&#8217;adresse en main propre (dans sa configuration)</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p class="center">
+  <span style="font-size: 0.9em;">
+    <a href="https://jacquelincharbonnel.github.io/">Jacquelin Charbonnel</a>
+    <!-- &nbsp; &mdash; &nbsp; -->
+    &nbsp;
+    &copy;Creative Commons BY-NC-SA 4.0
+  </span>
+  </p>
+</footer>
+
+<script>
+var myDate = new Date(document.lastModified);
+myNewDate = new Intl.DateTimeFormat(
+            undefined,
+            {year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit"}
+        )
+        .format(myDate).replace(/\./g, '-');
+document.getElementById("lastmodify").innerHTML = myNewDate ;
+</script>
+
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

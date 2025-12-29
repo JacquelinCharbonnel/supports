@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>NAT :: Supports</title>
+    <link rel="canonical" href="https://jacquelincharbonnel.github.io/supports/reseau_baba/2025/nat.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../_/css/site.css">
+<!-- reference des feuilles de styles supplémentaires -->
+<link rel="stylesheet" href="../../_/css/layout.css">
+<link rel="stylesheet" href="../../_/css/content.css">
+
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://jacquelincharbonnel.github.io/supports">Supports</a>
+  <!-- suppression du burger du bandeau
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+-->      
+    </div>
+<!-- suppression des boutons du bandeau
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+-->
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="reseau_baba" data-version="2025">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">Réseau</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Aperçu</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Services d&#8217;infrastructure</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="arp.html">ARP</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="nat.html">NAT</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="dns.html">DNS</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="dhcp.html">DHCP</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Réseau</span>
+    <span class="version">2025</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../C/2023/index.html">C</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../C/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../concurrence/2024/index.html">Concurrence</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../concurrence/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../datatext/2023/index.html">DataText</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../datatext/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../json/2023/index.html">JSON</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../json/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../linux/2025/index.html">Linux</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../linux/2025/index.html">2025</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../python_objet/2024/index.html">Python objet</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../python_objet/2024/index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="index.html">Réseau</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">2025</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../supports/index.html">Supports</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../xml/2023/index.html">XML</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../xml/2023/index.html">2023</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../supports/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Réseau</a></li>
+    <li>Services d&#8217;infrastructure</li>
+    <li><a href="nat.html">NAT</a></li>
+  </ul>
+</nav>
+<!-- supression de "edit this page"
+  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/reseaubaba/./modules/ROOT/pages/nat.adoc">Edit this Page</a></div>
+-->
+</div>
+  <!-- ajout de la date de modification -->
+     <div class="lastmodify"> dernière modification : 2025 </div>
+  <!-- fin ajout -->
+  <div class="content">
+<aside class="toc sidebar" data-title="Plan" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">NAT</h1>
+<div class="sect1">
+<h2 id="_pénurie_dadresses_ipv4"><a class="anchor" href="#_pénurie_dadresses_ipv4"></a>1. Pénurie d&#8217;adresses IPv4</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Le nombre d&#8217;adresses IPv4 est 256<sup>4</sup>, soit 4,3 milliards d&#8217;adresses IPv4.
+C&#8217;est très insuffisant pour équiper tous les appareils connectés.
+IPv6 a été créé pour faire face à la pénurie, mais sa mise en oeuvre est lente.
+Le NAT est un moyen pour IPv4 de faire face au problème, en attendant l&#8217;avènement d&#8217;IPv6 qui résoudra la pénurie.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_classe_dadresses_ip"><a class="anchor" href="#_classe_dadresses_ip"></a>2. Classe d&#8217;adresses IP</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Une adresse IP représente à la fois un réseau et un équipement sur ce réseau.
+Et de fait, l&#8217;adresse IP est composée d&#8217;une adresse réseau et d&#8217;une adresse d&#8217;équipement (dans cet ordre).</p>
+</div>
+<div class="paragraph">
+<p>La frontière adresse_réseau/adresse_équipement est mobile.
+Elle est déterminée avec une donnée supplémentaire représentant le nombre de bits de l&#8217;adresse réseau.
+Exemples :</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>11.1.2.3/8</code></dt>
+<dd>
+<p>Le <code>/8</code> signifie que l&#8217;adresse réseau est codée par les 8 premiers bits.
+Donc cette adresse IP identifie l&#8217;équipement <code>1.2.3</code> sur le réseau <code>11</code>
+(IP de classe A).</p>
+</dd>
+<dt class="hdlist1"><code>173.19.1.2/16</code></dt>
+<dd>
+<p>Le <code>/16</code> signifie que l&#8217;adresse réseau est codée par les 16 premiers bits.
+Donc cette adresse IP identifie l&#8217;équipement <code>1.2</code> sur le réseau <code>173.19</code>
+(IP de classe B).</p>
+</dd>
+<dt class="hdlist1"><code>193.19.45.1/24</code></dt>
+<dd>
+<p>Le <code>/24</code> signifie que l&#8217;adresse réseau est codée par les 24 premiers bits.
+Donc cette adresse IP identifie l&#8217;équipement <code>1</code> sur le réseau <code>193.19.45</code>
+(IP de classe C).</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_réseaux_ip_privés"><a class="anchor" href="#_réseaux_ip_privés"></a>3. Réseaux IP privés</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Certains réseaux, par convention, ne sont pas routés sur Internet.
+Ces réseaux (appellés <em>réseaux privés</em>) sont :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>le réseau <code>10.x.x.x/8</code> comportant 256<sup>3</sup> IP,</p>
+</li>
+<li>
+<p>les 16 réseaux compris entre <code>172.16.x.x/16</code> et <code>172.31.x.x/16</code>, de 256² IP chacun, et</p>
+</li>
+<li>
+<p>les 256 réseaux <code>192.168.x.x/24</code>, de 256 IP chacun.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Tous les routeurs d&#8217;Internet écartent ces réseaux de leurs tables de routage.
+Par conséquent, ces réseaux sont injoignables,
+simplement parce qu&#8217;aucun routeur n&#8217;indique comment les atteindre.</p>
+</div>
+<div class="paragraph">
+<p>N&#8217;importe qui peut donc utiliser ces réseaux pour un usage personnel,
+sans risque de conflit.
+Dans les faits, ces réseaux privés
+sont utilisés pour des LAN privés, dont les équipements n&#8217;ont pas besoin d&#8217;être accessibles sur Internet.
+Par exemple, le réseau d&#8217;un particulier chez lui est un réseau privé.
+Et de fait, les équipements numériques d&#8217;un particulier ne sont pas joignables depuis Internet (ce qui est très sécurisant pour lui).</p>
+</div>
+<div class="paragraph">
+<p>Mais alors, comment un équipement d&#8217;un réseau privé peut-il communiquer avec un équipement sur Internet ?
+Comment l&#8217;équipement peut-il recevoir les réponses à ses réquêtes ?
+Réponse : grâce au NAT.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_nat"><a class="anchor" href="#_nat"></a>4. NAT</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Le NAT (<em>Network Address Translation</em>)
+est une <em>astuce</em> qui permet à une adresse IP privée, avec la complicité de sa passerelle, de communiquer sur Internet.</p>
+</div>
+<div class="paragraph">
+<p>Lorsqu’un équipement d’un réseau privé veut communiquer avec un ordinateur sur Internet :</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>L’équipement envoie un paquet sur son LAN.
+Comme tout paquet IP, celui-ci contient l&#8217;adresse IP de la source (nécessaire pour recevoir une réponse).
+Donc ici, l&#8217;adresse source est l&#8217;adresse IP privée de l&#8217;émetteur du paquet.</p>
+</li>
+<li>
+<p>Comme la destination n&#8217;est pas sur le LAN, le paquet est récupéré par la passerelle.</p>
+</li>
+<li>
+<p>La passerelle procède alors à un subterfuge :
+elle remplace, dans le paquet, l’adresse source par sa propre adresse, son adresse publique
+(elle mémorise aussi des informations qui seront utiles au retour du paquet).
+Le paquet a donc maintenant une addresse source publique,
+et c&#8217;est ainsi qu&#8217;il débarque sur Internet.</p>
+</li>
+<li>
+<p>La destination reçoit le paquet, le traite et prépare la réponse.
+Ce nouveau paquet part en direction de l&#8217;adresse IP source contenue dans le paquet reçu (qui est devenue l&#8217;adresse de destination dans ce nouveau paquet).
+Le paquet part donc à destination de la passerelle du LAN de la source.</p>
+</li>
+<li>
+<p>La passerelle reçoit la réponse,
+détermine, à l&#8217;aide des informations mémorisées à l&#8217;aller, l&#8217;équipement auquel
+elle doit être remise,
+et lui transmet.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/NAT_Concept.png" alt="nat" width="640"></span></p>
+</div>
+<div class="paragraph">
+<p>Le NAT permet donc, vu d&#8217;Internet, d&#8217;avoir plusieurs équipements derrière  une seule et même IP.
+C&#8217;est un moyen de faire face à la pénurie d&#8217;adresses IP.</p>
+</div>
+<div class="paragraph">
+<p>Un réseau privé derrière un NAT est inaccessible directement depuis Internet, ce qui est un avantage énorme d&#8217;un point de vue sécurité.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_redirection_de_ports"><a class="anchor" href="#_redirection_de_ports"></a>5. Redirection de ports</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>La redirection de port (<em>port forwarding</em>) permet à
+un équipement situé sur un réseau privé d&#8217;être contacté par des équipements situés sur Internet.
+Cela permet par exemple d&#8217;avoir un serveur web chez soi, ouvert sur Internet.
+Cela permet aussi de pouvoir, depuis Internet,
+d&#8217;accéder à la camera de surveillance de sa maison,
+à son NAS, à son réfrigérateur, etc.</p>
+</div>
+<div class="paragraph">
+<p>Le port forwarding se paramètre sur la passerelle.
+Il faut la configurer de telle sorte qu&#8217;elle redirige le trafic réseau arrivant sur un port donné vers un appareil spécifique sur le LAN
+(elle doit avant tout réaliser un NAT pour ce réseau).</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/portforward.png" alt="portforward" width="640"></span></p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Installer un serveur web chez soi</dt>
+<dd>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>installer un serveur web sur un ordinateur du réseau domestique, donc avec une IP privée, par exemple 192.168.1.10 (un serveur web standard qui écoute par exemple sur le port 8080)</p>
+</li>
+<li>
+<p>configurer la passerelle (munie d&#8217;une IP publique, par exemple 11.1.1.2) de telle sorte qu&#8217;elle redirige ce qui lui arrive sur un port donné, par exemple 80, sur le port 8080 de 192.168.1.10.</p>
+</li>
+<li>
+<p>tester en envoyant une requête depuis Internet sur <a href="http://11.1.1.2" class="bare">http://11.1.1.2</a>.
+Celle-ci doit arriver sur le port 8080 de 192.168.1.10.</p>
+</li>
+</ol>
+</div>
+</dd>
+</dl>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>En ouvrant à tout vent un réseau initialement fermé, le port forwarding a un impact majeur sur la sécurité du réseau local.
+L&#8217;équipement auparavant inaccessible, devient d&#8217;un coup visible par tout Internet.
+Désormais, il ne peut compter que sur ses propres défense pour assurer sa sécurité.
+Il doit donc appliquer les bonnes pratiques de sécurité :
+logiciels à jour, patches de sécurité appliqués, mots de passe solides, etc.
+Et une surveillance attentive de ce qui s&#8217;y passe doit être effectuée.
+A la moindre faille, l&#8217;équipement sera au mieux congestionné (le meilleur des cas), ou pire, infiltré ou corrompu.
+Puis (le loup étant dans la bergerie) cette machine infiltrée servira de rebond pour accéder et pirater les autres équipements du réseau local privé. 😱</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p class="center">
+  <span style="font-size: 0.9em;">
+    <a href="https://jacquelincharbonnel.github.io/">Jacquelin Charbonnel</a>
+    <!-- &nbsp; &mdash; &nbsp; -->
+    &nbsp;
+    &copy;Creative Commons BY-NC-SA 4.0
+  </span>
+  </p>
+</footer>
+
+<script>
+var myDate = new Date(document.lastModified);
+myNewDate = new Intl.DateTimeFormat(
+            undefined,
+            {year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit"}
+        )
+        .format(myDate).replace(/\./g, '-');
+document.getElementById("lastmodify").innerHTML = myNewDate ;
+</script>
+
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
