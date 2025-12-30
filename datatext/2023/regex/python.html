@@ -218,27 +218,23 @@
 <h2 id="_raw_string"><a class="anchor" href="#_raw_string"></a>1. Raw string</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Les <em>string</em> Python interprêtent certaines séquences (comme <code>\n</code>, <code>\r</code>, <code>\t</code>, <code>\\</code>, etc.)
-de façon particulière.
-Donc par exemple, pour représenter littéralement la chaîne <code>"tangea\n\te"</code> :</p>
+<p>Les <em>string</em> Python interprêtent certaines séquences (comme <code>\n</code>, <code>\r</code>, <code>\t</code>, <code>\\</code>, etc.).
+Par exemple, la chaîne <code>"tangea\n\te"</code> :</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">s1 = "tangea\n\te"</code></pre>
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">s1 = "tangea\n\te"
+print(s1)
+tangea
+      e</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>n&#8217;est pas la solution, puisque <code>print(s1)</code> donne :</p>
-</div>
-<div class="listingblock">
-<div class="title">output</div>
-<div class="content">
-<pre>tangea
-      e</pre>
-</div>
+<p>contient un saut de ligne et une tabulation.</p>
 </div>
 <div class="paragraph">
-<p>Il faut écrire :</p>
+<p>Donc pour représenter littéralement la chaîne <code>"tangea\n\te"</code>,
+il faut écrire :</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -246,22 +242,18 @@ Donc par exemple, pour représenter littéralement la chaîne <code>"tangea\n\te
 </div>
 </div>
 <div class="paragraph">
-<p><em>raw string</em> est un type chaîne de caractères dans lequel il n&#8217;y a aucune interprétation :</p>
+<p>en doublant le <code>"\"</code>.</p>
+</div>
+<div class="paragraph">
+<p><em>raw string</em> est un type chaîne de caractères dans lequel il n&#8217;y a aucune interprétation,
+ce qui, dans certains cas, simplifie les choses :</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">s2 = r"tangea\n\te"   <i class="conum" data-value="1"></i><b>(1)</b>
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">s2 = r"tangea\n\te"
 print(s2)
-print(s1==s2)               # True</code></pre>
+print(s1==s2)</code></pre>
 </div>
-</div>
-<div class="colist arabic">
-<table>
-<tr>
-<td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>le <code>r</code> qui signifie <em>rawstring</em></td>
-</tr>
-</table>
 </div>
 <div class="paragraph">
 <p>donne :</p>
@@ -269,9 +261,26 @@ print(s1==s2)               # True</code></pre>
 <div class="listingblock">
 <div class="title">output</div>
 <div class="content">
-<pre>tangeante
+<pre>tangea\n\te
 True</pre>
 </div>
+</div>
+<div class="paragraph">
+<p>Donc
+<code>"tangea\\n\\te"</code> et
+<code>r"tangea\n\te"</code> sont 2 façons d&#8217;écrire la même chose.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+dans <code>r"&#8230;&#8203;"</code>, le <code>r</code> qui signifie <em>rawstring</em> (et non <em>regex</em>).
+</td>
+</tr>
+</table>
 </div>
 <div class="sect2">
 <h3 id="_raw_string_et_regex"><a class="anchor" href="#_raw_string_et_regex"></a>1.1. Raw string et regex</h3>
@@ -325,7 +334,7 @@ Utiliser une raw string rend les choses un peu plus lisibles :</p>
 <div class="sect3">
 <h4 id="_conclusion"><a class="anchor" href="#_conclusion"></a>Conclusion</h4>
 <div class="paragraph">
-<p>En Python, il est plus simple de représenter une regex littérale avec une <em>raw string</em> :</p>
+<p>En Python, il est plus simple de représenter une regex littérale par une <em>raw string</em> :</p>
 </div>
 <div class="literalblock">
 <div class="content">

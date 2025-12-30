@@ -217,14 +217,14 @@
 <div class="sectionbody">
 <div class="paragraph">
 <p>Une expression régulière (<em>regex</em>) est un motif (<em>pattern</em>) destiné à identifier des chaînes de caractères.
-Donc, étant donné une regex, une chaine de caractères correspond (<em>match</em>) ou ne correspond pas à cette regex.</p>
+Donc, étant donnée une regex, une chaine de caractères correspond (<em>match</em>) ou ne correspond pas à cette regex.</p>
 </div>
 <div class="paragraph">
 <p>Concept issu de travaux théoriques en neuroscience (Stephen Kleen, 1956),
 les regex sont implémentées informatiquement pour la première fois par Ken Thompson dans le premier éditeur de texte d&#8217;Unix (<code>ed</code>),
 pour rechercher et substituer des portions de texte.
 Depuis, elles sont devenues une abstraction à part entière,
-apparessant un peu partout en informatique :
+apparaissant un peu partout en informatique :
 de nombreuses commandes en ligne les <em>comprennent</em>,
 nombre de configurations logicielles les utilisent dans leur formulation,
 et la plupart des langages de programmation permettent au développeur de les exploiter.</p>
@@ -393,8 +393,8 @@ au contraire des chaînes ci-dessous :</p>
 <div class="listingblock">
 <div class="content">
 <pre>dfg             # pas de caractère entre d et f
-dxyfg           # trop de caractères en d et f
-abcd  fghi      # trop de caractères en d et f</pre>
+dxyfg           # trop de caractères entre d et f
+abcd  fghi      # trop de caractères entre d et f</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -465,7 +465,7 @@ Ainsi :</p>
 glob et regex ont le même objectif, mais sont différents et incompatibles.</p>
 </div>
 <div class="paragraph">
-<p>Les globs admettent seulement 2 jokers : <code>"?"</code> et <code>"*"</code>.
+<p>Les globs admettent principalement 2 jokers : <code>"?"</code> et <code>"*"</code>.
 <code>"?"</code> représente un unique caractère quelconque et <code>"*"</code> représente une suite de caractères quelconques (éventuellement vide).</p>
 </div>
 <div class="paragraph">
@@ -666,7 +666,7 @@ Ainsi :</p>
 <p><code>a?</code> signifie : 0 ou 1 <code>"a"</code></p>
 </li>
 <li>
-<p><code>ab?c</code> signifie donc : <code>"a"</code> suivi de 0 ou 1 <code>"b"</code>, suivi de <code>""</code></p>
+<p><code>ab?c</code> signifie donc : <code>"a"</code> suivi de 0 ou 1 <code>"b"</code>, suivi de <code>"c"</code></p>
 </li>
 </ul>
 </div>
@@ -689,7 +689,7 @@ Ainsi :</p>
 <p><code>a{,n}</code> signifie <code>"a"</code> répété au plus <em>n</em> fois</p>
 </li>
 <li>
-<p><code>a{n,}</code> signifie `</p>
+<p><code>a{n,}</code> signifie <code>"a"</code> répété au moins <em>n</em> fois</p>
 </li>
 </ul>
 </div>
@@ -724,40 +724,38 @@ Ainsi :</p>
 <div class="sect2">
 <h3 id="_lalternative_2"><a class="anchor" href="#_lalternative_2"></a>L&#8217;alternative <code>[ ]</code></h3>
 <div class="paragraph">
-<p>Elle permet de définir 1 caractère unique pris dans un ensemble donné.</p>
+<p>Elle permet de définir 1 caractère unique pris dans un ensemble donné.
+Exemple :</p>
 </div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 100%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>[abcd]</code> signifie : 1 caractère parmi <code>"a"</code>, <code>"b"</code>, <code>"c"</code> et <code>"d"</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>[a-d]</code> signifie : 1 caractère parmi <code>"a"</code>, <code>"b"</code>, <code>"c"</code> et <code>"d"</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>[a-dkx-z]</code> signifie : 1 caractère parmi <code>"a"</code>, <code>"b"</code>, <code>"c"</code>, <code>"d"</code>, <code>"k"</code>, <code>"x"</code>, <code>"y"</code> et <code>"z"</code></p></td>
-</tr>
-</tbody>
-</table>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 100%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>[^abcd]</code> signifie : 1 caractère différent de <code>"a"</code>, <code>"b"</code>, <code>"c"</code> et <code>"d"</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>[^a-d]</code> signifie : 1 caractère différent de <code>"a"</code>, <code>"b"</code>, <code>"c"</code> et <code>"d"</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>[^a-dx-z]</code> signifie : 1 caractère différent de  <code>"a"</code>, <code>"b"</code>, <code>"c"</code>, <code>"d"</code>, <code>"x"</code>, <code>"y"</code> et <code>"z"</code></p></td>
-</tr>
-</tbody>
-</table>
+<div class="ulist">
+<ul>
+<li>
+<p><code>[abcd]</code> pour <code>"a"</code>, <code>"b"</code>, <code>"c"</code> ou <code>"d"</code></p>
+</li>
+<li>
+<p><code>[a-d]</code> pour <code>"a"</code>, <code>"b"</code>, <code>"c"</code> ou <code>"d"</code></p>
+</li>
+<li>
+<p><code>[a-dkx-z]</code> pour <code>"a"</code>, <code>"b"</code>, <code>"c"</code>, <code>"d"</code>, <code>"k"</code>, <code>"x"</code>, <code>"y"</code> ou <code>"z"</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Si le premier caractère est <code>"^"</code>, alors le complémentaire de l&#8217;ensemble est considéré :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>[^abcd]</code> pour 1 caractère différent de <code>"a"</code>, <code>"b"</code>, <code>"c"</code> et <code>"d"</code></p>
+</li>
+<li>
+<p><code>[^a-d]</code> pour 1 caractère différent de <code>"a"</code>, <code>"b"</code>, <code>"c"</code> et <code>"d"</code></p>
+</li>
+<li>
+<p><code>[^a-dx-z]</code> pour 1 caractère différent de  <code>"a"</code>, <code>"b"</code>, <code>"c"</code>, <code>"d"</code>, <code>"x"</code>, <code>"y"</code> et <code>"z"</code></p>
+</li>
+</ul>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_captures"><a class="anchor" href="#_captures"></a>Captures</h3>
