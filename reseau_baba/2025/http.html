@@ -883,7 +883,62 @@ print(f"text: {r.text}")</code></pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_le_protocole_https"><a class="anchor" href="#_le_protocole_https"></a>8. Le protocole HTTPS</h2>
+<h2 id="_proxy"><a class="anchor" href="#_proxy"></a>8. Proxy</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>C&#8217;est le cas par exemple d&#8217;une université souhaitant garder trace des connexions des étudiants.
+Dans cette architecture, les connexions HTTP sortantes des clients internes passent toutes par un point de centralisation.
+Les objectifs visés peuvent être :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>le contrôles (journalisation des accès)</p>
+</li>
+<li>
+<p>le filtrage (censure de sites)</p>
+</li>
+<li>
+<p>les performances (cache)</p>
+</li>
+<li>
+<p>le respect de l&#8217;anonymat de l&#8217;extérieur</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Exemple de logiciel proxy : <code>apache</code>, <code>squid</code>, <code>nginx</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_reverse_proxy"><a class="anchor" href="#_reverse_proxy"></a>9. Reverse proxy</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>C&#8217;est le cas par exemple d&#8217;une entreprise souhaitant canalisé le flux HTTP entrant depuis l&#8217;extérieur.
+Dans cette architecture, un point d&#8217;entrée obligatoire (appelé <em>reverse proxy</em> ou <em>front-end</em>) focalise toutes les requêtes entrantes, qui les redispatche en interne sur des <em>back-ends</em>.
+Les objectifs visés peuvent être :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>le garant des contrôles (sécurisation centralisée)</p>
+</li>
+<li>
+<p>la flexibilité (organisation interne invisible de l&#8217;extérieur)</p>
+</li>
+<li>
+<p>la performance (répartition de charge)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Exemple de logiciel reverse proxy : <code>apache</code>, <code>squid</code>, <code>varnish</code></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_le_protocole_https"><a class="anchor" href="#_le_protocole_https"></a>10. Le protocole HTTPS</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>D&#8217;un point de vue sécurité, HTTP a 2 faiblesses :</p>
