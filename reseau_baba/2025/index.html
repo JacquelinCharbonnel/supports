@@ -448,10 +448,10 @@ chacune gère ses propres abstractions et les services qu&#8217;elle propose.</p
 <p><span class="image center"><img src="_images/tcpip_couches.png" alt="couche"></span></p>
 </div>
 <div class="paragraph">
-<p>La position d&#8217;une couche traduit le niveau d&#8217;abstration des concepts quelle gère.
+<p>La position d&#8217;une couche traduit le niveau d&#8217;abstration des concepts quelle implémente.
 Par exemple,
 la couche la plus basse correspond au matériel (le câble,
-les cartes électroniques, la connectique, les hubs, switches, etc.),
+les cartes électroniques, la connectique, les hubs, etc.),
 et la couche la plus haute correspond aux applications
 (web, messagerie, partage de fichiers, streaming, etc.).</p>
 </div>
@@ -690,18 +690,18 @@ et transitant vers la destination correspondant à l&#8217;adresse IP <code>8.8.
 <h4 id="_en_résumé"><a class="anchor" href="#_en_résumé"></a>3.2.4. En résumé</h4>
 <div class="paragraph">
 <p>La couche IP permet l&#8217;échange de paquets d&#8217;information entre 2 équipements connectés au même réseau IP.
-A ce niveau, on peut détecter (avec la commande <code>ping</code>) si un équipement est ou non joignable depuis l&#8217;équipement local.
-Rien ne permet donc de savoir si un équipement peut par exemple répondre à une requête web,
-ou bien s&#8217;il peut recevoir un mail.
-Car la couche IP ne s&#8217;intéresse pas à la nature des échanges.</p>
+A ce niveau, on peut détecter (avec la commande <code>ping</code>) si un équipement est ou non joignable depuis l&#8217;équipement local. Rien de plus.
+Par exemple, rien ne permet de savoir si un équipement peut par exemple répondre à une requête web,
+ou bien s&#8217;il peut recevoir un mail,
+car la couche IP ne s&#8217;intéresse pas à la nature des échanges.</p>
 </div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_la_couche_transport"><a class="anchor" href="#_la_couche_transport"></a>3.3. La couche transport</h3>
 <div class="paragraph">
-<p>C&#8217;est ici que l&#8217;on considère qu&#8217;il existe divers types de dialogues,
-et que 2 équipements doivent pouvoir tenir en parallèle plusieurs types de conversation
+<p>C&#8217;est ici que l&#8217;on tient compte divers types de dialogues.
+C&#8217;est à ce niveau que l&#8217;on comprend que 2 équipements peuvent tenir en parallèle plusieurs types de conversation
 (comme par exemple échanger des mails et en même temps s&#8217;échanger des pages web).</p>
 </div>
 <div class="admonitionblock note">
@@ -721,13 +721,13 @@ la voix et le réseau téléphonique.
 <div class="paragraph">
 <p>C&#8217;est aussi à ce niveau qu&#8217;apparait la notion de client et de serveur.
 Un serveur est un équipement à l&#8217;écoute de requêtes (émises par des clients).
-Un client est un équipement qui émet des requêtes (à un serveur).</p>
+Un client est un équipement qui émet des requêtes (vers un serveur).</p>
 </div>
 <div class="paragraph">
 <p>C&#8217;est aussi au niveau de la couche transport que se pose la question de la fiabilité et de la rapidité des échanges.
 Veut-on que l&#8217;information reçue soit rigoureusement l&#8217;information émise
 (au prix d&#8217;un travail complexe et coûteux de vérification)
-ou au contraire veut-on une information <em>la meilleure possible</em> (<em>best effort</em>) pour aller plus vite ?
+ou au contraire veut-on une information <em>la meilleure possible</em> (<em>best effort</em>) pour aller au plus vite ?
 Les 2 possibilités existent, et à chacune d&#8217;elles correspond un protocole : UDP ou TCP.</p>
 </div>
 <div class="admonitionblock note">
